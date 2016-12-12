@@ -1,0 +1,62 @@
+%Importante: Non modificare questo template
+%Modificare il documento principale per cambiare le parti
+
+\begin{center}
+
+
+%Spaziatura verticale
+
+\vspace{4em}
+
+%Intestazione con nome del gruppo
+\begin{center} 
+	\begin{Huge}
+		\textbf{\fontsize{15mm}{20mm}\selectfont \gruppoLink} 
+	\end{Huge}
+\end{center}
+
+\begin{center}
+	\begin{Large}
+		\vspace{0.3em}
+		\textbf{Progetto \progetto}
+	\end{Large}
+\end{center}
+
+%Inclusione del logo
+\includegraphics[keepaspectratio = true,width=6cm]{../../Template/img/LogoNetbreak.png}
+
+%Prima pagina senza intestazione né piè di pagina	
+\thispagestyle{empty}
+
+%Le informazioni del documento sono ancorate a fine pagina
+\vfill
+
+%Nome del documento
+\begin{Huge} \textbf{\documento} \end{Huge}
+
+%Tabella centrale
+\begin{center}
+\large\textbf{Informazioni sul documento} \\ \vspace{2em}
+\small
+\begin{tabular}{r l}
+	\textbf{Nome del file} & \nomedocumentofisico \\
+	\textbf{Data di creazione} & \datacreazione\\
+	\textbf{Ultima modifica e versione} & \datamodifica\\ & Versione \versione\\
+	\textbf{Stato} & \stato \\
+	\textbf{Redatto da}	& \redazione\\
+	\textbf{Verificato da}	& \verifica\\
+	\textbf{Approvato da}	& \approvazione\\
+	\textbf{Uso}  & \uso\\
+	\textbf{Distribuzione} & \gruppo \\
+	\textbf{Destinato a}  &  \destinateTo \\
+\end{tabular}
+\end{center}
+
+\vspace{2em}
+
+\normalsize
+%Inclusione abstract
+\textbf{Abstract\\} 
+\input{abstract.tex}
+\end{center}
+\clearpage

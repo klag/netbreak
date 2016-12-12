@@ -1,0 +1,189 @@
+\section{Processi primari}
+\subsection{Fornitura}
+
+\subsubsection{Studio di fattibilità}
+Lo Studio di fattibilità sarà redatto a partire dalle riunioni con tutto il team, 
+in merito alla scelta del miglior capitolato da svolgere. Conseguentemente alla pubblicazione,
+saranno fissati degli incontri con i membri del gruppo dove saranno stilati internamente una lista
+di \textbf{Pro} e di \textbf{Contro} per ciascun progetto disponibile. Gli analisti del team sono le figure
+incaricate della stesura dei singoli studi, in relazione a quanto emerso dagli incontri con tutto il gruppo.
+Il documento prenderà in analisi ciascun capitolato, secondo i sottocitati punti:
+\begin{itemize}
+	\item \textbf{Descrizione:} Introduzione generale del capitolato
+	\item \textbf{Dominio Applicativo:} Descrizione del bacino di utenza e dell'ambito in cui il prodotto sarà utilizzato.
+	\item \textbf{Tecnologie:} Breve elenco delle tecnologie di interesse e che saranno centrali nel progetto.
+	\item \textbf{Aspetti critici:} Descrizione degli aspetti cruciali del prodotto, su cui è necessario porre particolare attenzione,
+	evidenziando in particolare le problematiche e le difficoltà che si possono incontrare.
+	\item \textbf{Considerazioni conclusive:} Valutazione finale e soggettiva del gruppo che, prendendo spunto dai punti precedenti, stila
+	le motivazioni percui il capitolato analizzato è stato scelto oppure no.
+\end{itemize}
+
+\subsection{Sviluppo}
+\subsubsection{Analisi dei Requisiti}
+L'Analisi dei requisiti dovrà seguire la fase di Studio di fattibilità. Questa fase analizzerà in modo quanto più
+accurato possibile i requisiti necessari per ciascun ambito del progetto da realizzare. Verranno inoltre stilati
+i casi d'uso del prodotto, corredati da opportuna descrizione e analisi. La struttura
+del documento sarà organizzata nei seguenti punti:
+\begin{itemize}
+	\item Casi d'uso
+	\item Requisiti progettuali
+\end{itemize}
+
+\paragraph{Casi d'uso}
+\subparagraph{Nomenclatura}
+La scelta del nome per i Casi d'uso avverrà secondo la seguente procedura:
+\begin{center}
+	U[Codice categoria].[Codice progressivo]
+\end{center}
+dove:
+\begin{itemize}
+	\item\textbf{Codice categoria}: identifica il codice entro cui lo specifico Use case viene raggruppato. Può essere organizzato eventualmente in ulteriori sottocategorie oppure omesso.
+	\item\textbf{Codice progressivo}: identificativo dello specifico Use case
+\end{itemize}
+
+\subparagraph{Struttura}
+L'analisi di ciascun Caso d'uso dovrà essere strutturata come segue, avendo cura di mantenere l'ordine indicato:
+
+\begin{itemize}
+	\item\textbf{Sigla e nome}: Identifica il caso d'uso analizzato. Va indicato nel titolo del paragrafo corrispondente.
+	\item\textbf{Diagramma}: Immagine del diagramma per il suddetto Caso d'uso
+	\item\textbf{Descrizione}: Breve descrizione
+	\item\textbf{Attori}: Descrizione degli attori coinvolti.
+	
+	\item\textbf{Stato iniziale}: Descrive la pre-condizione che dev'essere verificata antecedentemente.
+	\item\textbf{Stato finale}: Descrive la post-condizione che deve valere all'uscita della situazione descritta.
+	\item\textbf{Flusso di esecuzione}: Analisi completa del flusso di esecuzione del caso d'uso comprendente,  se necessario, eventuali casi d'uso esterni
+\end{itemize}
+
+Gli elementi sopracitati sono da considerarsi standard, mentre si valuterà caso per caso l'eventuale immissione di ulteriori informazioni quali:
+
+\begin{itemize}
+	\item\textbf{Estensioni}: Descrive le estensioni per il Caso d'uso descritto
+	\item\textbf{Inclusioni}: Descrive le inclusioni per il Caso d'uso descritto
+	\item\textbf{Note}: Ulteriori informazioni
+\end{itemize}
+
+\paragraph{Requisiti progettuali}
+Il documento dovrà contenere un elenco di requisiti, redatto dagli Analisti, che indicheranno le peculiarità richieste e informazioni relative alla loro tipologia e rilevanza.
+
+\subparagraph{Nomenclatura}
+La scelta del nome per i Requisiti progettuali avverrà secondo la seguente procedura:
+\begin{center}
+R[Rilevanza][Tipologia][Codice]
+\end{center}
+
+\textbf{Rilevanza:} che può assumere uno seguenti valori, elencati in ordine dal maggiore al minor rilievo
+
+\begin{itemize}
+	\item \textbf{1:} Requisito critico, di fondamentale importanza per il progetto.
+	\item \textbf{2:} Requisito principale.
+	\item \textbf{3:} Requisito secondario, che rappresenta una caratteristica auspicabile ma non esplicitamente necessaria.
+	\item \textbf{4:} Requisito facoltativo.
+\end{itemize}
+
+\textbf{Tipologia:} che può assumere uno seguenti valori
+
+  \begin{itemize}
+  	\item \textbf{V:} Requisito di vincolo, imposto dal committente.
+    \item \textbf{F:} Requisito di funzionalità.
+    \item \textbf{Q:} Requisito qualitativo.
+    \item \textbf{P:} Requisito prestazionale.
+  \end{itemize}
+
+\textbf{Codice:} che assume un numero sequenziale e univoco, necessario a catalogare e riconoscere i Requisiti progettuali.
+
+\subparagraph{Struttura}
+L'analisi di ciascun requisito dovrà essere strutturata come segue, avendo cura di mantenere l'ordine indicato:
+
+\begin{itemize}
+  \item \textbf{Descrizione:} una sintesi del requisito, che lo descriva in modo conciso ma quanto più efficace possibile
+  \item \textbf{Origine:} descrive la provenienza del requisito, ovvero da chi è stato sollevato e in che ambito.
+\end{itemize}
+
+\subsubsection{Progettazione}
+
+La progettazione è la fase di preparazione in cui si realizza un'astrazione di quella che diverrà la struttura software del prodotto. Questa fase è successiva alla produzione di una completa Analisi dei Requisiti, in quanto da essa viene tratto spunto per questa fase. I documenti risultanti da questa fase di progettazione fungeranno in seguito da percorso per la produzione del software vero e proprio.
+
+\paragraph{Obiettivi}
+Questo stadio si prefigge i seguenti obiettivi:
+\begin{itemize}
+	\item Fornire una visione macroscopica del percorso da seguire in fase di codifica software
+	\item Realizzare un prodotto in rispetto degli standard prefissati in fase di analisi e di analisi dei requisiti.
+	\item Flessibilità del programma, per poter far fronte in modo agile a repentini cambi o modifiche rilevanti, pur non inficiando il lavoro pregresso
+	\item Soddisfare le richieste del committente.
+\end{itemize}
+
+\subsubsection{Programmazione}
+
+La fase di codifica si prefigge la realizzazione pratica del prodotto richiesto. I programmatori sono i principali responsabili di questa fase, che tenendo conto degli stadi precedenti e seguendo nel dettaglio quanto precedentemente stilato, realizzano un prodotto che sia in grado di svolgere i compiti richiesti. Ogni programmatore dev'essere, come requisito prioritario, strettamente ancorato alle linee guida stabilite.
+
+
+
+\paragraph{Best practices}
+
+La fase di codifica dev'essere molto scrupolosa, attendendosi alle linee guida definite all'interno di questo documento. Esse compongono gli standard di codifica per la realizzazione del progetto. Gli standard sotto riportati hanno il compito di:
+
+\begin{itemize}
+	\item Fornire uno strumento per garantire una più agevole cooperazione tra i diversi sviluppatori
+	\item Favorire la creazione di un codice valido e ben formato
+	\item Favorire la realizzazione di un software di qualità
+	\item Rendere più agevole la lettura e modifica del codice internamente al team
+\end{itemize}
+
+Le regole stilistiche del codice riguardano le parti non prettamente implementative, ma di ausilio ai vari programmatori per permettere una miglior cooperazione e comprensione del codice. Esse riguardano la nomenclatura, La definizione di tecniche di scrittura è importante per avere una maggiore comprensione del codice sorgente.
+Le tecniche di scrittura del codice descritte nel seguente documento sono suddivise in tre categorie: Impostazione, Nomenclatura e Commenti.
+
+\subparagraph{Impostazione}
+L'impostazione stilistica del documento consente una più agevole comprensione e lettura del codice, e pertanto è importante fornire una logica comune. Di seguito sono elencate le principale norme relative alla formattazione del codice: 
+
+\begin{itemize}
+	\item
+	I blocchi di codice vanno indentati tramite i rientri standard, evitando spaziature singole. Ogni porzione di codice interna ad un altra dev'essere rigorosamente indentata in modo corretto.
+	\item
+	Utilizzare gli spazi per separare gli operatori, ove possibile. Aggiungere spazi che aumentino la leggibilità del codice in tutte le situazioni dove ciò è permesso, a patto che il funzionamento non risulti alterato.
+	\item
+	Dividere il codice in modo quanto più modulare possibile tra vari file, evitando file monolitici di ingenti dimensioni e di difficile modifica. Ciò è un requisito fondamentale per un corretto e miglior utilizzo dei software di versionamento.
+\end{itemize}
+
+\subparagraph{Nomenclatura}
+
+Nell'elenco sottostante sono elencati gli standard di nomenclatura utilizzati per il codice che verrà prodotto. Tale aspetto è fondamentale per una miglior comprensione del codice.
+
+\begin{itemize}
+\item
+Assegnare nomi univoci ai costrutti, evitando possibili ambiguità dovute a nomi similari. I costrutti devono avere nomi quanto più significativi possibili, possibilmente anche se utilizzati in porzioni marginali. Le variabili formate da un solo carattere sono invece consentite qualora si tratti di iterazioni circoscritte.
+\item
+Nella scelta dei nomi di files e cartelle, è importante che siano descrittivi del proprio contenuto nel modo più accurato possibile.
+\item
+Accertarsi che le parole utilizzate siano scritte nella corretta ortografia della lingua a cui appartiene.
+\item
+Nella scrittura di nomi composti utilizzare la forma "Camel Case", ottenuta scrivendo con iniziale minuscola la prima parola di un nome composto, seguito dalle successive parole con iniziale sempre maiuscola.
+\item
+Nella descrizione di funzioni, utilizzare come prima voce il verbo dell'azione svolta, seguito dal nome dell'azione o dell'oggetto su cui viene eseguita.
+\item
+Accertarsi che non vi sia ambiguità nelle abbreviazioni utilizzate, avendo cura di verificare che non possano venir utilizzate due abbreviazioni simili per funzionalità differenti.
+
+\end{itemize}
+
+
+\subparagraph{Commenti}
+La fase di commento deve essere ampia e uniforme, seguendo i criteri e le linee guida elencate:
+
+\begin{itemize}
+\item
+Produrre o mantenere aggiornata un intestazione per ciascun file, comprensiva di una descrizione di ciò che è incluso in quello specifico documento.
+\item
+Indicare pre e post condizione di ogni funzionalità di rilievo, tali da favorire un riutilizzo di eventuale codice già scritto. Al più, si introduca brevemente ciascuna porzione con una descrizione concisa.
+\item
+Inserire commenti nella riga precedente al codice o porzione che desidero commentare. Non si commenti, dunque, in modalità "inline".
+\item
+Stilare commenti completi, di senso compiuto e grammaticalmente corretti. Documentare inoltre in modo tempestivo, durante la stesura del codice, per evitare di dover rianalizzare una porzione al solo fine di documentarla.
+\end{itemize}
+
+\subsubsection{Strumenti utilizzati}
+
+\paragraph{TexStudio}
+In seguito a una breve fase di test, la scelta del team per l'editor di documenti Latex è ricaduta su \textbf{TexStudio}. Esso è un noto fork di un altrettanto famoso editor, TexMaker. TexStudio è un editor completamente gratuito e OpenSource. Esso è disponibile per i più diffusi sistemi operativi. L'editor consente un agevole utilizzo dei file tex, inclusa una gestione dei documenti inclusi. Tale peculiarità gioca a nostra favore per una semplificata predisposizione alla modularità dei documenti. L'editor scelto possiede numerose features rilevanti, quali autocompletamento e controllo della sintassi, anteprima incorporata, e controllo ortografico. Per le motivazioni elencate, l'editor scelto sarà il principale strumento tramite cui verranno redatti i documenti necessari al progetto.
+
+\paragraph{Astah}
+Per la stesura e modellazione di diagrammi in linguaggio UML, la scelta è ricaduta sull'editor Astah. Esso è un editor multi-piattaforma gratuito. Il suo punto forte rispetto ad altre soluzioni è la semplicità di utilizzo. Tra le funzionalità interessanti ai nostri fini c'è la possibilità di esportare i diagrammi creati direttamente in un file immagine. Il software Astah sarà utilizzato per la creazione di tutti i diagrammi necessari in sede di progettazione ed analisi

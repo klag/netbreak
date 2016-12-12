@@ -1,0 +1,98 @@
+%Stile e dimensione del documento
+\documentclass[a4paper,11pt]{article}
+
+%Pacchetti da importare
+\usepackage{ifthen}
+\usepackage[italian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{float}
+\usepackage{chapterbib}
+\usepackage{graphicx}
+\usepackage[a4paper,top=2.5cm,bottom=2.5cm,left=2.5cm,right=2.5cm]{geometry}
+\usepackage[colorlinks=true, urlcolor=black, citecolor=black, linkcolor=black]{hyperref}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{totpages}
+\usepackage{tabularx, array}
+\usepackage{dcolumn}
+\usepackage{epstopdf}
+\usepackage{booktabs}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage{calc}
+\usepackage{datatool}
+\usepackage[bottom]{footmisc}
+\usepackage{listings}
+\usepackage{textcomp}
+\usepackage{titlesec}
+\usepackage{rotating}
+\usepackage{multirow}
+\usepackage{placeins}
+\usepackage{color}
+\usepackage[table,usenames,dvipsnames]{xcolor}
+\usepackage{hyperref}
+\usepackage{makecell}
+\usepackage{breakurl}
+\usepackage{hyperref}
+
+
+
+%Stile fancy per il documento (Header e footer)
+\pagestyle{fancy}
+%Rimuovo l'indentazione
+\setlength{\parindent}{0pt}
+
+%Imposto l'intestazione
+\lhead{\Large{\progetto} \\ \footnotesize{\documento}}
+%Linea sotto l'intestazione
+\renewcommand{\headrulewidth}{0.4pt} 
+
+%Footer
+\lfoot{\textit{\gruppoLink}\\ \footnotesize{\email}}
+%Footer con numero romano per le prime pagine
+\rfoot{\thepage}
+\cfoot{}
+%Linea sopra il footer
+\renewcommand{\footrulewidth}{0.4pt}   
+
+%Imposta il livello degli elenchi 
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+
+%Paragrafi impostati come una sezione
+\titleformat{\paragraph}{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+\titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+\makeatletter
+\newcounter{subsubparagraph}[subparagraph]
+\renewcommand\thesubsubparagraph{
+  \thesubparagraph.\@arabic\c@subsubparagraph}
+\newcommand\subsubparagraph{
+  \@startsection{subsubparagraph}
+    {6}
+    {\parindent}
+    {3.25ex \@plus 1ex \@minus .2ex}
+    {0.75em}
+    {\normalfont\normalsize\bfseries}}
+\newcommand\l@subsubparagraph{\@dottedtocline{6}{10em}{5.5em}} 
+\newcommand{\subsubparagraphmark}[1]{}
+\makeatother
+
+\makeatletter
+\newcounter{subsubsubparagraph}[subsubparagraph]
+\renewcommand\thesubsubsubparagraph{
+  \thesubsubparagraph.\@arabic\c@subsubsubparagraph}
+\newcommand\subsubsubparagraph{
+  \@startsection{subsubsubparagraph}
+    {7}
+    {\parindent}
+    {3.25ex \@plus 1ex \@minus .2ex}
+    {0.75em}
+    {\normalfont\normalsize\bfseries}}
+\newcommand\l@subsubsubparagraph{\@dottedtocline{7}{10em}{6.5em}}
+\newcommand{\subsubsubparagraphmark}[1]{}
+\makeatother

@@ -1,0 +1,50 @@
+\newpage
+\section{Capitolato C6}
+
+\subsection{Descrizione}
+
+Il capitolato proposto da Zucchetti consiste nella creazione di un
+editor UML, che a partire dal diagramma delle classi, diagramma delle attività e altre possibili tipologie di diagrammi, generi il codice corrispondente all'applicazione descritta. Il linguaggio di implementazione di un progetto generato automaticamente potrà essere Java o Javascript. Le caratteristiche peculiari del progetto riguardano la possibilità non solo di generare codice, ma possibilmente anche operare delle decisioni che sotto forma di input al generatore di codice, dia risultati diversi nel codice prodotto,
+a parità di linguaggio per diagrammi di uno stesso progetto. E' necessario
+integrare anche un sistema di machine learning che, tenendo conto
+di quali sono le modifiche usualmente effettuate post generazione
+codice, renda sempre piu' definitivo il codice prodotto, diminuendo le modifiche necessarie da parte dell'utilizzatore dell'editor.
+
+\subsection{Dominio applicativo}
+
+Lo scopo di questo prodotto e' fornire agli sviluppatori software
+uno strumento per l'implementazione automatica totale o parziale del
+codice di un progetto, a partire dai diagrammi UML dello stesso. Il
+codice generato utilizzando pattern di progetto risultera' standardizzato,
+fornendo una base comune piu' facilmente estendibile o modificabile
+dagli implementatori. Gli utilizzatori stimati sono l'amministratore,
+i progettisti, i programmatori e i verificatori di un progetto software.
+
+\subsection{Tecnologie}
+
+Sono necessarie conoscenze estese per lo sviluppo di applicativi web:
+\begin{itemize}
+	\item \textbf{HTML/CSS/JS} per il lato Client
+	(obbligatorio).
+	\item \textbf{Framework }e \textbf{Librerie} a scelta open source.
+	\item \textbf{Java }o\textbf{ Javascript} per il lato Server
+	(obbligatorio).
+	\item \textbf{OrientDB} o altro database NoSQL a grafo.
+\end{itemize}
+
+\subsection{Aspetti critici}
+
+Gli aspetti cruciali nello sviluppare un generatore automatico di
+software consistono nel trovare un'associazione automatica accettabile
+tra lo specifico problema descritto nei diagrammi e il codice generato. Si deve evitare un incremento di complessità ed è necessario mantenere la consistenza dei diagrammi al modificarsi del codice. Infatti, una successiva estensione degli stessi non deve alterare riscritture o modifiche importanti da parte degli implementatori del codice generato.
+
+\subsection{Considerazioni conclusive}
+
+Il capitolato e' stato scartato dal nostro gruppo per un serie di
+motivi. E' richiesta anzitutto una conoscenza approfondita del linguaggio
+UML nonchè di una forte esperienza di utilizzo, che nessuno di noi ancora possiede. Inoltre, è necessaria la conoscenza di un gran numero di design
+pattern e della loro corretta applicazione a seconda dei differenti contesti di utilizzo. \'{E} anche necessario integrare un servizio
+di machine learning, che a partire dal codice, renda compilazioni
+successive dei diagrammi di uno stesso progetto o progetti diversi
+sempre piu' efficienti e precise e nessuno del nostro gruppo ha esperienza
+in questo. Infine, occorre cimentarsi nell'apprendimento dei database non relazionali (NoSQL). 

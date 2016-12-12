@@ -1,0 +1,65 @@
+\newpage
+\section{Capitolato C5}
+
+\subsection{Descrizione}
+
+Il capitolato proposto da Red Babel tratta la creazione di un framework
+Monolith, implementato come package di Rocket.chat. Lo scopo di questo
+framework è fornire agli sviluppatori uno strumento per l'implementazione
+di bolle interattive all'interno del sistema di messaggistica Rocket.chat.
+Queste bolle interattive nascono dalla neccessità sempre più frequente
+di trasmettere informazioni in modo sempre più evoluto e frequente.
+Sono stati individuati 3 tipi di bolle interattive, la cui implementazione è richiesta obbligatoriamente:: 
+\begin{itemize}
+	\item Rich media bubble: rappresentano quei contenuti come link a video
+	o a pagine web, dei quali è utile mostrare direttamennte il contenuto
+	all'interno di una bolla nel sistema di messaggistica;
+	\item Self-updating bubble: rappresentano quei contenuti dei quali è interessante
+	consultare lo stato anche a distanza di tempo dalla condivisone, come
+	può essere la variazione di prezzo di un articolo o le previsioni
+	del tempo;
+	\item Editing bubble: il contenuto più comune, appartenetente a questo tipo
+	di bolle, è il sondaggio. In questo caso un utente può creare un sondaggio
+	composto da un quesito e da alcune riposte, mentre gli altri utenti
+	hanno la possibilità di scegliere una o più delle risposte.
+\end{itemize}
+
+
+\subsection{Dominio}
+
+Questo framweork si offre a tutti gli sviluppatori che necessitano
+di introdurre un sistema più avanzato per lo scambio di dati, come
+può essere un'azienda che vuole offrire una customer communication
+dashboard ai suoi clienti come strumento di assistenza o un bot che
+risponda in modo automatico alle domande più frequenti. 
+
+\subsection{Tecnologie}
+
+Per la realizzazione di questo capitolato è necessario l'utilizzo delle seguenti tecnologie:
+\begin{itemize}
+	\item \textbf{Javascript 6th edition (ES6)} per lo sviluppo della parte
+	backend del framework;
+	\item \textbf{Angular 2 }per la parte frontend del framework;
+	\item \textbf{HTML5, CSS3 e SASS} (CSS prepocessor) per la struttura e l'aspetto
+	grafico;
+\end{itemize}
+
+\subsection{Aspetti critici}
+
+Questo package deve essere facilmente installabile in un server dove
+risiede un'istanza di Rocket.chat, ad esempio attraverso un package
+manager. Le API che il framework deve fornire dovranno dare la possibilità
+allo sviluppatore di implementare una grande varietà di bolle interattive,
+che potranno essere poi inserite in un contesto più complesso come
+appunto una customer communication. Questo potrà generare delle difficoltà
+nel riconoscimento del tipo di contenuto da visualizzare e nel modo
+in cui dovrà essere visualizzato. 
+
+\subsection{Considerazioni conclusive}
+
+Il capitolato tratta un argomento sicuramente interessante ed attuale,
+vista l'enorme mole di dati che ogni giorno viene scambiata tra utenti
+di tutto il mondo. In questo caso specifico non riteniamo cosi interessante
+l'implementazione di questo framework poichè grandi colossi mondiali,
+Telegram in primis, ma anche Whatsapp ed Apple stanno implmentando
+queste funzioni con risultati notevoli e in continuo miglioramento.
