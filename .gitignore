@@ -1,5 +1,8 @@
 # Created by https://www.gitignore.io/api/latex
 
+# File ini
+*.ini
+
 ### LaTeX ###
 ## Core latex/pdflatex auxiliary files:
 *.aux
