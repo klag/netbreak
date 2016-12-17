@@ -3,30 +3,34 @@
 
 \subsection{Descrizione}
 
-Il capitolato proposto da RiskApp riguarda la simulazione di eventuali danni economici dovuti a un evento esterno che può interrompere il business di una azienda. L’applicazione web deve poter offrire all’utente la possibilità di inserire tramite appositi form un piano dettagliato dei processi produttivi. Una volta inviati i dati al server di back-end e l'algoritmo RiskApp simulerà come un certo tipo di danno può impattare nel bilancio aziendale in termici di fatturato e quota di mercato. L’algoritmo fornirà un grafo con la struttura del processo produttivo e i possibili scenari di danno che possono colpire l’azienda e il relativo danno economico. Si richiede che la Web App restituisca il grafo sia integrato in una mappa geografica e sia fruibile tramite dispositivo mobile e in particolare su tablet, con supporto alle gestures tipiche e l'inserimento con riconoscimento vocale.
+Il capitolato proposto da RiskApp riguarda la simulazione di eventuali danni economici dovuti a un evento esterno, che può interrompere il business di un'azienda. L’applicazione web deve poter offrire all’utente la possibilità di inserire, tramite appositi form, un piano dettagliato dei processi produttivi della propria azienda. Una volta inviati i dati al server di analisi dei dati, esso applicherà l'algoritmo RiskApp. Quest'ultimo serve a simulare l'impatto di un certo tipo di danno nel bilancio aziendale, in termici di fatturato e quota di mercato. Inoltre, fornisce un grafo integrato in una mappa geografica, che rappresenta la struttura del processo produttivo e i possibili scenari di danno che possono colpire l’azienda, con relativo danno economico. Si richiede che l'applicazione web sia utilizzabile su dispositivi mobile, in particolare su tablet, con supporto alle gesture tipiche e l'inserimento con riconoscimento vocale.
 
 \subsection{Dominio applicativo}
 
-Lo scopo del progetto è fornire una Web App per l'inserimento dei dati e la successiva elaborazione per quantificare il danno economico causato da una interruzione del processo produttivo di una azienda. La Web App sarà quindi utile anche in ambito assicurativo, in quanto permettere di quantificare correttamente l'importo assicurativo di una polizza.
+Lo scopo del progetto è fornire una web app per l'inserimento e la successiva elaborazione di dati per quantificare il danno economico causato da un'interruzione del processo produttivo di un'azienda. L'applicazione sarà, quindi, utile anche in ambito assicurativo, in quanto permetterà di quantificare correttamente l'importo di una polizza.
 
 \subsection{Tecnologie}
+L'azienda proponente RiskApp suggerisce di procedere adottando il suo attuale stack tecnologico:
 \begin{itemize}
-	\item \textbf{Bootstrap, Javascript con framework React, hammer.js e Yeoman}
-	per quanto riguarda la part front-end
-	\item \textbf{Django} per quanto riguarda la parte back-end
-	\item \textbf{Python3} per conoscere il prodotto attuale di RiskApp
-	\item \textbf{PostgreSQL e noSQL} come database
-	\item \textbf{RStudio} con Shiny per quanto riguarda il processamento dati
+	\item \textbf{HTML5\ped{\textit{G}}, CSS3\ped{\textit{G}}} e \textbf{Javascript\ped{\textit{G}}}, per la struttura e l'interfaccia grafica dell'applicazione web;
+	\item \textbf{Bootstrap3\ped{\textit{G}}, React\ped{\textit{G}}, hammer.js\ped{\textit{G}}} e \textbf{Yeoman\ped{\textit{G}}}, come framework per la parte front-end;
+	\item \textbf{Django\ped{\textit{G}}}, per la parte back-end;
+	\item \textbf{Python3\ped{\textit{G}}}, per conoscere il prodotto attuale di RiskApp;
+	\item \textbf{PostgreSQL\ped{\textit{G}}}, come database SQL\ped{\textit{G}}, e qualsiasi \textbf{NoSQL\ped{\textit{G}}}, come database non relazionale;
+	\item \textbf{RStudio\ped{\textit{G}}} con \textbf{Shiny\ped{\textit{G}}}, per il processamento dati.
 \end{itemize}
 
 \subsection{Aspetti critici}
 
-La nostra analisi ha portato a individuare diversi punti critici. Il primo riguarda trasportare il processo produttivo dell’azienda, restituito come grafo dall’algoritmo, su una mappa geografica, con evidenziato il percorso della merce e i luoghi di lavorazione e deposito della merce. Crediamo che questo processo sia complesso e soggetto a possibili ed eventuali errori sulla creazione della mappa geografica.
-Un secondo aspetto critico può essere individuato riguardo la fruizione della Web App anche offline, quindi l'incapsulamento dei dati e il successivo invio una volta collegati alla rete. 
-L'ultimo riguarda la restituzione dei dati nello stesso formato di input: i dati inviati al server dell'elaborazione devono essere convertiti e la lettura nel formato di input necessita una un ulteriore decodifica. Questo aspetto potrebbe essere risolto in parte con lo studio dell’algoritmo di RiskApp.
+La nostra analisi ha portato a individuare diversi punti critici:
+\begin{itemize}
+	\item Trasportare il grafo rappresentante il processo produttivo dell’azienda su di una mappa geografica, con evidenziato il percorso della merce e i luoghi di lavorazione e deposito di quest'ultima;
+	\item L'utilizzo della web app anche in assenza di collegamento alla rete, quindi come vengono incapsulati e successivamente inviati i dati una volta che si ritorna online;
+	\item La restituzione dei dati nello stesso formato di input: i dati inviati al server di analisi devono essere convertiti, e la lettura nel formato di input necessita un'ulteriore decodifica. Questo punto potrebbe essere risolto, in parte, con lo studio dell’algoritmo di RiskApp.
+\end{itemize}
 
 \subsection{Considerazioni conclusive}
 
-La creazione di una Web App connessa ad un sistema di analisi già esistente non ha generato grande entusiasmo nel gruppo e alcuni aspetti non sono chiari, a partire dall’algoritmo RiskApp al requisito di usufruire di una Web App anche offline. La scelta di questo capitolato avrebbe richiesto uno studio approfondito dell’algoritmo di Riskapp, per conoscere il meccanismo di elaborazione di dati e del suo output.
-È altresì necessario la conoscenza, attualmente assente in tutti gli elementi del gruppo di lavoro, del linguaggio in cui è sviluppato il sistema con cui dovrebbe interagire la Web App (Python3) e una comprensione dell’utilizzo di database non relazionali (noSQL).
-Per i motivi precedentemente elencati, il gruppo ha scelto all’unanimità di scartare il capitolato in questione. 
+La creazione di un'applicazione web connessa ad un sistema di analisi già esistente, non ha generato un forte stimolo nel gruppo. Lo studio approfondito dell’algoritmo RiskApp, per comprendere il meccanismo di elaborazione dei dati e la generazione dell'output, e la realizzazione di un'applicativo disponibile e funzionante offline, sono gli elementi che più hanno allontanato il gruppo dallo scegliere questo capitolato. 
+Inoltre, è necessaria la conoscenza del linguaggio Pyhton3\ped{\textit{G}}, che nessun membro del gruppo possiede, e il possibile utilizzo di database NoSQL\ped{\textit{G}}.
+Per questi motivi, il gruppo ha deciso di scartare questo capitolato. 

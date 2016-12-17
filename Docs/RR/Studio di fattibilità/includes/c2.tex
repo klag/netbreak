@@ -6,23 +6,23 @@
 Il capitolato proposto da zero12 riguarda la creazione di un'applicazione
 web che permetta agli ospiti di un'azienda di interrogare un assistente
 vocale dedicato all'accoglienza. Il software sfrutterà il sistema
-di comunicazione già esistente, basato su Slack, per notificare l'arrivo dei visitatore. Tra le funzionalità obbligatorie da fornire,
+di comunicazione già esistente, basato su Slack\ped{\textit{G}}, per notificare l'arrivo dei visitatore. Tra le funzionalità obbligatorie da fornire,
 vi è la richiesta dei dati personali dell'ospite e di sue eventuali
-necessità (moduli, informazioni, caffè...), che verranno inoltrate
-all'interessato tramite Slack. Il software dovrà utilizzare obbligatoriamente
+necessità (moduli, informazioni, caffè, etc.), che verranno inoltrate
+all'interessato tramite Slack\ped{\textit{G}}. Il software dovrà utilizzare obbligatoriamente
 la lingua inglese per adattarsi agli assistenti virtuali già disponibili.
 L'applicativo sarà suddiviso in tre parti: l'interfaccia web per interagire
-con l'utente, i servizi AWS Lambda per interagire con l'API dell'assistente
+con l'utente, i servizi AWS Lambda\ped{\textit{G}} per l'interazione con l'API\ped{\textit{G}} dell'assistente
 virtuale e l'interfacciamento. Sarà importante non solo la realizzazione
 del software, ma anche uno studio del mercato attuale e l'analisi
-del comportamento degli utenti, così da migliorarne la prestazione
+del comportamento degli utenti, così da migliorarne le prestazioni
 e la soddisfazione nell'utilizzo.
 
 \subsection{Dominio applicativo}
 
 Il progetto risulta interessante per qualunque organizzazione che voglia
 gestire in modo automatico l'accoglienza dei visitatori presso la sua sede. In particolare,
-è destinato a tutte le aziende che utilizzano Slack: un punto di forza vista
+è destinato a tutte le aziende che utilizzano Slack\ped{\textit{G}}: un buon punto di forza vista
 la sua ampia diffusione. Inoltre, il recente interesse nel campo della
 sintesi vocale potrebbe fornire un trampolino di lancio al progetto.
 Se il software saprà garantire la soddisfazione dei visitatori e miglioramenti
@@ -31,26 +31,24 @@ anche in altri settori.
 
 \subsection{Tecnologie}
 
-Le tecnologie consigliate per il raggiungimento degli scopi del progetto
-proposto sono:
+Le tecnologie consigliate per il raggiungimento degli scopi del progetto proposto sono:
 \begin{itemize}
-	\item \textbf{HTML5, CSS3 e Javascript }per lo sviluppo dell'interfaccia
-	Web;
-	\item \textbf{Bootstrap 3} come framework CSS;
-	\item \textbf{NodeJS o Swift} come linguaggio di programmazione per lo
+	\item \textbf{HTML5\ped{\textit{G}}, CSS3\ped{\textit{G}}} e \textbf{Javascript\ped{\textit{G}}}, per lo sviluppo dell'interfaccia web;
+	\item \textbf{Bootstrap3\ped{\textit{G}}}, come framework\ped{\textit{G}} CSS\ped{\textit{G}};
+	\item \textbf{NodeJS\ped{\textit{G}}} o \textbf{Swift\ped{\textit{G}}}, come linguaggio di programmazione per lo
 	sviluppo dell'applicazione;
-	\item \textbf{Express} come eventuale framework NodeJS;
-	\item \textbf{Amazon Web Services }come infrastruttura di cloud computing;
-	\item \textbf{MongoDB o DynamoDB} come database NoSQL;
-	\item \textbf{SiriSDK o AlexaSDK} come assistenti virtuali.
+	\item \textbf{Express\ped{\textit{G}}}, come eventuale framework\ped{\textit{G}} NodeJS\ped{\textit{G}};
+	\item \textbf{Amazon Web Services\ped{\textit{G}}}, come infrastruttura di cloud computing\ped{\textit{G}};
+	\item \textbf{MongoDB\ped{\textit{G}}} o \textbf{DynamoDB\ped{\textit{G}}}, come database NoSQL\ped{\textit{G}};
+	\item \textbf{SiriSDK\ped{\textit{G}}} o \textbf{AlexaSDK\ped{\textit{G}}}, come assistenti virtuali.
 \end{itemize}
 
 \subsection{Aspetti critici}
 
 Un punto cruciale del progetto riguarda la capacità di progettare
-correttamente le interfacce rivolte ai servizi AWS Lambda. Questi
+correttamente le interfacce rivolte ai servizi AWS Lambda\ped{\textit{G}}. Questi
 gestiranno lo scambio di dati tra gli utenti e gli altri elementi
-interni quali Slack, database ed assistente virtuale. L'apprendimento e l'integrazione di un numero relativamente alto di nuove tecnologie potrebbe, inizialmente, disorientare e far perdere la visione d'insieme del progetto.
+interni quali Slack\ped{\textit{G}}, database ed assistente virtuale. L'apprendimento e l'integrazione di un numero relativamente alto di nuove tecnologie potrebbe, inizialmente, disorientare e far perdere la visione d'insieme del progetto.
 Di natura totalmente diversa è l'analisi del comportamento degli
 utenti: un'attività che richiede flessibilità nel rivalutare il proprio
 punto di vista, mediando tra le necessità di sviluppatori ed utenti,
@@ -64,6 +62,5 @@ Il capitolato richiede la conoscenza e lo studio di un buon numero di tecnologie
 	\item La maggior parte delle tecnologie da utilizzare richiede molto tempo per la comprensione e l'apprendimento.
 \end{itemize}
 
-La varietà delle tecnologie è controbilanciata dall'uso superficiale che se ne farà: queste saranno sfruttate in modo superficiale rispetto alle loro possibilità, poichè ciò che realmente conta nel progetto è la comunicazione tra esse. Vista l'eterogeneità del gruppo, si è deciso di puntare ad un capitolato che impiegasse un minor numero di differenti tecnologie, ma che allo stesso tempo permettesse un utilizzo approfondito e dedicato. Inoltre, l'analisi di mercato e lo studio del comportamento
-degli utenti appaiono come compiti non banali per chi non sia accuratamente
-informato riguardo al settore della sintesi vocale. Per i motivi sopracitati, dunque, questo capitolato è passato in secondo piano rispetto agli altri proposti.
+La varietà delle tecnologie è controbilanciata dall'uso superficiale che se ne farà: queste non saranno sfruttate al massimo delle loro possibilità, poichè ciò che realmente interessa nel progetto è la comunicazione tra esse. Vista l'eterogeneità del gruppo, si è deciso di puntare ad un capitolato che impiegasse un minor numero di differenti tecnologie, ma che allo stesso tempo permettesse un utilizzo approfondito e dedicato. Inoltre, l'analisi di mercato e lo studio del comportamento
+degli utenti appaiono come compiti non banali per chi non abbia esperienza nel settore della sintesi vocale. Per i motivi sopracitati, dunque, questo capitolato è passato in secondo piano rispetto agli altri proposti.
