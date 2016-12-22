@@ -1,0 +1,300 @@
+\newpage
+
+\section{Requisiti Funzionali}
+\subsection{Requisiti Funzionali}
+\begin{longtable}{|c|m{8cm}|c|}
+\caption{Tabella dei requisiti funzionali} \\
+
+\hline
+\thead*{\textbf{Codice Requisito}} &\thead{\textbf{Descrizione}}  &\thead{\textbf{Fonti}} \\
+\hline
+\endhead
+
+\hline
+\endfoot
+\hline
+\endlastfoot
+
+RFD1 & L'utente non autenticato può registrarsi & \makecell*{Capitolato\\UC3} \\
+\hline
+
+RFD1.1 & L'utente non autenticato può inserire il proprio nome & \makecell*{Interno\\UC3.1} \\
+\hline
+RFD1.2 & L'utente non autenticato può inserire il proprio cognome & \makecell*{Interno\\UC3.2} \\
+\hline
+RFD1.3 & L'utente non autenticato può inserire il proprio username & \makecell*{Interno\\UC3.3} \\
+\hline
+RFD1.4 & L'utente non autenticato può inserire la propria email & \makecell*{Interno\\UC3.4} \\
+\hline
+RFD1.5 & L'utente non autenticato può inserire la propria password & \makecell*{Interno\\UC3.5} \\
+\hline
+RFD1.6 & L'utente non autenticato può confermare l'inserimento della propria password & \makecell*{Interno\\UC3.6} \\
+\hline
+RFD1.7 & L'utente non autenticato può confermare i dati inseriti, confermando la propria registrazione & \makecell*{Interno\\UC3.7} \\
+\hline
+RFD1.8 & L'applicazione web mostra un messaggio di errore nel caso la registrazione sia fallita & \makecell*{Interno\\UC3.8} \\
+\hline
+
+RFD2 & L'utente non autenticato può effettuare il login & \makecell*{Capitolato\\UC4} \\
+\hline
+
+RFD2.1 & L'utente non autenticato può effettuare il login base di APIMarket & \makecell*{Capitolato\\UC4\\UC4.1} \\
+\hline
+
+RFD2.1.1 & L'utente non autenticato può inserire uno username o una email & \makecell*{Interno\\UC4.1\\UC4.1.1} \\
+\hline
+RFD2.1.2 & L'utente non autenticato può inserire una password & \makecell*{Interno\\UC4.1\\UC4.1.2} \\
+\hline
+RFD2.1.3 & L'utente non autenticato può confermare i dati inseriti, effettuando il login & \makecell*{Interno\\UC4.1\\UC4.1.3} \\
+\hline
+RFD2.1.4 & L'applicazione web mostra un messaggio di errore nel caso il login sia fallito & \makecell*{Interno\\UC4.1.4} \\
+\hline
+
+RFD2.2 & L'utente non autenticato può inserire effettuare il login tramite Facebook & \makecell*{Interno\\UC4.2} \\
+\hline
+RFD2.3 & L'utente non autenticato può inserire effettuare il login tramite Twitter & \makecell*{Interno\\UC4.3} \\
+\hline
+RFD2.4 & L'utente non autenticato può inserire effettuare il login tramite LinkedIn & \makecell*{Interno\\UC4.4} \\
+\hline
+RFD2.5 & L'utente non autenticato può inserire effettuare il login tramite Google+ & \makecell*{Interno\\UC4.5} \\
+\hline
+
+RFD3 & L'utente non autenticato può recuperare la propria password & \makecell*{Interno\\UC5} \\
+\hline
+
+RFD3.1 & L'utente non autenticato può inserire la propria email & \makecell*{Interno\\UC5\\UC5.1} \\
+\hline
+RFD3.2 & L'utente non autenticato può confermare l'email inserita, permettendo all'applicazione web di inviare un'email, contenente la password, a quell'indirizzo & \makecell*{Interno\\UC5\\UC5.2} \\
+\hline
+RFD3.3 & L'applicazione web mostra un messaggio di errore nel caso l'email per il recupero password non sia valida & \makecell*{Interno\\UC5.3} \\
+\hline
+
+RFO4 & L'utente autenticato e non possono eseguire la ricerca sulle API sulla base dell'inserimento di alcuni parametri & \makecell*{Capitolato\\UC6} \\
+\hline
+
+RFO4.1 & L'utente autenticato e non possono inserire una stringa di ricerca sul nome delle API & \makecell*{Capitolato\\UC6\\UC6.1} \\
+\hline
+RFO4.2 & L'utente autenticato e non possono inserire una stringa di ricerca sul nome di un utente APIMarket & \makecell*{Capitolato\\UC6\\UC6.2} \\
+\hline
+RFO4.3 & L'utente autenticato e non possono scegliere una categoria di API & \makecell*{Interno\\UC6\\UC6.3} \\
+\hline
+RFO4.4 & L'utente autenticato può applicare il filtro sulle proprie API  & \makecell*{Interno\\UC6\\UC6.4} \\
+\hline
+RFO4.5 & L'utente autenticato e non possono confermare i parametri di ricerca scelti & \makecell*{Capitolato\\UC6\\UC6.5} \\
+\hline
+RFO4.6 & L'utente autenticato e non possono visualizzare i risultati ottenuti dall'applicazione web, dopo aver confermato i parametri di ricerca scelti & \makecell*{Capitolato\\UC6\\UC6.7} \\
+\hline
+RFO4.7 & L'applicazione web mostra un messaggio di errore nel caso la ricerca API sia fallita & \makecell*{Interno\\UC6\\UC6.6} \\
+\hline
+
+RFD5 & L'utente autenticato e l'amministratore APIMarket possono visualizzare il proprio profilo utente & \makecell*{Capitolato\\UC7\\UC7.2} \\
+\hline
+
+RFD5.1 & L'utente autenticato e l'amministratore APIMarket possono visualizzare le proprie informazioni personali & \makecell*{Capitolato\\UC7.2\\UC7.2.3} \\
+\hline
+
+RFD6 & L'utente autenticato e l'amministratore APIMarket possono gestire il proprio profilo utente & \makecell*{Capitolato\\UC7\\UC7.1} \\
+\hline
+
+RFD6.1 & L'utente autenticato e l'amministratore APIMarket possono modificare il proprio nome & \makecell*{Capitolato\\UC7.1.1} \\
+\hline
+RFD6.2 & L'utente autenticato e l'amministratore APIMarket possono modificare il proprio cognome & \makecell*{Capitolato\\UC7.1.2} \\
+\hline
+RFD6.3 & L'utente autenticato e l'amministratore APIMarket possono modificare il proprio username & \makecell*{Capitolato\\UC7.1.3} \\
+\hline
+RFD6.4 & L'utente autenticato e l'amministratore APIMarket possono modificare la propria foto utente & \makecell*{Capitolato\\UC7.1.4} \\
+\hline
+RFD6.5 & L'utente autenticato e l'amministratore APIMarket possono modificare la propria email & \makecell*{Capitolato\\UC7.1.5} \\
+\hline
+RFD6.6 & L'utente autenticato e l'amministratore APIMarket possono modificare la propria password & \makecell*{Capitolato\\UC7.1.6} \\
+\hline
+RFD6.7 & L'utente autenticato e l'amministratore APIMarket possono confermare le proprie modifiche & \makecell*{Capitolato\\UC7.1.7} \\
+\hline
+RFD6.8 & L'applicazione web mostra un messaggio di errore nel caso le modifiche all'account utente siano fallite & \makecell*{Capitolato\\UC7.1.8} \\
+\hline
+RFD6.9 & L'utente autenticato e l'amministratore APIMarket possono eliminare il proprio account utente & \makecell*{Interno\\UC7.1.9} \\
+\hline
+RFD6.10 & L'applicazione web mostra un messaggio di errore nel caso la cancellazione del proprio account utente sia fallita & \makecell*{Interno\\UC7.1.10} \\
+\hline
+
+RFO7 & L'utente autenticato e l'amministratore APIMarket possono consultare la documentazione di una API & \makecell*{Capitolato\\UC8.1} \\
+\hline
+
+RFO7.1 & L'utente autenticato e l'amministratore APIMarket possono consultare la documentazione di una API versione PDF & \makecell*{Capitolato\\UC8.1\\UC8.1.1} \\
+\hline
+RFD7.2 & L'utente autenticato e l'amministratore APIMarket possono consultare la documentazione di una API versione Web & \makecell*{Interno\\UC8.1\\UC8.1.2} \\
+\hline
+
+RFO8 & L'utente autenticato e l'amministratore APIMarket possono acquistare una API & \makecell*{Capitolato\\UC8.2} \\
+\hline
+
+RFO8.1 & L'utente autenticato e l'amministratore APIMarket possono scegliere un piano d'acquisto per una API & \makecell*{Capitolato\\UC8.2\\UC8.2.1} \\
+\hline
+
+RFO8.1.1 & L'utente autenticato e l'amministratore APIMarket possono scegliere il rinnovo in base al numero di accessi & \makecell*{Capitolato\\UC8.2\\UC8.2.1} \\
+\hline
+RFO8.1.2 & L'utente autenticato e l'amministratore APIMarket possono scegliere il rinnovo in base al tempo di utilizzo & \makecell*{Capitolato\\UC8.2\\UC8.2.1} \\
+\hline
+
+RFO8.2 & L'utente autenticato e l'amministratore APIMarket possono scegliere una modalità d'acquisto per una API & \makecell*{Capitolato\\UC8.2\\UC8.2.2} \\
+\hline
+
+RFO8.2.1 & L'utente autenticato e l'amministratore APIMarket possono scegliere la modalità di acquisto tramite carta di credito & \makecell*{Capitolato\\UC8.2\\UC8.2.2} \\
+\hline
+
+RFO8.3 & L'utente autenticato e l'amministratore APIMarket possono confermare i dati immessi per l'acquisto di una API & \makecell*{Capitolato\\UC8.2\\UC8.2.3} \\
+\hline
+RFO8.4 & L'utente autenticato e l'amministratore APIMarket possono effettuare il pagamento tramite una piattaforma esterna, in base alla modalità d'acquisto scelta & \makecell*{Capitolato\\UC8.2\\UC8.2.4} \\
+\hline
+
+RFO8.4.1 & L'utente autenticato e l'amministratore APIMarket possono effettuare il pagamento tramite carta di credito & \makecell*{Capitolato\\UC8.2\\UC8.2.4} \\
+\hline
+
+RFO8.5 & L'utente autenticato e l'amministratore APIMarket possono effettuare il pagamento tramite APIMarket & \makecell*{Capitolato\\UC8.2\\UC8.2.5} \\
+\hline
+RFD8.6 & L'applicazione web mostra un messaggio di conferma dell'avvenuto acquisto & \makecell*{Capitolato\\UC8.2\\UC8.2.6} \\
+\hline
+RFD8.7 & L'applicazione web mostra un messaggio di errore nel caso l'acquisto sia fallito & \makecell*{Capitolato\\UC8.2\\UC8.2.7} \\
+\hline
+RFD8.8 & L'applicazione web crea e consegna una chiave API per validare l'API acquistata all'acquirente & \makecell*{Capitolato\\UC8.2\\UC8.2.8} \\
+\hline
+
+RFD9 & L'utente autenticato e l'amministratore APIMarket possono gestire le API acquistate & \makecell*{Interna\\UC9} \\
+\hline
+
+RFD9.1 & L'utente autenticato e l'amministratore APIMarket possono visualizzare i dati riguardanti il rinnovo automatico di una API & \makecell*{Interna\\UC9.1.1} \\
+\hline
+RFD9.2 & L'utente autenticato e l'amministratore APIMarket possono annullare il rinnovo automatico di una API & \makecell*{Interna\\UC9.1.2} \\
+\hline
+RFD9.3 & L'utente autenticato e l'amministratore APIMarket possono rimuovere una API dalle API acquistate & \makecell*{Interna\\UC9.3} \\
+\hline
+RFD9.4 & L'utente autenticato e l'amministratore APIMarket possono visualizzare la scadenza di una chiave API & \makecell*{Interna\\UC9.4} \\
+\hline
+
+RFO10 & L'utente autenticato e l'amministratore APIMarket possono gestire le API registrate & \makecell*{Interna\\UC10} \\
+\hline
+
+RFD10.1 & L'utente autenticato e l'amministratore APIMarket possono rimuovere una propria API da APIMarket & \makecell*{Interna\\UC10.1} \\
+\hline
+
+RFD10.1.1 & L'applicazione web manda un messaggio di notifica della cancellazione di una API & \makecell*{Interna\\UC10.4} \\
+\hline
+RFD10.1.2 & L'applicazione web mostra un messaggio di errore nel caso la cancellazione di una propria API sia fallita & \makecell*{Interna\\UC10.5} \\
+\hline
+
+RFO10.2 & L'utente autenticato e l'amministratore APIMarket possono modificare la documentazione di una propria API & \makecell*{Interna\\UC10.2.1} \\
+\hline
+RFO10.3 & L'utente autenticato e l'amministratore APIMarket possono modificare l'interfaccia di una propria API & \makecell*{Interna\\UC10.2.2} \\
+\hline
+RFO10.4 & L'utente autenticato e l'amministratore APIMarket possono confermare le modifiche ad una propria API & \makecell*{Interna\\UC10.2.3} \\
+\hline
+RFO10.5 & L'applicazione web mostra un messaggio di errore nel caso le modifiche alla propria API siano fallite & \makecell*{Interna\\UC10.2.4} \\
+\hline
+RFO10.6 & L'utente autenticato e l'amministratore APIMarket possono visualizzare i dati di utilizzo di una propria API & \makecell*{Capitolato\\UC10.3} \\
+\hline
+
+RFO11 & L'utente autenticato e l'amministratore APIMarket possono registrare una nuova API & \makecell*{Capitolato\\UC11} \\
+\hline
+
+RFO11.1 & L'utente autenticato e l'amministratore APIMarket possono inserire la documentazione di una nuova API & \makecell*{Capitolato\\UC11\\UC11.1} \\
+\hline
+
+RFO11.1.1 & L'utente autenticato e l'amministratore APIMarket possono inserire la documentazione PDF di una nuova API & \makecell*{Capitolato\\UC11\\UC11.1.1} \\
+\hline
+RFD11.1.2 & L'utente autenticato e l'amministratore APIMarket possono inserire la documentazione Web di una nuova API & \makecell*{Interno\\UC11\\UC11.1.2} \\
+\hline
+
+RFO11.2 & L'utente autenticato e l'amministratore APIMarket possono registrare l'interfaccia di una nuova API & \makecell*{Capitolato\\UC11\\UC11.2} \\
+\hline
+
+RFO11.3 & L'utente autenticato e l'amministratore APIMarket possono confermare la registrazione di una nuova API & \makecell*{Capitolato\\UC1\\UC11.3} \\
+\hline
+RFO11.4 & L'applicazione web mostra un messaggio di errore nel caso la registrazione di una propria API sia fallita & \makecell*{Capitolato\\UC11\\UC11.4} \\
+\hline
+
+RFD12 & L'utente autenticato e l'amministratore APIMarket possono effettuare il logout & \makecell*{Capitolato\\UC12} \\
+\hline
+
+RFD12.1 & L'utente autenticato e l'amministratore APIMarket possono confermare il logout & \makecell*{Capitolato\\UC12\\UC12.1} \\
+\hline
+
+RFD13 & L'amministratore APIMarket può visualizzare i dati di utilizzo riservati di tutte le API & \makecell*{Interno\\UC13} \\
+\hline
+
+RFD13.1 & L'amministratore APIMarket può visualizzare il numero di utenti acquirenti di una API & \makecell*{Interno\\UC13\\UC13.1} \\
+\hline
+RFD13.2 & L'amministratore APIMarket può visualizzare i tempi di utilizzo di una API & \makecell*{Interno\\UC13\\UC13.2} \\
+\hline
+
+RFD14 & L'amministratore APIMarket può amministrare l'applicazione web & \makecell*{Interno\\UC14} \\
+\hline
+
+\end{longtable}
+
+\subsection{Requisiti di Qualità}
+\begin{longtable}{|c|m{8cm}|c|}
+\caption{Tabella dei requisiti di qualità} \\
+
+\hline
+\thead*{\textbf{Codice Requisito}} &\thead{\textbf{Descrizione}}  &\thead{\textbf{Fonti}} \\
+\hline
+\endhead
+
+\hline
+\endfoot
+\hline
+\endlastfoot
+
+RQO1 & Per ogni servizio, deve essere fornita la descrizione di ogni servizio e delle singole API, l'interfaccia delle API, lo schema design relativo all'eventuale base di dati associata & \makecell*{Capitolato} \\
+\hline
+
+RQO2 & Deve essere fornito il sequence chart diagram delle interazioni che prevedono il coinvolgimento di più microservizi & \makecell*{Capitolato} \\
+\hline
+
+RQO3 & Devono essere forniti gli algoritmi delle policy per l'utilizzo delle API & \makecell*{Capitolato} \\
+\hline
+
+RQO4 & Deve essere fornito l'algoritmo di generazione delle API key & \makecell*{Capitolato} \\
+\hline
+
+RQO5 & L'applicazione web deve superare i test forniti da ItalianaSoftware & \makecell*{Capitolato} \\
+\hline
+
+\end{longtable}
+
+\subsection{Requisiti di Vincolo}
+\begin{longtable}{|c|m{8cm}|c|}
+\caption{Tabella dei requisiti di vincolo} \\
+
+\hline
+\thead*{\textbf{Codice Requisito}} &\thead{\textbf{Descrizione}}  &\thead{\textbf{Fonti}} \\
+\hline
+\endhead
+
+\hline
+\endfoot
+\hline
+\endlastfoot
+
+RVO1 & Il sistema deve avere un'architettura a servizi & \makecell*{Capitolato} \\
+\hline
+
+RVO2 &  Nel caso di più gruppi per questo progetto, le specifiche di design iniziali dovranno essere condivise fra tutti i partecipanti al fine di rendere il progetto finale integrabile ed omogeneo & \makecell*{Capitolato} \\
+\hline
+
+RVD3 & Si suggerisce di utilizzare Jolie per le interfacce dei servizi e per l'API gateway &\makecell*{Capitolato} \\
+\hline
+
+RVD4 & Le componenti web possono essere realizzate utilizzando Javascript, HTML, css3 &\makecell*{Capitolato} \\
+\hline
+
+RVD5 & Come database possono essere utilizzati sia NoSQL che SQL &\makecell*{Capitolato} \\
+\hline
+
+RVO6 & Il codice finale deve essere depositato su una repository git &\makecell*{Capitolato} \\
+\hline
+
+RVO7 & Deve essere stilato breve report tecnico che evidenzi gli aspetti positivi e gli aspetti negativi di un'architettura a microservizi  &\makecell*{Capitolato} \\
+\hline
+
+\end{longtable}
