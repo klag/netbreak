@@ -1,3 +1,93 @@
 \newpage
+
 \section{Pianificazione}
-Testo
+La Pianificazione è un'attività essenziale per ottenere la massima efficacia ed efficienza nel lavoro richiesto dal progetto. Il team\ped{G} \gruppo\ ha scelto di suddividere il carico di lavoro nei seguenti periodi:
+\begin{itemize}
+	\item \textbf{\AR};
+	\item \textbf{\PA};
+	\item \textbf{\PD};
+	\item \textbf{\CO};
+	\item \textbf{\VV}.
+\end{itemize}
+Per ognuno di questi periodi, vengono messe in evidenza, attraverso un \textbf{diagramma di  Gantt\ped{G}}, le principali attività richieste. Ogni attività, a sua volta, può essere suddivisa in una o più sotto-attività e fare riferimento ad una o più risorse. I diagrammi di Gantt\ped{G} permettono di rappresentare le varie dipendenze tra attività e sotto-attività, grazie all’uso di semplici frecce, e le relative risorse impiegate per ognuna di esse. La rappresentazione temporale delle attività nel diagramma di Gantt\ped{G} avviene mediante delle frecce direzionate verso il basso. In un diagramma di Gantt\ped{G}, inoltre, è possibile rappresentare delle milestone\ped{G}, tramite dei rombi neri. Una milestone\ped{G} può essere:
+\begin{itemize}
+	\item \textbf{Esterna}, se coincide con le date di consegna dei documenti stabilite;
+	\item \textbf{Interna}, se rappresenta un punto di revisione stabilito dal team\ped{G}.
+\end{itemize}
+Una milestone\ped{G}, quindi, coincide con la terminazione di un periodo, ed occorre fare attenzione a non causare dei ritardi su un'attività, poichè essi provocano lo slittamento temporale di tutte le attività ad essa collegate.
+\\\\
+Nei diagrammi di Gantt\ped{G}, le sotto-attività possono essere di due tipi:
+\begin{itemize}
+	\item \textbf{Primarie}: sono necessarie per la realizzazione del progetto nei tempi prestabiliti e rispetto alla milestone\ped{G} fissata. Tutte le attività di questo tipo vengono rappresentate all’interno del diagramma di Gantt\ped{G} con il colore \textbf{rosso};
+	\item \textbf{Secondarie}: possono essere svolte in modo parallelo alle sotto-attività primarie. A differenza di quest'ultime, dei ritardi in attività di questo tipo, non comportano uno slittamento temporale dell'intero progetto. Tutte le attività di questo tipo vengono rappresentate all’interno del diagramma di Gantt\ped{G} con il colore \textbf{blu}.
+\end{itemize}
+
+	\subsection{Suddivisione delle attività}
+		\subsubsection{\AR}
+		\textbf{Periodo}: dal 2016-12-02 al 2017-01-10.\\
+		Il periodo inizia con la formazione del gruppo e termina con la consegna dei documenti richiesti per la \RR. Essa, infatti, richiede i seguenti documenti:
+		\begin{itemize}
+			\item \textbf{\NdP}: testo;
+			\item \textbf{\SdF}: testo;
+			\item \textbf{\AdR}: testo;
+			\item \textbf{\PdP}: testo;
+			\item \textbf{\PdQ}: testo;
+			\item \textbf{\G}: testo;
+			\item \textbf{\LdP}: testo.
+		\end{itemize}
+		I ruoli maggiormente interessati in questa fase, per la produzione dei documenti citati, sono: \Amm, \Res, \Ana\ e \Ver.
+		
+		\subsubsection{\PA}
+		\textbf{Periodo}: dal 2017-01-25 al 2017-MM-DD.\\
+		Il periodo di \PA\ inizia immediatamente dopo l'\AR\ e termina con una milestone\ped{G} interna di \RPMin. Nell'arco di questo periodo è necessario effettuare la progettazione ad alto livello del sistema. Inoltre, si richiede di svolgere le seguenti attività:
+		\begin{itemize}
+			\item \textit{\ST}: documento che interessa prevalentemente il \Prog\ del team. In esso vengono specificate:
+			\begin{itemize}
+				\item scelte progettuali di alto livello prese;
+				\item design pattern\ped{G} scelti per la realizzazione del prodotto;
+				\item architettura generale del software.
+			\end{itemize}
+			\item Migliorare i documenti \NdP, \PdP, \PdQ\ e \G;
+			\item Verificare e approvare tutti i documenti modificati.
+		\end{itemize}
+		I ruoli maggiormente interessati in questo periodo sono: \Amm, \Res, \Prog\ e \Ver.
+	
+		\subsubsection{\PD}
+		\textbf{Periodo}: dal 2017-MM-DD al 2017-MM-DD.\\
+		Il periodo di \PD\ inizia dopo quello di \PA\ e termina con la consegna dei documenti previsiti dalla \RP. Questo periodo prevede la stesura dettagliata dell’intero sistema, specificando approfonditamente
+		il comportamento e l’interazione tra i vari componenti.
+		Inoltre, prevede lo svolgimento delle seguenti attività:
+		\begin{itemize}
+			\item \textit{\DDP}: documento di responsabilità del \Prog, il quale ha il compito di descrivere il comportamento	e le interazioni tra i vari componenti del sistema, basandosi sul documento di \ST;
+			\item  Migliorare i documenti \NdP, \PdP, \PdQ, \ST\ e \G;
+			\item Verificare e approvare tutti i documenti modificati.
+		\end{itemize}
+		I ruoli maggiormente interessati in questo periodo sono: \Amm, \Res, \Prog\ e \Ver.
+		
+		\subsubsection{\CO}
+		\textbf{Periodo}: dal 2017-MM-DD al 2017-MM-DD.\\
+		Il periodo di \CO\ è successivo alla \PD\ e si conclude con la consegna	del prodotto per la \RQ. Questo periodo ha l'obiettivo di fornire un prodotto qualificato, grazie allo svolgimento delle seguenti attività:
+		\begin{itemize}
+			\item \textbf{Codifica}: i \Progrs\ hanno il compito di sviluppare il codice del prodotto software progettato nelle precedenti fasi e descritto nel documento \DDP. L’attività di \CO prevede due cicli incrementali per: il miglioramento
+			di parti del sistema già esistenti e funzionanti, e l’aggiunta di nuove funzionalità al sistema stesso.
+			Ogni incremento prevede tre attività:
+			\begin{itemize}
+				\item Progettazione dell’incremento da parte dei \Progs;
+				\item Codifica da parte dei \Progrs dell’incremento progettato;
+				\item Verifica dell’incremento effettuato.
+			\end{itemize};
+			\item \textit{\MU}: documento che descrive le linee guida per il corretto utilizzo del prodotto. Esso è destinato all’utilizzatore finale/cliente;
+			\item  Migliorare i documenti \NdP, \PdP, \PdQ\ e \G;
+			\item Verificare e approvare tutti i documenti modificati.
+		\end{itemize}
+		I ruoli maggiormente interessati in questo periodo sono: \Amm, \Res, \Prog, \Progr\ e \Ver.
+		
+		\subsubsection{\VV}
+		\textbf{Periodo}: dal 2017-MM-DD al 2017-MM-DD.\\
+		Il periodo di \VV\ inizia dopo quello di \CO\ e termina con la consegna del prodotto finale alla \RA. Questo periodo ha lo scopo di effettuare tutti i test necessari a garantire che il prodotto sia conforme alla attese e soddisfi tutti i requisiti concordati in fase di \AdR. Le attività previste sono:
+		\begin{itemize}
+			\item Effettuare i test di sistema\ped{G};
+			\item Migliorare i documenti \NdP, \PdP, \PdQ, \G\ e \MU;
+			\item Verificare e approvare tutti i documenti modificati.
+		\end{itemize}
+			I ruoli maggiormente interessati in questo periodo sono: \Res, \Prog\ e \Ver.
