@@ -1,0 +1,39 @@
+% Sostituisco i placeholder registrati con la specifica variabile per il documento corrente. Questa parte iniziale contiene intestazioni e templates.
+
+% Modificare ad ogni modifica e documento
+\newcommand{\documento}{\VE}
+\newcommand{\nomedocumentofisico}{Verbale 1 - 28 novembre 2016.pdf}
+\newcommand{\redazione}{\NS}
+\newcommand{\verifica}{}
+\newcommand{\versione}{}
+\newcommand{\approvazione}{\AS}
+\newcommand{\uso}{Interno}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \gruppo}
+\newcommand{\datacreazione}{29 novembre 2016}
+\newcommand{\datamodifica}{30 novembre 2016}
+\newcommand{\stato}{Approvato}
+
+%Abilitazione indice delle tabelle e figure
+\def\TABELLE{false}
+\def\FIGURE{false}
+
+%Inclusione di layout e variabili (Non modificare)
+\input{../../template/layoutDocumento.tex}
+\input{../../template/comandiVeloci.tex}
+
+
+%Imposto la profondità degli indici
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+
+\begin{document}
+
+%Inclusione del template per la homepage (Non modificare)
+\input{../../template/homepage.tex}
+
+%Inclusione delle varie sezioni di contenuto
+%Introduzione e contenuti di ogni tipo
+
+\input{riassunto.tex}
+
+\end{document}
