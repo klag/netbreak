@@ -1,16 +1,16 @@
-\subsubsection{Caso d'uso UC3.8:  Visualizza Errore Registrazione}
+\subsubsection{Caso d'uso UC3.8:  Registrazione fallita}
 \label{UC3_8}
 
 \begin{longtable}{ l | p{11cm}}
 	\hline
 	\rowcolor{Gray}
-	 \multicolumn{2}{c}{UC3.8 - Visualizza Errore Registrazione} \\
+	 \multicolumn{2}{c}{UC3.8 - Registrazione fallita} \\
 	 \hline
-	\textbf{Attori} & Utente Non Autenticato \\
-	\textbf{Descrizione} & L'utente non autenticato visualizza un messaggio d'errore circa la sua registrazione  \\
-	\textbf{Pre-Condizioni} & L'utente ha scelto di registrarsi e inserito dati errati di registrazione \\
-	\textbf{Post-Condizioni} & L'utente visualizza un messaggio d'errore \\
+	\textbf{Attori} & Utente non autenticato \\
+	\textbf{Descrizione} & L'attore non si è registrato con successo  \\
+	\textbf{Pre-Condizioni} & L'attore ha confermato i dati inseriti \\
+	\textbf{Post-Condizioni} & L'attore visualizza i campi dati errati con relativo suggerimento \\
 	\textbf{Scenario Principale} & \begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'utente non autenticato Visualizza un Errore di Registrazione (UC3.1)
+		\item L'attore visualizza i campi dati che non soddisfano i criteri richiesti dalla piattaforma (E.g: Campi dati vuoti, caratteri speciali, username o email già presente etc.)
 	\end{enumerate*}\\
 \end{longtable}
