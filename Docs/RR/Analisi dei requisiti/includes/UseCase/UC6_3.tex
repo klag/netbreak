@@ -1,17 +1,19 @@
-\subsubsection{Caso d'uso UC6.3:  Scelta Categoria}
+\subsubsection{Caso d'uso UC6.3: Visualizza risultati}
 \label{UC6_3}
 
-\begin{tabular}{ l | p{11cm}}
-	\hline
-	\rowcolor{Gray}
-	 \multicolumn{2}{c}{UC6.3 - Scelta Categoria} \\
-	 \hline
-	\textbf{Attori} & Utente Non Autenticato, Utente Autenticato \\
-	\textbf{Descrizione} & Gli utenti possono effettuare una ricerca delle API usandone la categoria\\
-	\textbf{Pre-Condizioni} & L'utente ha scelto fare una ricerca di API\\
-	\textbf{Post-Condizioni} & L'utente ha inserito il nome della categoria dell'API nella barra di ricerca \\
-	\textbf{Scenario Principale} & 
-	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'utente puo' inserire il Nome della categoria dell'API nella barra di ricerca (UC6.3)
-	\end{enumerate*}\\
-\end{tabular}
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC6.3 - Visualizza risultati} \\
+		\hline
+		\textbf{Attori} & Utente non autenticato, Utente autenticato \\
+		\textbf{Descrizione} & L'attore visualizza i risultati prodotti dalla piattaforma\\
+		\textbf{Pre-Condizioni} & L'attore ha confermato la ricerca\\
+		\textbf{Post-Condizioni} & L'attore visualizza i risultati di ricerca prodotti \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare i risultati della ricerca, che possono essere anche vuoti nel caso di stringhe non consone.
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}

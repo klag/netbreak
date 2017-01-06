@@ -1,17 +1,19 @@
-\subsubsection{Caso d'uso UC6.2:  Inserimento Nome Utente}
+\subsubsection{Caso d'uso UC6.2: Conferma ricerca}
 \label{UC6_2}
 
-\begin{tabular}{ l | p{11cm}}
-	\hline
-	\rowcolor{Gray}
-	 \multicolumn{2}{c}{UC6.2 - Inserimento Nome Utente} \\
-	 \hline
-	\textbf{Attori} & Utente Non Autenticato, Utente Autenticato \\
-	\textbf{Descrizione} & Gli utenti possono effettuare una ricerca delle API usandone il nome dell'Utente che le ha create. Tale utente puo' rappresentare un'azienda\\
-	\textbf{Pre-Condizioni} & L'utente ha scelto fare una ricerca di API\\
-	\textbf{Post-Condizioni} & L'utente ha inserito il nome dell'Utente creatore dell'API nella barra di ricerca \\
-	\textbf{Scenario Principale} & 
-	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'utente puo' inserire il Nome dell'Utente Creatore dell'API nella barra di ricerca (UC6.2)
-	\end{enumerate*}\\
-\end{tabular}
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC6.2 - Conferma ricerca} \\
+		\hline
+		\textbf{Attori} & Utente non autenticato, Utente autenticato \\
+		\textbf{Descrizione} & L'attore conferma la stringa di ricerca inserita per poter visualizzare i risultati\\
+		\textbf{Pre-Condizioni} & L'attore ha inserito una stringa di ricerca\\
+		\textbf{Post-Condizioni} & L'attore ha confermato una stringa per la ricerca \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può confermare una stringa per la ricerca
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
