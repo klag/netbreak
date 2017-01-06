@@ -1,5 +1,5 @@
 \newpage
-\subsection{Caso d'uso UC3:  Registrazione utente }
+\subsection{Caso d'uso UC3: Registrazione utente }
 \label{UC3}
 \begin{figure}[ht]
 	\centering
@@ -13,18 +13,20 @@
 	 \multicolumn{2}{c}{UC3 - Registrazione utente} \\
 	 \hline
 	\textbf{Attori} & Utente non autenticato \\
-	\textbf{Descrizione} & L'attore inserisce le sue informazioni personali per potersi registrare all'applicazione web, così da poter successivamente effettuare il login ed evolversi in un utente autenticato.
-	L'amministratore API Market, oltre alle funzionalità offerte all'utente autenticato, può
-	visualizzare i dati di utilizzo delle API ed amministrare l'applicazione web.  \\
+	\textbf{Descrizione} & L'attore inserisce le sue informazioni personali per potersi registrare all'applicazione web, così da poter successivamente effettuare il login ed evolversi in un utente autenticato. \\
 	\textbf{Pre-Condizioni} & L'attore ha scelto di registrarsi e l'applicazione web mostra la schermata di registrazione \\
 	\textbf{Post-Condizioni} & L'attore si è registrato all'applicazione web \\
 	\textbf{Scenario Principale} & \begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
 		\item L'attore può inserire il proprio nome (UC3.1)
 		\item L'attore può inserire il proprio cognome (UC3.2)
-		\item L'attore può inserire il proprio username (UC3.3)
+		\item L'attore può inserire lo username desiderato (UC3.3)
 		\item L'attore può inserire la propria email (UC3.4) 
-		\item L'attore può inserire la propria password (UC3.5)
-		\item L'attore può reinserire la propria password per conferma (UC3.6)
-		\item L'attore può confermare i dati inseriti, registrandosi all'applicazione web (UC3.7)
+		\item L'attore può inserire la password desiderata (UC3.5)
+		\item L'attore può reinserire la password desiderata per conferma (UC3.6)
+		\item L'attore può confermare la registrazione (UC3.7)
+	\end{enumerate*}\\
+	\textbf{Scenari Alternativi} & 
+	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+		\item L'attore può visualizzare un messaggio d'errore che segnala i campi dati non validi (UC3.8)
 	\end{enumerate*}\\
 \end{longtable}

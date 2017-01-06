@@ -13,13 +13,13 @@
 	\multicolumn{2}{c}{UC4.5 - Login tramite Google+} \\
 	\hline
 	\textbf{Attori} & Utente non autenticato, Google+ \\
-	\textbf{Descrizione} & L'attore Utente non autenticato effettua il login all'applicazione web tramite Google+, così da evolversi in un utente autenticato\\
-	\textbf{Pre-Condizioni} & L'attore Utente non autenticato ha scelto di eseguire il login all'applicazione web e non è autenticato \\
-	\textbf{Post-Condizioni} & L'attore Utente non autenticato ha effettuato il login all'applicazione web tramite Google+, evolvendosi in un utente autenticato \\
+	\textbf{Descrizione} & L'attore effettua il login all'applicazione web tramite Google+, così da evolversi in un utente autenticato \\
+	\textbf{Pre-Condizioni} & L'attore ha scelto di eseguire il login all'applicazione web tramite Google+ (e non è autenticato) \\
+	\textbf{Post-Condizioni} & L'attore ha effettuato il login all'applicazione web tramite Google+, evolvendosi in un utente autenticato \\
 	\textbf{Scenario Principale} & \begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore effettua il login con successo tramite Google+, evolvendosi in un Utente autenticato (UC2)
+		\item L'attore può effettuare con successo il login tramite Google+ (UC4.5.1), visualizzando un messaggio di successo, e venendo reindirizzato alla pagina principale evolvendosi in un utente autenticato (UC2)
 	\end{enumerate*}\\
 	\textbf{Scenari Alternativi} & \begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore ha fallito il login tramite Google+ (E.g: Mancanza di privilegi e autorizzazioni, utente non loggato correttamente a Google+)
+	\item L'attore ha fallito il login tramite Google+ (E.g: Mancanza di privilegi/autorizzazioni, utente non correttamente loggato a Google+...) e visualizza un messaggio d'errore (4.5.2)
 	\end{enumerate*}\\
 \end{tabular}
