@@ -457,3 +457,45 @@
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
+
+\paragraph{Caso d'uso UC12.2.3: Prelievo dal saldo}
+\label{UC12_2_3}
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC12.2.3 - Prelievo dal saldo} \\
+		\hline
+		\textbf{Attori} & Utente autenticato \\
+		\textbf{Descrizione} & L'attore può prelevare una somma di denaro dal saldo del proprio account e trasferirlo su un conto PayPal specificato\\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di prelievo dal saldo\\
+		\textbf{Post-Condizioni} & L'attore ha prelevato una certa somma dal proprio credito attuale \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può prelevare una somma dal saldo corrente relativo al proprio account, se questa supera la soglia stabilita dalla piattaforma, e trasferirli direttamente su un conto PayPal da lui specificato (UC12.2.3.1)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC12.2.3.1: Trasferimento saldo su conto PayPal esterno}
+\label{UC12_2_3_1}
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC12.2.3.1 - Trasferimento saldo su conto PayPal esterno} \\
+		\hline
+		\textbf{Attori} & Utente autenticato \\
+		\textbf{Descrizione} & L'attore trasferisce una somma di denaro prelevata dal saldo del proprio account su un conto PayPal specificato\\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di trasferimento somma dal saldo\\
+		\textbf{Post-Condizioni} & L'attore ha trasferito su un conto PayPal esterno una certa somma prelevata dal credito del proprio saldo \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può indicare i dati relativi al conto PayPal esterno su cui intende trasferire la somma massima stabilita dalla piattaforma
+		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio d'errore che segnala l'esito negativo del trasferimento di denaro sul conto PayPal indicato
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
