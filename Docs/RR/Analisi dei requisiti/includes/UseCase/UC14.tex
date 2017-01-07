@@ -1,25 +1,25 @@
 \newpage
-\subsection{Caso d'uso UC14: Amministrazione Applicazione Web}
+\subsection{Caso d'uso UC14: Amministrazione applicazione web}
 \label{UC14}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/UC14.png}
-	\caption{UC13: Visualizzazione Dati Utilizzo API}
+	\caption{UC13: Amministrazione applicazione web}
 \end{figure}
 
 \renewcommand*{\arraystretch}{1.6}
 \begin{longtable}{ l | p{11cm}}
 	\hline
 	\rowcolor{Gray}
-	\multicolumn{2}{c}{UC14: Amministrazione Applicazione Web} \\
+	\multicolumn{2}{c}{UC14: Amministrazione applicazione web} \\
 	\hline
-	\textbf{Attori} &Utente Autenticato, Amministratore APIMarket \\
-	\textbf{Descrizione} &l''attore visualizza i dati dell'utilizzo delle API in APIMarket \\
-	\textbf{Pre-Condizioni} &   l'attore ha scelto di visualizzare i dati dell'utilizzo delle API in APIMarket\\
-	\textbf{Post-Condizioni}& l'attore ha visualizzato i dati dell'utilizzo delle API in APIMarket\\
+	\textbf{Attori} & Amministratore API Market \\
+	\textbf{Descrizione} & L'attore può gestire la parte riservata della piattaforma, ed effettuare operazioni super-user su utenza, prodotti registrati e sulla piattaforma stessa \\
+	\textbf{Pre-Condizioni} & L'attore visita la pagina relativa all'amministrazione della piattaforma API Market\\
+	\textbf{Post-Condizioni}& L'attore ha effettuato le modifiche desiderate, o ha consultato i dati desiderati, all'interno della piattaforma\\
 	\textbf{Scenario Principale} & \begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore può visualizzare il numero di utenti che hanno acquistato una API (UC13.1)
-		\item L'attore può registrare l'interfaccia della propria nuova API (UC13.2)
+		\item L'attore può consultare i dati di utilizzo avanzati per un API
+		\item L'attore può moderare l'utenza predisponendo sospensioni o cancellazioni
 	\end{enumerate*}\\
 \end{longtable}
 
