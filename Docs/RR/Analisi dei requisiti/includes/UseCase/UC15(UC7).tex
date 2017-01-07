@@ -26,11 +26,12 @@
 		\item L'attore può visualizzare l'interfaccia dell'API (UC7.5)
 		\item L'attore può consultare la documentazione fornita dall'utente (UC7.6)
 		\item L'attore può visualizzare i dati di utilizzo dell'API  (UC7.7)
+		\item L'attore visualizza il prezzo dell'API (UC7.8)
 		\item L'attore può acquistare l'API visualizzata (UC9)
 	\end{enumerate*}\\
 	\textbf{Scenari Alternativi} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore possiede una licenza attiva per il prodotto, e può visualizzarne la chiave personale di utilizzo (UC7.8)
+		\item L'attore possiede una licenza attiva per il prodotto, e può visualizzarne la chiave personale di utilizzo (UC7.9)
 	\end{enumerate*}\\
 \end{longtable}
 
@@ -310,11 +311,31 @@
 		\hline
 		\textbf{Attori} & Utente autenticato \\
 		\textbf{Descrizione} & L'attore visualizza la propria chiave di utilizzo per l'API\\
-		\textbf{Pre-Condizioni} & L'attore ha selezionato un API per poterla visualizzare e possiede una licenza attualmente attiva\\
+		\textbf{Pre-Condizioni} & L'attore possiede una licenza attualmente attiva per l'API in questione\\
 		\textbf{Post-Condizioni} & L'attore visualizza la propria chiave API \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
 			\item L'attore può visualizzare la propria chiave API personale
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subsubsection{Caso d'uso UC7.9: Visualizzazione prezzo API}
+\label{UC7_9}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC7.9 - Visualizzazione prezzo API} \\
+		\hline
+		\textbf{Attori} & Utente non autenticato, Utente autenticato \\
+		\textbf{Descrizione} & L'attore visualizza il prezzo dell'API selezionata\\
+		\textbf{Pre-Condizioni} & L'attore ha selezionato un API per poterla visualizzare\\
+		\textbf{Post-Condizioni} & L'attore visualizza il prezzo per l'API selezionata \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare il prezzo per l'API nella pagina corrente
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
