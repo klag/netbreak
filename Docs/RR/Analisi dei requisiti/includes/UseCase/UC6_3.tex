@@ -1,19 +1,23 @@
-\subsubsection{Caso d'uso UC6.3: Visualizza risultati}
+\subsubsection{Caso d'uso UC6.3: Visualizzazione risultati}
 \label{UC6_3}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC6.3 - Visualizza risultati} \\
+		\multicolumn{2}{c}{UC6.3 - Visualizzazione risultati} \\
 		\hline
-		\textbf{Attori} & Utente non autenticato, Utente autenticato \\
+		\textbf{Attori} & Utente generico, Utente non autenticato, Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore visualizza i risultati prodotti dalla piattaforma\\
 		\textbf{Pre-Condizioni} & L'attore ha confermato la ricerca\\
 		\textbf{Post-Condizioni} & L'attore visualizza i risultati di ricerca prodotti \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare i risultati della ricerca, che possono essere anche vuoti nel caso di stringhe non consone. L'utente può accedere alla schermata delle singole API (UC7)
+			\item L'attore può visualizzare i risultati della ricerca, che possono essere anche vuoti nel caso di stringhe non consone
 		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+		\item L'attore può accedere alla schermata delle singole API tramite la lista delle API (UC7)
+	\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}

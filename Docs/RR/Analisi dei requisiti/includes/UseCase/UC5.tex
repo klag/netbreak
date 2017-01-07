@@ -13,16 +13,17 @@
 	 \multicolumn{2}{c}{UC5 - Recupero password} \\
 	 \hline
 	\textbf{Attori} & Utente non autenticato \\
-	\textbf{Descrizione} & L'attore tenta il recupero della propria password tramite l'invio di una email \\
-	\textbf{Pre-Condizioni} & L'attore ha scelto di recuperare la sua password e non è autenticato \\
-	\textbf{Post-Condizioni} & L'attore ha ricevuto nella propria casella email un link per reimpostare la propria password, oppure la procedura è fallita \\
+	\textbf{Descrizione} & L'attore recupera la propria password tramite l'invio di una email \\
+	\textbf{Pre-Condizioni} & L'attore ha scelto di recuperare la sua password (e non è autenticato) \\
+	\textbf{Post-Condizioni} & L'attore ha ricevuto nella propria casella email un link per resettare la propria password, oppure la procedura è fallita \\
 	\textbf{Scenario Principale} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore può inserire la propria email di registrazione (UC5.1)
-		\item L'attore può confermare l'indirizzo email inserito, al quale l'applicazione web ha inviato un link per reimpostare la password (UC5.2)
+		\item L'attore può inserire la propria email (UC5.1)
+		\item L'attore può confermare l'indirizzo email inserito, al quale l'applicazione web invierà un link per resettare la password (UC5.2)
 	\end{enumerate*}\\
 	\textbf{Scenari Alternativi} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore visualizza un errore e l'invio della email di recupero password non avviene (UC5.3) 
+		\item L'attore, se ha inserito un'email non valida o inesistente, può visualizzare un messaggio d'errore e l'email di reset password non avviene (UC5.3)
+		\item L'attore, se ha richiesto il recupero della password ed ha aperto il link per poterla resettare, può effettuare il reset password in una apposita schermata (UC5.4)
 	\end{enumerate*}\\
 \end{longtable}
