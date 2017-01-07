@@ -114,22 +114,102 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC11.5: Inserimento nome API}
+\paragraph{Caso d'uso UC11.5: Inserimento link documentazione API}
 \label{UC11_5}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC11.5 - Inserimento nome API} \\
+		\multicolumn{2}{c}{UC11.5 - Inserimento link documentazione API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore inserisce il nome relativo ad una propria API\\
+		\textbf{Descrizione} & L'attore inserisce il link esterno della documentazione relativo ad una propria API\\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per la registrazione di un API\\
-		\textbf{Post-Condizioni} & L'attore ha inserito il nome per l'API da registrare \\
+		\textbf{Post-Condizioni} & L'attore ha inserito il link esterno della documentazione per l'API da registrare \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può inserire il nome dell'API
+			\item L'attore può inserire il link esterno della documentazione per l'API
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC11.6: Inserimento file documentazione API}
+\label{UC11_6}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC11.6 - Inserimento file documentazione API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato \\
+		\textbf{Descrizione} & L'attore carica un file di documentazione relativo ad una propria API\\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per la registrazione di un API\\
+		\textbf{Post-Condizioni} & L'attore ha caricato un file di documentazione per l'API da registrare \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può selezionare un file di documentazione da caricare relativo all'API
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC11.7: Inserimento prezzo base API}
+\label{UC11_7}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC11.7 - Inserimento prezzo base API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato \\
+		\textbf{Descrizione} & L'attore inserisce il prezzo base relativo ad una propria API\\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per la registrazione di un API\\
+		\textbf{Post-Condizioni} & L'attore ha inserito il prezzo base per l'API da registrare \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può inserire il prezzo base per l'API da registrare
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC11.8: Conferma dati inseriti}
+\label{UC11_8}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC11.8 - Conferma dati inserit} \\
+		\hline
+		\textbf{Attori} & Utente autenticato \\
+		\textbf{Descrizione} & L'attore conferma i dati inseriti per la registrazione di un'API\\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per la registrazione di un API\\
+		\textbf{Post-Condizioni} & L'attore ha confermato la registrazione della propria API\\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può confermare l'inserimento di dati e documentazione effettuato, e venir rimandato in caso di successo alla lista delle API da lui registrate (UC10)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC11.9: Errore dati inseriti}
+\label{UC11_9}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC11.9 - Errore dati inserit} \\
+		\hline
+		\textbf{Attori} & Utente autenticato \\
+		\textbf{Descrizione} & L'attore conferma i dati inseriti per la registrazione di un'API ma riceve un errore dalla piattaforma\\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per la registrazione di un API\\
+		\textbf{Post-Condizioni} & L'attore viene notificato dell'errore e può ripetere l'inserimento\\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore riceve un messaggio di errore relativo ai dati inseriti, che indicano con precisione quale campo necessita una correzione. Viene rimandato alla schermata per l'inserimento (UC11)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
