@@ -14,16 +14,16 @@
 	\hline
 	\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 	\textbf{Descrizione} & L'attore visualizza le API da lui registrate \\
-	\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate  \\
+	\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
 	\textbf{Post-Condizioni} & L'attore ha visualizzato le API da lui registrate \\
 	\textbf{Scenario Principale} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore può visualizzare il numero delle API registrate (UC10.1)
-		\item L'attore può visualizzare la lista delle API registrate (UC10.2)
+		\item L'attore può visualizzare il numero delle API da lui registrate (UC10.1)
+		\item L'attore può visualizzare la lista delle API da lui registrate (UC10.2)
 	\end{enumerate*}\\
 	\textbf{Scenari Alternativi} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore può visualizzare i dati relativi ad una singola API (UC7)
+		\item L'attore può visualizzare i dati relativi ad ogni API (UC7)
 	\end{enumerate*}\\
 \end{longtable}
 
@@ -182,14 +182,15 @@
 			\item L'attore può modificare la descrizione dell'API (UC10.2.5.2)
 			\item L'attore può modificare i tag dell'API (UC10.2.5.3)
 			\item L'attore può modificare l'interfaccia dell'API (UC10.2.5.4)
-			\item L'attore può modificare il file di documentazione PDF (UC10.2.5.5)
-			\item L'attore può modificare il link alla documentazione esterna (UC10.2.5.6)
+			\item L'attore può modificare il file per la documentazione PDF (UC10.2.5.5)
+			\item L'attore può modificare il link per la documentazione esterna (UC10.2.5.6)
 			\item L'attore può modificare il prezzo base dell'API (UC10.2.5.7)
 			\item L'attore può confermare la modifica dell'API (UC10.2.5.8)
 		\end{enumerate*}\\
 		\textbf{Scenari Alternativi} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio d'errore informativo e le modifiche non avvengono
+			\item L'attore può visualizzare un messaggio d'errore informativo riguardo la conferma delle modifiche dell'API, e le modifiche non avvengono (UC10.2.5.9)
+			\item L'attore può visualizzare un messaggio di errore riguardo al caricamento del file di documentazione PDF dell'API, ed il caricamento del file non avviene (UC10.2.5.10)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -269,7 +270,7 @@
 		\textbf{Post-Condizioni} & L'attore ha modificato l'interfaccia pubblica dell'API selezionata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può modificare l'interfaccia pubblica dell'API
+			\item L'attore può modificare l'interfaccia dell'API
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -284,16 +285,36 @@
 		\multicolumn{2}{c}{UC10.2.5.5 - Modifica documentazione PDF API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
-		\textbf{Descrizione} & L'attore modifica la documentazione PDF dell'API \\
+		\textbf{Descrizione} & L'attore carica su API Market un file PDF contenente la nuova documentazione PDF dell'API \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla modifica di una API registrata, precedentemente selezionata \\
-		\textbf{Post-Condizioni} & L'attore ha modificato il file di documentazione dell'API selezionata \\
+		\textbf{Post-Condizioni} & L'attore ha caricato su API Market un nuovo file PDF contenente la documentazione PDF dell'API \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può selezionare un nuovo file dalle sue cartelle personali, che verrà caricato alla conferma
+			\item L'attore può caricare su API Market un nuovo file PDF contenente la documentazione PDF dell'API
 		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio di errore ed il caricamento del file non avviene (UC10.2.5.10)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC10.2.5.10: Errore modifica PDF API}
+\label{UC10_2_5_10}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC10.2.5.10 - Errore modifica PDF API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di errore e la modifica della documentazione PDF dell'API non avviene \\
+		\textbf{Pre-Condizioni} & L'attore ha cercato di caricare su API Market un file contenente la documentazione dell'API ma si è verificato un errore \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item Il file selezionato è di un formato non conforme e l'operazione non avviene
+			\item L'attore può visualizzare un messaggio di errore
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -308,12 +329,12 @@
 		\multicolumn{2}{c}{UC10.2.5.6 - Modifica documentazione esterna API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
-		\textbf{Descrizione} & L'attore modifica la documentazione esterna dell'API \\
+		\textbf{Descrizione} & L'attore modifica il link alla documentazione esterna dell'API \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla modifica di una API registrata, precedentemente selezionata \\
-		\textbf{Post-Condizioni} & L'attore ha modificato il link di documentazione esterna dell'API selezionata \\
+		\textbf{Post-Condizioni} & L'attore ha modificato il link alla documentazione esterna dell'API selezionata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può modificare il link di documentazione esterna dell'API
+			\item L'attore può modificare il link alla documentazione esterna dell'API
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -368,12 +389,12 @@
 		\multicolumn{2}{c}{UC10.2.5.9 - Errore modifica API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
-		\textbf{Descrizione} & L'attore visualizza un messaggio di errore e la modifica non avviene \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la modifica dell'API non avviene \\
 		\textbf{Pre-Condizioni} & L'attore ha confermato la modifica di una API ma si è verificato un errore \\
-		\textbf{Post-Condizioni} & L'attore ha visualizzato un errore relativo alla modifica dell'API, con opportuna descrizione \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore informativo \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio di errore e la modifica non avviene
+			\item L'attore può visualizzare un messaggio di errore informativo e la modifica non avviene
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
