@@ -199,5 +199,118 @@
 	\end{tabular}
 \end{minipage}
 
-\newpage
-\textbf{Da fare: UC14.2.3 e sottocasi, UC14.2.4 e sottocasi, UC14.2.5 e sottocasi, UC14.2.2.1, UC14.2.2.2}
+\subparagraph{Caso d'uso UC14.2.2.1: Durata sospensione utente}
+\label{UC14_2_2_1}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.2.2.1 - Durata sospensione utente} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore può indicare quanto deve durare la sospensione per l'utente indicato \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per sospendere un utente\\
+		\textbf{Post-Condizioni} & L'attore ha indicato la durata della sospensione \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può inserire il numero di giorni di durata della sospensione
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC14.2.2.2: Conferma sospensione utente}
+\label{UC14_2_2_2}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.2.2.2 - Conferma sospensione utente} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore può confermare la sospensione indicata \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per sospendere un utente e ha inserito la durata in giorni\\
+		\textbf{Post-Condizioni} & L'attore ha sospeso con successo un utente \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore conferma la scelta e viene notificato dell'avvenuta sospensione
+		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore non ha inserito la durata correttamente e viene notificato dell'errore.
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC14.2.3: Sospensione pagamenti utente}
+\label{UC14_2_3}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.2.3 - Sospensione pagamenti utente} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore può sospendere i prelievi per l'utente indicato \\
+		\textbf{Pre-Condizioni} & L'attore ha inserito il nome utente da sospendere\\
+		\textbf{Post-Condizioni} & L'attore ha sospeso i pagamenti per l'utente selezionato per la risoluzione di eventuali contestazioni \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può confermare la sospensione dei prelievi di denaro di un utente, per risolvere eventuali contestazioni
+		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore viene notificato che l'utente possiede una sospensione già in atto.
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC14.2.4: Revoca sospensione utente}
+\label{UC14_2_4}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.2.4 - Revoca sospensione utente} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore può revocare una sospensione per l'utente indicato \\
+		\textbf{Pre-Condizioni} & L'attore ha inserito il nome utente su cui revocare la sospensione\\
+		\textbf{Post-Condizioni} & L'attore revocato la sospensione per l'utente selezionato \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può revocare una sospensione per un utente
+		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore viene notificato che l'utente selezionato non ha una sospensione in atto
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC14.2.5: Revoca sospensione pagamenti utente}
+\label{UC14_2_5}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.2.5 - Revoca sospensione pagamenti utente} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore può revocare una sospensione di pagamenti per l'utente indicato \\
+		\textbf{Pre-Condizioni} & L'attore ha inserito il nome utente su cui revocare la sospensione dei pagamenti\\
+		\textbf{Post-Condizioni} & L'attore revocato la sospensione per l'utente selezionato in seguito alla risoluzione delle contestazioni in atto \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può revocare una sospensione per un utente
+		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore viene notificato che l'utente selezionato non ha una sospensione dei pagamenti in atto
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
