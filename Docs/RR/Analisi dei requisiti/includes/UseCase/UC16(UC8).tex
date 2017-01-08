@@ -4,7 +4,7 @@
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/UC8.png}
-	\caption{UC8: Visualizzazione API}
+	\caption{UC8: Visualizzazione API acquistate}
 \end{figure}
 
 \begin{longtable}{ l | p{11cm}}
@@ -14,7 +14,7 @@
 	\hline
 	 \textbf{Attori} & Utente autenticato, Amministratore API Market \\
 	\textbf{Descrizione} & L'attore visualizza le API da lui acquistate \\
-	\textbf{Pre-Condizioni} & L'attore ha scelto di visualizzare le API da lui acquistate \\
+	\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui acquistate \\
 	\textbf{Post-Condizioni} & L'attore ha visualizzato le API da lui acquistate \\
 	\textbf{Scenario Principale} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
@@ -38,7 +38,7 @@
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore visualizza il numero di API da lui acquistate \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di visualizzazione API acquistate \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui acquistate \\
 		\textbf{Post-Condizioni} & L'attore ha visualizzato il numero delle API da lui acquistate \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
@@ -64,14 +64,14 @@
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore visualizza la lista delle API da lui acquistate \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di visualizzazione API acquistate \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui acquistate \\
 		\textbf{Post-Condizioni} & L'attore ha visualizzato la lista delle API da lui acquistate \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
 			\item L'attore può visualizzare il nome dell'API (UC8.2.1)
 			\item L'attore può visualizzare il link alla pagina di visualizzazione API (UC8.2.2)
 			\item L'attore può visualizzare il nome dell'autore dell'API (UC8.2.3)
-			\item L'attore può visualizzare la data di scadenza della propria licenza per l'API (UC8.2.4)
+			\item L'attore può visualizzare il parametro di scadenza, in base al contratto,  della propria licenza per l'API (UC8.2.4)
 			\item L'attore può visualizzare la propria chiave per l'API (UC8.2.5)
 		\end{enumerate*}\\
 	\end{tabular}
@@ -88,7 +88,7 @@
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore visualizza nella lista il nome dell'API \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di visualizzazione API acquistate \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui acquistate \\
 		\textbf{Post-Condizioni} & L'attore ha visualizzato nella lista il nome dell'API \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
@@ -128,11 +128,11 @@
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore visualizza nella lista la data di scadenza della propria licenza per l'API \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di visualizzazione API acquistate \\
-		\textbf{Post-Condizioni} & L'attore ha visualizzato nella lista la data di scadenza dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui acquistate \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato nella lista il parametro di scadenza dell'API \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare nella lista la data di scadenza della propria licenza per l'API
+			\item L'attore può visualizzare nella lista il parametro di scadenza della propria licenza per l'API
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -148,7 +148,27 @@
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore visualizza nella lista la propria chiave di utilizzo per l'API \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di visualizzazione API acquistate \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui acquistate \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato nella lista la propria chiave di utilizzo per l'API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare nella lista la propria chiave di utilizzo per l'API
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC8.2.6: Avvertimento eliminazione API}
+\label{UC8_2_6}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC8.2.6 - Avvertimento eliminazione API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza nella lista se l'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui acquistate \\
 		\textbf{Post-Condizioni} & L'attore ha visualizzato nella lista la propria chiave di utilizzo per l'API \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]

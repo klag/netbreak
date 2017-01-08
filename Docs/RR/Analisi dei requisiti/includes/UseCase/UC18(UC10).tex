@@ -12,22 +12,20 @@
 	\rowcolor{Gray}
 	\multicolumn{2}{c}{UC10 - Visualizzazione API registrate}\\
 	\hline
-	
-	 \textbf{Attori} & Utente autenticato  \\
-	\textbf{Descrizione} & L'attore può visualizzare la schermata relativa alle API da lui registrate \\
-	\textbf{Pre-Condizioni} & L'attore seleziona il link per visualizzare le API registrate  \\
-	\textbf{Post-Condizioni} & L'attore visualizza la pagina relativa alle API da lui registrate\\
+	\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+	\textbf{Descrizione} & L'attore visualizza le API da lui registrate \\
+	\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate  \\
+	\textbf{Post-Condizioni} & L'attore ha visualizzato le API da lui registrate \\
 	\textbf{Scenario Principale} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore visualizza il numero di API registrate (UC10.1)
-		\item L'attore visualizza la lista di API registrate (UC10.2)
+		\item L'attore può visualizzare il numero delle API registrate (UC10.1)
+		\item L'attore può visualizzare la lista delle API registrate (UC10.2)
 	\end{enumerate*}\\
 	\textbf{Scenari Alternativi} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore può visualizzare i dati relativi a una singola API (UC7)
+		\item L'attore può visualizzare i dati relativi ad una singola API (UC7)
 	\end{enumerate*}\\
 \end{longtable}
-
 
 \subsubsection{Caso d'uso UC10.1: Visualizzazione numero API registrate}
 \label{UC10_1}
@@ -38,19 +36,25 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC10.1 - Visualizzazione numero API registrate} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore visualizza il numero di API da lui registrate nella schermata relativa\\
-		\textbf{Pre-Condizioni} & L'attore si trova nel menù relativo alle API da lui registrate\\
-		\textbf{Post-Condizioni} & L'attore visualizza il numero di API registrate \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza il numero di API da lui registrate \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato il numero delle API da lui registrate \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare il numero di API da lui registrate nella piattaforma
+			\item L'attore può visualizzare il numero di API da lui registrate
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
+\newpage
 \subsubsection{Caso d'uso UC10.2: Visualizzazione lista API registrate}
 \label{UC10_2}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC10_2.png}
+	\caption{UC10.2: Visualizzazione lista API registrate}
+\end{figure}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
@@ -58,17 +62,17 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC10.2 - Visualizzazione lista API registrate} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore visualizza la lista di API da lui registrate nella schermata relativa\\
-		\textbf{Pre-Condizioni} & L'attore si trova nel menù relativo alle API da lui registrate\\
-		\textbf{Post-Condizioni} & L'attore visualizza la lista di API registrate \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza la lista di ogni API da lui registrata \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato la lista delle API da lui registrate \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore visualizza il nome dell'API (10.2.1)
-			\item L'attore visualizza il link alla pagina dell'API (10.2.2)
-			\item L'attore visualizza il numero di licenze attive (10.2.3)
-			\item L'attore visualizza un pulsante per la modifica dell'API selezionata (10.2.4)
-			\item L'attore visualizza un pulsante per l'eliminazione (10.2.5)
+			\item L'attore può visualizzare il nome di ogni API da lui registrata (UC10.2.1)
+			\item L'attore può visualizzare il link alla pagina di visualizzazione API di ogni API da lui registrata (UC10.2.2)
+			\item L'attore può visualizzare il numero di licenze attive di ogni API da lui registrata (UC10.2.3)
+			\item L'attore può modificare ogni API da lui registrata (UC10.2.4)
+			\item L'attore può eliminare ogni API da lui registrata (UC10.2.5)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -82,13 +86,13 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC10.2.1 - Visualizzazione nome API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore visualizza il nome dell'API\\
-		\textbf{Pre-Condizioni} & L'attore visualizza la lista API nel menù relativo alle API da lui registrate\\
-		\textbf{Post-Condizioni} & L'attore visualizza il nome dell'API nella lista \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza nella lista il nome di ogni API da lui registrata \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato nella lista il nome di ogni API da lui registrata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare il nome dell'API
+			\item L'attore può visualizzare nella lista il nome di ogni API da lui registrata
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -102,13 +106,13 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC10.2.2 - Visualizzazione link API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore visualizza il link dell'API\\
-		\textbf{Pre-Condizioni} & L'attore visualizza la lista API nel menù relativo alle API da lui registrate\\
-		\textbf{Post-Condizioni} & L'attore visualizza il link dell'API nella lista \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza nella lista il link alla visualizzazione di ogni API da lui registrata \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato nella lista il link alla visualizzazione di ogni API da lui registrata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare il link dell'API
+			\item L'attore può visualizzare nella lista il link alla visualizzazione di ogni API da lui registrata
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -122,60 +126,86 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC10.2.3 - Visualizzazione numero licenze attive} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore visualizza il numero di licenze attive per ogni voce della lista\\
-		\textbf{Pre-Condizioni} & L'attore visualizza la lista API nel menù relativo alle API da lui registrate\\
-		\textbf{Post-Condizioni} & L'attore visualizza il numero delle API vendute e attualmente attive \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza nella lista il numero di licenze attive per ogni API da lui registrata \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato nella lista il numero di licenze attive per ogni API da lui registrata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare il numero delle API vendute e attualmente attive
+			\item L'attore può visualizzare nella lista il numero di licenze attive per ogni API da lui registrata
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC10.2.4: Modifica API registrata}
-\label{UC10_2_4}
+\paragraph{Caso d'uso UC10.2.4: Notifica eliminazione API}
+\label{UC10_2_1}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4 - Modifica API registrata} \\
+		\multicolumn{2}{c}{UC10.2.1 - Notifica eliminazione API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore visualizza il menù di modifica per l'API selezionata\\
-		\textbf{Pre-Condizioni} & L'attore preme il pulsante modifica per un API, nel menù relativo alle API da lui registrate\\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & Per ogni API da lui registrata nella lista, l'attore visualizza se questa sia in fase di eliminazione \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
+		\textbf{Post-Condizioni} & Per ogni API da lui registrata nella lista, l'attore ha visualizzato se questa sia in fase di eliminazione \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item Per ogni API da lui registrata nella lista, l'attore può visualizzare se questa sia in fase di eliminazione
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\newpage
+\paragraph{Caso d'uso UC10.2.5: Modifica API registrata}
+\label{UC10_2_5}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC10_2_5.png}
+	\caption{UC10.2.5: Modifica API registrata}
+\end{figure}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC10.2.5 - Modifica API registrata} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica una API da lui registrata \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
 		\textbf{Post-Condizioni} & L'attore ha modificato un API registrata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può modificare il nome dell'API (UC10.2.4.1)
-			\item L'attore può modificare la descrizione dell'API (UC10.2.4.2)
-			\item L'attore può modificare i tag dell'API (UC10.2.4.3)
-			\item L'attore può modificare l'interfaccia pubblica dell'API (UC10.2.4.4)
-			\item L'attore può modificare il link esterno alla documentazione (UC10.2.4.5)
-			\item L'attore può modificare il file di documentazione caricato  (UC10.2.4.6)
-			\item L'attore può modificare il prezzo base per l'API (UC10.2.4.7)
-			\item L'attore può confermare i dati modificati e continuare con l'operazione (UC10.2.4.8)
+			\item L'attore può modificare il nome dell'API (UC10.2.5.1)
+			\item L'attore può modificare la descrizione dell'API (UC10.2.5.2)
+			\item L'attore può modificare i tag dell'API (UC10.2.5.3)
+			\item L'attore può modificare l'interfaccia dell'API (UC10.2.5.4)
+			\item L'attore può modificare il file di documentazione PDF (UC10.2.5.5)
+			\item L'attore può modificare il link alla documentazione esterna (UC10.2.5.6)
+			\item L'attore può modificare il prezzo base dell'API (UC10.2.5.7)
+			\item L'attore può confermare la modifica dell'API (UC10.2.5.8)
 		\end{enumerate*}\\
 		\textbf{Scenari Alternativi} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore riceve un errore relativo ai dati modificati, e la richiesta non viene completata (UC10.2.4.9)
+			\item L'attore può visualizzare un messaggio d'errore informativo e le modifiche non avvengono
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC10.2.4.1: Modifica nome API registrata}
-\label{UC10_2_4_1}
+\subparagraph{Caso d'uso UC10.2.5.1: Modifica nome API}
+\label{UC10_2_5_1}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4.1 - Modifica nome API registrata} \\
+		\multicolumn{2}{c}{UC10.2.5.1 - Modifica nome API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore modifica il nome relativo ad una propria API\\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per la modifica di un'API da lui registrata\\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica il nome dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla modifica di una API registrata, precedentemente selezionata \\
 		\textbf{Post-Condizioni} & L'attore ha modificato il nome dell'API selezionata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
@@ -184,18 +214,18 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC10.2.4.2: Modifica descrizione API registrata}
-\label{UC10_2_4_2}
+\subparagraph{Caso d'uso UC10.2.5.2: Modifica descrizione API}
+\label{UC10_2_5_2}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4.2 - Modifica descrizione API registrata} \\
+		\multicolumn{2}{c}{UC10.2.5.2 - Modifica descrizione API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore modifica la descrizione relativa ad una propria API\\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per la modifica di un'API da lui registrata\\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica la descrizione dell'API\\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla modifica di una API registrata, precedentemente selezionata \\
 		\textbf{Post-Condizioni} & L'attore ha modificato la descrizione dell'API selezionata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
@@ -204,18 +234,18 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC10.2.4.3: Modifica tag API registrata}
-\label{UC10_2_4_3}
+\subparagraph{Caso d'uso UC10.2.5.3: Modifica tag API}
+\label{UC10_2_5_3}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4.3 - Modifica tag API registrata} \\
+		\multicolumn{2}{c}{UC10.2.5.3 - Modifica tag API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore modifica i tag relativi ad una propria API\\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per la modifica di un'API da lui registrata\\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica i tag dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla modifica di una API registrata, precedentemente selezionata \\
 		\textbf{Post-Condizioni} & L'attore ha modificato i tag dell'API selezionata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
@@ -224,18 +254,18 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC10.2.4.4: Modifica interfaccia API registrata}
-\label{UC10_2_4_4}
+\subparagraph{Caso d'uso UC10.2.5.4: Modifica interfaccia API}
+\label{UC10_2_5_4}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4.4 - Modifica interfaccia API registrata} \\
+		\multicolumn{2}{c}{UC10.2.5.4 - Modifica interfaccia API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore modifica l'interfaccia pubblica relativa ad una propria API\\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per la modifica di un'API da lui registrata\\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica l'interfaccia dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla modifica di una API registrata, precedentemente selezionata \\
 		\textbf{Post-Condizioni} & L'attore ha modificato l'interfaccia pubblica dell'API selezionata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
@@ -244,38 +274,18 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC10.2.4.5: Modifica link documentazione API registrata}
-\label{UC10_2_4_5}
+\subparagraph{Caso d'uso UC10.2.5.5: Modifica documentazione PDF API}
+\label{UC10_2_5_5}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4.5 - Modifica link documentazione API registrata} \\
+		\multicolumn{2}{c}{UC10.2.5.5 - Modifica documentazione PDF API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore modifica il link di documentazione esterna relativo ad una propria API\\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per la modifica di un'API da lui registrata\\
-		\textbf{Post-Condizioni} & L'attore ha modificato il link di documentazione esterna dell'API selezionata \\
-		\textbf{Scenario Principale} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può modificare il link di documentazione esterna dell'API
-		\end{enumerate*}\\
-	\end{tabular}
-\end{minipage}
-
-\subparagraph{Caso d'uso UC10.2.4.6: Modifica file documentazione API registrata}
-\label{UC10_2_4_6}
-
-\begin{minipage}{\linewidth}
-	\begin{tabular}{ l | p{11cm}}
-		\hline
-		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4.6 - Modifica file documentazione API registrata} \\
-		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore modifica il file di documentazione relativo ad una propria API\\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per la modifica di un'API da lui registrata\\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica la documentazione PDF dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla modifica di una API registrata, precedentemente selezionata \\
 		\textbf{Post-Condizioni} & L'attore ha modificato il file di documentazione dell'API selezionata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
@@ -288,18 +298,38 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC10.2.4.7: Modifica prezzo API registrata}
-\label{UC10_2_4_7}
+\subparagraph{Caso d'uso UC10.2.5.6: Modifica documentazione esterna API}
+\label{UC10_2_5_6}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4.7 - Modifica prezzo API registrata} \\
+		\multicolumn{2}{c}{UC10.2.5.6 - Modifica documentazione esterna API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore modifica il prezzo base relativo ad una propria API\\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per la modifica di un'API da lui registrata\\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica la documentazione esterna dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla modifica di una API registrata, precedentemente selezionata \\
+		\textbf{Post-Condizioni} & L'attore ha modificato il link di documentazione esterna dell'API selezionata \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può modificare il link di documentazione esterna dell'API
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC10.2.5.7: Modifica prezzo base API}
+\label{UC10_2_5_7}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC10.2.5.7 - Modifica prezzo base API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica il prezzo base dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla modifica di una API registrata, precedentemente selezionata \\
 		\textbf{Post-Condizioni} & L'attore ha modificato prezzo base dell'API selezionata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
@@ -308,69 +338,82 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC10.2.4.8: Conferma modifica API}
-\label{UC10_2_4_8}
+\subparagraph{Caso d'uso UC10.2.5.8: Conferma modifica API}
+\label{UC10_2_5_8}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4.8 - Conferma modifica API} \\
+		\multicolumn{2}{c}{UC10.2.5.8 - Conferma modifica API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore conferma la modifica relativa ad una propria API\\
-		\textbf{Pre-Condizioni} & L'attore ha completato i campi che desidera modificare\\
-		\textbf{Post-Condizioni} & L'attore modificato con successo la propria API \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore conferma le modifiche all'API, visualizzando un messaggio di successo \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla modifica di una API registrata, precedentemente selezionata \\
+		\textbf{Post-Condizioni} & L'attore ha confermato le modifiche all'API, visualizzando un messaggio di successo \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può confermare le modifiche da lui richieste, che verranno aggiornate sulla piattaforma in caso di successo
+			\item L'attore può confermare le modifiche effettuate all'API, visualizzando un messaggio di successo e venendo reindirizzato alla schermata di visualizzazione API registrate (UC10)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC10.2.5: Eliminazione API registrata}
-\label{UC10_2_5}
+\subparagraph{Caso d'uso UC10.2.5.9: Errore modifica API}
+\label{UC10_2_5_9}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.5 - Eliminazione API registrata} \\
+		\multicolumn{2}{c}{UC10.2.5.9 - Errore modifica API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore richiede l'eliminazione di un API da lui registrata\\
-		\textbf{Pre-Condizioni} & L'attore ha premuto il pulsante per l'eliminazione di un API\\
-		\textbf{Post-Condizioni} & L'attore viene reindirizzato ad una pagina di conferma\\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di errore e la modifica non avviene \\
+		\textbf{Pre-Condizioni} & L'attore ha confermato la modifica di una API ma si è verificato un errore \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato un errore relativo alla modifica dell'API, con opportuna descrizione \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può premere il pulsante per l'eliminazione della propria API
-			\item L'attore può confermare l'operazione richiesta (UC10.2.5.1)
-		\end{enumerate*}\\
-		\textbf{Scenari Alternativi} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore viene notificato di una contestazione in atto, inerente ai prodotti registrati o ai pagamenti, e l'operazione non ha buon fine. L'attore viene rimandato al contatto dello staff per la risoluzione del problema.
+			\item L'attore può visualizzare un messaggio di errore e la modifica non avviene
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC10.2.5.1: Conferma eliminazione API registrata}
-\label{UC10_2_5_1}
+\paragraph{Caso d'uso UC10.2.6: Eliminazione API registrata}
+\label{UC10_2_6}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.5.1 - Conferma eliminazione API registrata} \\
+		\multicolumn{2}{c}{UC10.2.6 - Eliminazione API registrata} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore richiede l'eliminazione di un API da lui registrata\\
-		\textbf{Pre-Condizioni} & L'attore ha confermato la cancellazione di un API\\
-		\textbf{Post-Condizioni} & L'attore viene notificato della presa in carico dell'operazione, in rispetto delle licenze e contratti in essere\\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore richiede l'eliminazione di una API da lui registrata, che verrà eliminata secondo le politiche di API Market \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
+		\textbf{Post-Condizioni} & L'attore ha richiesto l'eliminazione di una API da lui registrata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore viene notificato che la cancellazione avverrà alla scadenza dell'ultima licenza attualmente attiva. Gli acquisti, al momento della conferma, vengono disabilitati (UC9.5)
+			\item L'attore può richiedere l'eliminazione di una API da lui registrata, che verrà eliminata secondo le politiche di API Market
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
+\paragraph{Caso d'uso UC10.2.7: Revoca eliminazione API registrata}
+\label{UC10_2_7}
 
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC10.2.7 - Revoca eliminazione API registrata} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore revoca la richiesta di eliminazione di una API da lui registrata \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
+		\textbf{Post-Condizioni} & L'attore ha revocato la richiesta di eliminazione di una API da lui registrata \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può revocare la richiesta di eliminazione di una API da lui registrata
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
