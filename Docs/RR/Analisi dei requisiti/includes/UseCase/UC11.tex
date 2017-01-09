@@ -23,18 +23,18 @@
 		\item L'attore può inserire i tag della nuova API (UC11.3)
 		\item L'attore può inserire l'interfaccia della nuova API (UC11.4)
 		\item L'attore può inserire il file per la documentazione PDF della nuova API (UC11.5)
-		\item L'attore può inserire il link per la documentazione esterna della nuova API (UC11.6)
-		\item L'attore può inserire il prezzo base della nuova API (UC11.7)
-		\item L'attore può confermare la registrazione della nuova API (UC11.8)
+		\item L'attore può inserire il link per la documentazione esterna della nuova API (UC11.7)
+		\item L'attore può inserire il prezzo base della nuova API (UC11.8)
+		\item L'attore può confermare la registrazione della nuova API (UC11.9)
 	\end{enumerate*}\\
 	\textbf{Scenario Principale} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio d'errore informativo riguardo la conferma della registrazione dell'API, e la registrazione non avviene (UC11.9)
-			\item L'attore può visualizzare un messaggio di errore riguardo al caricamento del file di documentazione PDF dell'API, ed il caricamento del file non avviene (UC11.10)
-		\end{enumerate*}\\
+			\item L'attore può visualizzare un messaggio di errore riguardo al caricamento del file di documentazione PDF dell'API, ed il caricamento del file non avviene (UC11.6)
+			\item L'attore può visualizzare un messaggio d'errore informativo riguardo la conferma della registrazione dell'API, e la registrazione non avviene (UC11.10)
+	\end{enumerate*}\\
 \end{longtable}
 
-\paragraph{Caso d'uso UC11.1: Inserimento nome API}
+\subsubsection{Caso d'uso UC11.1: Inserimento nome API}
 \label{UC11_1}
 
 \begin{minipage}{\linewidth}
@@ -54,7 +54,7 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC11.2: Inserimento descrizione API}
+\subsubsection{Caso d'uso UC11.2: Inserimento descrizione API}
 \label{UC11_2}
 
 \begin{minipage}{\linewidth}
@@ -74,7 +74,7 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC11.3: Inserimento tag API}
+\subsubsection{Caso d'uso UC11.3: Inserimento tag API}
 \label{UC11_3}
 
 \begin{minipage}{\linewidth}
@@ -94,7 +94,7 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC11.4: Inserimento interfaccia API}
+\subsubsection{Caso d'uso UC11.4: Inserimento interfaccia API}
 \label{UC11_4}
 
 \begin{minipage}{\linewidth}
@@ -114,7 +114,7 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC11.5: Inserimento documentazione PDF API}
+\subsubsection{Caso d'uso UC11.5: Inserimento documentazione PDF API}
 \label{UC11_5}
 
 \begin{minipage}{\linewidth}
@@ -138,14 +138,14 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC11.10: Errore inserimento PDF API}
-\label{UC11_10}
+\subsubsection{Caso d'uso UC11.6: Errore inserimento PDF API}
+\label{UC11_6}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC11.10 - Errore inserimento PDF API} \\
+		\multicolumn{2}{c}{UC11.6 - Errore inserimento PDF API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore visualizza un messaggio di errore e l'inserimento della documentazione PDF della nuova API non avviene \\
@@ -158,14 +158,14 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC11.6: Inserimento documentazione esterna API}
-\label{UC11_6}
+\subsubsection{Caso d'uso UC11.7: Inserimento documentazione esterna API}
+\label{UC11_7}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC11.6 - Inserimento documentazione esterna API} \\
+		\multicolumn{2}{c}{UC11.7 - Inserimento documentazione esterna API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore inserisce il link alla documentazione esterna della nuova API \\
@@ -178,14 +178,14 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC11.7: Inserimento prezzo base API}
-\label{UC11_7}
+\subsubsection{Caso d'uso UC11.8: Inserimento prezzo base API}
+\label{UC11_8}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC11.7 - Inserimento prezzo base API} \\
+		\multicolumn{2}{c}{UC11.8 - Inserimento prezzo base API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore inserisce il prezzo base della nuova API \\
@@ -198,14 +198,14 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC11.8: Conferma registrazione nuova API}
-\label{UC11_8}
+\subsubsection{Caso d'uso UC11.9: Conferma registrazione nuova API}
+\label{UC11_9}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC11.8 - Conferma registrazione nuova API} \\
+		\multicolumn{2}{c}{UC11.9 - Conferma registrazione nuova API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore conferma la registrazione della nuova API \\
@@ -218,14 +218,14 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC11.9: Errore registrazione nuova API}
-\label{UC11_9}
+\subsubsection{Caso d'uso UC11.10: Errore registrazione nuova API}
+\label{UC11_10}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC11.9 - Errore registrazione nuova API} \\
+		\multicolumn{2}{c}{UC11.10 - Errore registrazione nuova API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la registrazione della nuova API non avviene \\
