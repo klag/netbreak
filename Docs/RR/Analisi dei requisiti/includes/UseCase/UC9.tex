@@ -1,30 +1,398 @@
 \newpage
-\subsection{Caso d'uso UC9: Interazione con API Acquistate}
+\subsection{Caso d'uso UC9 - Acquisto API}
 \label{UC9}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/UC9.png}
-	\caption{UC9: Interazione con API Acquistate}
+	\caption{UC9: Acquisto API}
 \end{figure}
-\FloatBarrier
-\renewcommand*{\arraystretch}{1.6}
+
 \begin{longtable}{ l | p{11cm}}
 	\hline
 	\rowcolor{Gray}
-	\multicolumn{2}{c}{UC9: Interazione con API Acquistate} \\
+	\multicolumn{2}{c}{UC9 - Acquisto API}\\
 	\hline
-	\textbf{Attori} &Utente Autenticato, Amministratore APIMarket, Interfacce API Presente In APIMarket \\
-	\textbf{Descrizione} & l'attore sceglie attraverso quale modalità interagire con le API acquistate \\
-	\textbf{Pre-Condizioni} & l'attore si trova nella schermata di gestione di una API acquistata\\
-	\textbf{Post-Condizioni}&l'attore ha scelto l'interazione\\
-	\textbf{Scenario Principale} & \begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore può ricercare un'API(UC6)
-		\item L'attore può consultare la documentazione di un'API(UC8.1)
-		\item L'attore può Annullare il rinnovo di un'API(UC9.1)
-		\item L'attore può utilizzare un'API(UC9.2)
-		\item L'attore può Rimuovere un'API dalle Acquistate
-		\item L'attore può vedere la Scadenza di un'API(UC9.4);
+	\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+	\textbf{Descrizione} & L'attore può effettuare l'acquisto dell'API selezionata tramite i crediti da lui posseduti \\
+	\textbf{Pre-Condizioni} & L'attore ha selezionato una API e si trova nella relativa schermata di acquisto \\
+	\textbf{Post-Condizioni} & L'attore ha acquistato l'API selezionata \\
+	\textbf{Scenario Principale} & 
+	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+		\item L'attore può visualizzare il nome dell'API (UC9.1)
+		\item L'attore può visualizzare l'autore dell'API (UC9.2)
+		\item L'attore può scegliere la licenza API desiderata (UC9.3)
+		\item L'attore può visualizzare il prezzo dell'API selezionata (UC9.4)
+		\item L'attore può visualizzare il saldo disponibile nel suo conto virtuale (UC12.2.1)
+		\item L'attore può ricaricare il proprio conto virtuale (UC12.2.2)
+		\item L'attore può visualizzare il saldo preventivato in seguito all'acquisto della licenza selezionata (UC9.5)
+		\item L'attore può confermare l'acquisto (UC9.6), venendo reindirizzato ad una schermata di riepilogo (UC9.7)
+	\end{enumerate*}\\
+	\textbf{Scenari Alternativi} & 
+	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+		\item L'attore può visualizzare un messaggio di errore e la transazione non avviene (UC9.8)
 	\end{enumerate*}\\
 \end{longtable}
 
+\subsubsection{Caso d'uso UC9.1: Visualizzazione nome API}
+\label{UC9_1}
 
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.1 - Visualizzazione nome API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza il nome dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di acquisto dell'API \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato il nome dell'API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare il nome dell'API
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subsubsection{Caso d'uso UC9.2: Visualizzazione nome API}
+\label{UC9_2}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.2 - Visualizzazione autore API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza l'autore dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di acquisto dell'API \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato l'autore dell'API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare l'autore dell'API
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\newpage
+\subsubsection{Caso d'uso UC9.3: Scelta licenza API}
+\label{UC9_3}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC9_3.png}
+	\caption{UC9.3: Scelta licenza API}
+\end{figure}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.1 - Visualizzazione menù licenza} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore sceglie tra le licenze quella desiderata, oppure lascia inalterata la scelta di default \\
+		\textbf{Pre-Condizioni} & L'attore ha selezionato una API e si trova nella relativa schermata di acquisto \\
+		\textbf{Post-Condizioni} & L'attore ha selezionato la licenza desiderata, oppure ha lasciato inalterata la scelta di default \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può selezionare la licenza per numero di chiamate, impostata di default (UC9.3.1)
+			\item L'attore può selezionare la licenza per tempo di utilizzo (UC9.3.2)
+			\item L'attore può selezionare la licenza per traffico (UC9.3.3)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.3.1: Scelta licenza per numero di chiamate}
+\label{UC9_3_1}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.3.1 - Scelta licenza per numero di chiamate} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore sceglie la licenza API per numero di chiamate \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di acquisto dell'API \\
+		\textbf{Post-Condizioni} & L'attore ha scelto la licenza API per numero di chiamate \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può scegliere la licenza API per numero di chiamate
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.3.2: Scelta licenza per tempo di utilizzo}
+\label{UC9_3_2}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.3.2 - Scelta licenza per tempo di utilizzo} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore sceglie la licenza API per tempo di utilizzo \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di acquisto dell'API \\
+		\textbf{Post-Condizioni} & L'attore ha scelto la licenza API per tempo di utilizzo \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può scegliere la licenza API per tempo di utilizzo
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.3.3: Scelta licenza per traffico}
+\label{UC9_3_3}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.3.3 - Scelta licenza per traffico} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore sceglie la licenza API per traffico \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di acquisto dell'API \\
+		\textbf{Post-Condizioni} & L'attore ha scelto la licenza API per traffico \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può scegliere la licenza API per traffico
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\newpage
+\subsubsection{Caso d'uso UC9.4: Visualizzazione prezzo API}
+\label{UC9_4}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC9_4.png}
+	\caption{UC9.4: Visualizzazione prezzo API}
+\end{figure}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.4 - Visualizzazione prezzo API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza il prezzo dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di acquisto dell'API \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato il prezzo dell'API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare il prezzo dell'API per numero di chiamate (UC9.4.1)
+			\item L'attore può visualizzare il prezzo dell'API per tempo di utilizzo (UC9.4.2)
+			\item L'attore può visualizzare il prezzo dell'API per traffico (UC9.4.3)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.4.1: Visualizzazione prezzo per numero di chiamate}
+\label{UC9_4_1}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.4.1 - Visualizzazione prezzo per numero di chiamate} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza il prezzo per numero di chiamate dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di acquisto dell'API \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato il prezzo per numero di chiamate dell'API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare il prezzo per numero di chiamate dell'API
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.4.2: Visualizzazione prezzo per tempo di utilizzo}
+\label{UC9_4_2}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.4.2 - Visualizzazione prezzo per tempo di utilizzo} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza il prezzo per tempo di utilizzo dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di acquisto dell'API \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato il prezzo per tempo di utilizzo dell'API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare il prezzo per tempo di utilizzo dell'API
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.4.3: Visualizzazione prezzo per traffico}
+\label{UC9_4_3}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.4.3 - Visualizzazione prezzo per traffico} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza il prezzo per per traffico dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di acquisto dell'API \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato il prezzo per per traffico dell'API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare il prezzo per per traffico dell'API
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subsubsection{Caso d'uso UC9.5: Visualizzazione previsione saldo finale}
+\label{UC9_5}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.5 - Visualizzazione previsione saldo finale} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza una previsione del proprio saldo crediti in seguito all'acquisto\\
+		\textbf{Pre-Condizioni} & L'attore ha selezionato una API e si trova nella relativa schermata di acquisto \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato una previsione del proprio saldo in seguito all'acquisto \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare una previsione del proprio saldo finale qualora acquistasse l'API con la licenza scelta in UC9.3
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subsubsection{Caso d'uso UC9.6: Conferma acquisto API}
+\label{UC9_6}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.6 - Conferma acquisto API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore può confermare l'acquisto dell'API, portando a termine la transazione, ricevendo un'email di riepilogo e visualizzando una schermata di riepilogo dell'acquisto appena realizzato \\
+		\textbf{Pre-Condizioni} & L'attore ha selezionato una API e si trova nella relativa schermata di acquisto \\
+		\textbf{Post-Condizioni} & L'attore ha confermato l'acquisto dell'API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può confermare l'acquisto dell'API, portando a termine la transazione, ricevendo un'email di riepilogo e visualizzando una schermata di riepilogo dell'acquisto appena realizzato (UC9.7)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\newpage
+\subsubsection{Caso d'uso UC9.7: Riepilogo acquisto API}
+\label{UC9_7}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC9_7.png}
+	\caption{UC9.7: Riepilogo acquisto API}
+\end{figure}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.7 - Riepilogo acquisto API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore conferma l'acquisto dell'API, portando a termine la transazione e visualizzando un messaggio di ringraziamento \\
+		\textbf{Pre-Condizioni} & L'attore ha confermato l'acquisto per l'API \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato il riepilogo dell'acquisto appena realizzato \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio di ringraziamento (UC9.7.1)
+			\item L'attore può visualizzare il nome dell'API appena acquistata (UC9.7.2)
+			\item L'attore può visualizzare la chiave dell'API appena acquistata (UC9.7.3)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.7.1: Visualizzazione ringraziamento}
+\label{UC9_7_1}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.7.1 - Visualizzazione ringraziamento} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di ringraziamento \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di riepilogo acquisto dell'API \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di ringraziamento \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio di ringraziamento
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.7.2: Visualizzazione nome API acquistata}
+\label{UC9_7_2}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.7.2 - Visualizzazione nome API acquistata} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza il nome dell'API acquistata \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di riepilogo acquisto dell'API \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato il nome dell'API acquistata \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare il nome dell'API acquistata
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.7.3: Visualizzazione chiave API acquistata}
+\label{UC9_7_3}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.7.3 - Visualizzazione chiave API acquistata} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza la chiave dell'API acquistata \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di riepilogo acquisto dell'API \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato la chiave dell'API acquistata \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare la chiave dell'API acquistata
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.8: Errore acquisto API}
+\label{UC9_8}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.8 - Errore acquisto API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di errore e la transazione non avviene \\
+		\textbf{Pre-Condizioni} & L'attore ha confermato l'acquisto per una API ma si è verificato un errore \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato un errore relativo all'acquisto, con opportuna descrizione \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio di errore e la transazione non avviene (E.g: L'API è in fase di cancellazione)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}

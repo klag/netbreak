@@ -1,28 +1,17 @@
 \newpage
-\subsection{Caso d'uso UC13: Visualizzazione Dati Utilizzo API}
+\subsection{Caso d'uso UC13: Logout}
 \label{UC13}
-\begin{figure}[ht]
-	\centering
-	\includegraphics[scale=0.45]{UML/UC13.png}
-	\caption{UC13: Visualizzazione Dati Utilizzo API}
-\end{figure}
 
-\renewcommand*{\arraystretch}{1.6}
 \begin{longtable}{ l | p{11cm}}
 	\hline
 	\rowcolor{Gray}
-	\multicolumn{2}{c}{UC13: Visualizzazione Dati Utilizzo API} \\
+	\multicolumn{2}{c}{UC13 - Logout} \\
 	\hline
-	\textbf{Attori} &Utente Autenticato, Amministratore APIMarket \\
-	\textbf{Descrizione} &l''attore visualizza i dati dell'utilizzo delle API in APIMarket \\
-	\textbf{Pre-Condizioni} &   l'attore ha scelto di visualizzare i dati dell'utilizzo delle API in APIMarket\\
-	\textbf{Post-Condizioni}& l'attore ha visualizzato i dati dell'utilizzo delle API in APIMarket\\
+	\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+	\textbf{Descrizione} & L'attore effettua il logout, retrocedendo ad un utente non autenticato e venendo reindirizzato alla schermata iniziale (UC1) \\
+	\textbf{Pre-Condizioni} & L'attore si trova nella schermata iniziale dell'applicazione web \\
+	\textbf{Post-Condizioni}& L'attore ha effettuato il logout, è stato retrocesso ad un utente non autenticato e reindirizzato alla schermata iniziale \\
 	\textbf{Scenario Principale} & \begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore può visualizzare il numero di utenti che hanno acquistato una API (UC13.1)
-		\item L'attore può registrare l'interfaccia della propria nuova API (UC13.2)
+		\item L'attore può effettuare il logout, retrocedendo ad un utente non autenticato e venendo reindirizzato alla schermata iniziale (UC1)
 	\end{enumerate*}\\
 \end{longtable}
-
-
-
-
