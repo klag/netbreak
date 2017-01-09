@@ -1,33 +1,38 @@
 \newpage
-\subsection{Caso d'uso UC12: Menù profilo utente}
+\subsection{Caso d'uso UC12: Gestione proprio profilo utente}
 \label{UC12}
-
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/UC12.png}
-	\caption{UC12 - Menù profilo utente}
+	\caption{UC12 - Gestione proprio profilo utente}
 \end{figure}
-\FloatBarrier
+
 \begin{longtable}{ l | p{11cm}}
 	\hline
 	\rowcolor{Gray}
-	 \multicolumn{2}{c}{UC12 - Menù profilo utente} \\
-	 \hline
-	 \textbf{Attori} & Utente autenticato  \\
-	\textbf{Descrizione} & L’attore può visualizzare e modificare i dati relativi all'account registrato \\
-	\textbf{Pre-Condizioni} & L’attore è nel menù per la gestione del profilo \\
-	\textbf{Post-Condizioni} & L’attore ha effettuato operazioni di gestione del proprio profilo \\
+	\multicolumn{2}{c}{UC12 - Gestione proprio profilo utente} \\
+	\hline
+	\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+	\textbf{Descrizione} & L’attore visualizza e/o gestisce le informazioni del proprio profilo utente \\
+	\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione del proprio profilo utente \\
+	\textbf{Post-Condizioni} & L’attore ha visualizzato e/o gestito le informazioni del proprio profilo utente \\
 	\textbf{Scenario Principale} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
 		\item L'attore può gestire le proprie informazioni personali (UC12.1)
-		\item L'attore può gestire il metodo di pagamento (UC12.2)
-		\item L'attore può visualizzare le API acquistate (UC8)
-		\item L'attore può interagire con le API da lui registrate e fornite sul marketplace (UC10)
+		\item L'attore può gestire il proprio conto utente (UC12.2)
+		\item L'attore può visualizzare le API da lui acquistate (UC8)
+		\item L'attore può visualizzare le API da lui registrate (UC10)
 	\end{enumerate*}\\
 \end{longtable}
 
+\newpage
 \subsubsection{Caso d'uso UC12.1: Gestione informazioni personali}
 \label{UC12_1}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC12_1.png}
+	\caption{UC12.1: Gestione informazioni personali}
+\end{figure}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
@@ -35,45 +40,47 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC12.1 - Gestione informazioni personali} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può gestire le proprie informazioni personali\\
-		\textbf{Pre-Condizioni} & L'attore si trova nel menù relativo alla gestione delle informazioni personali del profilo\\
-		\textbf{Post-Condizioni} & L'attore ha effettuato operazioni di gestione di informazioni personali \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza e/o modifica le proprie informazioni personali \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione del proprio profilo utente \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato e/o modificato le proprie informazioni personali \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare le informazioni personali (UC12.1.1)
-			\item L'attore può modificare le informazioni personali (UC12.1.2)
+			\item L'attore può visualizzare le proprie informazioni personali (UC12.1.1)
+			\item L'attore può modificare le proprie informazioni personali (UC12.1.2)
 		\end{enumerate*}
 	\end{tabular}
 \end{minipage}
 
 \newpage
-\paragraph{Caso d'uso UC12.1.1: Visualizzazione info personali profilo utente}
+\paragraph{Caso d'uso UC12.1.1: Visualizzazione informazioni personali}
 \label{UC12_1_1}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/UC12_1_1.png}
-	\caption{UC12.1.1: Visualizzazione info personali profilo utente}
+	\caption{UC12.1.1: Visualizzazione informazioni personali}
 \end{figure}
-\FloatBarrier
+
+\begin{minipage}{\linewidth}
 \begin{tabular}{ l | p{11cm}}
 	\hline
 	\rowcolor{Gray}
-	\multicolumn{2}{c}{UC12.1.1 - Visualizzazione info personali profilo utente} \\
+	\multicolumn{2}{c}{UC12.1.1 - Visualizzazione informazioni personali} \\
 	\hline
-	\textbf{Attori} & Utente autenticato \\
-	\textbf{Descrizione} & L'attore può visualizzare le informazioni personali relative al proprio account registrato\\
-	\textbf{Pre-Condizioni} & L'attore è nella schermata di gestione informazioni personali\\
+	\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+	\textbf{Descrizione} & L'attore visualizza le proprie informazioni personali \\
+	\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione del proprio profilo utente \\
 	\textbf{Post-Condizioni} & L'attore ha visualizzato le proprie informazioni personali \\
 	\textbf{Scenario Principale} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore visualizza il nome (UC12.1.1.1)
-		\item L'attore visualizza il cognome (UC12.1.1.2)
-		\item L'attore visualizza lo username (UC12.1.1.3)
-		\item L'attore visualizza l'email (UC12.1.1.4)
-		\item L'attore visualizza l'immagine del profilo (UC12.1.1.5)
-	\end{enumerate*}
+		\item L'attore può visualizzare il proprio nome (UC12.1.1.1)
+		\item L'attore può visualizzare il proprio cognome (UC12.1.1.2)
+		\item L'attore può visualizzare il proprio username (UC12.1.1.3)
+		\item L'attore può visualizzare la propria email (UC12.1.1.4)
+		\item L'attore può visualizzare il proprio avatar (UC12.1.1.5)
+	\end{enumerate*}\\
 \end{tabular}
+\end{minipage}
 
 \subparagraph{Caso d'uso UC12.1.1.1: Visualizzazione nome}
 \label{UC12_1_1_1}
@@ -84,13 +91,13 @@
 	\rowcolor{Gray}
 	\multicolumn{2}{c}{UC12.1.1.1 - Visualizzazione nome} \\
 	\hline
-	\textbf{Attori} & Utente autenticato \\
-	\textbf{Descrizione} & L'attore può visualizzare il nome\\
-	\textbf{Pre-Condizioni} & L'attore è nella schermata di visualizzazione informazioni personali\\
+	\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+	\textbf{Descrizione} & L'attore visualizzare il proprio nome \\
+	\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione delle informazioni personali \\
 	\textbf{Post-Condizioni} & L'attore ha visualizzato il proprio nome \\
 	\textbf{Scenario Principale} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore visualizza il proprio nome
+		\item L'attore può visualizzare il proprio nome
 	\end{enumerate*}
 \end{tabular}
 \end{minipage}
@@ -104,398 +111,401 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC12.1.1.2 - Visualizzazione cognome} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può visualizzare il cognome\\
-		\textbf{Pre-Condizioni} & L'attore è nella schermata di visualizzazione informazioni personali\\
-		\textbf{Post-Condizioni} & L'attore ha visualizzato il proprio cognome \\
-		\textbf{Scenario Principale} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore visualizza il proprio cognome
-		\end{enumerate*}
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizzare il proprio cognome \\
+	\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione delle informazioni personali \\
+	\textbf{Post-Condizioni} & L'attore ha visualizzato il proprio cognome \\
+	\textbf{Scenario Principale} & 
+	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+		\item L'attore può visualizzare il proprio cognome
+	\end{enumerate*}
 	\end{tabular}
 \end{minipage}
 
 \subparagraph{Caso d'uso UC12.1.1.3: Visualizzazione username}
 \label{UC12_1_1_3}
+
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC12.1.1.3 - Visualizzazione username} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può visualizzare lo username\\
-		\textbf{Pre-Condizioni} & L'attore è nella schermata di visualizzazione informazioni personali\\
-		\textbf{Post-Condizioni} & L'attore ha visualizzato il proprio username \\
-		\textbf{Scenario Principale} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore visualizza il proprio username
-		\end{enumerate*}
+		\textbf{Descrizione} & L'attore visualizzare il proprio username \\
+	\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione delle informazioni personali \\
+	\textbf{Post-Condizioni} & L'attore ha visualizzato il proprio username \\
+	\textbf{Scenario Principale} & 
+	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+		\item L'attore può visualizzare il proprio username
+	\end{enumerate*}
 	\end{tabular}
 \end{minipage}
 
 \subparagraph{Caso d'uso UC12.1.1.4: Visualizzazione email}
 \label{UC12_1_1_4}
+
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC12.1.1.4 - Visualizzazione email} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può visualizzare l'indirizzo email associato al proprio account\\
-		\textbf{Pre-Condizioni} & L'attore è nella schermata di visualizzazione informazioni personali\\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizzare la propria email \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione delle informazioni personali \\
 		\textbf{Post-Condizioni} & L'attore ha visualizzato la propria email \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore visualizza la propria email
+			\item L'attore può visualizzare la propria email
 		\end{enumerate*}
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC12.1.1.5: Visualizzazione immagine del profilo}
+\subparagraph{Caso d'uso UC12.1.1.5: Visualizzazione avatar}
 \label{UC12_1_1_5}
+
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC12.1.1.5 - Visualizzazione immagine del profilo} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può visualizzare l'immagine del profilo\\
-		\textbf{Pre-Condizioni} & L'attore è nella schermata di visualizzazione informazioni personali\\
-		\textbf{Post-Condizioni} & L'attore ha visualizzato l'immagine del proprio profilo \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizzare il proprio avatar \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione delle informazioni personali \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato il proprio avatar \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore visualizza l'immagine del proprio profilo
+			\item L'attore può visualizzare il proprio avatar
 		\end{enumerate*}
 	\end{tabular}
 \end{minipage}
 
 \newpage
-\paragraph{Caso d'uso UC12.1.2: Modifica info personali profilo utente}
+\paragraph{Caso d'uso UC12.1.2: Modifica informazioni personali}
 \label{UC12_1_2}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/UC12_1_1.png}
-	\caption{UC12.1.2: Modifica info personali profilo utente}
+	\includegraphics[scale=0.45]{UML/UC12_1_2.png}
+	\caption{UC12.1.2: Modifica informazioni personali}
 \end{figure}
-\FloatBarrier
+
 \begin{tabular}{ l | p{11cm}}
 	\hline
 	\rowcolor{Gray}
-	\multicolumn{2}{c}{UC12.1.2 - Modifica info personali profilo utente} \\
+	\multicolumn{2}{c}{UC12.1.2 - Modifica informazioni personali} \\
 	\hline
-	\textbf{Attori} & Utente autenticato \\
-	\textbf{Descrizione} & L'attore può modificare le informazioni personali relative al proprio profilo utente\\
-	\textbf{Pre-Condizioni} & L'attore è nella schermata di gestione informazioni personali\\
+	\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+	\textbf{Descrizione} & L'attore modifica le proprie informazioni personali \\
+	\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione del proprio profilo utente \\
 	\textbf{Post-Condizioni} & L'attore ha modificato le proprie informazioni personali \\
 	\textbf{Scenario Principale} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore può modificare il nome (UC12.1.2.1)
-		\item L'attore può modificare il cognome (UC12.1.2.2)
-		\item L'attore può modificare lo username (UC12.1.2.3)
-		\item L'attore può modificare l'email (UC12.1.2.4)
-		\item L'attore può modificare l'immagine del profilo (UC12.1.2.5)
-		\item L'attore può confermare le modifiche effettuate (UC12.1.2.6)
+		\item L'attore può modificare il proprio nome (UC12.1.2.1)
+		\item L'attore può modificare il proprio cognome (UC12.1.2.2)
+		\item L'attore può modificare il proprio username (UC12.1.2.3)
+		\item L'attore può modificare la propria email (UC12.1.2.4)
+		\item L'attore può modificare la propria password (UC12.1.2.5)
+		\item L'attore può modificare il proprio avatar (UC12.1.2.6)
+		\item L'attore può confermare la modifica alle proprie informazione personali (UC12.1.2.7)
 	\end{enumerate*}\\
 	\textbf{Scenari Alternativi} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore visualizza gli errori rilevati nelle modifiche richieste (UC12.1.2.7)
+		\item L'attore può visualizzare un messaggio di errore informativo, e le modifiche non avvengono (UC12.1.2.8)
 	\end{enumerate*}\\
 \end{tabular}
 
 \subparagraph{Caso d'uso UC12.1.2.1: Modifica nome}
 \label{UC12_1_2_1}
+
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC12.1.2.1 - Modifica nome} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può modificare il nome\\
-		\textbf{Pre-Condizioni} & L'attore è nella schermata di modifica informazioni personali\\
-		\textbf{Post-Condizioni} & L'attore ha modificato il nome \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica il proprio nome \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione delle informazioni personali \\
+		\textbf{Post-Condizioni} & L'attore ha modificato il proprio nome \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può inserire il nuovo nome
-		\end{enumerate*}\\
+			\item L'attore può modificare il proprio nome
+		\end{enumerate*}
 	\end{tabular}
 \end{minipage}
 
 \subparagraph{Caso d'uso UC12.1.2.2: Modifica cognome}
 \label{UC12_1_2_2}
+
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC12.1.2.2 - Modifica cognome} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può modificare il cognome\\
-		\textbf{Pre-Condizioni} & L'attore è nella schermata di modifica informazioni personali\\
-		\textbf{Post-Condizioni} & L'attore ha modificato il cognome \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica il proprio cognome \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione delle informazioni personali \\
+		\textbf{Post-Condizioni} & L'attore ha modificato il proprio cognome \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può inserire il nuovo cognome
-		\end{enumerate*}\\
+			\item L'attore può modificare il proprio cognome
+		\end{enumerate*}
 	\end{tabular}
 \end{minipage}
 
 \subparagraph{Caso d'uso UC12.1.2.3: Modifica username}
 \label{UC12_1_2_3}
+
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC12.1.2.3 - Modifica username} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può modificare lo username\\
-		\textbf{Pre-Condizioni} & L'attore è nella schermata di modifica informazioni personali\\
-		\textbf{Post-Condizioni} & L'attore ha modificato lo username\\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica il proprio username \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione delle informazioni personali \\
+		\textbf{Post-Condizioni} & L'attore ha modificato il proprio username \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può inserire il nuovo username per il profilo
-		\end{enumerate*}\\
+			\item L'attore può modificare il proprio username
+		\end{enumerate*}
 	\end{tabular}
 \end{minipage}
 
 \subparagraph{Caso d'uso UC12.1.2.4: Modifica email}
 \label{UC12_1_2_4}
+
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC12.1.2.4 - Modifica email} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può modificare l'email associata all'account registrato\\
-		\textbf{Pre-Condizioni} & L'attore è nella schermata di modifica informazioni personali\\
-		\textbf{Post-Condizioni} & L'attore ha modificato l'email \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica la propria email \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione delle informazioni personali \\
+		\textbf{Post-Condizioni} & L'attore ha modificato la propria email \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può inserire la nuova email da associare al proprio profilo
-		\end{enumerate*}\\
-	\end{tabular}
-\end{minipage}
-
-\subparagraph{Caso d'uso UC12.1.2.5: Modifica immagine profilo}
-\label{UC12_1_2_5}
-\begin{minipage}{\linewidth}
-	\begin{tabular}{ l | p{11cm}}
-		\hline
-		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC12.1.2.5 - Modifica immagine profilo} \\
-		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può modificare l'immagine del proprio profilo\\
-		\textbf{Pre-Condizioni} & L'attore è nella schermata di modifica informazioni personali\\
-		\textbf{Post-Condizioni} & L'attore ha modificato l'immagine del proprio profilo \\
-		\textbf{Scenario Principale} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può inserire una nuova immagine del profilo
-		\end{enumerate*}\\
-	\end{tabular}
-\end{minipage}
-
-\subparagraph{Caso d'uso UC12.1.2.6: Conferma modifiche info profilo}
-\label{UC12_1_2_6}
-\begin{minipage}{\linewidth}
-	\begin{tabular}{ l | p{11cm}}
-		\hline
-		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC12.1.2.6 - Conferma modifiche info profilo} \\
-		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può confermare le modifiche effettuate alle proprie informazioni personali\\
-		\textbf{Pre-Condizioni} & L'attore è nella schermata di modifica informazioni personali\\
-		\textbf{Post-Condizioni} & L'attore ha confermato le modifiche effettuate \\
-		\textbf{Scenario Principale} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può confermare le modifiche effettuate, visualizzando il messaggio di successo e venendo reindirizzato al menù relativo al profilo utente (UC12)
-		\end{enumerate*}\\
-	\end{tabular}
-\end{minipage}
-
-\subparagraph{Caso d'uso UC12.1.2.7: Errore modifiche info profilo}
-\label{UC12_1_2_7}
-\begin{minipage}{\linewidth}
-	\begin{tabular}{ l | p{11cm}}
-		\hline
-		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC12.1.2.7 - Errore modifiche info profilo} \\
-		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore visualizza un messaggio d'errore che indica il fallimento delle operazioni di modifica dati personali\\
-		\textbf{Pre-Condizioni} & L'attore è nella schermata di modifica informazioni personali\\
-		\textbf{Post-Condizioni} & L'attore ha confermato le modifiche effettuate, ma esse non sono valide\\
-		\textbf{Scenario Principale} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio d'errore che segnala i dati inseriti che non risultano validi
-		\end{enumerate*}\\
-	\end{tabular}
-\end{minipage}
-
-\subsubsection{Caso d'uso UC12.2: Gestione metodo di pagamento}
-\label{UC12_2}
-
-\begin{minipage}{\linewidth}
-	\begin{tabular}{ l | p{11cm}}
-		\hline
-		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC12.2 - Gestione metodo di pagamento} \\
-		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può gestire il proprio credito \\
-		\textbf{Pre-Condizioni} & L'attore si trova nel menù relativo alla gestione del metodo di pagamento\\
-		\textbf{Post-Condizioni} & L'attore ha effettuato operazioni relative al metodo di pagamento \\
-		\textbf{Scenario Principale} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare il credito attuale presente nel proprio account (UC12.2.1)
-			\item L'attore può effettuare un versamento per accrescere il proprio credito (UC12.2.2)
+			\item L'attore può modificare la propria email
 		\end{enumerate*}
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC12.2.1: Visualizzazione saldo}
-\label{UC12_2_1}
+\subparagraph{Caso d'uso UC12.1.2.5: Modifica password}
+\label{UC12_1_2_5}
+
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC12.2.1 - Visualizzazione saldo} \\
+		\multicolumn{2}{c}{UC12.1.2.5 - Modifica password} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può visualizzare il credito attuale relativo al proprio account \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di visualizzazione saldo\\
-		\textbf{Post-Condizioni} & L'attore ha visualizzato il proprio credito attuale \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica la propria password \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione delle informazioni personali \\
+		\textbf{Post-Condizioni} & L'attore ha modificato la propria password \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare il saldo corrente relativo al proprio account
+			\item L'attore può modificare la propria password
+		\end{enumerate*}
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC12.1.2.6: Modifica avatar}
+\label{UC12_1_2_6}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC12.1.2.6 - Modifica avatar} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore modifica il proprio avatar \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione delle informazioni personali \\
+		\textbf{Post-Condizioni} & L'attore ha modificato il proprio avatar \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può modificare il proprio avatar
+		\end{enumerate*}
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC12.1.2.7: Conferma modifica informazioni personali}
+\label{UC12_1_2_7}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC12.1.2.7 - Conferma modifica informazioni personali} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore conferma la modifica delle informazioni personali \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione delle informazioni personali \\
+		\textbf{Post-Condizioni} & L'attore ha confermato la modifica delle informazioni personali \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può confermare la modifica delle informazioni personali, visualizzando un messaggio di successo
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC12.2.2: Versamento saldo}
-\label{UC12_2_2}
+\subparagraph{Caso d'uso UC12.1.2.8: Errore modifica informazioni personali}
+\label{UC12_1_2_8}
+
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC12.2.2 - Versamento saldo} \\
+		\multicolumn{2}{c}{UC12.1.2.8 - Errore modifica informazioni personali} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può incrementare il proprio credito per effettuare acquisti di API sulla piattaforma \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per effettuare il versamento\\
-		\textbf{Post-Condizioni} & L'attore ha effettuato un versamento sul proprio saldo \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la modifica delle informazioni personali non avviene \\
+		\textbf{Pre-Condizioni} & L'attore ha confermato la modifica delle informazioni personali ma si è verificato un errore \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore informativo \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può selezionare la cifra da accreditare sul proprio saldo (UC12.2.2.1)
-			\item L'attore può confermare la somma selezionata e procedere con l'operazione di ricarica del credito personale (UC12.2.2.2)
+			\item L'attore può visualizzare un messaggio di errore informativo e la modifica delle informazioni personali non avviene
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\newpage
+\subsubsection{Caso d'uso UC12.2: Gestione conto personale}
+\label{UC12_2}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC12_2.png}
+	\caption{UC12.2: Gestione conto personale}
+\end{figure}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC12.2 - Gestione conto personale} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza le informazioni del proprio conto utente e/o effettua una ricarica su di esso \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione del proprio profilo utente \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato il saldo del proprio conto utente e/o effettuato una ricarica su di esso \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare il saldo corrente del proprio conto utente (UC12.2.1)
+			\item L'attore può effettuare una ricarica sul proprio conto utente (UC12.2.2)
+		\end{enumerate*}
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC12.2.1: Visualizzazione saldo conto}
+\label{UC12_2_1}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC12.2.1 - Visualizzazione saldo conto} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza il saldo corrente del proprio conto utente \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione del proprio conto utente \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato il saldo corrente del proprio conto utente \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare il saldo corrente del proprio conto utente
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC12.2.2: Ricarica conto}
+\label{UC12_2_2}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC12_2_2.png}
+	\caption{UC12.2.2: Ricarica conto}
+\end{figure}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC12.2.2 - Ricarica conto} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market, PayPal \\
+		\textbf{Descrizione} & L'attore effettua una ricarica sul proprio conto utente \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione del proprio conto utente \\
+		\textbf{Post-Condizioni} & L'attore ha effettuato una ricarica sul proprio conto utente \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può effettuare una ricarica tramite PayPal sul proprio conto utente (UC12.2.2.1)
 		\end{enumerate*}\\
 		\textbf{Scenari Alternativi} & \begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio d'errore che segnala il fallimento dell'operazione di versamento sul saldo personale (UC12.2.2.3)
+			\item L'attore può visualizzare un messaggio di errore informativo, e la ricarica tramite PayPal sul proprio conto utente non avviene (UC12.2.2.2)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC12.2.2.1: Selezione somma di accredito}
+\subparagraph{Caso d'uso UC12.2.2.1: Ricarica tramite Paypal}
 \label{UC12_2_2_1}
+
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC12.2.2.1 - Selezione somma di accredito} \\
+		\multicolumn{2}{c}{UC12.2.2.1 - Ricarica tramite Paypal} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può selezionare la quantità di denaro da aggiungere al saldo attuale presente sul proprio account \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per effettuare il versamento\\
-		\textbf{Post-Condizioni} & L'attore ha selezionato la somma da accreditare al proprio saldo \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market, PayPal \\
+		\textbf{Descrizione} & L'attore effettua una ricarica tramite PayPal sul proprio conto utente \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla ricarica del proprio conto utente \\
+		\textbf{Post-Condizioni} & L'attore ha effettuato una ricarica tramite PayPal sul proprio conto utente \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può selezionare la cifra da accreditare sul proprio saldo
+			\item L'attore può effettuare una ricarica tramite PayPal sul proprio conto utente
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC12.2.2.2: Conferma accredito somma selezionata}
+\subparagraph{Caso d'uso UC12.2.2.2: Errore ricarica Paypal}
 \label{UC12_2_2_2}
+
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC12.2.2.2 - Conferma accredito somma selezionata} \\
+		\multicolumn{2}{c}{UC12.2.2.2 - Errore ricarica Paypal} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può confermare la somma indicata come accredito sul saldo personale del proprio account \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per effettuare il versamento\\
-		\textbf{Post-Condizioni} & L'attore ha effettuato un versamento sul proprio saldo \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market, PayPal \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la ricarica tramite PayPal sul proprio conto utente non avviene \\
+		\textbf{Pre-Condizioni} & L'attore ha confermato la ricarica tramite PayPal sul proprio conto utente ma si è verificato un errore \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore informativo \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può selezionare la cifra da accreditare sul proprio saldo
+			\item L'attore può visualizzare un messaggio di errore informativo e la ricarica tramite PayPal sul proprio conto utente non avviene
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC12.2.2.3: Fallimento ricarica saldo}
-\label{UC12_2_2_3}
-\begin{minipage}{\linewidth}
-	\begin{tabular}{ l | p{11cm}}
-		\hline
-		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC12.2.2.3 - Fallimento ricarica saldo} \\
-		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore fallisce il versamento sul saldo \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata per effettuare il versamento\\
-		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio d'errore che segnala il fallimento relativo al versamento sul saldo personale \\
-		\textbf{Scenario Principale} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio d'errore indicante il fallimento della procedura di ricarica saldo 
-		\end{enumerate*}\\
-	\end{tabular}
-\end{minipage}
-
-\paragraph{Caso d'uso UC12.2.3: Prelievo dal saldo}
+\paragraph{Caso d'uso UC12.2.3: Trasferimento saldo su conto PayPal}
 \label{UC12_2_3}
-\begin{minipage}{\linewidth}
-	\begin{tabular}{ l | p{11cm}}
-		\hline
-		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC12.2.3 - Prelievo dal saldo} \\
-		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore può prelevare una somma di denaro dal saldo del proprio account e trasferirlo su un conto PayPal specificato\\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di prelievo dal saldo\\
-		\textbf{Post-Condizioni} & L'attore ha prelevato una certa somma dal proprio credito attuale \\
-		\textbf{Scenario Principale} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può prelevare una somma dal saldo corrente relativo al proprio account, se questa supera la soglia stabilita dalla piattaforma, e trasferirli direttamente su un conto PayPal da lui specificato (UC12.2.3.1)
-		\end{enumerate*}\\
-	\end{tabular}
-\end{minipage}
 
-\paragraph{Caso d'uso UC12.2.3.1: Trasferimento saldo su conto PayPal esterno}
-\label{UC12_2_3_1}
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC12.2.3.1 - Trasferimento saldo su conto PayPal esterno} \\
+		\multicolumn{2}{c}{UC12.2.3 - Trasferimento saldo su conto PayPal} \\
 		\hline
-		\textbf{Attori} & Utente autenticato \\
-		\textbf{Descrizione} & L'attore trasferisce una somma di denaro prelevata dal saldo del proprio account su un conto PayPal specificato\\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di trasferimento somma dal saldo\\
-		\textbf{Post-Condizioni} & L'attore ha trasferito su un conto PayPal esterno una certa somma prelevata dal credito del proprio saldo \\
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore preleva una somma limitata di denaro dal proprio conto utente e la trasferisce su un conto PayPal \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla gestione del proprio conto utente \\
+		\textbf{Post-Condizioni} & L'attore ha prelevato una somma limitata di denaro dal proprio conto utente e l'ha trasferita su un conto PayPal \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può indicare i dati relativi al conto PayPal esterno su cui intende trasferire la somma massima stabilita dalla piattaforma
-		\end{enumerate*}\\
-		\textbf{Scenari Alternativi} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio d'errore che segnala l'esito negativo del trasferimento di denaro sul conto PayPal indicato
+			\item L'attore può prelevrea una somma limitata di denaro dal proprio conto utente, trasferendola su un conto PayPal
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
