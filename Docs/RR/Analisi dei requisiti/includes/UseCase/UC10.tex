@@ -21,10 +21,6 @@
 		\item L'attore può visualizzare il numero delle API da lui registrate (UC10.1)
 		\item L'attore può visualizzare la lista delle API da lui registrate (UC10.2)
 	\end{enumerate*}\\
-	\textbf{Scenari Alternativi} & 
-	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore può visualizzare i dati relativi ad ogni API (UC7)
-	\end{enumerate*}\\
 \end{longtable}
 
 \subsubsection{Caso d'uso UC10.1: Visualizzazione numero API registrate}
@@ -107,12 +103,12 @@
 		\multicolumn{2}{c}{UC10.2.2 - Visualizzazione link API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
-		\textbf{Descrizione} & L'attore visualizza nella lista il link alla visualizzazione di ogni API da lui registrata \\
+		\textbf{Descrizione} & L'attore visualizza nella lista il link alla visualizzazione dell'API  \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
-		\textbf{Post-Condizioni} & L'attore ha visualizzato nella lista il link alla visualizzazione di ogni API da lui registrata \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato nella lista il link alla visualizzazione dell'API \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare nella lista il link alla visualizzazione di ogni API da lui registrata
+			\item L'attore può visualizzare nella lista il link alla visualizzazione dell'API, che lo reindirizzerà ad UC7 per l'API in questione
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -294,7 +290,7 @@
 		\end{enumerate*}\\
 		\textbf{Scenari Alternativi} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio di errore ed il caricamento del file non avviene (UC10.2.5.10)
+			\item L'attore può visualizzare un messaggio di errore (E.g: formato errato) ed il caricamento del file non avviene (UC10.2.5.10)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
