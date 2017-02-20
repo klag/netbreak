@@ -18,8 +18,8 @@
 	\textbf{Post-Condizioni} & L'attore ha amministrato l'applicazione web e/o ha consultato i dati di utilizzo avanzati \\
 	\textbf{Scenario Principale} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore può scegliere una API (UC14.1) per visualizzarne i dati di utilizzo avanzati (UC14.1.1)
-		\item L'attore può scegliere un utente (UC14.2.1) da moderare (UC14.2.1.1)
+		\item L'attore può scegliere una API (UC14.1) per eseguire delle operazioni su di essa (UC14.1.1)
+		\item L'attore può scegliere un utente (UC14.2) da moderare (UC14.2.1)
 	\end{enumerate*}\\
 \end{longtable}
 
@@ -33,22 +33,50 @@
 		\multicolumn{2}{c}{UC14.1 - Scelta API} \\
 		\hline
 		\textbf{Attori} & Amministratore API Market \\
-		\textbf{Descrizione} & L'attore sceglie una API su cui visualizzare i dati di utilizzo avanzati \\
+		\textbf{Descrizione} & L'attore sceglie una API su cui effettuare delle operazioni \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa all'amministrazione dell'applicazione web \\
-		\textbf{Post-Condizioni} & L'attore ha scelto una API su cui visualizzare i dati di utilizzo avanzati \\
+		\textbf{Post-Condizioni} & L'attore ha scelto una API su cui effettuare delle operazioni \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può scegliere una API su cui visualizzare i dati di utilizzo avanzati (UC14.1.1)
+			\item L'attore può scegliere una API su cui effettuare delle operazioni (UC14.1.1)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
 \newpage
-\subsubsection{Caso d'uso UC14.1.1: Visualizzazione dati di utilizzo avanzati}
+\subsubsection{Caso d'uso UC14.1.1: Operazioni su API}
 \label{UC14_1_1}
 \begin{figure}[ht]
 	\centering
 	\includegraphics[scale=0.45]{UML/UC14_1_1.png}
+	\caption{UC14.1.1: Operazioni su API}
+\end{figure}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.1.1 - Operazioni su API} \\
+		\hline
+		\textbf{Attori} &  Amministratore API Market \\
+		\textbf{Descrizione} & L'attore esegue le operazioni sull'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa all'amministrazione dell'applicazione web \\
+		\textbf{Post-Condizioni} & L'attore ha concluso le operazioni sull'API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare i dati avanzati dell'API (UC14.1.1.1)
+			\item L'attore può sospendere il funzionamento dell'API (UC14.1.1.2)
+			\item L'attore può cancellare l'API da API Market (UC14.1.1.3)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\newpage
+\subsubsection{Caso d'uso UC14.1.1.1: Visualizzazione dati di utilizzo avanzati}
+\label{UC14_1_1_1}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC14_1_1_1.png}
 	\caption{UC14.1.1: Visualizzazione dati di utilizzo avanzati}
 \end{figure}
 
@@ -56,7 +84,7 @@
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC14.1.1 - Visualizzazione dati di utilizzo avanzati} \\
+		\multicolumn{2}{c}{UC14.1.1.1 - Visualizzazione dati di utilizzo avanzati} \\
 		\hline
 		\textbf{Attori} &  Amministratore API Market \\
 		\textbf{Descrizione} & L'attore sceglie una API e ne visualizza i dati di utilizzo avanzati \\
@@ -155,11 +183,11 @@
 \end{minipage}
 
 \newpage
-\paragraph{Caso d'uso UC14.1.1.5: Visualizzazione utenti con licenza attiva}
-\label{UC14_1_1_5}
+\paragraph{Caso d'uso UC14.1.1.1.5: Visualizzazione utenti con licenza attiva}
+\label{UC14_1_1_1_5}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/UC14_1_1_5.png}
+	\includegraphics[scale=0.45]{UML/UC14_1_1_1_5.png}
 	\caption{UC14.1.1.5: Visualizzazione utenti con licenza attiva}
 \end{figure}
 
@@ -167,7 +195,7 @@
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC14.1.1.5 - Visualizzazione utenti con licenza attiva} \\
+		\multicolumn{2}{c}{UC14.1.1.1.5 - Visualizzazione utenti con licenza attiva} \\
 		\hline
 		\textbf{Attori} & Amministratore API Market \\
 		\textbf{Descrizione} & L'attore ha scelto una API e visualizza una lista di utenti con licenze attive per l'API scelta\\
@@ -181,14 +209,14 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC14.1.1.5.1: Visualizzazione lista nomi utenti}
-\label{UC14_1_1_5_1}
+\subparagraph{Caso d'uso UC14.1..11.5.1: Visualizzazione lista nomi utenti}
+\label{UC14_1_1_1_5_1}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC14.1.1.5.1 - Visualizzazione lista nomi utenti} \\
+		\multicolumn{2}{c}{UC14.1.1.1.5.1 - Visualizzazione lista nomi utenti} \\
 		\hline
 		\textbf{Attori} & Amministratore API Market \\
 		\textbf{Descrizione} & L'attore ha scelto una API e visualizza il nome dell'utente interessato\\
@@ -201,14 +229,14 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC14.1.1.5.2: Visualizzazione lista data di scadenza licenza}
-\label{UC14_1_1_5_2}
+\subparagraph{Caso d'uso UC14.1.1.1.5.2: Visualizzazione lista data di scadenza licenza}
+\label{UC14_1_1_1_5_2}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC14.1.1.5.2 -  Visualizzazione lista data di scadenza licenza} \\
+		\multicolumn{2}{c}{UC14.1.1.1.5.2 -  Visualizzazione lista data di scadenza licenza} \\
 		\hline
 		\textbf{Attori} & Amministratore API Market \\
 		\textbf{Descrizione} & L'attore ha scelto una API e visualizza la data di scadenza per ogni utente della lista degli utenti con licenza attiva per l'API scelta \\
@@ -221,14 +249,14 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC14.1.1.6: Visualizzazione tempo medio di risposta}
-\label{UC14_1_1_6}
+\paragraph{Caso d'uso UC14.1.1.1.6: Visualizzazione tempo medio di risposta}
+\label{UC14_1_1_1_6}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC14.1.1.6 - Visualizzazione tempo medio di risposta} \\
+		\multicolumn{2}{c}{UC14.1.1.1.6 - Visualizzazione tempo medio di risposta} \\
 		\hline
 		\textbf{Attori} & Amministratore API Market \\
 		\textbf{Descrizione} & L'attore ha scelto una API e visualizza il tempo medio di risposta dell'API scelta \\
@@ -237,6 +265,146 @@
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
 			\item L'attore può visualizzare il tempo medio di risposta dell'API scelta
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\newpage
+\paragraph{Caso d'uso UC14.1.1.2: Sospensione API}
+\label{UC14_1_1_2}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC14_1_1_2.png}
+	\caption{UC14.1.1.2: Sospensione API}
+\end{figure}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.1.1.2 - Sospensione API} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore sospende l'API scelta \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle operazioni su API ed ha scelto una API \\
+		\textbf{Post-Condizioni} & L'attore ha sospeso l'API scelta \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può confermare la sospensione dell'API scelta (UC14.1.1.2.1)
+		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio di errore informativo e la sospensione dell'API scelta non avviene (UC14.1.1.2.2)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC14.1.1.2.1: Conferma sospensione API}
+\label{UC14_1_1_2_1}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.1.1.2.1 - Conferma sospensione API} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore conferma la sospensione dell'utente scelto e visualizza un messaggio di successo \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle operazioni su API ed ha scelto una API \\
+		\textbf{Post-Condizioni} & L'attore ha confermato la sospensione dell'API scelta \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore conferma la sospensione dell'API scelta e visualizza un messaggio di successo
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC14.1.1.2.2: Errore sospensione API}
+\label{UC14_1_1_2_2}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.1.1.2.2 - Errore sospensione API} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la sospensione dell'API scelta non avviene \\
+		\textbf{Pre-Condizioni} & L'attore ha confermato la sospensione dell'API scelta ma si è verificato un errore \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore informativo \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio di errore informativo e la sospensione dell'API scelta non avviene
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\newpage
+\paragraph{Caso d'uso UC14.1.1.3: Cancellazione API}
+\label{UC14_1_1_3}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC14_1_1_3.png}
+	\caption{UC14.1.1.3: Cancellazione API}
+\end{figure}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.1.1.3 - Cancellazione API} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore cancella l'API scelta \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle operazioni su API ed ha scelto una API \\
+		\textbf{Post-Condizioni} & L'attore ha cancellato l'API scelta \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può confermare la cancellazione dell'API scelta (UC14.1.1.3.1)
+		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio di errore informativo e la cancellazione dell'API scelta non avviene (UC14.1.1.3.2)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC14.1.1.3.1: Conferma cancellazione API}
+\label{UC14_1_1_3_1}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.1.1.3.1 - Conferma cancellazione API} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore conferma la cancellazione dell'utente scelto e visualizza un messaggio di successo \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle operazioni su API ed ha scelto una API \\
+		\textbf{Post-Condizioni} & L'attore ha confermato la cancellazione dell'API scelta \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore conferma la cancellazione dell'API scelta e visualizza un messaggio di successo
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC14.1.1.3.2: Errore cancellazione API}
+\label{UC14_1_1_3_2}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.1.1.3.2 - Errore cancellazione API} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la cancellazione dell'API scelta non avviene \\
+		\textbf{Pre-Condizioni} & L'attore ha confermato la cancellazione dell'API scelta ma si è verificato un errore \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore informativo \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio di errore informativo e la cancellazione dell'API scelta non avviene
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -283,9 +451,9 @@
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
 			\item L'attore può sospendere l'utente scelto (UC14.2.1.1)
-			\item L'attore può sospendere i prelievi dell'utente scelto dal rispettivo conto personale (UC14.2.1.2)
+			\item L'attore può sospendere i pagamenti verso l'utente scelto (UC14.2.1.2)
 			\item L'attore può revocare la sospensione dell'utente scelto (UC14.2.1.3)
-			\item L'attore può revocare la sospensione dei prelievi dell'utente scelto dal rispettivo conto personale (UC14.2.1.4)
+			\item L'attore può revocare la sospensione dei pagamenti verso l'utente scelto (UC14.2.1.4)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -306,49 +474,28 @@
 		\multicolumn{2}{c}{UC14.2.1.1 - Sospensione utente} \\
 		\hline
 		\textbf{Attori} & Amministratore API Market \\
-		\textbf{Descrizione} & L'attore sospende l'utente scelto per il numero desiderato di giorni \\
+		\textbf{Descrizione} & L'attore sospende l'utente scelto (impedisce da parte sua l'uso delle API acquistate, e da parte degli altri utente l'uso delle API da lui registrate) \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla moderazione dell'utenza ed ha scelto un utente \\
-		\textbf{Post-Condizioni} & L'attore ha sospeso l'utente scelto per il numero desiderato di giorni \\
+		\textbf{Post-Condizioni} & L'attore ha sospeso l'utente scelto \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può inserire la durata in giorni della sospensione dell'utente scelto (UC14.2.1.1.1)
-			\item L'attore può confermare la sospensione dell'utente scelto (UC14.2.1.1.2)
+			\item L'attore può confermare la sospensione dell'utente scelto (UC14.2.1.1.1)
 		\end{enumerate*}\\
 		\textbf{Scenari Alternativi} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio di errore informativo e la sospensione dell'utente scelto non avviene (UC14.2.1.1.3)
+			\item L'attore può visualizzare un messaggio di errore informativo e la sospensione dell'utente scelto non avviene (UC14.2.1.1.2)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC14.2.1.1.1: Scelta durata sospensione utente}
+\subparagraph{Caso d'uso UC14.2.1.1.1: Conferma sospensione utente}
 \label{UC14_2_1_1_1}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC14.2.1.1.1 - Scelta durata sospensione utente} \\
-		\hline
-		\textbf{Attori} & Amministratore API Market \\
-		\textbf{Descrizione} & L'attore inserisce la durata in giorni della sospensione dell'utente scelto, oppure lascia il valore di default \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla moderazione dell'utenza ed ha scelto un utente \\
-		\textbf{Post-Condizioni} & L'attore ha inserito la durata in giorni della sospensione dell'utente scelto, oppure ha lasciato il valore di default \\
-		\textbf{Scenario Principale} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può inserire la durata in giorni della sospensione dell'utente scelto oppure lasciare il valore di default
-		\end{enumerate*}\\
-	\end{tabular}
-\end{minipage}
-
-\subparagraph{Caso d'uso UC14.2.1.1.2: Conferma sospensione utente}
-\label{UC14_2_1_1_2}
-
-\begin{minipage}{\linewidth}
-	\begin{tabular}{ l | p{11cm}}
-		\hline
-		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC14.2.1.1.2 - Conferma sospensione utente} \\
+		\multicolumn{2}{c}{UC14.2.1.1.1 - Conferma sospensione utente} \\
 		\hline
 		\textbf{Attori} & Amministratore API Market \\
 		\textbf{Descrizione} & L'attore conferma la sospensione dell'utente scelto e visualizza un messaggio di successo \\
@@ -361,14 +508,14 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC14.2.1.1.3: Errore sospensione utente}
-\label{UC14_2_1_1_3}
+\subparagraph{Caso d'uso UC14.2.1.1.2: Errore sospensione utente}
+\label{UC14_2_1_1_2}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC13.2.1.3 - Errore sospensione utente} \\
+		\multicolumn{2}{c}{UC14.2.1.1.2 - Errore sospensione utente} \\
 		\hline
 		\textbf{Attori} & Amministratore API Market \\
 		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la sospensione dell'utente scelto non avviene \\
@@ -397,56 +544,56 @@
 		\multicolumn{2}{c}{UC14.2.1.2 - Sospensione prelievi conto utente} \\
 		\hline
 		\textbf{Attori} & Amministratore API Market \\
-		\textbf{Descrizione} & L'attore sospende a tempo indeterminato i prelievi dell'utente scelto dal rispettivo conto personale \\
+		\textbf{Descrizione} & L'attore sospende i pagamenti verso l'utente scelto \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla moderazione dell'utenza ed ha scelto un utente \\
-		\textbf{Post-Condizioni} & L'attore ha sospeso a tempo indeterminato i prelievi dell'utente scelto dal rispettivo conto personale \\
+		\textbf{Post-Condizioni} & L'attore ha sospeso i pagamenti verso l'utente scelto \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può sospendere a tempo indeterminato i prelievi dell'utente scelto dal rispettivo conto personale (UC14.2.1.2.1)
+			\item L'attore può sospendere i pagamenti verso l'utente scelto (UC14.2.1.2.1)
 		\end{enumerate*}\\
 		\textbf{Scenari Alternativi} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio di errore informativo e la sospensione a tempo indeterminato dei prelievi dell'utente scelto dal rispettivo conto personale non avviene (UC14.2.1.2.2)
+			\item L'attore può visualizzare un messaggio di errore informativo e la sospensione i pagamenti verso l'utente scelto non avviene (UC14.2.1.2.2)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC14.2.1.2.1: Conferma sospensione prelievi conto utente}
+\subparagraph{Caso d'uso UC14.2.1.2.1: Conferma sospensione pagamenti verso utente}
 \label{UC14_2_1_2_1}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC14.2.1.2.1 - Conferma sospensione prelievi conto utente} \\
+		\multicolumn{2}{c}{UC14.2.1.2.1 - Conferma sospensione pagamenti verso utente} \\
 		\hline
 		\textbf{Attori} & Amministratore API Market \\
-		\textbf{Descrizione} & L'attore conferma la sospensione a tempo indeterminato dei prelievi dell'utente scelto dal rispettivo conto e visualizza un messaggio di successo \\
+		\textbf{Descrizione} & L'attore conferma la sospensione dei pagamenti verso l'utente scelto e visualizza un messaggio di successo \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla moderazione dell'utenza ed ha scelto un utente \\
-		\textbf{Post-Condizioni} & L'attore ha confermato la sospensione a tempo indeterminato dei prelievi dell'utente scelto dal rispettivo conto \\
+		\textbf{Post-Condizioni} & L'attore ha confermato la sospensione dei pagamenti verso l'utente scelto \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore conferma la sospensione a tempo indeterminato dei prelievi dell'utente scelto dal rispettivo conto e visualizza un messaggio di successo
+			\item L'attore conferma la sospensione dei pagamenti verso l'utente scelto e visualizza un messaggio di successo
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC14.2.1.2.2: Errore sospensione prelievi conto utente}
+\subparagraph{Caso d'uso UC14.2.1.2.2: Errore sospensione pagamenti verso utente}
 \label{UC14_2_1_2_2}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC14.2.1.2.2 - Errore sospensione prelievi conto utente} \\
+		\multicolumn{2}{c}{UC14.2.1.2.2 - Errore sospensione pagamenti verso utente} \\
 		\hline
 		\textbf{Attori} & Amministratore API Market \\
-		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la sospensione a tempo indeterminato dei prelievi dell'utente scelto dal rispettivo conto personale non avviene \\
-		\textbf{Pre-Condizioni} & L'attore ha confermato la sospensione a tempo indeterminato dei prelievi dell'utente scelto dal rispettivo conto personale ma si è verificato un errore \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la sospensione dei pagamenti verso l'utente scelto non avviene \\
+		\textbf{Pre-Condizioni} & L'attore ha confermato la sospensione dei pagamenti verso l'utente scelto ma si è verificato un errore \\
 		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore informativo \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio di errore informativo e la sospensione a tempo indeterminato dei prelievi dell'utente scelto dal rispettivo conto personale non avviene
+			\item L'attore può visualizzare un messaggio di errore informativo e la sospensione dei pagamenti verso l'utente scelto non avviene
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -471,22 +618,92 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC14.2.1.4: Revoca sospensione prelievi conto utente}
+\paragraph{Caso d'uso UC14.2.1.4: Revoca sospensione pagamenti verso utente}
 \label{UC14_2_1_4}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC14.2.1.4 - Revoca sospensione prelievi conto utente} \\
+		\multicolumn{2}{c}{UC14.2.1.4 - Revoca sospensione pagamenti verso utente} \\
 		\hline
 		\textbf{Attori} & Amministratore API Market \\
-		\textbf{Descrizione} & L'attore revoca la sospensione dei prelievi dell'utente scelto dal rispettivo conto personale, ricevendo un messaggio di successo \\
+		\textbf{Descrizione} & L'attore revoca la sospensione dei pagamenti verso l'utente scelto, ricevendo un messaggio di successo \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla moderazione dell'utenza ed ha scelto un utente \\
-		\textbf{Post-Condizioni} & L'attore ha revocato la sospensione dei prelievi dell'utente scelto dal rispettivo conto personale, ricevendo un messaggio di successo \\
+		\textbf{Post-Condizioni} & L'attore ha revocato la sospensione dei pagamenti verso l'utente scelto, ricevendo un messaggio di successo \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può revocare la sospensione dei prelievi dell'utente scelto dal rispettivo conto personale, ricevendo un messaggio di successo
+			\item L'attore può revocare la sospensione dei pagamenti verso l'utente scelto, ricevendo un messaggio di successo
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\newpage
+\paragraph{Caso d'uso UC14.2.1.5: Cancellazione utente}
+\label{UC14_2_1_5}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC14_2_1_5.png}
+	\caption{UC14.2.1.5: Cancellazione utente}
+\end{figure}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.2.1.5 - Cancellazione utente} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore cancella l'utente scelto \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla moderazione dell'utenza ed ha scelto un utente \\
+		\textbf{Post-Condizioni} & L'attore ha cancellato l'utente scelto \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può confermare la cancellazione dell'utente scelto (UC14.2.1.5.1)
+		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio di errore informativo e la cancellazione dell'utente scelto non avviene (UC14.2.1.5.2)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC14.2.1.5.1: Conferma cancellazione utente}
+\label{UC14_2_1_5_1}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.2.1.5.1 - Conferma cancellazione utente} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore conferma la cancellazione dell'utente scelto e visualizza un messaggio di successo \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla moderazione dell'utenza ed ha scelto un utente \\
+		\textbf{Post-Condizioni} & L'attore ha confermato la cancellazione dell'utente scelto \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore conferma la cancellazione dell'utente scelto e visualizza un messaggio di successo
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC14.2.1.5.2: Errore cancellazione utente}
+\label{UC14_2_1_5_2}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC14.2.1.5.2 - Errore cancellazione utente} \\
+		\hline
+		\textbf{Attori} & Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la cancellazione dell'utente scelto non avviene \\
+		\textbf{Pre-Condizioni} & L'attore ha confermato la cancellazione dell'utente scelto ma si è verificato un errore \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore informativo \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio di errore informativo e la cancellazione dell'utente scelto non avviene
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}

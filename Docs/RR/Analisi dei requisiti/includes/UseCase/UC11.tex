@@ -24,13 +24,16 @@
 		\item L'attore può inserire l'interfaccia della nuova API (UC11.4)
 		\item L'attore può inserire il file per la documentazione PDF della nuova API (UC11.5)
 		\item L'attore può inserire il link per la documentazione esterna della nuova API (UC11.7)
-		\item L'attore può inserire il prezzo base della nuova API (UC11.8)
-		\item L'attore può confermare la registrazione della nuova API (UC11.9)
+		\item L'attore può scegliere la policy di vendita della nuova API (UC11.8)
+		\item L'attore può inserire il guadagno netto desiderato per la nuova API (UC11.9)
+		\item L'attore può inserire il file per il logo della nuova API (UC11.10)
+		\item L'attore può confermare la registrazione della nuova API (UC11.12)
 	\end{enumerate*}\\
-	\textbf{Scenario Principale} & 
+	\textbf{Scenari Alternativi} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio di errore riguardo al caricamento del file di documentazione PDF dell'API, ed il caricamento del file non avviene (UC11.6)
-			\item L'attore può visualizzare un messaggio d'errore informativo riguardo la conferma della registrazione dell'API, e la registrazione non avviene (UC11.10)
+			\item L'attore può visualizzare un messaggio di errore riguardo al caricamento del file di documentazione PDF della nuova API, ed il caricamento del file non avviene (UC11.6)
+			\item L'attore può visualizzare un messaggio di errore riguardo al caricamento del file del logo della nuova API, ed il caricamento del file non avviene (UC11.10)
+			\item L'attore può visualizzare un messaggio d'errore informativo riguardo la conferma della registrazione dell'API, e la registrazione non avviene (UC11.13)
 	\end{enumerate*}\\
 \end{longtable}
 
@@ -178,34 +181,165 @@
 	\end{tabular}
 \end{minipage}
 
-\subsubsection{Caso d'uso UC11.8: Inserimento prezzo base API}
-\label{UC11_8}
+
+\subsubsection{Caso d'uso UC11.8: Scelta policy vendita API}
+\label{UC9_2}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC11.8 - Inserimento prezzo base API} \\
+		\multicolumn{2}{c}{UC11.8.2 - Scelta policy vendita API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
-		\textbf{Descrizione} & L'attore inserisce il prezzo base della nuova API \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
-		\textbf{Post-Condizioni} & L'attore ha inserito il prezzo base della nuova API \\
+		\textbf{Descrizione} & L'attore sceglie una policy di vendita per la nuova API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di registrazione di una nuova API \\
+		\textbf{Post-Condizioni} & L'attore ha scelto una policy di vendita per la nuova API \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può inserire il prezzo base della nuova API
+			\item L'attore può scegliere una policy di vendita per la nuova API
+		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può scegliere la policy di vendita per numero di chiamate (UC11.8.1)
+			\item L'attore può scegliere la policy di vendita per tempo di utilizzo (UC11.8.2)
+			\item L'attore può scegliere la policy di vendita per traffico (UC11.8.3)	
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\subsubsection{Caso d'uso UC11.9: Conferma registrazione nuova API}
+\paragraph{Caso d'uso UC11.8.1: Scelta policy per numero di chiamate}
+\label{UC11_8_1}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC11.8.1 - Scelta policy per numero di chiamate} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore sceglie la policy di vendita API per numero di chiamate \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di registrazione di una nuova API \\
+		\textbf{Post-Condizioni} & L'attore ha scelto la policy di vendita API per numero di chiamate \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può scegliere la policy di vendita API per numero di chiamate
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC11.8.2: Scelta policy per tempo di utilizzo}
+\label{UC11_8_2}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC11.8.2 - Scelta policy per tempo di utilizzo} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore sceglie la policy di vendita API per tempo di utilizzo \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di registrazione di una nuova API \\
+		\textbf{Post-Condizioni} & L'attore ha scelto la policy di vendita API per tempo di utilizzo \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può scegliere la policy di vendita API per tempo di utilizzo
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC11.8.3: Scelta policy per traffico}
+\label{UC11_8_3}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC11.8.3 - Scelta policy per traffico} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore sceglie la policy di vendita API per traffico \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di registrazione di una nuova API \\
+		\textbf{Post-Condizioni} & L'attore ha scelto la policy di vendita API per traffico \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può scegliere la policy di vendita API per traffico
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subsubsection{Caso d'uso UC11.9: Inserimento guadagno API}
 \label{UC11_9}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC11.9 - Conferma registrazione nuova API} \\
+		\multicolumn{2}{c}{UC11.9 - Inserimento guadagno API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore inserisce il guadagno netto desiderato per la nuova API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
+		\textbf{Post-Condizioni} & L'attore ha inserito il guadagno netto desiderato per la nuova API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può inserire il guadagno netto desiderato per la nuova API
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subsubsection{Caso d'uso UC11.10: Inserimento logo API}
+\label{UC11_10}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC11.10 - Inserimento logo API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore carica su API Market un file contenente il logo per la nuova API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
+		\textbf{Post-Condizioni} & L'attore ha caricato su API Market un file contenente il logo per la nuova API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può caricare su API Market un file contenente il logo per la nuova API
+		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+		\item L'attore può visualizzare un messaggio di errore (E.g: formato errato) ed il caricamento del file non avviene (UC11.11)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subsubsection{Caso d'uso UC11.11: Errore inserimento logo API}
+\label{UC11_11}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC11.11 - Errore inserimento logo API} \\
+		\hline
+		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di errore e l'inserimento del logo per la nuova API non avviene \\
+		\textbf{Pre-Condizioni} & L'attore ha cercato di caricare su API Market un file contenente il logo per la nuova API ma si è verificato un errore \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio di errore (E.g: formato non valido)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subsubsection{Caso d'uso UC11.12: Conferma registrazione nuova API}
+\label{UC11_12}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC11.12 - Conferma registrazione nuova API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore conferma la registrazione della nuova API \\
@@ -218,14 +352,14 @@
 	\end{tabular}
 \end{minipage}
 
-\subsubsection{Caso d'uso UC11.10: Errore registrazione nuova API}
-\label{UC11_10}
+\subsubsection{Caso d'uso UC11.13: Errore registrazione nuova API}
+\label{UC11_13}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC11.10 - Errore registrazione nuova API} \\
+		\multicolumn{2}{c}{UC11.13 - Errore registrazione nuova API} \\
 		\hline
 		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
 		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la registrazione della nuova API non avviene \\

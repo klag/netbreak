@@ -3,13 +3,13 @@
 Vengono elencati i casi d'uso ricavati dall'analisi del capitolato C1.
 
 \subsection{Attori}
-Di seguito è riportato il diagramma UML che descrive la gerarchia degli attori. Sono sono state individuate 3 tipologie differenti di attori con funzionalità crescenti. Gli attori sono: l'utente non autenticato, l'utente autenticato e l'amministratore API Market (un attore autenticato con alcune funzionalità superuser). Un quarto attore, chiamato utente generico, viene utilizzato nei diagrammi UML per indicare funzionalità fruibili indipendentemente dallo status di autenticazione.
+Di seguito è riportata la gerarchia degli attori individuati. L'utente generico viene utilizzato nei diagrammi UML per indicare funzionalità fruibili indipendentemente dallo status di autenticazione. Successivamente la gerarchia distingue il cliente (cioè un utente autenticato) dall'utente non autenticato. Il cliente accede solo ai servizi base di API Market, in particolare la ricerca e l'acquisto di API. Lo sviluppatore è un cliente che può registrare nuove API e trarne profitto. L'amministratore API Market è uno sviluppatore che possiede funzionalità di amministrazione della piattaforma.
 
 \label{Attori}
 
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/attori.png}
+	\includegraphics[scale=0.45]{UML/Attori.png}
 	\caption{Attori}
 \end{figure}
 
@@ -17,14 +17,6 @@ Di seguito è riportato il diagramma UML che descrive la gerarchia degli attori.
 \input{includes/UseCase/UC1.tex}
 \input{includes/UseCase/UC2.tex}
 \input{includes/UseCase/UC3.tex}
-\input{includes/UseCase/UC3_1.tex}
-\input{includes/UseCase/UC3_2.tex}
-\input{includes/UseCase/UC3_3.tex}
-\input{includes/UseCase/UC3_4.tex}
-\input{includes/UseCase/UC3_5.tex}
-\input{includes/UseCase/UC3_6.tex}
-\input{includes/UseCase/UC3_7.tex}
-\input{includes/UseCase/UC3_8.tex}
 \input{includes/UseCase/UC4.tex}
 \input{includes/UseCase/UC4_1.tex}
 \input{includes/UseCase/UC4_2.tex}
