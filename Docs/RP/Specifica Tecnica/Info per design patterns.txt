@@ -1,0 +1,20 @@
+PATTERN (ITALIANO)
+http://losviluppatore.it/microservices-architecture-il-pattern-architetturale-emergente-per-le-grandi-applicazioni-moderne/
+
+PATTERNS
+http://microservices.io/patterns/
+
+PATTERN MICROSERVIZI
+http://microservices.io/patterns/microservices.html
+
+INFO SU PATTERNS
+http://uniknow.github.io/AgileDev/site/0.1.9-SNAPSHOT/patterns.html
+
+MICROSERVIZI VS S.O.A
+https://dzone.com/articles/microservices-vs-soa-2
+
+REPORT SU MICROSERVICES
+https://predixteam.files.wordpress.com/2016/01/micro-service.pdf
+
+SERVICE REGISTRY NETFLIX
+https://github.com/Netflix/eureka
