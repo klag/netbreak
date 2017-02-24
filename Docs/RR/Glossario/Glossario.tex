@@ -28,70 +28,55 @@
 \setcounter{secnumdepth}{7}
 \setcounter{tocdepth}{7}
 
-\begin{document}
+\makeglossaries
+\makeindex
+\renewcommand*{\glssubentrycounterlabel}{\Roman{glossarysubentry})\space}
+\renewcommand{\glossarysection}[2][]{}
 
+
+
+\begin{document}
 %Inclusione del template per la homepage (Non modificare)
 \input{../../template/homepage.tex}
 
 %Registro delle modifiche e indice (Non modificare)
-\pagenumbering{Roman}
 \input{../../template/changelogLayout.tex}
-\input{../../template/index.tex}
+%\input{../../template/index.tex}
 
 %Inclusione delle varie includes di contenuto
 %Introduzione e contenuti di ogni tipo
 
-\newpage
+
+
 \input{includes/A.tex}
-\newpage
 \input{includes/B.tex}
-\newpage
 \input{includes/C.tex}
-\newpage
 \input{includes/D.tex}
-\newpage
 \input{includes/E.tex}
-\newpage
 \input{includes/F.tex}
-\newpage
 \input{includes/G.tex}
-\newpage
 \input{includes/H.tex}
-\newpage
 \input{includes/I.tex}
-\newpage
 \input{includes/J.tex}
-\newpage
 \input{includes/K.tex}
-\newpage
 \input{includes/L.tex}
-\newpage
 \input{includes/M.tex}
-\newpage
 \input{includes/N.tex}
-\newpage
 \input{includes/O.tex}
-\newpage
 \input{includes/P.tex}
-\newpage
 \input{includes/Q.tex}
-\newpage
 \input{includes/R.tex}
-\newpage
 \input{includes/S.tex}
-\newpage
 \input{includes/T.tex}
-\newpage
 \input{includes/U.tex}
-\newpage
 \input{includes/V.tex}
-\newpage
 \input{includes/W.tex}
-\newpage
 \input{includes/X.tex}
-\newpage
 \input{includes/Y.tex}
-\newpage
 \input{includes/Z.tex}
+
+
+\glsaddall
+\printglossary[style=myaltlistgroup]
 
 \end{document}

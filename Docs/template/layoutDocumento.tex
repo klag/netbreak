@@ -40,6 +40,21 @@
 \usepackage{afterpage}
 
 
+%glossary code%
+\usepackage[nonumberlist,xindy]{glossaries}
+
+\newglossarystyle{myaltlistgroup}{%
+	\setglossarystyle{altlistgroup}%
+	\renewcommand*{\glsgroupheading}[1]{%
+		
+		\newpage
+		\item\makebox[\linewidth]{\Large\textbf{\glsgetgrouptitle{##1}}}%
+		\vspace*{-\baselineskip}%
+		\item\makebox[\linewidth]{\hspace*{3cm}\hrulefill\hspace*{3cm}}%
+	}%
+}
+
+
 
 %Stile fancy per il documento (Header e footer)
 \pagestyle{fancy}
