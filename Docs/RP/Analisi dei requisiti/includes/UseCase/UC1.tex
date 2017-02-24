@@ -1,0 +1,35 @@
+\newpage
+\subsection{Caso d'uso UC1: Main pre-autenticazione}
+\label{UC1}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC1.png}
+	\caption{UC1: Main pre-autenticazione}
+\end{figure}
+
+\renewcommand*{\arraystretch}{1.6}
+\begin{longtable}{ l | p{11cm}}
+	\hline
+	\rowcolor{Gray}
+	\multicolumn{2}{c}{UC1 - Main pre-autenticazione} \\
+	\hline
+	\textbf{Attori} & Utente non autenticato  \\
+	\textbf{Descrizione} & L'attore si trova nella schermata principale dell'applicazione ed accede alle funzionalità a lui disponibili: la registrazione, il login, il recupero password, la ricerca API \\
+	\textbf{Pre-Condizioni} & L'attore ha avviato l'applicazione web e non si è ancora autenticato \\
+	\textbf{Post-Condizioni} & L'applicazione ha eseguito le richieste dell'attore \\
+	\textbf{Scenario Principale} & 
+	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+		\item L'attore può registrarsi all'applicazione (UC3)
+		\item L'attore può effettuare il login all'applicazione (UC4)
+		\item L'attore può recuperare la propria password (UC5)
+		\item L'attore può effettuare una ricerca sulle API presenti nell'applicazione (UC6)
+	\end{enumerate*}\\
+	\textbf{Scenari Alternativi} & 
+	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+		\item L'attore può effettuare il login tramite API Market (UC4.1)
+		\item L'attore può effettuare il login tramite Facebook (UC4.2)
+		\item L'attore può effettuare il login tramite Twitter (UC4.3)
+		\item L'attore può effettuare il login tramite LinkedIn (UC4.4)
+		\item L'attore può effettuare il login tramite Google+ (UC4.5)
+	\end{enumerate*}\\
+\end{longtable}

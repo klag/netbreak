@@ -1,0 +1,177 @@
+\newpage
+
+\section{Processi di supporto}
+
+	\subsection{Documentazione}
+	In questa sezione del documento verrà spiegata la struttura, classificazione e metodo di revisione dei documenti del gruppo \textit{\gruppo}.
+	
+		\subsubsection{Nomenclatura e versione del documento}
+		Ogni documento deve rispettare una denominazione comune, il più possibile chiara, affinché venga individuato facilmente il nome e la versione del documento. Il gruppo ha scelto di utilizzare la seguente nomenclatura:
+		\begin{center}
+			\textit{NomeDelDocumento X\_Y\_Z.pdf}
+		\end{center}
+		All’interno del nome, \textit{X\_Y\_Z} indica la versione del documento nel seguente modo:
+		\begin{itemize}
+			\item \textit{X}: indica il numero di pubblicazioni del documento. Questo indice è incrementato esclusivamente dal \textit{\RdP} in seguito alla sua approvazione finale. L’incremento di tale indice, azzera automaticamente gli indici Y e Z;
+			\item \textit{Y}: indica il numero di verifiche e viene incrementato esclusivamente dai \textit{\Vers}. L’incremento di tale indice, azzera automaticamente l'indice Z;
+			\item \textit{Z}: indica il numero di aggiornamenti minori effettuati prima o in seguito a una verifica o approvazione. Viene incrementato progressivamente e viene azzerato solo in seguito a una modifica degli indici X e Y.
+		\end{itemize}
+		Ogni modifica della versione del documento deve riflettersi nel changelog, nel nome del documento e nel frontespizio in corrispondenza della voce \textit{Versione}.
+	
+		\subsubsection{Classificazione del documento}
+		Per tutti i documenti redatti dal gruppo occorre sempre specificare una classe, che può essere \textbf{Interna} o \textbf{Esterna}.
+		Un documento viene classificato come \textbf{Interno}, se la sua consultazione è limitata al solo gruppo. Invece, se il documento è destinato ad una consultazione esterna al gruppo, viene classificato come \textbf{Esterno}.
+	
+		\subsubsection{Ciclo di vita del documento}
+		Un documento può trovarsi in tre stati:
+		\begin{itemize}
+			\item \textbf{Bozza}: il/i redattore/i è/sono in fase di stesura del documento;
+			\item \textbf{In attesa di verifica}: il/i redattore/i ha/hanno concluso la stesura e il documento passa in stato di attesa di verifica effettuata dal/dai \textit{\Ver/i};
+			\item \textbf{Approvato}: il/i \textit{\Ver/i} ha/hanno concluso il suo/loro lavoro e passa/passano il documento al \textit{\RdP} che ha il compito di approvarlo definitivamente.
+		\end{itemize}
+		
+		\subsubsection{Strumenti di sviluppo del documento}
+		Per la stesura dei documenti è stato scelto di utilizzare \textbf{\textit{\LaTeX\ped{G}}}, un linguaggio semplice e modulare. \textit{\LaTeX\ped{G}} è in grado di evitare possibili conflitti provenienti dall’utilizzo di software e piattaforme differenti.
+	
+		\subsubsection{Struttura del documento}
+		Ogni documento redatto dal gruppo avrà una struttura chiara e di facile comprensione per chiunque sia il lettore. Di seguito, viene riportata la struttura utilizzata nei documenti:
+
+			\paragraph{Frontespizio}
+			\begin{itemize}
+				\item{Nome del gruppo;}
+				\item{Nome del progetto;}
+				\item{Logo del gruppo;}
+				\item{Nome del documento;}
+				\item{Data di creazione;}
+				\item{Ultima modifica;}
+				\item{Versione;}
+				\item{Stato del documento;}
+				\item{Nome e cognome del/i redattore/i;}
+				\item{Nome e cognome del/dei \textit{\Ver/i};}
+				\item{Nome e cognome del \textit{\RdP} che ha approvato il documento;}
+				\item{Classificazione del documento;}
+				\item{Distribuzione;}
+				\item{Destinatari del documento;}
+				\item{Email di riferimento;}
+				\item{Abstract del documento.}
+			\end{itemize}
+	
+			\paragraph{Changelog}
+			La seconda sezione del documento è una lista che raccoglie e tiene traccia di tutte le modifiche effettuate al documento, dalla sua creazione alla sua approvazione finale. Le modifiche sono indicate secondo questo schema:
+			\begin{itemize}
+				\item\textbf{Descrizione}: indica le aggiunte e/o modifiche effettuate al documento;
+				\item\textbf{Autore e ruolo}: indica l’autore e il ruolo di chi ha effettuato la modifica;
+				\item\textbf{Data e versione}: indica la data di modifica e la nuova versione del documento in questione.
+			\end{itemize}	
+
+			\paragraph{Indice}
+			Ogni documento deve possedere un indice contenente tutte le sezioni presenti nel documento. Ogni immagine o tabella, invece, deve essere indicata con il relativo indice.
+
+			\paragraph{Intestazione e piè di pagina}
+			Tutte le pagine del documento, eccetto la prima, hanno un'intestazione e un piè di pagina. L’intestazione è suddivisa in due parti:
+			\begin{itemize}
+				\item Nell’angolo sinistro, sono indicati il nome del progetto e del documento in questione;
+				\item Nell’angolo destro, è presente il nome del capitolo contente la sezione che si sta consultando, ad esclusione del changelog.
+			\end{itemize}
+			Il piè di pagina, invece, è suddiviso nel seguente modo:
+			\begin{itemize}
+				\item Nell’angolo sinistro, vengono indicati nome e indirizzo email ufficiale del gruppo;
+				\item Nell’angolo destro, è presente una numerazione in numeri romani per le pagine relative a changelog e indice. Per tutte le altre pagine, invece, viene utilizzata una numerazione in numeri arabi, che indica il numero di pagina attuale e il numero totale di pagine del documento.
+			\end{itemize} 
+
+			\paragraph{Norme tipografiche}
+			Questa sezione del documento contiene i criteri riguardanti l’ortografia e la tipografia, utilizzate nel corso dello sviluppo della documentazione del progetto.
+
+				\subparagraph{Stili di testo e punteggiatura}
+				\begin{itemize}
+					\item \textbf{Grassetto}: deve essere utilizzato per parole importanti, all’interno di frasi o elenchi puntati;
+					\item \textit{Corsivo}: deve essere utilizzato per:
+					\begin{itemize}
+						\item Citazioni;
+						\item Parole del glossario (unitamente ad una G maiuscola in pedice);
+						\item Riferimenti ai ruoli;
+						\item Riferimento all’intero gruppo.
+					\end{itemize}
+					\item MAIUSCOLO: viene utilizzato unicamente per scrivere acronimi e macro \LaTeX\ presenti nei documenti;
+					\item \textsc{maiuscoletto}: viene utilizzato per i riferimenti ad altri documenti;
+					\item \LaTeX: viene usanto il comando \textbackslash{LaTeX} per ogni occorenza del termine \LaTeX.
+					\item Punteggiatura: ogni simbolo di punteggiatura è seguito da uno spazio, ad eccezione del punto, del punto interrogativo e del punto esclamativo, che sono seguiti da uno spazio e lettera maiuscola. Ogni voce di un elenco puntato deve terminare con punto e virgola, ad eccezione dell’ultima che termina con un punto. 
+					\end{itemize}
+	
+				\subparagraph{Formato data}
+				All’interno di ogni documento, tutte le date seguiranno lo standard \textit{\textbf{ISO 8601:2004\ped{G}}}:
+				\begin{center}
+					\textbf{YYYY-MM-DD}
+				\end{center}
+				Dove:
+				\begin{itemize}
+					\item \textbf{YYYY}: indica l’anno;
+					\item \textbf{MM}: indica il mese;
+					\item \textbf{DD}: indica il giorno.
+				\end{itemize}
+		
+		\subsubsection{Documenti da consegnare}
+			\paragraph{\SdF}
+			\begin{itemize}
+				\item \textbf{Classificazione}: interno;
+				\item \textbf{Destinazione}: gruppo e committente;
+				\item \textbf{Contenuto}: questo documento contiene lo studio effettuato dal gruppo \textit{\gruppo} su tutti i capitolati e, per ognuno di essi, le motivazioni che hanno portato alla relativa scelta o rifiuto.
+			\end{itemize}
+
+			\paragraph{\NdP}
+			\begin{itemize}
+				\item \textbf{Classificazione}: interno;
+				\item \textbf{Destinazione}: gruppo e committente;
+				\item \textbf{Contenuto}: lo scopo del documento è raccogliere tutte le convenzioni, gli strumenti e le regole che il gruppo \textit{\gruppo} adotterà durante l'intera realizzazione del progetto. 
+			\end{itemize}	
+
+			\paragraph{\AdR}
+			\begin{itemize}
+				\item \textbf{Classificazione}: esterno;
+				\item \textbf{Destinazione}: gruppo, committente e proponente;
+				\item \textbf{Contenuto}: questo documento si prefigge lo scopo di dare una visione generale dei requisiti essenziali del progetto e dei relativi casi d'uso.
+			\end{itemize}
+
+			\paragraph{\PdP}
+			\begin{itemize}
+				\item \textbf{Classificazione}: esterno;
+				\item \textbf{Destinazione}: gruppo, committente e proponente;
+				\item \textbf{Contenuto}: questo documento descrive come il gruppo \textit{\gruppo} ha impiegato tempo e risorse umane, ma anche la pianificazione delle stesse, per le attività future previste per la realizzazione del prodotto richiesto dal progetto.
+			\end{itemize}
+
+			\paragraph{\PdQ}
+			\begin{itemize}
+				\item \textbf{Classificazione}: esterno;
+				\item \textbf{Destinazione}: gruppo, committente e proponente;
+				\item \textbf{Contenuto}: questo documento descrive come il gruppo \textit{\gruppo} intende raggiungere gli obiettivi di qualità prefissati all’inizio del progetto.
+			\end{itemize}
+
+			\paragraph{\G}
+			\begin{itemize}
+				\item \textbf{Classificazione}: esterno;
+				\item \textbf{Destinazione}: gruppo, committente e proponente;
+				\item \textbf{Contenuto}: questo documento ha lo scopo di fornire una definizione di tutti i termini tecnici e acronimi, al fine di rendere la lettura comprensibile a tutti i destinatari della documentazione fornita.
+			\end{itemize}
+
+	\subsection{Verifica}
+	Il processo di Verifica ha lo scopo di controllare ed assicurare che ogni documento prodotto rispecchi quanto previsto dai requisiti.
+
+		\subsubsection{Analisi}
+
+			\paragraph{Analisi statica}
+			L'analisi statica è applicata ai documenti di testo, e consiste nel trovare errori sintattici ed ortografici. Una prima verifica viene effettuata dai \textit{\Vers} e, successivamente, dal \textit{\RdP}. Le due tecniche scelte sono la \textbf{\textit{Formal Walkthrough\ped{G}}} e la \textbf{\textit{Fagan Inspection\ped{G}}}.
+			\begin{itemize}
+				\item \textbf{\textit{Formal Walkthrough\ped{G}}}: consiste nell'individuare quanti più errori di sintassi e di ortografia possibili, senza concentrarsi su particolari e specifici errori. Questa tecnica sarà utilizzata dai \textit{\Vers}, i quali trascriveranno gli errori più frequenti in una apposita lista, necessaria per la tecnica di \textit{Fagan Inspection\ped{G}};
+				\item \textbf{\textit{Fagan Inspection\ped{G}}}: si basa su una lettura attenta dei documenti, basandosi sulla lista degli errori stilata durante la \textit{Formal Walkthrough\ped{G}}. Questo processo acquisirà rilevanza in concomitanza con l'incremento della lista di possibili errori stilata dai \textit{\Vers}.
+			\end{itemize}
+
+			\paragraph{Analisi dinamica}
+			L'analisi dinamica è applicata esclusivamente sul software prodotto, in quanto consiste nell’effettuare test per verificare il corretto funzionamento dell’applicativo.
+	
+		\subsubsection{Strumenti}
+		\begin{itemize}
+			\item \textbf{\textit{W3C Markup Validator Service\ped{G}}}: validatore online di codice \textit{HTML\ped{G}}, utile per trovare eventuali errori nel codice. L'indirizzo web di riferimento è: \url https://validator.w3.org/;
+			\item \textbf{\textit{CSSLint\ped{G}}}: validatore online di codice \textit{CSS\ped{G}}, utile per trovare eventuali errori nel codice. L'indirizzo web di riferimento è: \url http://csslint.net/;
+			\item \textbf{\textit{SQLFiddle\ped{G}}}: validatore online di codice \textit{MySQL\ped{G}}. Utile per verificare la consistenza del codice del database. L'indirizzo web di riferimento è: \url http://sqlfiddle.com/;
+			\item \textbf{\textit{PHP Code Checker\ped{G}}}: strumento online che verifica la presenza di eventuali errori di sintassi nel codice \textit{PHP\ped{G}}. L'indirizzo web di riferimento è: \url http://phpcodechecker.com/.
+		\end{itemize}

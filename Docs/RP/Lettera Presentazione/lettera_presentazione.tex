@@ -1,0 +1,146 @@
+\documentclass[11pt,a4paper]{letter} 
+\usepackage{graphicx} 
+\usepackage{microtype} 
+\usepackage{gfsdidot} 
+\usepackage[T1]{fontenc} 
+\usepackage[latin1]{inputenc}
+
+\usepackage{eurosym}
+\usepackage{amstext} % for \text
+\DeclareRobustCommand{\officialeuro}{%
+	\ifmmode\expandafter\text\fi
+	{\fontencoding{U}\fontfamily{eurosym}\selectfont e}}
+
+\makeatletter
+\def\vhrulefill#1{\leavevmode\leaders\hrule\@height#1\hfill \kern\z@}
+\makeatother
+
+%----------------------------------------------------------------------------------------
+%	DOCUMENT MARGINS
+%----------------------------------------------------------------------------------------
+
+\textwidth 6.75in
+\textheight 9.25in
+\oddsidemargin -.25in
+\evensidemargin -.25in
+\topmargin -1in
+\longindentation 0.50\textwidth
+\parindent 0.4in
+
+%----------------------------------------------------------------------------------------
+%	SENDER INFORMATION
+%----------------------------------------------------------------------------------------
+
+\def\Who{24 Gennaio 2017}
+\def\Email{netbreakswe@gmail.com} 
+
+\address{
+\includegraphics[width=0.8in]{LogoNetbreak.png} % Include the logo of your institution
+\hspace{5.0in} % Position of the institution logo, increase to move left, decrease to move right
+\vskip -1.07in~\\ % Position of the text in relation to the institution logo, increase to move down, decrease to move up
+\hspace{1.5in}NetBreak \hfill \normalsize % Second line of institution name, adjust hspace if your logo is wide
+\makebox[0ex][r]{\bf \Who \What }\hspace{0.08in} % Print your name and title with a little whitespace to the right
+~\\[-0.11in] % Reduce the whitespace above the horizontal rule
+\hspace{1.5in}\vhrulefill{1pt} \\ % Horizontal rule, adjust hspace if your logo is wide and \vhrulefill for the thickness of the rule
+\hspace{\fill}\parbox[t]{2.85in}{ % Create a box for your details underneath the horizontal rule on the right
+\footnotesize % Use a smaller font size for the details
+\Email\\ % Your email address
+}
+\hspace{-1.4in} % Horizontal position of this block, increase to move left, decrease to move right
+\vspace{-0.3in} % Move the letter content up for a more compact look
+}
+
+%----------------------------------------------------------------------------------------
+%	TO ADDRESS STRUCTURE
+%----------------------------------------------------------------------------------------
+
+\def\opening#1{\thispagestyle{empty}
+{\centering\fromaddress \vspace{0.6in} \\ % Print the header and from address here, add whitespace to move date down
+\hspace*{\longindentation}\hspace*{\fill}\par} % Print today's date, remove \today to not display it
+{\raggedright \toname \\ \toaddress \par} % Print the to name and address
+\vspace{0.1in} % White space after the to address
+\noindent #1 % Print the opening line
+% Uncomment the 4 lines below to print a footnote with custom text
+%\def\thefootnote{}
+%\def\footnoterule{\hrule}
+%\footnotetext{\hspace*{\fill}{\footnotesize\em Footnote text}}
+%\def\thefootnote{\arabic{footnote}}
+}
+
+\long\def\closing#1{
+\vspace{0.4in} % Some whitespace after the letter content and before the signature
+\noindent % Stop paragraph indentation
+\hspace*{\longindentation} % Move the signature right
+\parbox{\indentedwidth}{\raggedright
+#1 % Print the signature text
+\vskip 0.10in % Whitespace between the signature text and your name
+\fromsig}} % Print your name and title
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TO ADDRESS
+%----------------------------------------------------------------------------------------
+
+\begin{letter}
+{Alla Cortese Attenzione di:\\
+	Prof. Vardanega Tullio\\
+	Prof. Cardin Riccardo\\
+	Universita` degli Studi di Padova\\
+	Dipartimento di Matematica "Tullio Levi-Civita"\\
+	Via Trieste, 63\\
+	35121 - Padova (PD)\\
+}
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+
+\opening {\textbf{Oggetto}: Presentazione della proposta per il capitolato d'appalto C1.}\\
+
+\noindent Egregio Professore Vardanega Tullio,
+
+\indent con la presente il gruppo NetBreak intende comunicarLe ufficialmente l'impegno per lo svolgimento del capitolato C1 proposto da ItalianaSoftware S.r.l, per la realizzazione di un API Market.
+L'offerta \`e corredata dai seguenti documenti, allegati alla presente lettera:
+\begin{itemize}
+<<<<<<< HEAD
+	\item \textsc{Analisi dei Requisiti 1.0.0 (Esterni/AnalisiDeiRequisiti 1\_0\_0.pdf)}; 
+	\item \textsc{Glossario 1.0.0 (Esterni/Glossario 1\_0\_0.pdf)}; 
+	\item \textsc{Norme di Progetto 1.0.0 (Interni/NormeDiProgetto 1\_0\_0.pdf)}; 
+	\item \textsc{Piano di Progetto 1.0.0 (Esterni/PianoDiProgetto 1\_0\_0.pdf)}; 
+	\item \textsc{Piano di Qualifica 1.0.0 (Esterni/PianoDiQualifica 1\_0\_0.pdf)}; 
+	\item \textsc{Studio di Fattibilit\`a 1.0.0 (Interni/StudioDiFattibilita 1\_0\_0.pdf)}; 
+	\item \textsc{Verbale 1 1.0.0 (Interni/Verbale 1 - 28 novembre 2016.pdf)}; 
+	\item \textsc{Verbale 2 1.0.0 (Interni/Verbale 2 - 01 dicembre 2016.pdf)}; 
+	\item \textsc{Verbale 3 1.0.0 (Interni/Verbale 3 - 12 dicembre 2016.pdf)}; 
+	\item \textsc{Verbale 4 1.0.0 (Interni/Verbale 4 - 22 dicembre 2016.pdf)}; 
+	\item \textsc{Verbale 5 1.0.0 (Interni/Verbale 5 - 28 dicembre 2016.pdf)}. 
+=======
+	\item \textsc{Analisi dei Requisiti 1.0.0} (Esterni/AnalisiDeiRequisiti1\_0\_0.pdf); 
+	\item \textsc{Glossario 1.0.0} (Esterni/Glossario1\_0\_0.pdf); 
+	\item \textsc{Norme di Progetto 1.0.0} (Interni/NormeDiProgetto1\_0\_0.pdf); 
+	\item \textsc{Piano di Progetto 1.0.0} (Esterni/PianoDiProgetto1\_0\_0.pdf); 
+	\item \textsc{Piano di Qualifica 1.0.0} (Esterni/PianoDiQualifica1\_0\_0.pdf); 
+	\item \textsc{Studio di Fattibilit\`a 1.0.0} (Interni/StudioDiFattibilita1\_0\_0.pdf); 
+	\item \textsc{Verbale 1} (Interni/Verbale 1 - 28 novembre 2016.pdf); 
+	\item \textsc{Verbale 2} (Interni/Verbale 2 - 01 dicembre 2016.pdf); 
+	\item \textsc{Verbale 3} (Interni/Verbale 3 - 12 dicembre 2016.pdf); 
+	\item \textsc{Verbale 4} (Interni/Verbale 4 - 22 dicembre 2016.pdf); 
+	\item \textsc{Verbale 5} (Interni/Verbale 5 - 28 dicembre 2016.pdf). 
+>>>>>>> origin/master
+\end{itemize}
+	Il gruppo NetBreak si pone come obiettivo la consegna del prodotto richiesto, entro la fine del secondo semestre dell'anno accademico 2016/2017. L'importo del preventivo ammonta a \hbox{11.425 \euro{}.}
+
+\noindent Rimango a Sua completa disposizione per ogni ulteriore chiarimento.\\
+Distinti Saluti
+	
+
+\closing{Andrea Scalabrin,\\ Responsabile NetBreak\\ \includegraphics[width=1.8in]{AS.png}}
+
+%----------------------------------------------------------------------------------------
+
+\end{letter}
+\end{document}

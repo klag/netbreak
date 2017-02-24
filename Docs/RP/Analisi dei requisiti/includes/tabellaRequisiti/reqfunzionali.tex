@@ -1,0 +1,429 @@
+\subsection{Requisiti di funzionalità}
+
+Di seguito sono elencati tutti i requisiti rilevati e descritti nel documento. Essi saranno catalogati secondo la nomenclatura indicata nel documento \textsc{NormeDiProgetto 1\_0\_0.pdf} di cui si cita la sezione di seguito:
+
+\begin{center}
+	R[Tipologia][Rilevanza][Codice]
+\end{center}
+\textbf{Tipologia:} può assumere uno dei seguenti valori:
+\begin{itemize}
+	\item \textbf{V:} requisito di vincolo;
+	\item \textbf{F:} requisito di funzionalità;
+	\item \textbf{Q:} requisito di qualità;
+	\item \textbf{P:} requisito prestazionale.
+\end{itemize}
+\textbf{Rilevanza:} può assumere uno dei seguenti valori, elencati in ordine di importanza:
+\begin{itemize}
+	\item \textbf{O:} requisito obbligatorio;
+	\item \textbf{D:} requisito desiderabile;
+	\item \textbf{F:} requisito facoltativo.
+\end{itemize}
+\textbf{Codice:} assume un numero sequenziale e univoco, necessario a catalogare e riconoscere ogni requisito progettuale.
+
+\begin{longtable}{|c|p{8cm}|c|}
+\caption{Tabella dei requisiti di funzionalità} \\
+
+\hline
+\thead*{\textbf{Codice requisito}} &\thead{\textbf{Descrizione}}  &\thead{\textbf{Fonte}} \\
+\hline
+\endhead
+
+\hline
+\endfoot
+\hline
+\endlastfoot
+
+\hypertarget{RFO1}{RFO1} & L'utente non autenticato può registrarsi & \makecell*{Capitolato\\UC3} \\
+\hline
+
+\hypertarget{RFD1.1}{RFD1.1} & L'utente non autenticato può inserire il proprio nome & \makecell*{Interno\\UC3\\UC3.1} \\
+\hline
+\hypertarget{RFD1.2}{RFD1.2} & L'utente non autenticato può inserire il proprio cognome & \makecell*{Interno\\UC3\\UC3.2} \\
+\hline
+\hypertarget{RFO1.3}{RFO1.3} & L'utente non autenticato può inserire il proprio username & \makecell*{Interno\\UC3\\UC3.3} \\
+\hline
+\hypertarget{RFO1.4}{RFO1.4} & L'utente non autenticato può inserire la propria email & \makecell*{Interno\\UC3\\UC3.4} \\
+\hline
+\hypertarget{RFO1.5}{RFO1.5} & L'utente non autenticato può inserire la propria password & \makecell*{Interno\\UC3\\UC3.5} \\
+\hline
+\hypertarget{RFO1.6}{RFO1.6} & L'utente non autenticato può confermare l'inserimento della propria password & \makecell*{Interno\\UC3\\UC3.6} \\
+\hline
+\hypertarget{RFO1.7}{RFO1.7} & L'utente non autenticato può confermare i dati inseriti, confermando la propria registrazione & \makecell*{Interno\\UC3\\UC3.7} \\
+\hline
+\hypertarget{RFF1.8}{RFF1.8} & L'applicazione web mostra un messaggio di errore nel caso la registrazione sia fallita & \makecell*{Interno\\UC3\\UC3.8} \\
+\hline
+
+\hypertarget{RFO2}{RFO2} & L'utente non autenticato può effettuare il login & \makecell*{Capitolato\\UC4} \\
+\hline
+
+\hypertarget{RFO2.1}{RFO2.1} & L'utente non autenticato può effettuare il login base di APIMarket & \makecell*{Capitolato\\UC4\\UC4.1} \\
+\hline
+
+\hypertarget{RFO2.1.1}{RFO2.1.1} & L'utente non autenticato può inserire uno username o una email & \makecell*{Interno\\UC4\\UC4.1\\UC4.1.1} \\
+\hline
+\hypertarget{RFO2.1.2}{RFO2.1.2} & L'utente non autenticato può inserire una password & \makecell*{Interno\\UC4\\UC4.1\\UC4.1.2} \\
+\hline
+\hypertarget{RFO2.1.3}{RFO2.1.3} & L'utente non autenticato può confermare i dati inseriti, effettuando il login & \makecell*{Interno\\UC4\\UC4.1\\UC4.1.3} \\
+\hline
+\hypertarget{RFF2.1.4}{RFF2.1.4} & L'applicazione web mostra un messaggio di errore nel caso il login sia fallito & \makecell*{Interno\\UC4\\UC4.1\\UC4.1.4} \\
+\hline
+
+\hypertarget{RFF2.2}{RFF2.2} & L'utente non autenticato può effettuare il login tramite Facebook & \makecell*{Interno\\UC4\\UC4.2} \\
+\hline
+\hypertarget{RFF2.3}{RFF2.3} & L'utente non autenticato può effettuare il login tramite Twitter & \makecell*{Interno\\UC4\\UC4.3} \\
+\hline
+\hypertarget{RFF2.4}{RFF2.4} & L'utente non autenticato può effettuare il login tramite LinkedIn & \makecell*{Interno\\UC4\\UC4.4} \\
+\hline
+\hypertarget{RFF2.5}{RFF2.5} & L'utente non autenticato può effettuare il login tramite Google+ & \makecell*{Interno\\UC4\\UC4.5} \\
+\hline
+
+\hypertarget{RFD3}{RFD3} & L'utente non autenticato può recuperare la propria password & \makecell*{Interno\\UC5} \\
+\hline
+
+\hypertarget{RFD3.1}{RFD3.1} & L'utente non autenticato può inserire la propria email & \makecell*{Interno\\UC5\\UC5.1} \\
+\hline
+\hypertarget{RFD3.2}{RFD3.2} & L'utente non autenticato può confermare l'email inserita, permettendo all'applicazione web di inviare un'email, con un link per il reset, a quell'indirizzo & \makecell*{Interno\\UC5\\UC5.2} \\
+\hline
+\hypertarget{RFD3.3}{RFD3.3} & L'applicazione web mostra un messaggio di errore nel caso l'email per il recupero password non sia valida & \makecell*{Interno\\UC5\\UC5.3} \\
+\hline
+
+\hline
+\hypertarget{RFD3.4}{RFD3.4} & L'utente non autenticato puo' scegliere una nuova password per il proprio account & \makecell*{Interno\\UC5\\UC5.4} \\
+\hline
+
+\hypertarget{RFO4}{RFO4} & L'utente autenticato e non, l'amministratore API Market possono eseguire la ricerca sulle API sulla base dell'inserimento di alcune keywords & \makecell*{Capitolato\\UC6} \\
+\hline
+
+\hypertarget{RFO4.1}{RFO4.1} & L'utente autenticato e non, l'amministratore API Market possono inserire una stringa di ricerca, o keyword & \makecell*{Capitolato\\UC6\\UC6.1} \\
+\hline
+
+\hypertarget{RFO4.2}{RFO4.2} & L'utente autenticato e non, l'amministratore API Market possono confermare la ricerca  & \makecell*{Capitolato\\UC6\\UC6.2} \\
+\hline
+\hypertarget{RFD4.3}{RFD4.3} & L'utente autenticato e non, l'amministratore API Market possono visualizzare i risultati ottenuti dall'applicazione web, dopo aver confermato i parametri di ricerca scelti & \makecell*{Capitolato\\UC6\\UC6.3} \\
+\hline
+
+\hypertarget{RFO5}{RFO5} & L'utente autenticato e non, l'amministratore API Market possono visualizzare la pagina dei dati relativi all'API selezionata & \makecell*{Capitolato\\UC7} \\
+\hline
+
+\hypertarget{RFO5.1}{RFO5.1} & L'utente autenticato e non, l'amministratore API Market possono visualizzare il nome dell'API & \makecell*{Capitolato\\UC7\\UC7.1} \\
+\hline
+
+\hypertarget{RFO5.2}{RFO5.2} & L'utente autenticato e non, l'amministratore API Market possono visualizzare la descrizione dell'API & \makecell*{Capitolato\\UC7\\UC7.2} \\
+\hline
+
+\hypertarget{RFO5.3}{RFO5.3} & L'utente autenticato e non, l'amministratore API Market possono visualizzare l'autore dell'API & \makecell*{Capitolato\\UC7\\UC7.3} \\
+\hline
+
+\hypertarget{RFO5.4}{RFO5.4} & L'utente autenticato e non, l'amministratore API Market possono visualizzare il tag dell'API & \makecell*{Capitolato\\UC7\\UC7.4} \\
+\hline
+
+\hypertarget{RFO5.5}{RFO5.5} & L'utente autenticato e non, l'amministratore API Market possono visualizzare l'interfaccia dell'API & \makecell*{Capitolato\\UC7\\UC7.5} \\
+\hline
+
+\hypertarget{RFO5.6}{RFO5.6} & L'utente autenticato e non, l'amministratore API Market e non possono consultare la documentazione dell'API & \makecell*{Capitolato\\UC7\\UC7.6} \\
+\hline
+
+\hypertarget{RFO5.6.1}{RFO5.6.1} & L'utente autenticato e non, l'amministratore API Market possono consultare la versione PDF della documentazione dell'API & \makecell*{Capitolato\\UC7\\UC7.6\\UC7.6.1} \\
+\hline
+
+\hypertarget{RFO5.6.2}{RFO5.6.2} &  L'utente autenticato e non, l'amministratore API Market possono consultare la versione esterna della documentazione dell'API, su una pagina esterna specificata dall'autore dell'API  & \makecell*{Capitolato\\UC7\\UC7.6\\UC7.6.2} \\
+\hline
+
+\hypertarget{RFO5.7}{RFO5.7} & L'utente autenticato e non, l'amministratore API Market possono visualizzare i dati di utilizzo dell'API & \makecell*{Capitolato\\UC7\\UC7.7} \\
+\hline
+
+\hypertarget{RFO5.7.1}{RFO5.7.1} &  L'utente autenticato e non, l'amministratore API Market possono visualizzare il numero di licenze attive & \makecell*{Capitolato\\UC7\\UC7.7\\UC7.7.1} \\
+\hline
+
+\hypertarget{RFO5.7.2}{RFO5.7.2} &  L'utente autenticato e non, l'amministratore API Market possono visualizzare il numero di chiamate giornaliere & \makecell*{Capitolato\\UC7\\UC7.7\\UC7.7.2} \\
+\hline
+\hypertarget{RFO5.7.3}{RFO5.7.3} &  L'utente autenticato e non, l'amministratore API Market possono visualizzare il tempo medio di utilizzo giornaliero & \makecell*{Capitolato\\UC7\\UC7.7\\UC7.7.3} \\
+\hline
+\hypertarget{RFO5.7.4}{RFO5.7.4} &  L'utente autenticato e non, l'amministratore API Market possono visualizzare il traffico medio giornaliero & \makecell*{Capitolato\\UC7\\UC7.7\\UC7.7.4} \\
+\hline
+
+\hypertarget{RFO5.8}{RFO5.8} & L'utente autenticato e non, l'amministratore API Market possono visualizzare il prezzo dell'API & \makecell*{Capitolato\\UC7\\UC7.8} \\
+\hline
+
+\hypertarget{RFO5.8.1}{RFO5.8.1} &  L'utente autenticato e non, l'amministratore API Market possono visualizzare il prezzo per numero di chiamate & \makecell*{Capitolato\\UC7\\UC7.8\\UC7.8.1} \\
+\hline
+
+\hypertarget{RFO5.8.2}{RFO5.8.2} &  L'utente autenticato e non, l'amministratore API Market possono visualizzare il prezzo per tempo di utilizzo & \makecell*{Capitolato\\UC7\\UC7.8\\UC7.8.2} \\
+\hline
+
+\hypertarget{RFO5.8.3}{RFO5.8.3} &  L'utente autenticato e non, l'amministratore API Market possono visualizzare il prezzo per traffico & \makecell*{Capitolato\\UC7\\UC7.8\\UC7.8.3} \\
+\hline
+
+\hypertarget{RFO5.9}{RFO5.9} & L'utente autenticato e non, l'amministratore API Market possono visualizzare la data dell'ultima modifica all'API& \makecell*{Capitolato\\UC7\\UC7.9} \\
+\hline
+
+\hypertarget{RFO5.10}{RFO5.10} & L'utente autenticato e non, l'amministratore API Market possono visualizzare la chiave dell'API& \makecell*{Capitolato\\UC7\\UC7.10} \\
+\hline
+
+\hypertarget{RFO6}{RFO6} & L'utente autenticato e l'amministratore API Market possono visualizzare le API acquistate & \makecell*{Capitolato\\UC8} \\
+\hline
+
+\hypertarget{RFO6.1}{RFO6.1} & L'utente autenticato e l'amministratore API Market possono visualizzare il numero di API acquistate& \makecell*{Capitolato\\UC8\\UC8.1} \\
+\hline
+
+\hypertarget{RFO6.2}{RFO6.2} & L'utente autenticato e l'amministratore API Market possono visualizzare la lista delle API acquistate& \makecell*{Capitolato\\UC8\\UC8.2} \\
+\hline
+
+\hypertarget{RFO6.2.1}{RFO6.2.1} &  L'utente autenticato e l'amministratore API Market possono visualizzare il nome dell'API & \makecell*{Capitolato\\UC8\\UC8.2\\UC8.2.1} \\
+\hline
+
+\hypertarget{RFO6.2.2}{RFO6.2.2} &  L'utente autenticato e l'amministratore API Market possono visualizzare il nome dell'API & \makecell*{Capitolato\\UC8\\UC8.2\\UC8.2.2} \\
+\hline
+
+\hypertarget{RFO6.2.3}{RFO6.2.3} &  L'utente autenticato e l'amministratore API Market possono visualizzare il link dell'API & \makecell*{Capitolato\\UC8\\UC8.2\\UC8.2.3} \\
+\hline
+
+\hypertarget{RFO6.2.4}{RFO6.2.4} &  L'utente autenticato e l'amministratore API Market possono visualizzare la scadenza della licenza dell'API & \makecell*{Capitolato\\UC8\\UC8.2\\UC8.2.4} \\
+\hline
+
+\hypertarget{RFO6.2.5}{RFO6.2.5} &  L'utente autenticato e l'amministratore API Market possono visualizzare la chiave dell'API & \makecell*{Capitolato\\UC8\\UC8.2\\UC8.2.5} \\
+\hline
+
+\hypertarget{RFO6.2.6}{RFO6.2.6} &  L'utente autenticato e l'amministratore API Market possono visualizzare il nome dell'API & \makecell*{Capitolato\\UC8\\UC8.2\\UC8.2.6} \\
+\hline
+
+\hypertarget{RFO7}{RFO7} & L'utente autenticato e l'amministratore API Market possono acquistare l'API & \makecell*{Capitolato\\UC9} \\
+\hline
+
+\hypertarget{RFO7.1}{RFO7.1} &  L'utente autenticato e l'amministratore API Market possono scegliere la licenza dell'API & \makecell*{Capitolato\\UC9\\UC9.1} \\
+\hline
+
+\hypertarget{RFO7.1.1}{RFO7.1.1} &  L'utente autenticato e l'amministratore API Market possono scegliere la licenza per numero di chiamate & \makecell*{Capitolato\\UC9\\UC9.1\\UC9.1.1} \\
+\hline
+
+\hypertarget{RFO7.1.2}{RFO7.1.2} &  L'utente autenticato e l'amministratore API Market possono scegliere la licenza per tempo di utilizzo & \makecell*{Capitolato\\UC9\\UC9.1\\UC9.1.2} \\
+\hline
+
+\hypertarget{RFO7.1.3}{RFO7.1.3} &  L'utente autenticato e l'amministratore API Market possono scegliere la licenza per traffico & \makecell*{Capitolato\\UC9\\UC9.1\\UC9.1.3} \\
+\hline
+
+\hypertarget{RFO7.2}{RFO7.2} &  L'utente autenticato e l'amministratore API Market possono visualizzare una previsione del saldo finale & \makecell*{Capitolato\\UC9\\UC9.2} \\
+\hline
+
+\hypertarget{RFO7.3}{RFO7.3} & L'utente autenticato e l'amministratore API Market possono visualizzare una previsione del saldo finale & \makecell*{Capitolato\\UC9\\UC9.3} \\
+\hline
+
+\hypertarget{RFO7.4}{RFO7.4} &  L'utente autenticato e l'amministratore API Market possono visualizzare il riepilogo dell'acquisto API & \makecell*{Capitolato\\UC9\\UC9.4} \\
+\hline
+
+\hypertarget{RFD7.5}{RFD7.5} &  L'utente autenticato e l'amministratore API Market non visualizzano un errore a causa di un acquisto andato male & \makecell*{Capitolato\\UC9\\UC9.4} \\
+\hline
+
+\hypertarget{RFO8}{RFO8} &  L'utente autenticato e l'amministratore API Market possono visualizzare le API registrate & \makecell*{Capitolato\\UC10} \\
+\hline
+
+\hypertarget{RFO8.1}{RFO8.1} &  L'utente autenticato e l'amministratore API Market possono visualizzare il numero di API registrate & \makecell*{Capitolato\\UC10\\UC10.1} \\
+\hline
+
+\hypertarget{RFO8.2}{RFO8.2} &  L'utente autenticato e l'amministratore API Market possono visualizzare la lista delle API registrate & \makecell*{Capitolato\\UC10\\UC10.2} \\
+\hline
+
+\hypertarget{RFO8.2.1}{RFO8.2.1} &  L'utente autenticato e l'amministratore API Market possono visualizzare il nome dell'API & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.1} \\
+\hline
+
+\hypertarget{RFO8.2.2}{RFO8.2.2} &  L'utente autenticato e l'amministratore API Market possono visualizzare il link dell'API & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.2} \\
+\hline
+
+\hypertarget{RFO8.2.3}{RFO8.2.3} &  L'utente autenticato e l'amministratore API Market possono visualizzare il numero di licenze attive & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.3} \\
+\hline
+
+\hypertarget{RFD8.2.4}{RFD8.2.4} &  L'utente autenticato e l'amministratore API Market possono visualizzare la notifica dell'eliminazione dell'API & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.4} \\
+\hline
+
+\hypertarget{RFO8.2.5}{RFO8.2.5} &  L'utente autenticato e l'amministratore API Market possono modificare l'API registrata & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.5} \\
+\hline
+
+\hypertarget{RFO8.2.5.1}{RFO8.2.5.1} &  L'utente autenticato e l'amministratore API Market possono modificare il nome dell'API & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.5\\UC10.2.5.1} \\
+\hline
+
+\hypertarget{RFO8.2.5.2}{RFO8.2.5.2} &  L'utente autenticato e l'amministratore API Market possono modificare la descrizione dell'API & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.5\\UC10.2.5.2} \\
+\hline
+
+\hypertarget{RFO8.2.5.3}{RFO8.2.5.3} &  L'utente autenticato e l'amministratore API Market possono modificare il tag dell'API & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.5\\UC10.2.5.3} \\
+\hline
+
+\hypertarget{RFO8.2.5.4}{RFO8.2.5.4} &  L'utente autenticato e l'amministratore API Market possono modificare l'interfaccia dell'API & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.5\\UC10.2.5.4} \\
+\hline
+
+\hypertarget{RFO8.2.5.5}{RFO8.2.5.5} & L'utente autenticato e l'amministratore API Market possono modificare la documentazione PDF dell'API & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.5\\UC10.2.5.5} \\
+\hline
+
+\hypertarget{RFO8.2.5.6}{RFO8.2.5.6} &  L'utente autenticato e l'amministratore API Market possono modificare la documentazion esterna dell'API & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.5\\UC10.2.5.6} \\
+\hline
+
+\hypertarget{RFO8.2.5.7}{RFO8.2.5.7} &  L'utente autenticato e l'amministratore API Market possono modificare il prezzo base dell'API & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.5\\UC10.2.5.7} \\
+\hline
+
+\hypertarget{RFO8.2.5.8}{RFO8.2.5.8} &  L'utente autenticato e l'amministratore API Market possono confermare la modifica all'API & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.5\\UC10.2.5.8} \\
+\hline
+
+\hypertarget{RFO8.2.5.9}{RFO8.2.5.9} &  L'applicazione web mostra un errore alla modifica dell'API & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.5\\UC10.2.5.9} \\
+\hline
+
+\hypertarget{RFO8.2.5.10}{RFO8.2.5.10} &  L'applicazione web mostra un errore alla documentazione & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.5\\UC10.2.5.10} \\
+\hline
+
+\hypertarget{RFO8.2.6}{RFO8.2.6} &  L'utente autenticato e l'amministratore API Market possono eliminare l'API registrata & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.6} \\
+\hline
+
+\hypertarget{RFO8.2.7}{RFO8.2.7} &  L'utente autenticato e l'amministratore API Market possono revocare l'API registrata & \makecell*{Capitolato\\UC10\\UC10.2\\UC10.2.7} \\
+\hline
+
+\hypertarget{RFO9}{RFO9} &  L'utente autenticato e l'amministratore API Market possono registrare una nuova API & \makecell*{Capitolato\\UC11} \\
+\hline
+
+\hypertarget{RFO9.1}{RFO9.1} &  L'utente autenticato e l'amministratore API Market possono inserire un nome per l'API & \makecell*{Capitolato\\UC11\\UC11.1} \\
+\hline
+
+\hypertarget{RFO9,2}{RFO9.2} &  L'utente autenticato e l'amministratore API Market possono inserire una descrizione per l'API & \makecell*{Capitolato\\UC11\\UC11.2} \\
+\hline
+
+\hypertarget{RFO9.3}{RFO9.3} &  L'utente autenticato e l'amministratore API Market possono inserire un tag per l'API & \makecell*{Capitolato\\UC11\\UC11.3} \\
+\hline
+
+\hypertarget{RFO9.4}{RFO9.4} &  L'utente autenticato e l'amministratore API Market possono inserire l'interfaccia per l'API & \makecell*{Capitolato\\UC11\\UC11.4} \\
+\hline
+
+\hypertarget{RFO9.5}{RFO9.5} &  L'utente autenticato e l'amministratore API Market possono inserire la documentazione PDF per l'API & \makecell*{Capitolato\\UC11\\UC11.5} \\
+\hline
+
+\hypertarget{RFO9.6}{RFO9.6} &  L'utente autenticato e l'amministratore API Market possono inserire la documentazione esterna dell'API & \makecell*{Capitolato\\UC11\\UC11.6} \\
+\hline
+
+\hypertarget{RFO9.7}{RFO9.7} &  L'utente autenticato e l'amministratore API Market possono inserire il prezzo base dell'API & \makecell*{Capitolato\\UC11\\UC11.7} \\
+\hline
+
+\hypertarget{RFO9.8}{RFO9.8} & L'utente autenticato e l'amministratore API Market possono confermare la registrazione della nuova API & \makecell*{Capitolato\\UC11\\UC11.8} \\
+\hline
+
+\hypertarget{RFD9.9}{RFD9.9} &  L'applicazione web mostra un errore in caso di fallimento della procedura di registrazione della nuova API & \makecell*{Capitolato\\UC11\\UC11.9} \\
+\hline
+
+\hypertarget{RFD9.10}{RFD9.10} &  L'applicazione web mostra un errore in caso di fallimento della procedura di inserimento del PDF & \makecell*{Capitolato\\UC11\\UC11.10} \\
+\hline
+
+\hypertarget{RFO10}{RFO10} &  L'utente autenticato e l'amministratore API Market possono visualizzre il menu' del profilo utente & \makecell*{Capitolato\\UC12} \\
+\hline
+
+\hypertarget{RFO10.1}{RFO10.1} &  L'utente autenticato e l'amministratore API Market possono gestire le informazioni personali & \makecell*{Capitolato\\UC12\\UC12.1} \\
+\hline
+
+\hypertarget{RFO10.1.1}{RFO10.1.1} &  L'utente autenticato e l'amministratore API Market possono visualizzare le informazioni personali del profilo utente &\makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.1} \\
+\hline
+
+\hypertarget{RFO10.1.1.1}{RFO10.1.1.1} &  L'utente autenticato e l'amministratore API Market possono visualizzare il nome & \makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.1\\UC12.1.1.1} \\
+\hline
+
+\hypertarget{RFO10.1.1.2}{RFO10.1.1.2} &  L'utente autenticato e l'amministratore API Market possono visualizzare il cognome & \makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.1\\UC12.1.1.2} \\
+\hline
+
+\hypertarget{RFO10.1.1.3}{RFO10.1.1.3} &  L'utente autenticato e l'amministratore API Market possono visualizzare l'username & \makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.1\\UC12.1.1.3} \\
+\hline
+
+\hypertarget{RFO10.1.1.4}{RFO10.1.1.4} &  L'utente autenticato e l'amministratore API Market possono visualizzare l'email & \makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.1\\UC12.1.1.4} \\
+\hline
+
+\hypertarget{RFO10.1.1.5}{RFO10.1.1.5} &  L'utente autenticato e l'amministratore API Market possono visualizzare l'immagine del profilo & \makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.1\\UC12.1.1.5} \\
+\hline
+
+\hypertarget{RFO10.1.2}{RFO10.1.2} &  L'utente autenticato e l'amministratore API Market possono modificare le informazioni personali del profilo utente &\makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.2} \\
+\hline
+
+\hypertarget{RFO10.1.2.1}{RFO10.1.2.1} &  L'utente autenticato e l'amministratore API Market possono modificare il nome & \makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.2\\UC12.1.1.1} \\
+\hline
+
+\hypertarget{RFO10.1.2.2}{RFO10.1.2.2} &  L'utente autenticato e l'amministratore API Market possono modificare il cognome & \makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.2} \\
+\hline
+
+\hypertarget{RFO10.1.2.3}{RFO10.1.2.3} &  L'utente autenticato e l'amministratore API Market possono modificare l'username & \makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.3} \\
+\hline
+
+\hypertarget{RFO10.1.2.4}{RFO10.1.2.4} &  L'utente autenticato e l'amministratore API Market possono modificare l'email & \makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.4} \\
+\hline
+
+\hypertarget{RFO10.1.2.5}{RFO10.1.2.5} &  L'utente autenticato e l'amministratore API Market possono modificare l'immagine del profilo & \makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.5} \\
+\hline
+
+\hypertarget{RFO10.1.2.6}{RFO10.1.2.6} &  L'utente autenticato e l'amministratore API Market possono confermare le modifiche delle info del profilo & \makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.6} \\
+\hline
+
+\hypertarget{RFO10.1.2.7}{RFO10.1.2.7} &  L'applicazione web puo' mostrare un errore in seguito a un'illegalita' sorta nel modificare le info del profilo & \makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.7} \\
+\hline
+
+\hypertarget{RFO10.2}{RFO10.2} &  L'utente autenticato e l'amministratore API Market possono gestire il metodo di pagamento & \makecell*{Capitolato\\UC12\\UC12.2} \\
+\hline
+
+\hypertarget{RFO10.2.1}{RFO10.2.1} &  L'utente autenticato e l'amministratore API Market possono visualizzare il saldo & \makecell*{Capitolato\\UC12\\UC12.2\\UC12.2.1} \\
+\hline
+
+\hypertarget{RFO10.2.2}{RFO10.2.2} &  L'utente autenticato e l'amministratore API Market possono versare il saldo & \makecell*{Capitolato\\UC12\\UC12.2\\UC12.2.2} \\
+\hline
+
+\hypertarget{RFO10.2.2.1}{RFO10.2.2.1} &  L'utente autenticato e l'amministratore API Market possono selezionare la somma di accredito & \makecell*{Capitolato\\UC12\\UC12.2\\UC12.2.2\\UC12.2.2.1} \\
+\hline
+
+\hypertarget{RFO10.2.2.2}{RFO10.2.2.2} &  L'utente autenticato e l'amministratore API Market possono confermare l'accredito della somma selezionata & \makecell*{Capitolato\\UC12\\UC12.2\\UC12.2.2\\UC12.2.2.2} \\
+\hline
+
+\hypertarget{RFO10.2.2.3}{RFO10.2.2.3} &  L'applicazione web mostra un errore di fallimento ricarica & \makecell*{Capitolato\\UC12\\UC12.2\\UC12.2.2\\UC12.2.2.3} \\
+\hline
+
+\hypertarget{RFO10.2.3}{RFO10.2.3} &  L'utente autenticato e l'amministratore API Market possono prelevare dal saldo & \makecell*{Capitolato\\UC12\\UC12.2\\UC12.2.3} \\
+\hline
+
+\hypertarget{RFF10.2.3.1}{RFF1O.2.3.1} &  L'utente autenticato e l'amministratore API Market possono trasferire il saldo su un conto Paypal esterno & \makecell*{Capitolato\\UC12\\UC12.2\\UC12.2.3\\UC12.2.3.1} \\
+\hline
+
+\hypertarget{RFO11}{RFO11} &  L'utente autenticato e l'amministratore API Market possono fare logout & \makecell*{Capitolato\\UC13} \\
+\hline
+
+\hypertarget{RFO11.1}{RFO11.1} &  L'utente autenticato e l'amministratore API Market possono confermare il logout & \makecell*{Capitolato\\UC13\\UC13.1} \\
+\hline
+
+\hypertarget{RFO12}{RFO12} &  L'amministratore API Market puo' amministrare l'applicazione web & \makecell*{Capitolato\\UC14} \\
+\hline
+
+\hypertarget{RFO12.1}{RFO12.1} &  L'amministratore API Market puo' visualizzare i dati di utilizzo avanzati & \makecell*{Capitolato\\UC14\\UC14.1} \\
+\hline
+
+\hypertarget{RFO12.1.1}{RFO12.1.1} &  L'amministratore API Market puo' visualizzare il numero di utenti attivi per ogni API & \makecell*{Capitolato\\UC14\\UC14.1\\UC14.1.1} \\
+\hline
+
+\hypertarget{RFO12.1.1.1}{RFO12.1.1.1} &  L'amministratore API Market puo' visualizzare il nome dell'API & \makecell*{Capitolato\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.1} \\
+\hline
+
+\hypertarget{RFO12.1.1.2}{RFO12.1.1.2} &  L'amministratore API Market puo' visualizzare la durata residua della licenza dell'API & \makecell*{Capitolato\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.2} \\
+\hline
+
+\hypertarget{RFO12.2}{RFO12.2} &  L'amministratore API Market puo'effettuare azioni sugli utenti& \makecell*{Capitolato\\UC14\\UC14.2} \\
+\hline
+
+\hypertarget{RFO12.2.1}{RFO12.2.1} &  L'amministratore API Market puo' ricercare un utente attraverso il suo username& \makecell*{Capitolato\\UC14\\UC14.2\\UC14.2.1} \\
+\hline
+
+\hypertarget{RFO12.2.2}{RFO12.2.2} &  L'amministratore API Market puo' sospendere un utente& \makecell*{Capitolato\\UC14\\UC14.2\\UC14.2.2} \\
+\hline
+
+\hypertarget{RFO12.2.2.1}{RFO12.2.2.1} &  L'amministratore API Market puo' scegliere la durata della sospensione dell'utente& \makecell*{Capitolato\\UC14\\UC14.2\\UC14.2.2\\UC14.2.2.1} \\
+\hline
+
+\hypertarget{RFO12.2.2.2}{RFO12.2.2.2} &  L'amministratore API Market puo' confermare la sospensione dell'utente& \makecell*{Capitolato\\UC14\\UC14.2\\UC14.2.2\\UC14.2.2.2} \\
+\hline
+
+\hypertarget{RFO12.2.3}{RFO12.2.3} &  L'amministratore API Market puo' sospendere i pagamenti di un utente& \makecell*{Capitolato\\UC14\\UC14.2\\UC14.2.3} \\
+\hline
+
+\hypertarget{RFO12.2.4}{RFO12.2.4} &  L'amministratore API Market puo' revocare la sospensione di un utente& \makecell*{Capitolato\\UC14\\UC14.2\\UC14.2.4} \\
+\hline
+
+\hypertarget{RFO12.2.5}{RFO12.2.5} &  L'amministratore API Market puo' revocare la sospensione dei pagamenti di un utente& \makecell*{Capitolato\\UC14\\UC14.2\\UC14.2.5} \\
+\hline
+
+
+\end{longtable}
+

@@ -1,0 +1,142 @@
+\newpage
+\section{Processi primari}
+
+	\subsection{Fornitura}
+		\subsubsection{Studio di Fattibilità}
+		Questa fase vedrà la realizzazione di un documento redatto a partire da ciò che emergerà dalle riunioni, alle quali è richiesta la partecipazione dell'intero \textit{team\ped{G}}. Ciò consentirà di scegliere di comune accordo il capitolato più adatto. Durante tali riunioni, verrà stilata una lista di pro e contro per ogni capitolato d'appalto proposto. Successivamente, gli \textit{\Anas} avranno l'incarico di effettuare la stesura degli studi per ogni singolo capitolato. Il documento prodotto sarà strutturato nel seguente modo:
+		\begin{itemize}
+		\item \textbf{Descrizione:} introduzione generale del capitolato, nel quale si evidenziano le funzionalità minime richieste per il prodotto finale;
+		\item \textbf{Dominio applicativo:} descrizione del bacino di utenza e dell'ambito in cui il prodotto sarà utilizzato;
+		\item \textbf{Tecnologie:} breve elenco delle tecnologie di interesse, fondamentali nella realizzazione del prodotto richiesto;
+		\item \textbf{Aspetti critici:} elenco delle problematiche, dei rischi e delle difficoltà che potrebbero nascere in fase di sviluppo del prodotto;
+		\item \textbf{Considerazioni conclusive:} valutazione finale e soggettiva del gruppo, che fornisce le motivazioni per cui è stato scelto oppure scartato il capitolato in analisi.
+		\end{itemize}
+
+	\subsection{Sviluppo}
+	
+		\subsubsection{Analisi dei Requisiti}
+		La fase di \AdR\ dovrà seguire la fase di \SdF. Essa, infatti, analizzerà, in modo quanto più accurato possibile, i requisiti necessari, per ciascun ambito del progetto scelto. Inoltre, verranno stilati i casi d'uso del prodotto, corredati da un'opportuna descrizione ed analisi. La struttura del documento prodotto sarà organizzata nei seguenti punti:
+		\begin{itemize}
+			\item \textbf{Casi d'uso};
+			\item \textbf{Requisiti progettuali}.
+		\end{itemize}
+		
+		\paragraph{Casi d'uso}
+		
+			\subparagraph{Nomenclatura}
+			La scelta del nome per i casi d'uso avverrà secondo la seguente codifica:
+			\begin{center}
+				UC[Codice categoria].[Codice progressivo]
+			\end{center}
+			dove:
+			\begin{itemize}
+				\item\textbf{Codice categoria}: identifica il codice entro cui lo specifico caso d'uso viene raggruppato. Può essere organizzato in ulteriori sottocategorie oppure omesso;
+				\item\textbf{Codice progressivo}: identificativo dello specifico caso d'uso.
+			\end{itemize}
+			
+			\subparagraph{Struttura}
+			L'analisi di ciascun caso d'uso dovrà essere strutturata come segue, avendo cura di mantenere l'ordine indicato:
+			\begin{itemize}
+				\item\textbf{Sigla e nome}: identifica il caso d'uso. Va indicato nel titolo del paragrafo corrispondente;
+				\item\textbf{Diagramma}: immagine del diagramma \textit{UML\ped{G}} per il caso d'uso;
+				\item\textbf{Attori}: descrizione degli attori coinvolti;
+				\item\textbf{Descrizione}: breve descrizione del caso d'uso;
+				\item\textbf{Pre-Condizioni}: descrive lo state iniziale per il caso d'uso;
+				\item\textbf{Post-Condizioni}: descrive lo stato finale che deve valere al termine dello scenario descritto;
+				\item\textbf{Scenario Principale}: analisi completa del flusso di esecuzione principale del caso d'uso;
+				\item\textbf{Scenari Alternativi}: se presenti, elenca e descrive gli eventuali scenari alternativi per il caso d'uso.
+			\end{itemize}
+		
+		\paragraph{Requisiti progettuali}
+		Gli \textit{\Anas} hanno il compito di produrre il documento \textsc{\AdR1\_0\_0.pdf} contenente un elenco di requisiti, con annesse peculiarità richieste ed informazioni sulla loro tipologia e rilevanza.
+		
+			\subparagraph{Nomenclatura}
+			La scelta del nome per i requisiti progettuali avverrà secondo la seguente procedura:
+			\begin{center}
+			R[Tipologia][Rilevanza][Codice]
+			\end{center}
+			\textbf{Tipologia:} può assumere uno dei seguenti valori:
+			\begin{itemize}
+				\item \textbf{V:} requisito di vincolo;
+				\item \textbf{F:} requisito di funzionalità;
+				\item \textbf{Q:} requisito di qualità;
+				\item \textbf{P:} requisito prestazionale.
+			\end{itemize}
+			\textbf{Rilevanza:} può assumere uno dei seguenti valori, elencati in ordine di importanza:
+			\begin{itemize}
+				\item \textbf{O:} requisito obbligatorio;
+				\item \textbf{D:} requisito desiderabile;
+				\item \textbf{F:} requisito facoltativo.
+			\end{itemize}
+			\textbf{Codice:} assume un numero sequenziale e univoco, necessario a catalogare e riconoscere ogni requisito progettuale.
+		
+			\subparagraph{Struttura}
+			L'analisi di ciascun requisito dovrà essere strutturata come segue, avendo cura di mantenere l'ordine indicato:
+			\begin{itemize}
+			  \item \textbf{Descrizione:} Descrizione sintetica e concisa del requisito;
+			  \item \textbf{Fonte:} Descrive la fonte del requisito, ovvero da chi è stato sollevato e in che ambito. Può assumere i valori: capitolato, caso d'uso, interno.
+			\end{itemize}
+	
+	\subsubsection{Progettazione}
+	La Progettazione è la fase di preparazione in cui viene realizzata un'astrazione di quella che diverrà la struttura software del prodotto. Questa fase è successiva alla produzione di una completa \AdR, in quanto da essa vengono tracciate le linee guida per la progettazione. I documenti risultanti da questa fase fungeranno, poi, da percorso per la produzione del software vero e proprio.
+	
+		\paragraph{Obiettivi}
+		Questo stadio si prefigge i seguenti obiettivi:
+		\begin{itemize}
+			\item Fornire una visione macroscopica del percorso da seguire in fase di codifica software;
+			\item Realizzare un prodotto rispettando gli standard prefissati in fase di \SdF\ e \AdR;
+			\item Flessibilità del prodotto, per poter far fronte, in modo rapido, a repentine ed eventuali modifiche rilevanti, pur non condizionando il lavoro pregresso;
+			\item Soddisfare le richieste del committente.
+		\end{itemize}
+	
+	\subsubsection{Programmazione}
+	La fase di Codifica si prefigge la realizzazione pratica del codice dell'applicativo richiesto. I \textit{\Progrs} sono i principali responsabili di questa fase, che tenendo conto degli stadi precedenti e seguendo nel dettaglio quanto precedentemente stilato, realizzano un prodotto efficace. Ogni \textit{\Progr} deve essere, come requisito prioritario, strettamente ancorato alle linee guida stabilite.
+	
+		\paragraph{Best practices}
+		La fase di Codifica richiede di essere molto scrupolosi, attenendosi alle linee guida definite all'interno del presente documento. Esse compongono gli standard di codifica per la realizzazione del progetto. I seguenti standard hanno il compito di:
+		\begin{itemize}
+			\item Fornire uno strumento per garantire una più agevole cooperazione tra i diversi sviluppatori;
+			\item Favorire la creazione di un codice valido e ben formato;
+			\item Favorire la realizzazione di un software di qualità;
+			\item Rendere più agevole la lettura e la modifica del codice a tutti i componenti del \textit{team\ped{G}}.
+		\end{itemize}
+		Le regole stilistiche del codice riguardano le parti non prettamente implementative, ma di ausilio ai \textit{Programmatori}, al fine di permettere una miglior cooperazione e comprensione del codice stesso. Le tecniche di scrittura del codice, descritte nel presente documento, sono suddivise in tre categorie: Impostazione, Nomenclatura e Commenti.
+	
+			\subparagraph{Impostazione}
+			L'impostazione stilistica del documento consente una più semplice comprensione e lettura del codice, e pertanto è importante fornire una logica comune. Di seguito sono elencate le principali convenzioni relative alla formattazione del codice: 
+			\begin{itemize}
+				\item I blocchi di codice vanno indentati tramite i rientri standard, evitando spaziature singole. Ogni porzione di codice interna ad un altra dev'essere rigorosamente indentata a sua volta;
+				\item Utilizzare gli spazi per separare gli operatori, ove possibile. Aggiungere spazi che aumentino la leggibilità del codice in tutte le situazioni dove ciò sia permesso, a patto che il funzionamento non venga compromesso;
+				\item Dividere il codice in più moduli e non utilizzare un unico file di ingenti dimensioni e di difficile modifica. Ciò è un requisito fondamentale per un corretto e miglior utilizzo dei sistemi di versionamento.
+			\end{itemize}
+	
+			\subparagraph{Nomenclatura}
+			Di seguito, sono elencati gli standard di nomenclatura utilizzati per il codice che verrà prodotto. Tale aspetto è fondamentale per una miglior comprensione del codice.
+			\begin{itemize}
+			\item Assegnare nomi univoci ai costrutti, evitando possibili ambiguità dovute a nomi similari. I costrutti devono avere nomi quanto più significativi possibili, anche se utilizzati in porzioni marginali. Le variabili formate da un solo carattere sono, invece, consentite qualora si tratti di iterazioni circoscritte;
+			\item Scegliere nomi descrittivi per file e cartelle. \MakeUppercase{è} importante che indichino, nel modo più accurato possibile, il proprio contenuto;
+			\item Accertarsi che ogni parola utilizzata sia scritta nella corretta forma della lingua a cui appartiene;
+			\item Nella scrittura di nomi composti utilizzare la forma \textit{Camel Case\ped{G}}, ottenuta scrivendo con iniziale minuscola la prima parola di un nome composto, seguito dalle successive parole, ognuna con iniziale sempre maiuscola;
+			\item Nella descrizione di funzioni, utilizzare come prima voce il verbo dell'azione svolta, seguito dal nome dell'azione o dell'oggetto su cui viene eseguita;
+			\item Accertarsi che non vi sia ambiguità nelle abbreviazioni utilizzate, avendo cura di verificare che non possano venir impiegate due abbreviazioni simili per funzionalità differenti.
+			\end{itemize}
+			
+			\subparagraph{Commenti}
+			Ogni commento deve essere ampio, uniforme e sufficientemente dettagliato, seguendo i criteri e le linee guida elencate:
+			\begin{itemize}
+			\item Produrre e/o mantenere aggiornata un'intestazione per ciascun file. Essa deve sempre avere una breve descrizione di ciò che è incluso in quello specifico file;
+			\item Indicare pre e post-condizione di ogni funzionalità di rilievo, in modo da favorire un riutilizzo di eventuale codice già scritto. \MakeUppercase{è}, inoltre, consigliato introdurre una breve descrizione concisa riguardante la funzionalità;
+			\item Inserire commenti nella riga precedente al codice o porzione che si desidera commentare. Non è consentito commentare, dunque, in modalità "inline";
+			\item Stilare commenti completi, di senso compiuto e grammaticalmente corretti. Documentare, inoltre, durante la stesura del codice, per evitare di doverne rianalizzare una porzione, al solo fine di documentarla.
+			\end{itemize}
+		
+	\subsubsection{Strumenti utilizzati}
+	
+		\paragraph{TeXstudio}
+		In seguito a una breve fase di test, la scelta del \textit{team\ped{G}} per l'editor di documenti \textit{\LaTeX\ped{G}} è ricaduta su \textit{\textbf{TeXstudio\ped{G}}}. Esso è un noto fork di un altrettanto famoso editor, \textit{TexMaker\ped{G}}, ma con la peculiarità di essere completamente gratuito, open source e disponibile per i più diffusi sistemi operativi. L'editor consente un semplice utilizzo dei file .tex e una comoda gestione di inclusione e accorpamento di documenti. Tale caratteristica viene incontro alle esigenze del gruppo per via della predisposizione alla modularità dei documenti richiesti dal progetto. L'editor scelto, inoltre, possiede numerose features rilevanti, quali l'autocompletamento e il controllo della sintassi e dell'ortografia, e l'anteprima in PDF incorporata. Per questi motivi, \textit{TeXstudio\ped{G}} sarà il principale strumento tramite cui verranno redatti tutti i documenti.
+	
+		\paragraph{Astah}
+		Per la modellazione dei diagrammi dei casi d'uso in linguaggio \textit{UML\ped{G}}, la scelta è ricaduta su \textit{\textbf{Astah\ped{G}}}, editor multi-piattaforma e gratuito. Il suo punto forte rispetto ad altre soluzioni è la semplicità di utilizzo. Tra le funzionalità interessanti ai fini del gruppo, c'è la possibilità di esportare i diagrammi creati direttamente in un file immagine con estensione .png. Il software \textit{Astah\ped{G}} sarà utilizzato per la creazione di tutti i diagrammi necessari in fase di Progettazione ed \AdR.
+		
+		\paragraph{Smartsheet}
+		Per la realizzazione dei \textit{diagrammi di Gantt\ped{G}} richiesti in fase di Pianificazione, si è scelto di utilizzare lo strumento \textit{\textbf{Smartsheet\ped{G}}}, il quale consente di creare diagrammi secondo le attività pianificate per uno specifico periodo di tempo, indicato dall'utente. \MakeUppercase{è} risultato molto utile per la creazione dei grafici presenti nel documento \textsc{PianoDiProgetto 1\_0\_0.pdf}.
