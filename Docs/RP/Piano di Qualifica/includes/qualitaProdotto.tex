@@ -4,223 +4,407 @@
 Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha individuato dallo standard \textit{ISO/IEC 9126\ped{G}} le qualità che ritiene più importanti durante tutto il ciclo di vita del prodotto \progetto. Per ognuna delle qualità individuate, sono stati definiti obiettivi e metriche coerenti con i livelli di qualità dichiarati.
 
 \subsection{Definizione degli obiettivi di qualità}
-Elenco obiettivi di qualità individuati:
-\begin{itemize}
-	\item Funzionalità (6.1);
-	\item Affidabilità (6.2);
-	\item Usabilità (6.3);
-	\item Efficienza (6.4);
-	\item Manutenibilità (6.5);
-	\item Portabilità (6.6).
-\end{itemize}
-	
+
 	\subsubsection{Funzionalità}
-	Rappresenta la capacità del prodotto nel soddisfare tutti i requisiti descritti nel documento \textsc{AnalisiDeiRequisiti 1\_0\_0.pdf}.  
+	Rappresenta la capacità del prodotto nel fornire le funzionalità richieste e soddisfare tutti i requisiti descritti nel documento \textsc{AnalisiDeiRequisiti 1\_0\_0.pdf}.
 		
-		\begin{itemize}
-		\item \textbf{Misura:} quantità di requisiti mappati;
-		\item \textbf{Metrica:} la sufficienza è definita dal numero di requisiti obbligatori. Ogni requisito secondario andrà ad aumentare la qualità del prodotto, ma la priorità dovrà essere data ai requisiti obbligatori;
-		\item \textbf{Strumenti:} il sistema dovrà superare tutti i test previsti. Gli strumenti utilizzati sono descritti nel documento \textsc{NormeDiProgetto 1\_0\_0.pdf}.
+		\paragraph{Obiettivi}
+			\begin{itemize}
+				\item \textbf{Adeguatezza:} rappresenta la capacità di fornire un appropriato insieme di funzionalità che permettano agli utenti di svolgere determinati task e raggiungere gli obiettivi prefissati.
+				\item \textbf{Accuratezza:} rappresenta la capacità di fornire i risultati e gli effetti attesi con il livello di precisione richiesta.
+				\item \textbf{Sicurezza:} rappresenta la capacità di proteggere le informazioni ed i dati, in modo che persone o sistemi non autorizzati non possano accedervi.
+			\end{itemize}
+		
+		\paragraph{Metriche}
+			\subparagraph{Completezza delle funzioni sviluppate}
+			Indica la percentuale di funzionalità sviluppate ritenute complete.
+				\begin{table}[H]
+					\begin{center}
+						\begin{tabular}{|c|c|c|}
+							\hline
+							\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+							\hline
+							n° funz ritenute complete/n° funz totali & 100 & 90-100 \\
+							\hline
+						\end{tabular}
+					\end{center}
+					\caption{Completezza delle funzioni sviluppate}
+				\end{table}
 			
-		\end{itemize}
-	
-	\subsection{Affidabilità}
-		Il sistema dovrà dimostrarsi il più possibile robusto e garantire, in modo particolare, la disponibilità del servizio di \textit{API Gateway\ped{G}} in percentuale più alta possibile. 
-		
-		\begin{itemize}
-			\item \textbf{Misura:} l'unità di misura utilizzata sarà il numero di chiamate a \textit{microservizi\ped{G}} andate a buon fine diviso il numero di chiamate totali;
-			\item \textbf{Metrica: }il limite di sufficienza riguarderà il tasso di successo delle chiamate e il tempo che il sistema impiegherà per portarle a buon fine;
-			\item \textbf{Strumenti: }il sistema dovrà superare tutti i test previsti.
+			\subparagraph{Correttezza delle funzioni sviluppate}
+			Indica la percentuale di funzionalità sviluppate ritenute corrette.
+				\begin{table}[H]
+					\begin{center}
+						\begin{tabular}{|c|c|c|}
+							\hline
+							\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+							\hline
+							n° funz ritenute corrette/n° funz totali & 100 & 100 \\
+							\hline
+						\end{tabular}
+					\end{center}
+					\caption{Correttezza delle funzioni sviluppate}
+				\end{table}
 			
-		\end{itemize}
-	
-	\subsection{Usabilità}
-		L’interfaccia web deve essere di facile utilizzo per l’utente, tenendo però in considerazione il target di utenza prevista. Si presume che il sistema verrà utilizzato da utenti con un livello di conoscenza informatica abbastanza evoluto. 
-		
-		\begin{itemize}
-			\item \textbf{Misura: }l’unità di misura usata sarà una valutazione soggettiva dell’usabilità. Questo
-			è dovuto all’inesistenza di una metrica oggettiva adatta allo scopo;
-			\item \textbf{Metrica: }non esiste una metrica adeguata per determinare la sufficienza;
-			\item \textbf{Strumenti: }si veda il documento \textsc{NormeDiProgetto 1\_0\_0.pdf}.
+			\subparagraph{Accuratezza rispetto alle aspettative}
+			Indica la percentuale di risultati conformi alle aspettative.
+				\begin{table}[H]
+					\begin{center}
+						\begin{tabular}{|c|c|c|}
+							\hline
+							\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+							\hline
+							n° test con esito pos/n° test totali & 100 & 90-100 \\
+							\hline
+						\end{tabular}
+					\end{center}
+					\caption{Accuratezza rispetto alle aspettative}
+				\end{table}
 			
-		\end{itemize}
+			\subparagraph{Controllo degli accessi}
+			Indica la percentuale di accessi corretti al sistema.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\hline
+						n° accessi controllati con succ dal sistema/n° accessi tot & 100 & 90-100 \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{Controllo degli accessi}
+			\end{table}
 	
-	\subsection{Efficienza}
-		Il sistema deve fornire tutte le funzionalità nel più breve tempo possibile, riducendo al minimo l’utilizzo di risorse.
+	\subsubsection{Affidabilità}
+	Rappresenta la capacità del prodotto software di mantenere il livello di prestazione quando viene utilizzato in condizioni specificate.
 		
-		\begin{itemize}
-			\item \textbf{Misura: }il tempo di latenza di chiamata ad un \textit{microservizio\ped{G}}, e il tempo di latenza nel caricamento delle pagine web;
-			\item \textbf{Metrica: }i valori di latenza massimi verranno definiti in base al \textit{microservizio\ped{G}};
-			\item \textbf{Strumenti: }si veda il documento \textsc{NormeDiProgetto 1\_0\_0.pdf}.
+		\paragraph{Obiettivi}
+			\begin{itemize}
+				\item \textbf{Maturità:} rappresenta la capacità di evitare che si verifichino errori o siano prodotti risultati non corretti in fase di esecuzione.
+				\item \textbf{Tolleranza agli errori:} rappresenta la capacità di mantenere il livello di prestazioni in caso di errori nel software o di violazione nelle interfacce specificate.
+			\end{itemize}
+		
+		\paragraph{Metriche}
+			\subparagraph{mmmmmm}
+			Indica il numero di chiamate a microservizi andate a buon fine.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\hline
+						metodo di calcolo & xx-yy  & xx-yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{mmmmmmm}
+			\end{table}
+		
+			\subparagraph{vvvvv}
+			Indica ...
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\hline
+						metodo di calcolo & xx-yy  & xx-yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{vvvvvv}
+			\end{table}
+	
+	\subsubsection{Usabilità}
+	Rappresenta la capacità di un prodotto software di essere comprensibile, di poter essere studiato e di risultare attraente da parte di un utente sotto determinate condizioni.
+	
+		\paragraph{Obiettivi}
+			\begin{itemize}
+				\item \textbf{Comprensibilità:} rappresenta la capacità di permettere all'utente di capire le funzionalità del prodotto software e come poterle utilizzare con successo per svolgere particolari task in determinate condizioni di utilizzo.
+				\item \textbf{Apprendibilità:} rappresenta la capacità di permettere all'utente di imparare l'applicazione.
+				\item \textbf{Operabilità:} rappresenta la capacità di permettere all'utente di utilizzare e controllare il prodotto software.
+				\item \textbf{Attrattività:} rappresenta la capacità di risultare piacevole per l'utente.
+			\end{itemize}
+		
+		\paragraph{Metriche}
+			\subparagraph{mmmmmm}
+			Indica il ...
 			
-		\end{itemize}
-	
-	\subsection{Manutenibilità}
-		Il sistema deve essere comprensibile ed estensibile in modo facile e verificabile.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\hline
+						metodo di calcolo & xx-yy  & xx-yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{mmmmmmm}
+			\end{table}
 		
-		\begin{itemize}
-			\item \textbf{Misura: }l’unità di misura utilizzata saranno le metriche per il codice descritte nella sezione 3.6.3;
-			\item \textbf{Metrica: }il prodotto dovrà avere la sufficienza su tutte le metriche descritte nella sezione 3.6.3;
-			\item \textbf{Strumenti: }si veda il documento \textsc{NormeDiProgetto 1\_0\_0.pdf}.
+			\subparagraph{vvvvv}
+			Indica ...
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\hline
+						metodo di calcolo & xx-yy  & xx-yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{vvvvvv}
+			\end{table}
+	
+	\subsubsection{Efficienza}
+	Rappresenta la capacità di un prodotto software di realizzare le funzioni richieste nel minor tempo possibile ed utilizzando nel miglior modo le risorse necessarie.
+		
+		\paragraph{Obiettivi}
+			\begin{itemize}
+				\item \textbf{Comportamento rispetto al tempo:} rappresenta la capacità di fornire appropriati tempi di risposta, tempi di elaborazione e quantità di lavoro eseguendo le funzionalità previste.
+				\item \textbf{Utilizzo delle risorse:} rappresenta la capacità di utilizzare un appropriato numero e tipo di risposte quando esegue le funzionalità previste.
+			\end{itemize}
+		
+		\paragraph{Metriche}
+			\subparagraph{mmmmmm}
+			Indica tempo di latenza di chiamata ad un \textit{microservizio\ped{G}}.
 			
-		\end{itemize}
-	
-	\subsection{Portabilità}
-		Il \textit{front-end\ped{G}} dovrà essere utilizzabile dalle versioni più recenti dei più comuni browsers in commercio. 
-		Il \textit{back-end\ped{G}}, basandosi sul linguaggio \textit{Jolie\ped{G}}, dipenderà dalle risorse necessarie all’utilizzo di questo linguaggio.
-		
-		\begin{itemize}
-			\item \textbf{Misura: }l’unità di misura utilizzata saranno le metriche per il codice descritte nella sezione 3.6.3;
-			\item \textbf{Metrica: }il prodotto dovrà avere la sufficienza su tutte le metriche descritte nella sezione 3.6.3;
-			\item \textbf{Strumenti: }si veda il documento \textsc{NormeDiProgetto 1\_0\_0.pdf}.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\hline
+						metodo di calcolo & xx-yy  & xx-yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{mmmmmmm}
+			\end{table}
 			
-		\end{itemize}
+			\subparagraph{vvvvv}
+			Indica il tempo di latenza nel caricamento delle pagine web.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\hline
+						metodo di calcolo & xx-yy  & xx-yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{vvvvvv}
+			\end{table}
+			
+	\subsubsection{Manutenibilità}
+	Rappresenta la capacità di un prodotto software di essere modificato. Le modifiche possono includere correzioni o adattamenti del software a modifiche negli ambienti, nei requisiti e nelle specifiche funzionali.
 	
-	\subsection{Altre qualità}
-		Saranno inoltre importanti per il prodotto le seguenti qualità:
+		\paragraph{Obiettivi}
+			\begin{itemize}
+				\item \textbf{Analizzabilità:} rappresenta la capacità di poter effettuare la diagnosi sul software ed individuare le cause di errori o malfunzionamenti.
+				\item \textbf{Modificabilità:} rappresenta la capacità di consentire lo sviluppo di modifiche al codice, alla progettazione e alla documentazione.
+				\item \textbf{Stabilità:} rappresenta la capacità di evitare effetti non desiderati a seguito di modifiche al software.
+				\item \textbf{Testabilità:} rappresenta la capacità di consentire la verifica e la validazione del software modificato, cioè di eseguire test.
+			\end{itemize}
+	
+		\paragraph{Metriche}
+			\subparagraph{mmmmmm}
+			Indica...
+				\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\hline
+						metodo di calcolo & xx-yy  & xx-yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{mmmmmmm}
+			\end{table}
+	
+			\subparagraph{vvvvv}
+			Indica...
+				\begin{table}[H]
+					\begin{center}
+						\begin{tabular}{|c|c|c|}
+							\hline
+							\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+							\hline
+							metodo di calcolo & xx-yy  & xx-yy \\
+							\hline
+						\end{tabular}
+					\end{center}
+					\caption{vvvvvv}
+				\end{table}
+	
+	\subsubsection{Portabilità}
+	Rappresenta la capacità di un prodotto software di poter essere trasportato da un ambiente ad un altro.
 		
+		\paragraph{Obiettivi}
+			\begin{itemize}
+				\item \textbf{Adattabilità:} rappresenta la capacità di essere adattato a differenti ambienti, senza richiedere azioni specifiche diverse da quelle previste dal software per tali attività.
+				\item \textbf{Coesistenza:} DA METTERE?? rappresenta la capacità di coesistere con altre applicazioni indipendenti in ambienti comuni e di condividere le risorse.
+				\item \textbf{Sostituibilità:} rappresenta la capacità di sostituire un altro software specifico indipendente, per lo stesso scopo e nello stesso ambiente.
+			\end{itemize}
+		
+		\paragraph{Metriche}
+			\subparagraph{mmmmmm}
+			Indica...
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\hline
+						metodo di calcolo & xx-yy  & xx-yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{mmmmmmm}
+			\end{table}
+			
+			\subparagraph{vvvvv}
+			Indica...
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\hline
+						metodo di calcolo & xx-yy  & xx-yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{vvvvvv}
+			\end{table}
+	
+	\subsubsection{Altre qualità (da tenere??)}
+	Inoltre, saranno importanti per lo sviluppo di un buon prodotto software, le seguenti qualità:	
 		\begin{itemize}
-			\item \textbf{Incapsulamento: }applicare le tecniche di incapsulamento per aumentare la manutenibilità
+			\item \textbf{Incapsulamento:} applicare le tecniche di incapsulamento per aumentare la manutenibilità
 			e la possibilità di riutilizzo del codice. Sarà quindi favorito l’uso di interfacce ove
 			possibile;
-			\item \textbf{Coesione: }riguarda le funzionalità che collaborano al fine di raggiungere uno stesso obiettivo. Esse devono risiedere nello stesso componente, ed hanno lo scopo di ridurre l’indice di dipendenza, favorire la semplicità e la manutenibilità.
+			\item \textbf{Coesione:} riguarda le funzionalità che collaborano al fine di raggiungere uno stesso obiettivo. Esse devono risiedere nello stesso componente, ed hanno lo scopo di ridurre l’indice di dipendenza, favorire la semplicità e la manutenibilità.
+		\end{itemize}
+		
+	\subsection{Metriche (da tenere??)}
+	Le \textbf{metriche interne} si applicano al software non eseguibile, come ad esempio le specifiche tecniche e il codice sorgente, durante i periodi di progettazione e codifica.
+	Esse sono specificate nella norma \textit{ISO/IEC 9126-3\ped{G}}.\\
+	Durante le fasi di sviluppo del software, i prodotti intermedi sono valutati tramite metriche interne che misurano le proprietà intrinseche del prodotto.
+	Le misure effettuate permettono di prevedere il livello di qualità esterna ed in uso del prodotto finale, in quanto gli attributi interni influenzano le caratteristiche esterne e quelle in uso.
+	Le metriche interne misurano attributi interni del software e forniscono indicazioni sulle caratteristiche esterne del prodotto finale, tramite l'analisi statica dei prodotti intermedi.
+	Le metriche interne si applicano anche alla documentazione del prodotto.\\
+	Le \textbf{metriche esterne} misurano i comportamenti del prodotto software rilevabili dai test, dall'operatività e dall'osservazione durante la su esecuzione, in funzione degli obiettivi stabiliti.
+	Esse sono specificate nella norma \textit{ISO/IEC 9126-2\ped{G}}.
+		
+		\subsubsection{Misure}
+		Per conseguire dei risultati concreti, il processo di verifica deve fornire dei dati quantificabili per poter valutare se gli obiettivi sono stati raggiunti o meno. Queste è possibile tramite l’utilizzo di metriche e misure. Considerata la poca esperienza del gruppo, questi valori potrebbero essere inizialmente non molto accurati, ma utilizzando il modello incrementale visto nel \hbox{\textsc{PianoDiProgetto 1\_0\_0.pdf}} si potrà migliorarne la precisione.
+		Per ogni metrica sono indicati due range:
+		\begin{itemize}
+			\item \textbf{Range-accettazione: }rappresenta i valori minimi da raggiungere per il conseguimento degli obiettivi di qualità;
+			\item \textbf{Range-ottimale: }rappresenta i valori entro cui dovrebbe collocarsi la misurazione. Non sono vincolanti ma nel caso in cui non si raggiungessero questi valori, sarà necessaria una verifica più accurata e una ulteriore discussione, nella riunione successiva, delle cause di questo scostamento.
+		\end{itemize}
+	
+		\subsubsection{Indice Gulpease}
+		L'indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico.
+		L'indice di Gulpease considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.
+		La formula per il suo calcolo è la seguente:
+		
+		\[ 80+\frac{300*(numero delle frasi)-10*(numero delle lettere)}{numero delle parole} \]
+		
+		
+		I risultati sono compresi tra 0 e 100, dove il valore "100" indica la leggibilità più alta e "0" la leggibilità più bassa. In generale risulta che testi con un indice:
+		\begin{itemize}
+			\item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
+			\item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
+			\item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
+		\end{itemize}
+		
+		I parametri presi in considerazione saranno:
+		\begin{itemize}
+			\item \textbf{Range-accettazione: }[35/100];
+			\item \textbf{Range-ottimale: }[45/100].
+		\end{itemize}
+		
+		\subsubsection{Metriche per i processi}
+		Le metriche scelte prendono in considerazione tempi e costi, in modo da poter controllare efficacemente i processi e riuscire ad attenersi a quanto deciso nel documento \textsc{PianoDiProgetto 1\_0\_0.pdf}. 
+		Per queste metriche non vengono forniti Range-accettazione e Range-ottimale poiché bisognerà consultare il \textsc{PianoDiProgetto 1\_0\_0.pdf} per fare le dovute considerazioni.
+		
+		\begin{itemize}
+			\item \textbf{PPC (Partial Planned Cost): }indica il costo pianificato per lo svolgimento di un sottoinsieme di attività. Si misura in euro e in ore;
+			\item \textbf{PV (Planned Value): }indica il valore che si prevede ottenere dal completamento delle attività pianificate. Per questo progetto tale valore corrisponde alla spesa richiesta per il completamento delle attività. Si misura in euro e in ore;
+			\item \textbf{EV (Earned Value): }indica il valore ottenuto tramite le attività completate alla data corrente. Per questo progetto tale valore corrisponde alla spesa richiesta per il completamento delle attività. Si misura in euro e in ore;
+			\item \textbf{AC (Actual Cost): }indica il costo effettivamente sostenuto alla data corrente. Si misura in euro e in ore. Aiuta a calcolare altre metriche;
+			\item \textbf{BAC (Budget at Completion): }costo previsto per portare a termine il progetto. Si misura in euro e in ore. Mantiene traccia della spesa totale preventivata all'inizio del progetto;
+			\item \textbf{ETC (Estimate to Complete): }indica i costi pianificati per portare a termine le attività di progetto rimanenti alla data corrente. Corrisponde al PV riesaminato allo stato corrente del progetto ma senza tenere conto delle attività completate. Si misura in euro e in ore;
+			\item \textbf{EAC (Estimated at Completion): }revisione del costo stimato per la realizzazione del progetto, ossia il BAC rivisto allo stato corrente del progetto. Si misura in euro e in ore e si ottiene dalla formula: EAC = AC + ETC;
+			\item \textbf{SV (Schedule Variance): }è un indicatore di efficacia, mostra se si è o meno in linea con la pianificazione temporale rispetto alle attività nella baseline. Una schedule variance positiva indica che il gruppo è in anticipo rispetto al Piano di Progetto, altrimenti è in ritardo. Si ottiene dalla formula: SV = EV - PV;
+			\item \textbf{BV (Budget Variance): }indica se la spesa sostenuta alla data corrente è superiore o inferiore a quella preventivata. Una budget variance positiva indica che si è speso meno di quanto inizialmente previsto,  altrimenti viceversa. Si ottiene dalla formula: BV = PV - AC.
 			
 		\end{itemize}
-		
-	\subsection{Organizzazione (sezione in dubbio)}
-		\subsubsection{Criteri di qualità}
-		Lo standard \textit{ISO/IEC 9126\ped{G}} descrive gli obiettivi e le relative metriche necessarie a valutarli.
-		I criteri valutativi sono così suddivisi:
-		\begin{itemize}
-			\item \textbf{Qualità esterna:} le metriche esterne, specificate nella norma \textit{ISO/IEC 9126-2\ped{G}}, valutano i comportamenti del prodotto sulla base di prove, dell'operatività e dell'osservazione durante la sua esecuzione, in funzione degli obiettivi stabiliti;
-			\item \textbf{Qualità interna:} è specificata nella norma \textit{ISO/IEC 9126-3\ped{G}} e si applica al software non eseguibile
-			durante la progettazione e la codifica dello stesso, le misure effettuate consentono di prevedere il livello di qualità esterna ed interna, in quanto gli attributi interni influenzano quelli esterni e di uso;
-			\item \textbf{Qualità d'uso:} rappresenta la qualità dal punto di vista dell'utente finale, viene raggiunto quando sono raggiunte la qualità esterna e quella interna, le metriche di valutazione sono fornite nella norma \textit{ISO/IEC 9126-4\ped{G}}.
-		\end{itemize}
 	
-		\subsubsection{Pianificazione strategica e temporale}
-		Al fine di ridurre la propagazione di errori, l’attività di verifica di codice e documentazione dovrà essere sistematica. 
-		Per ogni attività sarà seguita una procedura che consiste in uno studio preliminare, volto ad evitare errori di natura tecnica o logica, portando ad un alleggerimento dell'attività di verifica finale.
-		Inoltre, si ha come obiettivo quello di rispettare le scadenze riportate nel documento \textsc{PianoDiProgetto 1\_0\_0.pdf}.
+	
+		\subsubsection{Metriche per il codice}
+		Le metriche per il software ora descritte non sono definitive, ma saranno affinate successivamente.
+		
+		\begin{itemize}
+			\item \textbf{Attributi per classe: }un grande numero di attributi interni ad una classe mostra probabilmente la necessità di suddividere la classe in più classi relazionate tra loro.
 			
-		\subsubsection{Responsabilità}
-		Il \textit{\RdP}\ ha il compito di:
-		\begin{itemize}
-			\item Accertarsi che attività e ruoli vengano rispettate, come definite nel \hbox{\textsc{PianoDiProgetto 1\_0\_0.pdf}};
-			\item Accertarsi che le attività di verifica vengano eseguite sistematicamente, come descritto nelle \textsc{NormeDiProgetto 1\_0\_0.pdf};
-			\item Approvare e sancire la distribuzione di un documento.
+			\begin{itemize}
+				\item \textbf{Range-accettazione: }[0/18];
+				\item \textbf{Range-ottimale: }[2/9].
+			\end{itemize}
+			
+			\item \textbf{Numero livelli annidamento: }mostra il livello di annidamento dei metodi. Un numero alto implica una bassa astrazione del codice ed un' elevata complessità.
+			
+			\begin{itemize}
+				\item \textbf{Range-accettazione: }[1/8];
+				\item \textbf{Range-ottimale: }[1/4].
+			\end{itemize}
+			
+			\item \textbf{Numero parametri per metodo: }un valore elevato indica che probabilmente il metodo ha un sovraccarico di funzionalità.
+			
+			\begin{itemize}
+				\item \textbf{Range-accettazione: }[0/8];
+				\item \textbf{Range-ottimale: }[0/5].
+			\end{itemize}
+			
+			\item \textbf{Accoppiamento afferente: }indica il numero di classi esterne ad un package che dipendono da esso. Un grande valore indica una forte dipendenza del software per il package in questione, un valore basso invece indica una bassa utilità del package per il resto del software.
+			
+			\begin{itemize}
+				\item \textbf{Range-accettazione: }non ancora definito;
+				\item \textbf{Range-ottimale: }non ancora definito.
+			\end{itemize}
+			
+			\item \textbf{Accoppiamento efferente: }il numero di classi di un package che dipendono da package esterni. Un valore basso indica che il package ha numerose funzionalità indipendenti dal resto del software.
+			
+			\begin{itemize}
+				\item \textbf{Range-accettazione: }non ancora definito;
+				\item \textbf{Range-ottimale: }non ancora definito.
+			\end{itemize}
+			
+			\item \textbf{Source Line Of Code (SLOC): }il numero di istruzioni presenti nel codice. Questa metrica fornisce una stima della complessità del programma. È utile anche per dare una stima di quanto il codice incrementerà nel tempo, semplificando così la pianificazione.
+			
+			\begin{itemize}
+				\item \textbf{Range-accettazione: }[0/18];
+				\item \textbf{Range-ottimale: }[2/9].
+			\end{itemize}
+			
+			\item \textbf{Complessità Ciclomatica: }una metrica sviluppata da Thomas J. McCabe che consente di stimare la complessità di un programma misurando il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.
+			
+			\begin{itemize}
+				\item \textbf{Range-accettazione: }non ancora definito;
+				\item \textbf{Range-ottimale: }non ancora definito.
+			\end{itemize}
+			
+			
+			
 		\end{itemize}
-		
-		I \textit{\Vers}\ hanno il compito di:
-		\begin{itemize}
-			\item Effettuare l‘attività di verifica in modo sistematico utilizzando metodi e strumenti descritti nel \textsc{PianoDiQualifica 1\_0\_0.pdf};
-			\item Documentare e segnalare ogni errore riscontrato.
-		\end{itemize}	
-		
-	\subsection{Misure e metriche}
-	Per conseguire dei risultati concreti, il processo di verifica deve fornire dei dati quantificabili per poter valutare se gli obiettivi sono stati raggiunti o meno. Queste è possibile tramite l’utilizzo di metriche e misure. Considerata la poca esperienza del gruppo, questi valori potrebbero essere inizialmente non molto accurati, ma utilizzando il modello incrementale visto nel \hbox{\textsc{PianoDiProgetto 1\_0\_0.pdf}} si potrà migliorarne la precisione.
-	Per ogni metrica sono indicati due range:
-	\begin{itemize}
-		\item \textbf{Range-accettazione: }rappresenta i valori minimi da raggiungere per il conseguimento degli obiettivi di qualità;
-		\item \textbf{Range-ottimale: }rappresenta i valori entro cui dovrebbe collocarsi la misurazione. Non sono vincolanti ma nel caso in cui non si raggiungessero questi valori, sarà necessaria una verifica più accurata e una ulteriore discussione, nella riunione successiva, delle cause di questo scostamento.
-	\end{itemize}
-	
-	\subsubsection{Indice Gulpease}
-	L'indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico.
-	L'indice di Gulpease considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.
-	La formula per il suo calcolo è la seguente:
-	
-	\[ 80+\frac{300*(numero delle frasi)-10*(numero delle lettere)}{numero delle parole} \]
-	
-	
-	I risultati sono compresi tra 0 e 100, dove il valore "100" indica la leggibilità più alta e "0" la leggibilità più bassa. In generale risulta che testi con un indice:
-	\begin{itemize}
-		\item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
-		\item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
-		\item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
-	\end{itemize}
-	
-	I parametri presi in considerazione saranno:
-	
-	\begin{itemize}
-		\item \textbf{Range-accettazione: }[35/100];
-		\item \textbf{Range-ottimale: }[45/100].
-	\end{itemize}
-	
-	\subsubsection{Metriche per i processi}
-	Le metriche scelte prendono in considerazione tempi e costi, in modo da poter controllare efficacemente i processi e riuscire ad attenersi a quanto deciso nel documento \textsc{PianoDiProgetto 1\_0\_0.pdf}. 
-	Per queste metriche non vengono forniti Range-accettazione e Range-ottimale poiché bisognerà consultare il \textsc{PianoDiProgetto 1\_0\_0.pdf} per fare le dovute considerazioni.
-	
-	\begin{itemize}
-		\item \textbf{PPC (Partial Planned Cost): }indica il costo pianificato per lo svolgimento di un sottoinsieme di attività. Si misura in euro e in ore;
-		\item \textbf{PV (Planned Value): }indica il valore che si prevede ottenere dal completamento delle attività pianificate. Per questo progetto tale valore corrisponde alla spesa richiesta per il completamento delle attività. Si misura in euro e in ore;
-		\item \textbf{EV (Earned Value): }indica il valore ottenuto tramite le attività completate alla data corrente. Per questo progetto tale valore corrisponde alla spesa richiesta per il completamento delle attività. Si misura in euro e in ore;
-		\item \textbf{AC (Actual Cost): }indica il costo effettivamente sostenuto alla data corrente. Si misura in euro e in ore. Aiuta a calcolare altre metriche;
-		\item \textbf{BAC (Budget at Completion): }costo previsto per portare a termine il progetto. Si misura in euro e in ore. Mantiene traccia della spesa totale preventivata all'inizio del progetto;
-		\item \textbf{ETC (Estimate to Complete): }indica i costi pianificati per portare a termine le attività di progetto rimanenti alla data corrente. Corrisponde al PV riesaminato allo stato corrente del progetto ma senza tenere conto delle attività completate. Si misura in euro e in ore;
-		\item \textbf{EAC (Estimated at Completion): }revisione del costo stimato per la realizzazione del progetto, ossia il BAC rivisto allo stato corrente del progetto. Si misura in euro e in ore e si ottiene dalla formula: EAC = AC + ETC;
-		\item \textbf{SV (Schedule Variance): }è un indicatore di efficacia, mostra se si è o meno in linea con la pianificazione temporale rispetto alle attività nella baseline. Una schedule variance positiva indica che il gruppo è in anticipo rispetto al Piano di Progetto, altrimenti è in ritardo. Si ottiene dalla formula: SV = EV - PV;
-		\item \textbf{BV (Budget Variance): }indica se la spesa sostenuta alla data corrente è superiore o inferiore a quella preventivata. Una budget variance positiva indica che si è speso meno di quanto inizialmente previsto,  altrimenti viceversa. Si ottiene dalla formula: BV = PV - AC.
-		
-	\end{itemize}
-	
-	
-	\subsubsection{Metriche per il codice}
-	Le metriche per il software ora descritte non sono definitive, ma saranno affinate successivamente.
-	
-	\begin{itemize}
-		\item \textbf{Attributi per classe: }un grande numero di attributi interni ad una classe mostra probabilmente la necessità di suddividere la classe in più classi relazionate tra loro.
-		
-		\begin{itemize}
-			\item \textbf{Range-accettazione: }[0/18];
-			\item \textbf{Range-ottimale: }[2/9].
-		\end{itemize}
-		
-		\item \textbf{Numero livelli annidamento: }mostra il livello di annidamento dei metodi. Un numero alto implica una bassa astrazione del codice ed un' elevata complessità.
-		
-		\begin{itemize}
-			\item \textbf{Range-accettazione: }[1/8];
-			\item \textbf{Range-ottimale: }[1/4].
-		\end{itemize}
-		
-		\item \textbf{Numero parametri per metodo: }un valore elevato indica che probabilmente il metodo ha un sovraccarico di funzionalità.
-		
-		\begin{itemize}
-			\item \textbf{Range-accettazione: }[0/8];
-			\item \textbf{Range-ottimale: }[0/5].
-		\end{itemize}
-		
-		\item \textbf{Accoppiamento afferente: }indica il numero di classi esterne ad un package che dipendono da esso. Un grande valore indica una forte dipendenza del software per il package in questione, un valore basso invece indica una bassa utilità del package per il resto del software.
-		
-		\begin{itemize}
-			\item \textbf{Range-accettazione: }non ancora definito;
-			\item \textbf{Range-ottimale: }non ancora definito.
-		\end{itemize}
-		
-		\item \textbf{Accoppiamento efferente: }il numero di classi di un package che dipendono da package esterni. Un valore basso indica che il package ha numerose funzionalità indipendenti dal resto del software.
-		
-		\begin{itemize}
-			\item \textbf{Range-accettazione: }non ancora definito;
-			\item \textbf{Range-ottimale: }non ancora definito.
-		\end{itemize}
-		
-		\item \textbf{Source Line Of Code (SLOC): }il numero di istruzioni presenti nel codice. Questa metrica fornisce una stima della complessità del programma. È utile anche per dare una stima di quanto il codice incrementerà nel tempo, semplificando così la pianificazione.
-		
-		\begin{itemize}
-			\item \textbf{Range-accettazione: }[0/18];
-			\item \textbf{Range-ottimale: }[2/9].
-		\end{itemize}
-		
-		\item \textbf{Complessità Ciclomatica: }una metrica sviluppata da Thomas J. McCabe che consente di stimare la complessità di un programma misurando il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.
-		
-		\begin{itemize}
-			\item \textbf{Range-accettazione: }non ancora definito;
-			\item \textbf{Range-ottimale: }non ancora definito.
-		\end{itemize}
-		
-		
-		
-	\end{itemize}
 	
 	
 	\subsection{Analisi}
