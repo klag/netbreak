@@ -12,7 +12,7 @@
 	\rowcolor{Gray}
 	\multicolumn{2}{c}{UC11 - Registrazione nuova API}\\
 	\hline
-	\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+	\textbf{Attori} & Sviluppatore \\
 	\textbf{Descrizione} & L'attore registra una nuova API su API Market \\
 	\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
 	\textbf{Post-Condizioni} & L'attore ha registrato una nuova API su API Market \\
@@ -20,7 +20,7 @@
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
 		\item L'attore può inserire il nome della nuova API (UC11.1)
 		\item L'attore può inserire la descrizione della nuova API (UC11.2)
-		\item L'attore può inserire i tag della nuova API (UC11.3)
+		\item L'attore può inserire la categoria della nuova API (UC11.3)
 		\item L'attore può inserire l'interfaccia della nuova API (UC11.4)
 		\item L'attore può inserire il file per la documentazione PDF della nuova API (UC11.5)
 		\item L'attore può inserire il link per la documentazione esterna della nuova API (UC11.7)
@@ -46,7 +46,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.1 - Inserimento nome API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore inserisce il nome della nuova API \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
 		\textbf{Post-Condizioni} & L'attore ha inserito il nome della nuova API \\
@@ -66,7 +66,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.2 - Inserimento descrizione API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore inserisce la descrizione della nuova API \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
 		\textbf{Post-Condizioni} & L'attore ha inserito la descrizione della nuova API \\
@@ -77,22 +77,22 @@
 	\end{tabular}
 \end{minipage}
 
-\subsubsection{Caso d'uso UC11.3: Inserimento tag API}
+\subsubsection{Caso d'uso UC11.3: Inserimento categoria API}
 \label{UC11_3}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC11.3 - Inserimento tag API} \\
+		\multicolumn{2}{c}{UC11.3 - Inserimento categoria API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
-		\textbf{Descrizione} & L'attore inserisce i tag della nuova API \\
+		\textbf{Attori} & Sviluppatore \\
+		\textbf{Descrizione} & L'attore inserisce la categoria della nuova API \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
-		\textbf{Post-Condizioni} & L'attore ha inserito i tag della nuova API \\
+		\textbf{Post-Condizioni} & L'attore ha inserito la categoria della nuova API \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può inserire i tag della nuova API
+			\item L'attore può inserire la categoria della nuova API
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -106,7 +106,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.4 - Inserimento interfaccia API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore inserisce l'interfaccia della nuova API \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
 		\textbf{Post-Condizioni} & L'attore ha inserito l'interfaccia della nuova API \\
@@ -126,7 +126,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.5 - Inserimento documentazione PDF API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore carica su API Market un file PDF contenente la documentazione PDF della nuova API \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
 		\textbf{Post-Condizioni} & L'attore ha caricato su API Market un file PDF contenente la documentazione PDF della nuova API \\
@@ -150,7 +150,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.6 - Errore inserimento PDF API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore visualizza un messaggio di errore e l'inserimento della documentazione PDF della nuova API non avviene \\
 		\textbf{Pre-Condizioni} & L'attore ha cercato di caricare su API Market un file contenente la documentazione della nuova API ma si è verificato un errore \\
 		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore \\
@@ -170,7 +170,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.7 - Inserimento documentazione esterna API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore inserisce il link alla documentazione esterna della nuova API \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
 		\textbf{Post-Condizioni} & L'attore ha inserito il link alla documentazione esterna della nuova API \\
@@ -191,7 +191,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.8.2 - Scelta policy vendita API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore sceglie una policy di vendita per la nuova API \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di registrazione di una nuova API \\
 		\textbf{Post-Condizioni} & L'attore ha scelto una policy di vendita per la nuova API \\
@@ -217,7 +217,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.8.1 - Scelta policy per numero di chiamate} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore sceglie la policy di vendita API per numero di chiamate \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di registrazione di una nuova API \\
 		\textbf{Post-Condizioni} & L'attore ha scelto la policy di vendita API per numero di chiamate \\
@@ -237,7 +237,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.8.2 - Scelta policy per tempo di utilizzo} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore sceglie la policy di vendita API per tempo di utilizzo \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di registrazione di una nuova API \\
 		\textbf{Post-Condizioni} & L'attore ha scelto la policy di vendita API per tempo di utilizzo \\
@@ -257,7 +257,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.8.3 - Scelta policy per traffico} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore sceglie la policy di vendita API per traffico \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di registrazione di una nuova API \\
 		\textbf{Post-Condizioni} & L'attore ha scelto la policy di vendita API per traffico \\
@@ -277,7 +277,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.9 - Inserimento guadagno API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore inserisce il guadagno netto desiderato per la nuova API \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
 		\textbf{Post-Condizioni} & L'attore ha inserito il guadagno netto desiderato per la nuova API \\
@@ -297,7 +297,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.10 - Inserimento logo API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore carica su API Market un file contenente il logo per la nuova API \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
 		\textbf{Post-Condizioni} & L'attore ha caricato su API Market un file contenente il logo per la nuova API \\
@@ -321,7 +321,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.11 - Errore inserimento logo API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore visualizza un messaggio di errore e l'inserimento del logo per la nuova API non avviene \\
 		\textbf{Pre-Condizioni} & L'attore ha cercato di caricare su API Market un file contenente il logo per la nuova API ma si è verificato un errore \\
 		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore \\
@@ -341,7 +341,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.12 - Conferma registrazione nuova API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore conferma la registrazione della nuova API \\
 		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla registrazione di una nuova API \\
 		\textbf{Post-Condizioni} & L'attore ha confermato la registrazione della nuova API \\
@@ -361,7 +361,7 @@
 		\rowcolor{Gray}
 		\multicolumn{2}{c}{UC11.13 - Errore registrazione nuova API} \\
 		\hline
-		\textbf{Attori} & Utente autenticato, Amministratore API Market \\
+		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la registrazione della nuova API non avviene \\
 		\textbf{Pre-Condizioni} & L'attore ha confermato la registrazione della una nuova API ma si è verificato un errore \\
 		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore informativo \\
