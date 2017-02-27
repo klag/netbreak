@@ -1,16 +1,18 @@
-15/02/2017
+20/02/2017
 Marco Casagrande
 
 Documento: AdR
 
 Aggiornamento dopo le riunioni per RPmin
 
--Aggiunti attori cliente e sviluppatore, tolto utente autenticato, aggiornata descrizione (IN FORSE)
--Uniti file latex UC3 ai file latex dei sottocasi
+-Aggiunti attori cliente e sviluppatore, aggiornata descrizione
+-Uniti file latex UC ai file latex dei sottocasi (a parte per UC4)
 -Adattato UC2 all'ER del database
 -Adattato UC3 all'ER del database
 -Adattato UC8 all'ER del database
 -Adattato UC9 all'ER del database
 -Adattato UC11 all'ER del database
--Adattato UC14 all'ER del database (da definire dati avanzati)
+-Adattato UC12 all'ER del database
+-Adattato UC13 all'ER del database
+-Adattato UC14 all'ER del database
 -Aggiornati file astah e png per ogni cambiamento
