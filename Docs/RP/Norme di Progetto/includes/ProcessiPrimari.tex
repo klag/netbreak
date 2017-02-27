@@ -48,7 +48,7 @@
 			\end{itemize}
 		
 		\paragraph{Requisiti progettuali}
-		Gli \textit{\Anas} hanno il compito di produrre il documento \textsc{\AdR1\_0\_0.pdf} contenente un elenco di requisiti, con annesse peculiarità richieste ed informazioni sulla loro tipologia e rilevanza.
+		Gli \textit{\Anas} hanno il compito di produrre il documento \textsc{\AdR2\_0\_0.pdf} contenente un elenco di requisiti, con annesse peculiarità richieste ed informazioni sulla loro tipologia e rilevanza.
 		
 			\subparagraph{Nomenclatura}
 			La scelta del nome per i requisiti progettuali avverrà secondo la seguente procedura:
@@ -139,14 +139,22 @@
 		Per la modellazione dei diagrammi dei casi d'uso in linguaggio \textit{UML\ped{G}}, la scelta è ricaduta su \textit{\textbf{Astah\ped{G}}}, editor multi-piattaforma e gratuito. Il suo punto forte rispetto ad altre soluzioni è la semplicità di utilizzo. Tra le funzionalità interessanti ai fini del gruppo, c'è la possibilità di esportare i diagrammi creati direttamente in un file immagine con estensione .png. Il software \textit{Astah\ped{G}} sarà utilizzato per la creazione di tutti i diagrammi necessari in fase di Progettazione ed \AdR.
 		
 		\paragraph{Smartsheet}
-		Per la realizzazione dei \textit{diagrammi di Gantt\ped{G}} richiesti in fase di Pianificazione, si è scelto di utilizzare lo strumento \textit{\textbf{Smartsheet\ped{G}}}, il quale consente di creare diagrammi secondo le attività pianificate per uno specifico periodo di tempo, indicato dall'utente. \MakeUppercase{è} risultato molto utile per la creazione dei grafici presenti nel documento \textsc{PianoDiProgetto 1\_0\_0.pdf}.
+		Per la realizzazione dei \textit{diagrammi di Gantt\ped{G}} richiesti in fase di Pianificazione, si è scelto di utilizzare lo strumento \textit{\textbf{Smartsheet\ped{G}}}, il quale consente di creare diagrammi secondo le attività pianificate per uno specifico periodo di tempo, indicato dall'utente.
+		Smartsheetè uno strumento gratuito e intuitiv, fruibile tramite interfaccia web. Le funzioni offerte sono ampie e immediate ed è possibile personalizzare i diagrammi con una formattazione condizionale per evidenziare attività, punti gritici o \textit{milestone\ped{G}}. Smartsheet semplicifica notevolmente la collaborazione in tempo reale e permette a diverse persone di rimanere aggiornate in tempo realie sugli sviluppi del progetto. \MakeUppercase{è} risultato molto utile per la creazione dei grafici presenti nel documento \textsc{PianoDiProgetto 2\_0\_0.pdf}.
 		
 		\paragraph{NetBreakDB}
-		Per il tracciamento dei documenti, preponderante specialmente nella fase di analisi e di progettazione, la scelta del team è ricaduta sull'utilizzo di uno strumento dedicato per permettere una più agevole gestione. Il software utilizzato è un fork di un progetto esistente, PragmaDB, creato da studenti degli scorsi anni che hanno intrapreso questa scelta, e modificato secondo le nostre esigenze. L'applicativo è grado di generare codice \textit{\LaTeX\ped{G}} a seguito di un indicizzazione dei requisiti all'interno del database. La possibilità di esportare le voci necessarie al tracciamento in maniera automatizzata rende il lavoro più uniforme ed ordinato.
+		Per il tracciamento dei documenti, preponderante specialmente nella fase di analisi e di progettazione, la scelta del team è ricaduta sull'utilizzo di uno strumento dedicato per permettere una più agevole gestione. Il software utilizzato è un fork di un progetto esistente, PragmaDB, creato da studenti degli scorsi anni che hanno intrapreso questa scelta, e modificato secondo le nostre esigenze. Il software permette la gestione di casi d'uso, attori, fonti e il calcolo automatizzato dell'indice di Gulpease effettuato direttamente sui documenti contenuti in una repo di Github. I risultati dell'indice vengono visualizzati in una tabella secondo questo ordine:
+		\begin{center}
+			NomeDocumento | valore indice | esito
+		\end{center}
+		L'applicativo è grado di generare codice \textit{\LaTeX\ped{G}} a seguito di un indicizzazione dei requisiti all'interno del database. La possibilità di esportare le voci necessarie al tracciamento in maniera automatizzata rende il lavoro più uniforme ed ordinato.
 		
 		\paragraph{Docker}
-		
+		Docker è un progetto open source per gli sviluppatori e gli amministratori di sistema che permette di rilasciare ed eseguire le applicazioni distribuite on premise, su macchine virtuali e nel cloud promuovendo lo sviluppo agile per garantire maggiore efficienze e flessibilità alle iniziative cloud e di modernizzare le applicazioni. Docker è un contenitore che permette di integrare applicazioni o parte di esse e fornisce un contenitore con tutto il necessario per l'esecuzione, pronto per essere installato su un server. Questo garantisce che il software funzionerà sempre allo stesso modo indipendentemente dall'ambiente in cui viene eseguito. Questo strumento permette di creare software più performanti, acellerare lo sviluppo ed eliminare possibili problemi dovuti all'esecuzione su macchine diverse. Il contenitore isola l'applicazioni dai livelli sottostanti della struttura in modo da garantire protezione all'applicazione. 
+			
 		\paragraph{SwaggerHub}
 		
+		
 		\paragraph{Gulpease}
-		Per verificare l'indice di leggibilità dei documenti, così come definito dal documento \textsc{PianoDiQualifica 1\_0\_0.pdf} è stato utilizzato lo strumento
+		Per verificare l'indice di leggibilità dei documenti, così come definito dal documento \textsc{PianoDiQualifica 2\_0\_0.pdf} è stato utilizzato uno strumento realizzato da un gruppo negli anni precedenti. Il calcolo dell'indice di Gulpease è effettuato da uno script PHP\ped{G}} che analizza i vari file .tex all'interno di una cartella e restituisce il nome del documento, il valore dell'indice e se il valore è superiore al minimo prefissato. 
+		Questo script è un ottimo strumento per automatizzare il lavoro in quanto, dopo alcune modifiche, è in grado di esportare i risultati in codice \textit{\LaTeX\ped{G}} e quindi semplificarne l'integrazione e indicare in quali documenti intervenire per migliorare la leggibilità del testo.
