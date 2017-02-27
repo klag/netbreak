@@ -153,8 +153,8 @@
 				\item \textbf{Contenuto}: questo documento ha lo scopo di fornire una definizione di tutti i termini tecnici e acronimi, al fine di rendere la lettura comprensibile a tutti i destinatari della documentazione fornita.
 			\end{itemize}
 
-	\subsection{Verifica}
-	Il processo di Verifica ha lo scopo di controllare ed assicurare che ogni documento prodotto rispecchi quanto previsto dai requisiti.
+	\subsection{Verifica e Validazione}
+	Il processo di Verifica e Validazione ha lo scopo di controllare ed assicurare che documentazione e software prodotti rispecchino quanto previsto dai requisiti. In particolare, la verifica serve a stabilire che il prodotto rispetti le specifiche, mentre in fase di validazione ci si accerta che le specifiche siano rispettate nel modo più consono.
 
 		\subsubsection{Analisi}
 
@@ -168,12 +168,60 @@
 			\paragraph{Analisi dinamica}
 			L'analisi dinamica è applicata esclusivamente sul software prodotto, in quanto consiste nell’effettuare test per verificare il corretto funzionamento dell’applicativo.
 	
-		\subsubsection{Strumenti}
+			
+		\subsubsection{Livelli dei test}
+		Il sistema adottato per il testing prende atto della struttura comune a tutto il software, decomponendo quindi questa fase partendo da elementi semplici fino a giungere al test dell'intero sistema, seguendo opportune strategie di integrazione.
+		
+		\paragraph{Test dei moduli}
+		Questa componente di test è atta ad analizzare ogni piccola unità software singolarmente. Così facendo, si minimizzano gli errori a partire da ogni singola componente. Testando i singoli moduli, si rende necessaria la presenza di componenti fittizie per simulare parti di sistema incomplete e altrimenti non testabili singolarmente. Il codice utilizzato per denotare questa fase di test sarà:
+		
+		\begin{center}
+			TM[Identificativo test]
+		\end{center}
+	
+		\paragraph{Test di integrazione}
+		I test denominati di integrazione riguardano insiemi di moduli, che vengono testati una volta assemblati. Alternando passi di integrazione e di controllo, come in questo caso, significa necessariamente predisporre test su componenti ancora incomplete. Il codice utilizzato per denotare questa fase di test sarà:
+		
+		\begin{center}
+			TI[Identificativo test]
+		\end{center}
+		
+		\paragraph{Test sul sistema}
+		I test sul sistema valutano ogni caratteristica di qualità di prodotto nella sua completezza. Il prodotto, giunto al periodo di testing sul sistema, si ritiene giunto ad una realizzazione definitiva. I test riguardano numerosi aspetti cruciali, e si possono riassumere nelle seguenti categorie:
+		
+		\begin{itemize}
+			\item \textbf{Facility test}: Vengono testate le funzionalità del prodotto, affinchè svolgano le attività preposte in modo corretto
+			\item \textbf{Compatibility test}: Si testa la compatibilità del prodotto con software di terze parti che interagirà con il sistema. Nel nostro caso specifico, trattasi ad esempio dei web browser che verranno utilizzati dagli utilizzatori finali
+			\item \textbf{Security test}: Viene valutata la robustezza del sistema in materia di sicurezza
+			\item \textbf{Performance test}: Si analizza la reattività e le prestazioni del sistema, anche in situazioni di particolare carico
+		\end{itemize}
+	
+		Il codice utilizzato per denotare questa fase di test sarà:
+		
+		\begin{center}
+			TS[Identificativo test]
+		\end{center}
+	
+		\paragraph{Test di regressione}
+		Durante lo sviluppo, qualora si renda necessaria la modifica di alcune componenti, il test di regressione consiste nel rieseguire tutti i test riguardanti tale componente aggiornata. Il codice utilizzato per denotare questa fase di test sarà:
+		
+		\begin{center}
+			TR[Identificativo test]
+		\end{center}
+	
+		\paragraph{Test di accettazione}
+		Esso è il controllo ultimo e definitivo che il prodotto realizzato dal fornitore sia conforme alla richiesta del proponente. Il test è effettuato in presenza del proponente, ed in caso di esito positivo il software può essere rilasciato.
+		
+		Il codice utilizzato per denotare questa fase di test sarà:
+		
+		\begin{center}
+			TA[Identificativo test]
+		\end{center}
+	
+		\subsubsection{Strumenti utilizzati}
 		\begin{itemize}
 			\item \textbf{\textit{W3C Markup Validator Service\ped{G}}}: validatore online di codice \textit{HTML\ped{G}}, utile per trovare eventuali errori nel codice. L'indirizzo web di riferimento è: \url https://validator.w3.org/;
 			\item \textbf{\textit{CSSLint\ped{G}}}: validatore online di codice \textit{CSS\ped{G}}, utile per trovare eventuali errori nel codice. L'indirizzo web di riferimento è: \url http://csslint.net/;
 			\item \textbf{\textit{SQLFiddle\ped{G}}}: validatore online di codice \textit{MySQL\ped{G}}. Utile per verificare la consistenza del codice del database. L'indirizzo web di riferimento è: \url http://sqlfiddle.com/;
-			\item \textbf{\textit{PHP Code Checker\ped{G}}}: strumento online che verifica la presenza di eventuali errori di sintassi nel codice \textit{PHP\ped{G}}. L'indirizzo web di riferimento è: \url http://phpcodechecker.com/.
+			\item \textbf{Strumenti per sviluppatori Google Chrome}: è uno strumento atto a controllare l'utilizzo di risorse del prodotto, l'usabilità su differenti dispositivi, nonchè simulare situazioni di carico della rete. L'indirizzo web di riferimento è: \url https://www.google.it/chrome/
 		\end{itemize}
-	
-	\subsection{Validazione}
