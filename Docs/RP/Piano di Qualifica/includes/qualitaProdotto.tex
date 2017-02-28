@@ -22,9 +22,9 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 					\begin{center}
 						\begin{tabular}{|c|c|c|}
 							\hline
-							\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+							\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 							\hline
-							n° funz ritenute complete/n° funz totali & 100 & 90-100 \\
+							n° funz ritenute complete/n° funz totali & 90-100 & 100 \\
 							\hline
 						\end{tabular}
 					\end{center}
@@ -37,7 +37,7 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 					\begin{center}
 						\begin{tabular}{|c|c|c|}
 							\hline
-							\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+							\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 							\hline
 							n° funz ritenute corrette/n° funz totali & 100 & 100 \\
 							\hline
@@ -52,9 +52,9 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 					\begin{center}
 						\begin{tabular}{|c|c|c|}
 							\hline
-							\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+							\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 							\hline
-							n° test con esito pos/n° test totali & 100 & 90-100 \\
+							n° test con esito pos/n° test totali & 90-100 & 100 \\
 							\hline
 						\end{tabular}
 					\end{center}
@@ -67,9 +67,9 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 				\begin{center}
 					\begin{tabular}{|c|c|c|}
 						\hline
-						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 						\hline
-						n° accessi controllati con succ dal sistema/n° accessi tot & 100 & 90-100 \\
+						n° accessi controllati con succ dal sistema/n° accessi tot & 90-100 & 100 \\
 						\hline
 					\end{tabular}
 				\end{center}
@@ -92,7 +92,7 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 				\begin{center}
 					\begin{tabular}{|c|c|c|}
 						\hline
-						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 						\hline
 						metodo di calcolo & xx-yy  & xx-yy \\
 						\hline
@@ -101,19 +101,34 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 				\caption{mmmmmmm}
 			\end{table}
 		
-			\subparagraph{vvvvv}
-			Indica ...
+			\subparagraph{Copertura dei test}
+			Indica il livello di copertura dei test.
 			\begin{table}[H]
 				\begin{center}
 					\begin{tabular}{|c|c|c|}
 						\hline
-						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 						\hline
-						metodo di calcolo & xx-yy  & xx-yy \\
+						n° test pianificati/n° test necessari a garantire copertura richiesta o massima & xx-yy  & xx-yy \\
 						\hline
 					\end{tabular}
 				\end{center}
-				\caption{vvvvvv}
+				\caption{Copertura dei test}
+			\end{table}
+			
+			\subparagraph{Controllo dei guasti}
+			Indica il livello di controllo dei guasti, attraverso il numero di condizioni di errore messe sotto controllo per evitare malfunzionamenti e/o guasti al prodotto.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+						\hline
+						n° cond errore gestite corrett/n° tot cond errore possibili nel sistema & xx-yy  & xx-yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{Controllo dei guasti}
 			\end{table}
 	
 	\subsubsection{Usabilità}
@@ -122,41 +137,54 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 		\paragraph{Obiettivi}
 			\begin{itemize}
 				\item \textbf{Comprensibilità:} rappresenta la capacità di permettere all'utente di capire le funzionalità del prodotto software e come poterle utilizzare con successo per svolgere particolari task in determinate condizioni di utilizzo.
-				\item \textbf{Apprendibilità:} rappresenta la capacità di permettere all'utente di imparare l'applicazione.
 				\item \textbf{Operabilità:} rappresenta la capacità di permettere all'utente di utilizzare e controllare il prodotto software.
 				\item \textbf{Attrattività:} rappresenta la capacità di risultare piacevole per l'utente.
 			\end{itemize}
 		
 		\paragraph{Metriche}
-			\subparagraph{mmmmmm}
-			Indica il ...
-			
+			\subparagraph{Comprensibilità delle funzionalità offerte}
+			Indica la percentuale di funzioni comprensibili agli utenti.
 			\begin{table}[H]
 				\begin{center}
 					\begin{tabular}{|c|c|c|}
 						\hline
-						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 						\hline
-						metodo di calcolo & xx-yy  & xx-yy \\
+						n° funz comprese/n° funz tot & 80-100  & 90-100 \\
 						\hline
 					\end{tabular}
 				\end{center}
-				\caption{mmmmmmm}
+				\caption{Comprensibilità delle funzionalità offerte}
 			\end{table}
 		
-			\subparagraph{vvvvv}
-			Indica ...
+			\subparagraph{Controllo e monitoraggio delle operazioni}
+			Indica la capacità del prodotto di monitorare lo stato delle operazioni eseguite.
 			\begin{table}[H]
 				\begin{center}
 					\begin{tabular}{|c|c|c|}
 						\hline
-						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 						\hline
-						metodo di calcolo & xx-yy  & xx-yy \\
+						n° funz con adeguato controllo e monitoraggio op/n° tot funz con controllo & xx-yy  & xx-yy \\
 						\hline
 					\end{tabular}
 				\end{center}
-				\caption{vvvvvv}
+				\caption{Controllo e monitoraggio delle operazioni}
+			\end{table}
+			
+			\subparagraph{Qualità della messaggistica}
+			Indica il grado di chiarezza, completezza e correttezza dei messaggi previsti rispetto alle diverse condizioni gestite dal prodotto (ad esempio, il completamento di una funzione, le condizioni di errore, le scelte da effettuare, etc...).
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+						\hline
+						n° msg risultano chiari, completi e corretti/n° tot msg previsti & xx-yy  & xx-yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{Qualità della messaggistica}
 			\end{table}
 	
 	\subsubsection{Efficienza}
@@ -169,35 +197,34 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 			\end{itemize}
 		
 		\paragraph{Metriche}
-			\subparagraph{mmmmmm}
-			Indica tempo di latenza di chiamata ad un \textit{microservizio\ped{G}}.
-			
+			\subparagraph{Tempo di risposta}
+			Indica il tempo di risposta per una chiamata ad un microservizio.
 			\begin{table}[H]
 				\begin{center}
 					\begin{tabular}{|c|c|c|}
 						\hline
-						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 						\hline
 						metodo di calcolo & xx-yy  & xx-yy \\
 						\hline
 					\end{tabular}
 				\end{center}
-				\caption{mmmmmmm}
+				\caption{Tempo di risposta}
 			\end{table}
 			
-			\subparagraph{vvvvv}
-			Indica il tempo di latenza nel caricamento delle pagine web.
+			\subparagraph{Utilizzo di risorse}
+			Indica la dimensione media dei buffer utilizzati dal prodotto.
 			\begin{table}[H]
 				\begin{center}
 					\begin{tabular}{|c|c|c|}
 						\hline
-						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 						\hline
 						metodo di calcolo & xx-yy  & xx-yy \\
 						\hline
 					\end{tabular}
 				\end{center}
-				\caption{vvvvvv}
+				\caption{Utilizzo di risorse}
 			\end{table}
 			
 	\subsubsection{Manutenibilità}
@@ -212,35 +239,50 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 			\end{itemize}
 	
 		\paragraph{Metriche}
-			\subparagraph{mmmmmm}
-			Indica...
+			\subparagraph{Registro di log}
+			Indica il livello di registrazione delle operazioni eseguite nei file di log.
 				\begin{table}[H]
 				\begin{center}
 					\begin{tabular}{|c|c|c|}
 						\hline
-						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 						\hline
-						metodo di calcolo & xx-yy  & xx-yy \\
+						n° op effettivamente reg/n° tot op & xx-yy  & xx-yy \\
 						\hline
 					\end{tabular}
 				\end{center}
-				\caption{mmmmmmm}
+				\caption{Registro di log}
 			\end{table}
 	
-			\subparagraph{vvvvv}
-			Indica...
+			\subparagraph{Complessità del software}
+			Indica la complessità ciclomatica di un modulo software sviluppato.
 				\begin{table}[H]
 					\begin{center}
 						\begin{tabular}{|c|c|c|}
 							\hline
-							\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+							\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 							\hline
-							metodo di calcolo & xx-yy  & xx-yy \\
+							n° archi - n° nodi + 2 & xx-yy  & xx-yy \\
 							\hline
 						\end{tabular}
 					\end{center}
-					\caption{vvvvvv}
+					\caption{Complessità del software}
 				\end{table}
+			
+			\subparagraph{Impatto delle modifiche}
+			Indica la percentuale di modifiche effettuate in risposta a failure, le quali hanno portato all’introduzione di nuove failure in altre componenti del sistema.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+						\hline
+						 & xx-yy  & xx-yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{Impatto delle modifiche}
+			\end{table}
 	
 	\subsubsection{Portabilità}
 	Rappresenta la capacità di un prodotto software di poter essere trasportato da un ambiente ad un altro.
@@ -248,49 +290,23 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 		\paragraph{Obiettivi}
 			\begin{itemize}
 				\item \textbf{Adattabilità:} rappresenta la capacità di essere adattato a differenti ambienti, senza richiedere azioni specifiche diverse da quelle previste dal software per tali attività.
-				\item \textbf{Coesistenza:} DA METTERE?? rappresenta la capacità di coesistere con altre applicazioni indipendenti in ambienti comuni e di condividere le risorse.
-				\item \textbf{Sostituibilità:} rappresenta la capacità di sostituire un altro software specifico indipendente, per lo stesso scopo e nello stesso ambiente.
 			\end{itemize}
 		
 		\paragraph{Metriche}
-			\subparagraph{mmmmmm}
-			Indica...
+			\subparagraph{Supporto differenti versioni dei browser}
+			Indica la percentuale di versioni di browser supportate.
 			\begin{table}[H]
 				\begin{center}
 					\begin{tabular}{|c|c|c|}
 						\hline
-						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
+						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 						\hline
-						metodo di calcolo & xx-yy  & xx-yy \\
-						\hline
-					\end{tabular}
-				\end{center}
-				\caption{mmmmmmm}
-			\end{table}
-			
-			\subparagraph{vvvvv}
-			Indica...
-			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Misura} & \textbf{Range ottimale} & \textbf{Range accettazione} \\
-						\hline
-						metodo di calcolo & xx-yy  & xx-yy \\
+						n° vers support/n° tot versioni che devono essere support & xx-yy  & xx-yy \\
 						\hline
 					\end{tabular}
 				\end{center}
-				\caption{vvvvvv}
+				\caption{Supporto differenti versioni dei browser}
 			\end{table}
-	
-	\subsubsection{Altre qualità (da tenere??)}
-	Inoltre, saranno importanti per lo sviluppo di un buon prodotto software, le seguenti qualità:	
-		\begin{itemize}
-			\item \textbf{Incapsulamento:} applicare le tecniche di incapsulamento per aumentare la manutenibilità
-			e la possibilità di riutilizzo del codice. Sarà quindi favorito l’uso di interfacce ove
-			possibile;
-			\item \textbf{Coesione:} riguarda le funzionalità che collaborano al fine di raggiungere uno stesso obiettivo. Esse devono risiedere nello stesso componente, ed hanno lo scopo di ridurre l’indice di dipendenza, favorire la semplicità e la manutenibilità.
-		\end{itemize}
 		
 	\subsection{Metriche (da tenere??)}
 	Le \textbf{metriche interne} si applicano al software non eseguibile, come ad esempio le specifiche tecniche e il codice sorgente, durante i periodi di progettazione e codifica.
@@ -303,32 +319,33 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 	Esse sono specificate nella norma \textit{ISO/IEC 9126-2\ped{G}}.
 		
 		\subsubsection{Misure}
-		Per conseguire dei risultati concreti, il processo di verifica deve fornire dei dati quantificabili per poter valutare se gli obiettivi sono stati raggiunti o meno. Queste è possibile tramite l’utilizzo di metriche e misure. Considerata la poca esperienza del gruppo, questi valori potrebbero essere inizialmente non molto accurati, ma utilizzando il modello incrementale visto nel \hbox{\textsc{PianoDiProgetto 1\_0\_0.pdf}} si potrà migliorarne la precisione.
-		Per ogni metrica sono indicati due range:
+		Per conseguire dei risultati concreti, il processo di verifica deve fornire dei dati quantificabili per poter valutare se gli obiettivi sono stati raggiunti o meno. Queste è possibile tramite l’utilizzo di metriche e misure. Per ogni metrica sono indicati due range:
 		\begin{itemize}
-			\item \textbf{Range-accettazione: }rappresenta i valori minimi da raggiungere per il conseguimento degli obiettivi di qualità;
-			\item \textbf{Range-ottimale: }rappresenta i valori entro cui dovrebbe collocarsi la misurazione. Non sono vincolanti ma nel caso in cui non si raggiungessero questi valori, sarà necessaria una verifica più accurata e una ulteriore discussione, nella riunione successiva, delle cause di questo scostamento.
+			\item \textbf{Range accettazione:} rappresenta l'intervallo di valori minimi richiesti per il raggiungimento degli obiettivi di qualità definiti;
+			\item \textbf{Range ottimale:} rappresenta l'intervallo di valori desiderati, entro cui dovrebbe collocarsi la misurazione. Nel caso in cui non si rientrasse in questo range, sarà necessario effettuare una verifica più accurata per individuarne le cause e poter applicare le dovute correzioni.
 		\end{itemize}
 	
 		\subsubsection{Indice Gulpease}
-		L'indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri ha il vantaggio di utilizzare la lunghezza delle parole in lettere anziché in sillabe, semplificandone il calcolo automatico.
-		L'indice di Gulpease considera due variabili linguistiche: la lunghezza della parola e la lunghezza della frase rispetto al numero delle lettere.
-		La formula per il suo calcolo è la seguente:
+		L'indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri, ha il vantaggio di utilizzare la lunghezza delle parole in lettere, anziché in sillabe, semplificandone il calcolo automatico. L'indice Gulpease considera due variabili linguistiche:
+		\begin{itemize}
+			\item la lunghezza della parola;
+			\item la lunghezza della frase, rispetto al numero delle lettere.
+		\end{itemize}
+		La \textbf{formula} per il suo calcolo è la seguente:
 		
 		\[ 80+\frac{300*(numero delle frasi)-10*(numero delle lettere)}{numero delle parole} \]
 		
-		
-		I risultati sono compresi tra 0 e 100, dove il valore "100" indica la leggibilità più alta e "0" la leggibilità più bassa. In generale risulta che testi con un indice:
+		I risultati sono compresi tra 0 e 100, dove il valore 100 indica la leggibilità più alta, mentre il valore 0 la leggibilità più bassa. In generale risulta che testi con un indice:
 		\begin{itemize}
-			\item inferiore a 80 sono difficili da leggere per chi ha la licenza elementare;
-			\item inferiore a 60 sono difficili da leggere per chi ha la licenza media;
-			\item inferiore a 40 sono difficili da leggere per chi ha un diploma superiore.
+			\item inferiore a 80, sono difficili da leggere per chi ha la licenza elementare;
+			\item inferiore a 60, sono difficili da leggere per chi ha la licenza media;
+			\item inferiore a 40, sono difficili da leggere per chi ha un diploma superiore.
 		\end{itemize}
 		
 		I parametri presi in considerazione saranno:
 		\begin{itemize}
-			\item \textbf{Range-accettazione: }[35/100];
-			\item \textbf{Range-ottimale: }[45/100].
+			\item \textbf{Range accettazione: }[35 - 100];
+			\item \textbf{Range ottimale: }[45 - 100].
 		\end{itemize}
 		
 		\subsubsection{Metriche per i processi}
@@ -342,10 +359,7 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 			\item \textbf{AC (Actual Cost): }indica il costo effettivamente sostenuto alla data corrente. Si misura in euro e in ore. Aiuta a calcolare altre metriche;
 			\item \textbf{BAC (Budget at Completion): }costo previsto per portare a termine il progetto. Si misura in euro e in ore. Mantiene traccia della spesa totale preventivata all'inizio del progetto;
 			\item \textbf{ETC (Estimate to Complete): }indica i costi pianificati per portare a termine le attività di progetto rimanenti alla data corrente. Corrisponde al PV riesaminato allo stato corrente del progetto ma senza tenere conto delle attività completate. Si misura in euro e in ore;
-			\item \textbf{EAC (Estimated at Completion): }revisione del costo stimato per la realizzazione del progetto, ossia il BAC rivisto allo stato corrente del progetto. Si misura in euro e in ore e si ottiene dalla formula: EAC = AC + ETC;
-			\item \textbf{SV (Schedule Variance): }è un indicatore di efficacia, mostra se si è o meno in linea con la pianificazione temporale rispetto alle attività nella baseline. Una schedule variance positiva indica che il gruppo è in anticipo rispetto al Piano di Progetto, altrimenti è in ritardo. Si ottiene dalla formula: SV = EV - PV;
-			\item \textbf{BV (Budget Variance): }indica se la spesa sostenuta alla data corrente è superiore o inferiore a quella preventivata. Una budget variance positiva indica che si è speso meno di quanto inizialmente previsto,  altrimenti viceversa. Si ottiene dalla formula: BV = PV - AC.
-			
+			\item \textbf{EAC (Estimated at Completion): }revisione del costo stimato per la realizzazione del progetto, ossia il BAC rivisto allo stato corrente del progetto. Si misura in euro e in ore e si ottiene dalla formula: EAC = AC + ETC.			
 		\end{itemize}
 	
 	
@@ -365,13 +379,6 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 			\begin{itemize}
 				\item \textbf{Range-accettazione: }[1/8];
 				\item \textbf{Range-ottimale: }[1/4].
-			\end{itemize}
-			
-			\item \textbf{Numero parametri per metodo: }un valore elevato indica che probabilmente il metodo ha un sovraccarico di funzionalità.
-			
-			\begin{itemize}
-				\item \textbf{Range-accettazione: }[0/8];
-				\item \textbf{Range-ottimale: }[0/5].
 			\end{itemize}
 			
 			\item \textbf{Accoppiamento afferente: }indica il numero di classi esterne ad un package che dipendono da esso. Un grande valore indica una forte dipendenza del software per il package in questione, un valore basso invece indica una bassa utilità del package per il resto del software.
@@ -395,15 +402,6 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 				\item \textbf{Range-ottimale: }[2/9].
 			\end{itemize}
 			
-			\item \textbf{Complessità Ciclomatica: }una metrica sviluppata da Thomas J. McCabe che consente di stimare la complessità di un programma misurando il numero di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.
-			
-			\begin{itemize}
-				\item \textbf{Range-accettazione: }non ancora definito;
-				\item \textbf{Range-ottimale: }non ancora definito.
-			\end{itemize}
-			
-			
-			
 		\end{itemize}
 	
 	
@@ -412,18 +410,18 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 	\subsubsection{Analisi statica}
 	L'analisi statica non necessita dell'esecuzione del codice oggetto ed è applicabile sin da subito su codice e documenti prodotti. Essa ha lo scopo di trovare anomalie e può essere eseguita nei due modi seguenti.
 	
-	\paragraph{{Formal Walkthrough\ped{G}}}
+	\paragraph{Formal Walkthrough}
 	Questa tecnica consistente nella ricerca a largo spettro di qualsiasi tipo di errore, nel modo più generico possibile. 
 	Questa tecnica è utilizzata nelle prime fasi di verifica. Durante ogni fase di verifica verrà stilata una lista degli errori più frequenti, in modo da facilitare l’individuazione delle anomalie nelle fasi successive. 
 	Nel momento in cui si avrà a disposizione una lista sufficientemente dettagliata, si potrà passare al metodo Inspection.
 	
 	
-	\paragraph{{Formal Inspection\ped{G}}}
+	\paragraph{Formal Inspection}
 	Questo metodo si basa sulla lista prodotta precedentemente con il metodo \textit{Formal Walkthrough\ped{G}}. In questo modo si andrà a cercare in modo mirato gli errori già individuati in passato, prestando comunque attenzione a nuovi possibili errori, che andranno poi ad arricchire la lista.
 	
 	
 	\subsubsection{Analisi dinamica}
-	Da definire
+	Da definire.
 	
 	
 	
