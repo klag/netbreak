@@ -69,8 +69,9 @@
 			\item L'attore può visualizzare il numero di licenze attive dell'API (UC10.2.3)
 			\item L'attore può modificare l'API (UC10.2.4)
 			\item L'attore può visualizzare gli avvisi riguardo l'API (UC10.2.5)
-			\item L'attore può visualizzare il logo dell'API (UC10.2.6)
-			\item L'attore può visualizzare il guadagno dell'API (UC10.2.7)
+			\item L'attore può aggiornare gli avvisi riguardo allo status dell'API (UC10.2.6)
+			\item L'attore può visualizzare il logo dell'API (UC10.2.7)
+			\item L'attore può visualizzare il guadagno dell'API (UC10.2.8)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -443,14 +444,34 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC10.2.6: Visualizzazione logo API}
+\paragraph{Caso d'uso UC10.2.6: Aggiornamento avvisi API}
 \label{UC10_2_6}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.6 - Visualizzazione logo API} \\
+		\multicolumn{2}{c}{UC10.2.6 - Aggiornamento avvisi API} \\
+		\hline
+		\textbf{Attori} & Sviluppatore \\
+		\textbf{Descrizione} & L'attore aggiorna gli avvisi riguardo allo status dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
+		\textbf{Post-Condizioni} & L'attore ha aggiornato gli avvisi riguardo allo status dell'API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può aggiornare gli avvisi riguardo allo status dell'API
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC10.2.7: Visualizzazione logo API}
+\label{UC10_2_7}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC10.2.7 - Visualizzazione logo API} \\
 		\hline
 		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore visualizza nella lista il logo dell'API \\
@@ -463,14 +484,14 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC10.2.7: Visualizzazione guadagno API}
-\label{UC10_2_7}
+\paragraph{Caso d'uso UC10.2.8: Visualizzazione guadagno API}
+\label{UC10_2_8}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.7 - Visualizzazione guadagno API} \\
+		\multicolumn{2}{c}{UC10.2.8 - Visualizzazione guadagno API} \\
 		\hline
 		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore visualizza nella lista il logo dell'API in base alla policy di vendita \\

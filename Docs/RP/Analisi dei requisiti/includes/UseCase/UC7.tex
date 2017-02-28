@@ -103,7 +103,7 @@
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC7.4 - Visualizzazione tag API} \\
+		\multicolumn{2}{c}{UC7.4 - Visualizzazione categoria API} \\
 		\hline
 		\textbf{Attori} & Utente generico \\
 		\textbf{Descrizione} & L'attore visualizza nella schermata relativa la categoria dell'API \\
@@ -116,8 +116,14 @@
 	\end{tabular}
 \end{minipage}
 
+\newpage
 \subsubsection{Caso d'uso UC7.5: Visualizzazione interfaccia API}
 \label{UC7_5}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC7_5.png}
+	\caption{UC7.5: Visualizzazione interfaccia API}
+\end{figure}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
@@ -131,7 +137,48 @@
 		\textbf{Post-Condizioni} & L'attore ha visualizzato l'interfaccia dell'API selezionata \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare l'interfaccia dell'API selezionata
+			\item L'attore può visualizzare testualmente l'interfaccia dell'API selezionata (UC7.5.1)
+			\item L'attore può visualizzare il link di download dell'interfaccia dell'API selezionata (UC7.5.2)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC7.5.1: Visualizzazione testuale interfaccia API}
+\label{UC7_5_1}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC7.5.1 - Visualizzazione testuale interfaccia API} \\
+		\hline
+		\textbf{Attori} & Utente generico \\
+		\textbf{Descrizione} & L'attore visualizza testualmente l'interfaccia dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di visualizzazione API dell'API precedentemente selezionata \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato testualmente l'interfaccia dell'API selezionata \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare testualmente l'interfaccia dell'API selezionata
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC7.5.2: Visualizzazione link download interfaccia API}
+\label{UC7_5_2}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC7.5.2 - Visualizzazione link download interfaccia API} \\
+		\hline
+		\textbf{Attori} & Utente generico \\
+		\textbf{Descrizione} & L'attore visualizza il link di download dell'interfaccia dell'API \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata di visualizzazione API dell'API precedentemente selezionata \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato il link di download dell'interfaccia dell'API selezionata \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare il link di download dell'interfaccia dell'API selezionata
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
