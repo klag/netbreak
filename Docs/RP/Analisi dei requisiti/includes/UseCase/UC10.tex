@@ -163,15 +163,14 @@
 			\item L'attore può modificare l'interfaccia dell'API (UC10.2.4.4)
 			\item L'attore può modificare il file per la documentazione PDF (UC10.2.4.5)
 			\item L'attore può modificare il link per la documentazione esterna (UC10.2.4.6)
-			\item L'attore può modificare la policy di vendita dell'API (UC10.2.4.7)
-			\item L'attore può modificare il logo dell'API (UC10.2.4.8)
-			\item L'attore può confermare la modifica dell'API (UC10.2.4.9)
+			\item L'attore può modificare il logo dell'API (UC10.2.4.7)
+			\item L'attore può confermare la modifica dell'API (UC10.2.4.8)
 		\end{enumerate*}\\
 		\textbf{Scenari Alternativi} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio di errore riguardo al caricamento del file di documentazione PDF dell'API, ed il caricamento del file non avviene (UC10.2.4.11)
-			\item L'attore può visualizzare un messaggio di errore riguardo al caricamento del file del logo dell'API, ed il caricamento del file non avviene (UC10.2.4.12)
-			\item L'attore può visualizzare un messaggio d'errore informativo riguardo la conferma delle modifiche dell'API, e le modifiche non avvengono (UC10.2.4.10)
+			\item L'attore può visualizzare un messaggio di errore riguardo al caricamento del file di documentazione PDF dell'API, ed il caricamento del file non avviene (UC10.2.4.10)
+			\item L'attore può visualizzare un messaggio di errore riguardo al caricamento del file del logo dell'API, ed il caricamento del file non avviene (UC10.2.4.11)
+			\item L'attore può visualizzare un messaggio d'errore informativo riguardo la conferma delle modifiche dell'API, e le modifiche non avvengono (UC10.2.4.9)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
@@ -280,14 +279,14 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC10.2.4.11: Errore modifica PDF API}
-\label{UC10_2_4_11}
+\subparagraph{Caso d'uso UC10.2.4.10: Errore modifica PDF API}
+\label{UC10_2_4_10}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4.11 - Errore modifica PDF API} \\
+		\multicolumn{2}{c}{UC10.2.4.10 - Errore modifica PDF API} \\
 		\hline
 		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore visualizza un messaggio di errore e la modifica della documentazione PDF dell'API non avviene \\
@@ -320,34 +319,14 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC10.2.4.7: Modifica policy vendita API}
+\subparagraph{Caso d'uso UC10.2.4.7: Modifica logo API}
 \label{UC10_2_4_7}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4.7 - Modifica policy vendita API} \\
-		\hline
-		\textbf{Attori} & Sviluppatore \\
-		\textbf{Descrizione} & L'attore modifica la policy di vendita dell'API \\
-		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alla modifica di una API registrata, precedentemente selezionata \\
-		\textbf{Post-Condizioni} & L'attore ha modificato la policy di vendita dell'API selezionata \\
-		\textbf{Scenario Principale} & 
-		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può modificare la policy di vendita dell'API
-		\end{enumerate*}\\
-	\end{tabular}
-\end{minipage}
-
-\subparagraph{Caso d'uso UC10.2.4.8: Modifica logo API}
-\label{UC10_2_4_8}
-
-\begin{minipage}{\linewidth}
-	\begin{tabular}{ l | p{11cm}}
-		\hline
-		\rowcolor{Gray}
-		\multicolumn{2}{c}{10.2.4.8 - Modifica logo API} \\
+		\multicolumn{2}{c}{10.2.4.7 - Modifica logo API} \\
 		\hline
 		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore carica su API Market un file contenente il nuovo logo per l'API registrata \\
@@ -359,19 +338,19 @@
 		\end{enumerate*}\\
 		\textbf{Scenari Alternativi} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore può visualizzare un messaggio di errore (E.g: formato errato) ed il caricamento del file non avviene (UC10.2.4.12)
+		\item L'attore può visualizzare un messaggio di errore (E.g: formato errato) ed il caricamento del file non avviene (UC10.2.4.11)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC10.2.4.12: Errore inserimento logo API}
-\label{UC10_2_4_12}
+\subparagraph{Caso d'uso UC10.2.4.11: Errore inserimento logo API}
+\label{UC10_2_4_11}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{10.2.4.12 - Errore inserimento logo API} \\
+		\multicolumn{2}{c}{10.2.4.11 - Errore inserimento logo API} \\
 		\hline
 		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore visualizza un messaggio di errore e l'inserimento del nuovo logo per l'API registrata non avviene \\
@@ -384,14 +363,14 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC10.2.4.9: Conferma modifica API}
-\label{UC10_2_4_9}
+\subparagraph{Caso d'uso UC10.2.4.8: Conferma modifica API}
+\label{UC10_2_4_8}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4.9 - Conferma modifica API} \\
+		\multicolumn{2}{c}{UC10.2.4.8 - Conferma modifica API} \\
 		\hline
 		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore conferma le modifiche all'API, visualizzando un messaggio di successo \\
@@ -404,14 +383,14 @@
 	\end{tabular}
 \end{minipage}
 
-\subparagraph{Caso d'uso UC10.2.4.10: Errore modifica API}
-\label{UC10_2_4_10}
+\subparagraph{Caso d'uso UC10.2.4.9: Errore modifica API}
+\label{UC10_2_4_9}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC10.2.4.10 - Errore modifica API} \\
+		\multicolumn{2}{c}{UC10.2.4.9 - Errore modifica API} \\
 		\hline
 		\textbf{Attori} & Sviluppatore \\
 		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la modifica dell'API non avviene \\
