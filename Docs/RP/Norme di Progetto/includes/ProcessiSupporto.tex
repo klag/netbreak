@@ -19,22 +19,28 @@
 		Ogni modifica della versione del documento deve riflettersi nel changelog, nel nome del documento e nel frontespizio in corrispondenza della voce \textit{Versione}.
 	
 		\subsubsection{Classificazione del documento}
-		Per tutti i documenti redatti dal gruppo occorre sempre specificare una classe, che può essere \textbf{Interna} o \textbf{Esterna}.
-		Un documento viene classificato come \textbf{Interno}, se la sua consultazione è limitata al solo gruppo. Invece, se il documento è destinato ad una consultazione esterna al gruppo, viene classificato come \textbf{Esterno}.
+		Per tutti i documenti redatti dal gruppo occorre sempre specificare una classe, che può essere
+		\begin{itemize}
+		\item\textbf{Interna}: consultazione limitata al solo gruppo;
+		\item \textbf{Esterna}: destinato ad una consultazione esterna al gruppo, quindi al proponente e committente.
+		\end{itemize} 
 	
 		\subsubsection{Ciclo di vita del documento}
 		Un documento può trovarsi in tre stati:
 		\begin{itemize}
-			\item \textbf{Bozza}: il/i redattore/i è/sono in fase di stesura del documento;
-			\item \textbf{In attesa di verifica}: il/i redattore/i ha/hanno concluso la stesura e il documento passa in stato di attesa di verifica effettuata dal/dai \textit{\Ver/i};
-			\item \textbf{Approvato}: il/i \textit{\Ver/i} ha/hanno concluso il suo/loro lavoro e passa/passano il documento al \textit{\RdP} che ha il compito di approvarlo definitivamente.
+			\item \textbf{Bozza};
+			\item \textbf{In attesa di verifica};
+			\item \textbf{Approvato}.
 		\end{itemize}
 		
+		i documenti in \textbf{Bozza} sono quelli in fase di stesura da parte del redattore. Ultimata la stesura il documento passa textbf{In attesa di verifica}, ovvero passano in mano al \Ver. Infine i documenti vengono consegnati al \RdP, il quale ha il compito di approvarli in via definitiva.
+		
 		\subsubsection{Strumenti di sviluppo del documento}
-		Per la stesura dei documenti è stato scelto di utilizzare \textbf{\textit{\LaTeX\ped{G}}}, un linguaggio semplice e modulare. \textit{\LaTeX\ped{G}} è in grado di evitare possibili conflitti provenienti dall'utilizzo di software e piattaforme differenti.
+		Per la stesura dei documenti è stato scelto di utilizzare \textbf{\textit{\LaTeX\ped{G}}}, un linguaggio di markup utilizzato per la stesura di documenti scientifici. \textit{\LaTeX\ped{G}} è un linguaggio semplice e modulare  ed in grado di evitare possibili conflitti provenienti dall'utilizzo di software e piattaforme differenti.
 	
 		\subsubsection{Struttura del documento}
-		Ogni documento redatto dal gruppo avrà una struttura chiara e di facile comprensione per chiunque sia il lettore. Di seguito, viene riportata la struttura utilizzata nei documenti:
+		Ogni documento redatto dal gruppo avrà una struttura chiara e di facile comprensione per chiunque sia il lettore. Una struttura semplice aiuta nella lettura e nell'individuare immediatamente di cosa si parla in quel documento e da chi è stato redatto, verificato e approvato.
+		Di seguito, viene riportata la struttura utilizzata nei documenti:
 
 			\paragraph{Frontespizio}
 			\begin{itemize}
@@ -65,7 +71,8 @@
 			\end{itemize}	
 
 			\paragraph{Indice}
-			Ogni documento deve possedere un indice contenente tutte le sezioni presenti nel documento. Ogni immagine o tabella, invece, deve essere indicata con il relativo indice.
+			Ogni documento ad eccezione dei verbali, deve possedere un indice contenente tutte le sezioni presenti nel documento. l'indice è ordinato nella sequenza in cui appaiono i capitoli, le sezioni e sottosezioni e contiene il titolo di ognuna. 
+			se nel documento sono presenti immagine o tabella  devono essere indicate con il relativo indice.
 
 			\paragraph{Intestazione e piè di pagina}
 			Tutte le pagine del documento, eccetto la prima, hanno un'intestazione e un piè di pagina. L'intestazione è suddivisa in due parti:
@@ -73,7 +80,7 @@
 				\item Nell'angolo sinistro, sono indicati il nome del progetto e del documento in questione;
 				\item Nell'angolo destro, è presente il nome del capitolo contente la sezione che si sta consultando, ad esclusione del changelog.
 			\end{itemize}
-			Il piè di pagina, invece, è suddiviso nel seguente modo:
+			Il piè di pagina, invece, è strutturato nel seguente modo:
 			\begin{itemize}
 				\item Nell'angolo sinistro, vengono indicati nome e indirizzo email ufficiale del gruppo;
 				\item Nell'angolo destro, è presente una numerazione in numeri romani per le pagine relative a changelog e indice. Per tutte le altre pagine, invece, viene utilizzata una numerazione in numeri arabi, che indica il numero di pagina attuale e il numero totale di pagine del documento.
