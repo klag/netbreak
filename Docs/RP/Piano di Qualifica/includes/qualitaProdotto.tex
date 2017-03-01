@@ -253,21 +253,6 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 				\end{center}
 				\caption{Registro di log}
 			\end{table}
-	
-			\subparagraph{Complessità del software}
-			Indica la complessità ciclomatica di un modulo software sviluppato.
-				\begin{table}[H]
-					\begin{center}
-						\begin{tabular}{|c|c|c|}
-							\hline
-							\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-							\hline
-							n° archi - n° nodi + 2 & xx-yy  & xx-yy \\
-							\hline
-						\end{tabular}
-					\end{center}
-					\caption{Complessità del software}
-				\end{table}
 			
 			\subparagraph{Impatto delle modifiche}
 			Indica la percentuale di modifiche effettuate in risposta a failure, le quali hanno portato all’introduzione di nuove failure in altre componenti del sistema.
@@ -367,20 +352,6 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 		Le metriche per il software ora descritte non sono definitive, ma saranno affinate successivamente.
 		
 		\begin{itemize}
-			\item \textbf{Attributi per classe: }un grande numero di attributi interni ad una classe mostra probabilmente la necessità di suddividere la classe in più classi relazionate tra loro.
-			
-			\begin{itemize}
-				\item \textbf{Range-accettazione: }[0/18];
-				\item \textbf{Range-ottimale: }[2/9].
-			\end{itemize}
-			
-			\item \textbf{Numero livelli annidamento: }mostra il livello di annidamento dei metodi. Un numero alto implica una bassa astrazione del codice ed un' elevata complessità.
-			
-			\begin{itemize}
-				\item \textbf{Range-accettazione: }[1/8];
-				\item \textbf{Range-ottimale: }[1/4].
-			\end{itemize}
-			
 			\item \textbf{Accoppiamento afferente: }indica il numero di classi esterne ad un package che dipendono da esso. Un grande valore indica una forte dipendenza del software per il package in questione, un valore basso invece indica una bassa utilità del package per il resto del software.
 			
 			\begin{itemize}
