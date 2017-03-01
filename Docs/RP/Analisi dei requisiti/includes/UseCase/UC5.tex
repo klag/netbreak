@@ -20,11 +20,11 @@
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
 		\item L'attore può inserire la propria email (UC5.1)
 		\item L'attore può confermare l'indirizzo email inserito, al quale l'applicazione web invierà un link per resettare la password (UC5.2)
+		\item L'attore, se ha richiesto il recupero della password ed ha aperto il link per poterla resettare, può effettuare il reset password in una apposita schermata (UC5.4)
 	\end{enumerate*}\\
 	\textbf{Scenari Alternativi} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore, se ha inserito un'email non valida o inesistente, può visualizzare un messaggio d'errore e l'email di reset password non viene inviata (UC5.3)
-		\item L'attore, se ha richiesto il recupero della password ed ha aperto il link per poterla resettare, può effettuare il reset password in una apposita schermata (UC5.4)
+		\item L'attore, dopo aver confermato l'invio della email di reset password, se ha inserito un'email non valida o inesistente, può visualizzare un messaggio d'errore e l'email di reset password non viene inviata (UC5.3)
 	\end{enumerate*}\\
 \end{longtable}
 
@@ -116,7 +116,7 @@
 		\end{enumerate*}\\
 		\textbf{Scenari Alternativi} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore visualizza un errore qualora le password inserite non coincidano o i campi risultino vuoti (UC5.4.4)
+			\item L'attore, dopo aver confermato i dati inseriti, se le password inserite non coincidono o i campi risultano vuoti, può visualizzare un errore (UC5.4.4)
 		\end{enumerate*}\\
 	\end{longtable}
 \end{minipage}

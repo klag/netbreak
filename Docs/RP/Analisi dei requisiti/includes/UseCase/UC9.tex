@@ -20,12 +20,13 @@
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
 		\item L'attore può visualizzare i dati d'acquisto dell'API (UC9.1)
 		\item L'attore può scegliere la licenza API desiderata (UC9.2)
-		\item L'attore può visualizzare il saldo preventivato in seguito all'acquisto dell'API con la licenza selezionata (UC9.3)
-		\item L'attore può confermare l'acquisto (UC9.4), venendo reindirizzato ad una schermata di riepilogo (UC9.5)
+		\item L'attore può scegliere il blocco d'acquisto API desiderato (UC9.3)
+		\item L'attore può visualizzare il saldo preventivato in seguito all'acquisto dell'API con la licenza selezionata (UC9.4)
+		\item L'attore può confermare l'acquisto (UC9.5), venendo reindirizzato ad una schermata di riepilogo (UC9.6)
 	\end{enumerate*}\\
 	\textbf{Scenari Alternativi} & 
 	\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-		\item L'attore può visualizzare un messaggio di errore (E.g: saldo non sufficiente) e la transazione non avviene (UC9.6)
+		\item L'attore, dopo aver confermato l'acquisto, può visualizzare un messaggio di errore (E.g: saldo non sufficiente) e la transazione non avviene (UC9.7)
 		\item L'attore può scegliere la licenza API per numero di chiamate (UC9.2.1)
 		\item L'attore può scegliere la licenza API per tempo di utilizzo (UC9.2.2)
 		\item L'attore può scegliere la licenza API per traffico (UC9.2.3)
@@ -113,14 +114,94 @@
 	\end{tabular}
 \end{minipage}
 
-\subsubsection{Caso d'uso UC9.2: Scelta blocco acquisto API}
+\subsubsection{Caso d'uso UC9.2: Scelta policy vendita API}
 \label{UC9_2}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC9.2 - Scelta blocco acquisto API} \\
+		\multicolumn{2}{c}{UC9.2 - Scelta policy vendita API} \\
+		\hline
+		\textbf{Attori} & Cliente \\
+		\textbf{Descrizione} & L'attore sceglie la policy di vendita dell'API \\
+		\textbf{Pre-Condizioni} & L'attore ha selezionato una API e si trova nella relativa schermata di acquisto \\
+		\textbf{Post-Condizioni} & L'attore ha scelto la policy di vendita dell'API \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può scegliere la policy di vendita dell'API
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.2.1: Scelta policy per numero di chiamate}
+\label{UC9_2_1}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.2.1 - Scelta policy per numero di chiamate} \\
+		\hline
+		\textbf{Attori} & Cliente \\
+		\textbf{Descrizione} & L'attore sceglie la policy di vendita dell'API per numero di chiamate \\
+		\textbf{Pre-Condizioni} & L'attore ha selezionato una API e si trova nella relativa schermata di acquisto \\
+		\textbf{Post-Condizioni} & L'attore ha scelto la policy di vendita dell'API per numero di chiamate \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può scegliere la policy di vendita dell'API per numero di chiamate
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.2.2: Scelta policy per tempo di utilizzo}
+\label{UC9_2_2}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.2.2 - Scelta policy per tempo di utilizzo} \\
+		\hline
+		\textbf{Attori} & Cliente \\
+		\textbf{Descrizione} & L'attore sceglie la policy di vendita dell'API per tempo di utilizzo \\
+		\textbf{Pre-Condizioni} & L'attore ha selezionato una API e si trova nella relativa schermata di acquisto \\
+		\textbf{Post-Condizioni} & L'attore ha scelto la policy di vendita dell'API per tempo di utilizzo \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può scegliere la policy di vendita dell'API per tempo di utilizzo
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\paragraph{Caso d'uso UC9.2.3: Scelta policy per traffico}
+\label{UC9_2_3}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.2.3 - Scelta policy per traffico} \\
+		\hline
+		\textbf{Attori} & Cliente \\
+		\textbf{Descrizione} & L'attore sceglie la policy di vendita dell'API per traffico \\
+		\textbf{Pre-Condizioni} & L'attore ha selezionato una API e si trova nella relativa schermata di acquisto \\
+		\textbf{Post-Condizioni} & L'attore ha scelto la policy di vendita dell'API per traffico \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può scegliere la policy di vendita dell'API per traffico
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subsubsection{Caso d'uso UC9.3: Scelta blocco acquisto API}
+\label{UC9_3}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC9.3 - Scelta blocco acquisto API} \\
 		\hline
 		\textbf{Attori} & Cliente \\
 		\textbf{Descrizione} & L'attore sceglie il blocco da acquistare in base alla policy di vendita dell'API \\
@@ -133,14 +214,14 @@
 	\end{tabular}
 \end{minipage}
 
-\subsubsection{Caso d'uso UC9.3: Visualizzazione previsione saldo finale}
-\label{UC9_3}
+\subsubsection{Caso d'uso UC9.4: Visualizzazione previsione saldo finale}
+\label{UC9_4}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC9.3 - Visualizzazione previsione saldo finale} \\
+		\multicolumn{2}{c}{UC9.4 - Visualizzazione previsione saldo finale} \\
 		\hline
 		\textbf{Attori} & Cliente \\
 		\textbf{Descrizione} & L'attore visualizza una previsione del proprio saldo crediti in seguito all'acquisto \\
@@ -153,14 +234,14 @@
 	\end{tabular}
 \end{minipage}
 
-\subsubsection{Caso d'uso UC9.4: Conferma acquisto API}
-\label{UC9_4}
+\subsubsection{Caso d'uso UC9.5: Conferma acquisto API}
+\label{UC9_5}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC9.4 - Conferma acquisto API} \\
+		\multicolumn{2}{c}{UC9.5 - Conferma acquisto API} \\
 		\hline
 		\textbf{Attori} & Cliente \\
 		\textbf{Descrizione} & L'attore può confermare l'acquisto dell'API, portando a termine la transazione, ricevendo un'email di riepilogo e visualizzando una schermata di riepilogo dell'acquisto appena realizzato \\
@@ -168,17 +249,17 @@
 		\textbf{Post-Condizioni} & L'attore ha confermato l'acquisto dell'API \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può confermare l'acquisto dell'API, portando a termine la transazione, ricevendo un'email di riepilogo e visualizzando una schermata di riepilogo dell'acquisto appena realizzato (UC9.5)
+			\item L'attore può confermare l'acquisto dell'API, portando a termine la transazione, ricevendo un'email di riepilogo e visualizzando una schermata di riepilogo dell'acquisto appena realizzato (UC9.6)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
 \newpage
-\subsubsection{Caso d'uso UC9.5: Riepilogo acquisto API}
-\label{UC9_5}
+\subsubsection{Caso d'uso UC9.6: Riepilogo acquisto API}
+\label{UC9_6}
 \begin{figure}[ht]
 	\centering
-	\includegraphics[scale=0.45]{UML/UC9_5.png}
+	\includegraphics[scale=0.45]{UML/UC9_6.png}
 	\caption{UC9.5: Riepilogo acquisto API}
 \end{figure}
 
@@ -194,21 +275,21 @@
 		\textbf{Post-Condizioni} & L'attore ha visualizzato il riepilogo dell'acquisto appena realizzato \\
 		\textbf{Scenario Principale} & 
 		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
-			\item L'attore può visualizzare un messaggio di ringraziamento (UC9.5.1)
-			\item L'attore può visualizzare il nome dell'API appena acquistata (UC9.5.2)
-			\item L'attore può visualizzare la chiave dell'API appena acquistata (UC9.5.3)
+			\item L'attore può visualizzare un messaggio di ringraziamento (UC9.6.1)
+			\item L'attore può visualizzare il nome dell'API appena acquistata (UC9.6.2)
+			\item L'attore può visualizzare la chiave dell'API appena acquistata (UC9.6.3)
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC9.5.1: Visualizzazione ringraziamento}
-\label{UC9_5_1}
+\paragraph{Caso d'uso UC9.6.1: Visualizzazione ringraziamento}
+\label{UC9_6_1}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC9.5.1 - Visualizzazione ringraziamento} \\
+		\multicolumn{2}{c}{UC9.6.1 - Visualizzazione ringraziamento} \\
 		\hline
 		\textbf{Attori} & Cliente \\
 		\textbf{Descrizione} & L'attore visualizza un messaggio di ringraziamento \\
@@ -221,14 +302,14 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC9.5.2: Visualizzazione nome API acquistata}
-\label{UC9_5_2}
+\paragraph{Caso d'uso UC9.6.2: Visualizzazione nome API acquistata}
+\label{UC9_6_2}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC9.5.2 - Visualizzazione nome API acquistata} \\
+		\multicolumn{2}{c}{UC9.6.2 - Visualizzazione nome API acquistata} \\
 		\hline
 		\textbf{Attori} & Cliente \\
 		\textbf{Descrizione} & L'attore visualizza il nome dell'API acquistata \\
@@ -241,14 +322,14 @@
 	\end{tabular}
 \end{minipage}
 
-\paragraph{Caso d'uso UC9.5.3: Visualizzazione chiave API acquistata}
-\label{UC9_5_3}
+\paragraph{Caso d'uso UC9.6.3: Visualizzazione chiave API acquistata}
+\label{UC9_6_3}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC9.5.3 - Visualizzazione chiave API acquistata} \\
+		\multicolumn{2}{c}{UC9.6.3 - Visualizzazione chiave API acquistata} \\
 		\hline
 		\textbf{Attori} & Cliente \\
 		\textbf{Descrizione} & L'attore visualizza la chiave dell'API acquistata \\
@@ -261,14 +342,14 @@
 	\end{tabular}
 \end{minipage}
 
-\subsubsection{Caso d'uso UC9.6: Errore acquisto API}
-\label{UC9_6}
+\subsubsection{Caso d'uso UC9.7: Errore acquisto API}
+\label{UC9_7}
 
 \begin{minipage}{\linewidth}
 	\begin{tabular}{ l | p{11cm}}
 		\hline
 		\rowcolor{Gray}
-		\multicolumn{2}{c}{UC9.6 - Errore acquisto API} \\
+		\multicolumn{2}{c}{UC9.7 - Errore acquisto API} \\
 		\hline
 		\textbf{Attori} & Cliente \\
 		\textbf{Descrizione} & L'attore visualizza un messaggio di errore e la transazione non avviene \\
