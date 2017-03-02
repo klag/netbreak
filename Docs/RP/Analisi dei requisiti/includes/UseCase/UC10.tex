@@ -482,3 +482,73 @@
 		\end{enumerate*}\\
 	\end{tabular}
 \end{minipage}
+
+\newpage
+\paragraph{Caso d'uso UC10.2.9: Cancellazione API}
+\label{UC10_2_9}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[scale=0.45]{UML/UC10_2_9.png}
+	\caption{UC10.2.9: Cancellazione API}
+\end{figure}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC10.2.9 - Cancellazione API} \\
+		\hline
+		\textbf{Attori} & Sviluppatore \\
+		\textbf{Descrizione} & L'attore cancella una API da lui registrata \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
+		\textbf{Post-Condizioni} & L'attore ha cancellato una API da lui registrata \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può confermare la cancellazione di una API da lui registrata (UC10.2.9.1)
+		\end{enumerate*}\\
+		\textbf{Scenari Alternativi} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore, dopo aver confermato la cancellazione dell'API, può visualizzare un messaggio d'errore informativo (E.g: API con almeno una API key attiva) e la cancellazione non avviene (UC10.2.9.2)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC10.2.9.1: Conferma cancellazione API}
+\label{UC10_2_9_1}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC10.2.9.1 - Conferma cancellazione API} \\
+		\hline
+		\textbf{Attori} & Sviluppatore \\
+		\textbf{Descrizione} & L'attore conferma la cancellazione dell'API, visualizzando un messaggio di successo \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate \\
+		\textbf{Post-Condizioni} & L'attore ha confermato la cancellazione dell'API, visualizzando un messaggio di successo \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può confermare la cancellazione dell'API, visualizzando un messaggio di successo e venendo reindirizzato alla schermata di visualizzazione API registrate (UC10)
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
+
+\subparagraph{Caso d'uso UC10.2.9.2: Errore cancellazione API}
+\label{UC10_2_9_2}
+
+\begin{minipage}{\linewidth}
+	\begin{tabular}{ l | p{11cm}}
+		\hline
+		\rowcolor{Gray}
+		\multicolumn{2}{c}{UC10.2.9.2 - Errore cancellazione API} \\
+		\hline
+		\textbf{Attori} & Sviluppatore \\
+		\textbf{Descrizione} & L'attore visualizza un messaggio di errore informativo e la cancellazione dell'API non avviene \\
+		\textbf{Pre-Condizioni} & L'attore si trova nella schermata relativa alle API da lui registrate e si è verificato un errore \\
+		\textbf{Post-Condizioni} & L'attore ha visualizzato un messaggio di errore informativo \\
+		\textbf{Scenario Principale} & 
+		\begin{enumerate*}[label=(\arabic*.),itemjoin={\newline}]
+			\item L'attore può visualizzare un messaggio di errore informativo e la cancellazione non avviene
+		\end{enumerate*}\\
+	\end{tabular}
+\end{minipage}
