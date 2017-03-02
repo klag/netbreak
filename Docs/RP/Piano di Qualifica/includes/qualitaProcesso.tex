@@ -365,11 +365,145 @@
 				\caption{Linee di commento}
 			\end{table}
 	
-	\subsection{System/Software Integration Process (6.4.5 - 7.1.6)}
+	\subsection{System/Software Qualification Testing Process}
+	Lo scopo del processo è quello di assicurare che ogni requisito individuato sia stato implementato nel prodotto.
+	Sarà indispensabile rendere il più possibile automatizzata l’esecuzione dei test di sistema, in modo tale che la loro esecuzione non richieda costi e tempi eccessivi, e  allo stesso tempo sia possibile eseguirne un numero sufficiente a garantire un’ottima copertura
+	dei requisiti.
+		
+		\subsubsection{Obiettivi}
+		Durante lo svolgimento delle attività di test, il team dovrà perseguire i seguenti obiettivi:
+			\begin{itemize}
+				\item le attività di test previste dal processo verranno svolte su un sistema le cui componenti sono verificate e correttamente integrate fra loro;
+				\item il sistema dovrà implementare e soddisfare tutti i requisiti obbligatori individuati durante l'attività di analisi dei requisiti.
+			\end{itemize}
+		
+		\subsubsection{Metriche}
+			\paragraph{Test di Unità}
+			Indica la percentuale di test di unità eseguiti.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+						\hline
+						n° TU eseg/n° TU pianif & 95-100  & 100 \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{Test di Unità}
+			\end{table}
+			
+			\paragraph{Test di Integrazione}
+			Indica la percentuale di test di integrazione eseguiti.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+						\hline
+						n° TI eseg/n° TI pianif & 65-100  & 75-100 \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{Test di Integrazione}
+			\end{table}
+			
+			\paragraph{Test di Sistema}
+			Indica la percentuale di test di sistema eseguiti.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+						\hline
+						n° TS eseg/n° TS pianif & 75-100  & 85-100 \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{Test di Sistema}
+			\end{table}
+			
+			\paragraph{Test superati}
+			Indica la percentuale di test totali superati.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+						\hline
+						n° test superati/n° test eseguiti & 95-100  & 100 \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{Test di Validazione}
+			\end{table}
 	
-	\subsection{System/Software Qualification Testing Process (6.4.6 - 7.1.7)}
+	\subsection{Software Documentation Management Process}
+	Questo processo ha l'obiettivo di produrre e manutenere le informazioni sul software prodotte dai processi
+	attuati, attraverso un'opportuna documentazione.
+	Ogni documento sarà dotato di:
+		\begin{itemize}
+			\item numero di versione;
+			\item changelog.
+		\end{itemize}
+	Queste informazioni consentono di tenere traccia di ogni azione effettuata sul documento in oggetto.
+		
+		\subsubsection{Obiettivi}
+		Il processo di documentazione dovrà perseguire le seguenti direttive:
+			\begin{itemize}
+				\item la documentazione prodotta dovrà essere chiara e comprensibile a tutti gli stakeholderG e
+				sarà resa disponibile alle parti interessate per la consultazione;
+				\item ogni forma di ambiguità sul significato di un termine utilizzato verrà eliminata grazie al
+				Glossario;
+				\item la documentazione prodotta sarà sempre aggiornata ed allineata allo stato attuale del
+				processo di sviluppo del prodotto.
+			\end{itemize}
+		
+		\subsubsection{Metriche}
+			\paragraph{Indice Gulpease}
+			L'indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana.
+			Rispetto ad altri indici, questo ha il vantaggio di utilizzare la lunghezza delle parole in lettere, anziché in sillabe, semplificandone il calcolo automatico. L'indice Gulpease considera due variabili linguistiche:
+			\begin{itemize}
+				\item la lunghezza della parola;
+				\item la lunghezza della frase, rispetto al numero delle lettere.
+			\end{itemize}
+			I risultati sono compresi tra 0 e 100, dove il valore 100 indica la leggibilità più alta, mentre il valore 0 la leggibilità più bassa.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+						\hline
+						89+((300*num frasi-10*num lett)/num par) & 40-100  & 55-100 \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{Indice Gulpease}
+			\end{table}
 	
-	\subsection{Software Documentation Management Process (7.2.1)}
-	
-	\subsection{Software Verification Process (7.2.4)}
-	
+	\subsection{Software Verification Process}
+	Questo processo ha lo scopo di verificare se un qualsiasi elemento del sistema soddisfa in modo esaustivo i requisiti ad esso associati.
+	Durante le varie attività di revisione della documentazione, gli errori più frequenti rilevati verranno
+	riportati in un documento apposito, in modo tale da velocizzare le successive attività di inspection.
+	Inoltre, per ogni test effettuato verrà tenuto il tracciamento del suo esito.
+		
+		\subsubsection{Obiettivi}
+		
+		
+		\subsubsection{Metriche}
+			\paragraph{Code Coverage}
+			Indica la percentuale di istruzioni che sono eseguite durante i test.
+			Un alto valore di questo indice implica un'alta probabilità che le componenti testate abbiano una ridotta quantità di errori.
+			Per ottenere un indice basso è necessario che l'implementazione dei metodi sia molto semplice, in modo da non richiedere alcuna attività di testing. Ad esempio, i metodi getter e setter.
+			\begin{table}[H]
+				\begin{center}
+					\begin{tabular}{|c|c|c|}
+						\hline
+						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+						\hline
+						num linee cod monit da test/num linee cod implem in sw & xx  & yy \\
+						\hline
+					\end{tabular}
+				\end{center}
+				\caption{Code Coverage}
+			\end{table}

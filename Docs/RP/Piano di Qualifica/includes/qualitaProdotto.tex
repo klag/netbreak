@@ -310,73 +310,7 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 			\item \textbf{Range ottimale:} rappresenta l'intervallo di valori desiderati, entro cui dovrebbe collocarsi la misurazione. Nel caso in cui non si rientrasse in questo range, sarà necessario effettuare una verifica più accurata per individuarne le cause e poter applicare le dovute correzioni.
 		\end{itemize}
 	
-		\subsubsection{Indice Gulpease}
-		L'indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana. Rispetto ad altri, ha il vantaggio di utilizzare la lunghezza delle parole in lettere, anziché in sillabe, semplificandone il calcolo automatico. L'indice Gulpease considera due variabili linguistiche:
-		\begin{itemize}
-			\item la lunghezza della parola;
-			\item la lunghezza della frase, rispetto al numero delle lettere.
-		\end{itemize}
-		La \textbf{formula} per il suo calcolo è la seguente:
-		
-		\[ 80+\frac{300*(numero delle frasi)-10*(numero delle lettere)}{numero delle parole} \]
-		
-		I risultati sono compresi tra 0 e 100, dove il valore 100 indica la leggibilità più alta, mentre il valore 0 la leggibilità più bassa. In generale risulta che testi con un indice:
-		\begin{itemize}
-			\item inferiore a 80, sono difficili da leggere per chi ha la licenza elementare;
-			\item inferiore a 60, sono difficili da leggere per chi ha la licenza media;
-			\item inferiore a 40, sono difficili da leggere per chi ha un diploma superiore.
-		\end{itemize}
-		
-		I parametri presi in considerazione saranno:
-		\begin{itemize}
-			\item \textbf{Range accettazione: }[35 - 100];
-			\item \textbf{Range ottimale: }[45 - 100].
-		\end{itemize}
-		
-		\subsubsection{Metriche per i processi}
-		Le metriche scelte prendono in considerazione tempi e costi, in modo da poter controllare efficacemente i processi e riuscire ad attenersi a quanto deciso nel documento \textsc{PianoDiProgetto 1\_0\_0.pdf}. 
-		Per queste metriche non vengono forniti Range-accettazione e Range-ottimale poiché bisognerà consultare il \textsc{PianoDiProgetto 1\_0\_0.pdf} per fare le dovute considerazioni.
-		
-		\begin{itemize}
-			\item \textbf{PPC (Partial Planned Cost): }indica il costo pianificato per lo svolgimento di un sottoinsieme di attività. Si misura in euro e in ore;
-			\item \textbf{PV (Planned Value): }indica il valore che si prevede ottenere dal completamento delle attività pianificate. Per questo progetto tale valore corrisponde alla spesa richiesta per il completamento delle attività. Si misura in euro e in ore;
-			\item \textbf{EV (Earned Value): }indica il valore ottenuto tramite le attività completate alla data corrente. Per questo progetto tale valore corrisponde alla spesa richiesta per il completamento delle attività. Si misura in euro e in ore;
-			\item \textbf{AC (Actual Cost): }indica il costo effettivamente sostenuto alla data corrente. Si misura in euro e in ore. Aiuta a calcolare altre metriche;
-			\item \textbf{BAC (Budget at Completion): }costo previsto per portare a termine il progetto. Si misura in euro e in ore. Mantiene traccia della spesa totale preventivata all'inizio del progetto;
-			\item \textbf{ETC (Estimate to Complete): }indica i costi pianificati per portare a termine le attività di progetto rimanenti alla data corrente. Corrisponde al PV riesaminato allo stato corrente del progetto ma senza tenere conto delle attività completate. Si misura in euro e in ore;
-			\item \textbf{EAC (Estimated at Completion): }revisione del costo stimato per la realizzazione del progetto, ossia il BAC rivisto allo stato corrente del progetto. Si misura in euro e in ore e si ottiene dalla formula: EAC = AC + ETC.			
-		\end{itemize}
-	
-	
-		\subsubsection{Metriche per il codice}
-		Le metriche per il software ora descritte non sono definitive, ma saranno affinate successivamente.
-		
-		\begin{itemize}
-			\item \textbf{Accoppiamento afferente: }indica il numero di classi esterne ad un package che dipendono da esso. Un grande valore indica una forte dipendenza del software per il package in questione, un valore basso invece indica una bassa utilità del package per il resto del software.
-			
-			\begin{itemize}
-				\item \textbf{Range-accettazione: }non ancora definito;
-				\item \textbf{Range-ottimale: }non ancora definito.
-			\end{itemize}
-			
-			\item \textbf{Accoppiamento efferente: }il numero di classi di un package che dipendono da package esterni. Un valore basso indica che il package ha numerose funzionalità indipendenti dal resto del software.
-			
-			\begin{itemize}
-				\item \textbf{Range-accettazione: }non ancora definito;
-				\item \textbf{Range-ottimale: }non ancora definito.
-			\end{itemize}
-			
-			\item \textbf{Source Line Of Code (SLOC): }il numero di istruzioni presenti nel codice. Questa metrica fornisce una stima della complessità del programma. È utile anche per dare una stima di quanto il codice incrementerà nel tempo, semplificando così la pianificazione.
-			
-			\begin{itemize}
-				\item \textbf{Range-accettazione: }[0/18];
-				\item \textbf{Range-ottimale: }[2/9].
-			\end{itemize}
-			
-		\end{itemize}
-	
-	
-	\subsection{Analisi}
+	\subsection{Analisi (questa parte non è già in NdP??)}
 	
 	\subsubsection{Analisi statica}
 	L'analisi statica non necessita dell'esecuzione del codice oggetto ed è applicabile sin da subito su codice e documenti prodotti. Essa ha lo scopo di trovare anomalie e può essere eseguita nei due modi seguenti.
