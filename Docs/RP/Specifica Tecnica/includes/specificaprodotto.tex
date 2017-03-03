@@ -7,9 +7,9 @@ Il software API Market si caratterizza dalle comuni applicazioni per l'approccio
 
 Il sistema verrà realizzato, per il lato back-end, tramite microservizi con interfaccia Jolie che verranno implementati con codice Java. Questo approccio, sebbene la tematica sia di recente sviluppo, risulta molto gettonato dalle grandi realtà che si sono affacciate a questo approccio (come ad esempio l'AWS Service registry "Eureka" usato dalla piattaforma Netflix). Il lato front-end invece verrà implementato tramite HTML e Javascript, in particolare l'utilizzo del framework full-stack MeteorJS consentirà un binding in real-time per la rappresentazione delle informazioni.
 Nella realizzazione dell'API Market richiesto verrà utilizato il desing pattern Model View ViewModel; alcune componenti di questo pattern addotteranno un design patterna microservizi, espresso in due varianti, a catena e di aggregazione.
-\begin{figure}
+\begin{figure}[H]
 	\centering
-	\includegraphics{IMG/MVVMPattern}
+	\includegraphics[width=0.7\linewidth]{IMG/MVVMPattern}
 	\caption{Il design pattern Model View ViewModel}
 \end{figure}
 
@@ -47,7 +47,7 @@ La componente ViewModel è situata nella parte front-end del sistema e comunica 
 
 \subsubsection{Pattern architetturale back-end}
 All'interno della componente Model sono presenti una serie di microservizi relizzati con il design pattern Aggregator Microservice. 
-\begin{figure}[!h]
+\begin{figure}[H]
 	\centering
 	\includegraphics
 	[width=0.7\linewidth]
