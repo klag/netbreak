@@ -16,7 +16,7 @@ In questa sezione, vengono descritte le tecnologie utilizzate per la realizzazio
 	\end{itemize}
 	\item \textbf{Svantaggi}:
 	\begin{itemize}
-		\item Semplice da imparare ma con una curva di apprendimento esponenziale
+		\item Semplice da imparare ma con una curva di apprendimento essenzialmente logaritmica
 		\item Potrebbe essere complicato un debug degli errori
 		\item Documentazione non particolarmente sviluppata rispetto a tecnologie più consolidate
 	\end{itemize}
@@ -77,34 +77,91 @@ In questa sezione, vengono descritte le tecnologie utilizzate per la realizzazio
 
 \subsection{Java}
 \begin{itemize}
-	\item \textbf{Descrizione}:
-	\item \textbf{Utilizzo}:
+	\item \textbf{Descrizione}: Java è un linguaggio di programmazione orientato agli oggetti, che presenta il grande vantaggio di essere indipendente dalla piattaforma in cui viene eseguito. Java è ad oggi il linguaggio di programmazione largamente più diffuso e utilizzato al mondo.
+	\item \textbf{Utilizzo}: Questa tecnologia verrà utilizzato nell'implementazione delle interfacce definite in linguaggio Jolie
 	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item Può essere eseguito ovunque sia disponibile una versione della Java Virtual Machine
+		\item Ha una gestione automatica della memoria tramite Garbage Collector
+		\item E' relativamente facile da imparare
+		\item Supporta nativamente la concorrenza e distribuzione
+	\end{itemize}
 	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Essendo un linguaggio interpretato ha un maggior overhead rispetto ai linguaggi compilati
+		\item Necessità di una gestione esplicita delle eccezioni
+		\item La Java Virtual Machine sfrutta in maniera più consistente le risorse del sistema
+	\end{itemize}
 \end{itemize}
 
 \subsection{Javascript ES6}
 \begin{itemize}
-	\item \textbf{Descrizione}:
-	\item \textbf{Utilizzo}:
+	\item \textbf{Descrizione}: JavaScript è il principale linguaggio per estendere le funzionalità Front-end di un sito
+	\item \textbf{Utilizzo}: Questa tecnologia sarà utilizzata per l'implementazione di funzionalità aggiuntive, assieme ai framework Angular e Meteor
 	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item E' un linguaggio relativamente semplice da imparare;
+		\item Estende le funzionalità delle pagine web;
+		\item Javascript è relativamente veloce per l'utente finale.
+	\end{itemize}
 	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Può presentare facilmente falle relative alla sicurezza
+		\item Rallenta il caricamento delle pagine in dispositivi non particolarmente performanti
+		\item Deve essere esplicitamente abilitato dall'end-user per poter usufruire delle funzionalità
+	\end{itemize}
 \end{itemize}
 
 \subsection{Jolie}
 \begin{itemize}
-	\item \textbf{Descrizione}:
-	\item \textbf{Utilizzo}:
+	\item \textbf{Descrizione}: Jolie è il primo linguaggio esplicitamente orientato ai Microservizi. 
+	\item \textbf{Utilizzo}: Jolie verrà utilizzato per la definizione delle interfacce nei microservizi che saranno realizzati per il lato Back-end.
 	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item Non necessita di framework ma solamente di un interprete;
+		\item Funziona tramite una Java Virtual Machine;
+		\item E' nativamente compatibile con Java per l'estensione delle funzionalità;
+		\item Il deployment di un microservizio può avvenire su più macchine, senza modificarne l'esecuzione.
+	\end{itemize}
 	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Linguaggio molto giovane e di scarsa diffusione;
+		\item Documentazione scarna;
+		\item Limitate tecnologie in grado di interfacciarsi con applicazioni Jolie.
+	\end{itemize}
 \end{itemize}
 
 \subsection{JQuery}
 \begin{itemize}
-	\item \textbf{Descrizione}:
-	\item \textbf{Utilizzo}:
+	\item \textbf{Descrizione}: JQuery è una libreria per il linguaggio JavaScript. Viene utilizzato per estendere le funzionalità di tale linguaggio, aggiungendo operazioni implementabili con semplicità;
+	\item \textbf{Utilizzo}: Questa tecnologia verrà utilizzata per aggiungere funzionalità nel lato Front-end
 	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item E' ben supportato dalla community
+		\item Rende la manipolazione DOM molto più agevole
+		\item Possiede diversi plug-in che estendono in modo ancor maggiore le funzionalità
+	\end{itemize}
 	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Presenta un ulteriore livello di appesantimento della struttura Front-end
+		\item La curva di apprendimento è logaritmica e può risultare difficile
+	\end{itemize}
+\end{itemize}
+
+\subsection{JWT}
+\begin{itemize}
+	\item \textbf{Descrizione}: JSON Web Tokens (JWT) è uno standard che definisce una metodologia compatta e sicura per la trasmissione tra due parti di un oggetto JSON. JWT utilizza il protocollo di codifica RSA;
+	\item \textbf{Utilizzo}: Questa tecnologia verrà utilizzata per secretare lo scambio di dati sensibili con la piattaforma
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item Supporto RSA a 256-bit con altissima sicurezza;
+		\item Riduce il numero di transazioni con il database;
+		\item Relativamente semplice da utilizzare.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item La sicurezza di JWT è basata su una singola chiave, rappresentandone anche uno dei suoi più gravi rischi;
+	\end{itemize}
 \end{itemize}
 
 \subsection{Leonardo}
@@ -112,7 +169,13 @@ In questa sezione, vengono descritte le tecnologie utilizzate per la realizzazio
 	\item \textbf{Descrizione}:
 	\item \textbf{Utilizzo}:
 	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item 
+	\end{itemize}
 	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item 
+	\end{itemize}
 \end{itemize}
 
 \subsection{MeteorJS}
@@ -120,7 +183,13 @@ In questa sezione, vengono descritte le tecnologie utilizzate per la realizzazio
 	\item \textbf{Descrizione}:
 	\item \textbf{Utilizzo}:
 	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item 
+	\end{itemize}
 	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item 
+	\end{itemize}
 \end{itemize}
 
 \subsection{PostgreSQL}
@@ -128,7 +197,13 @@ In questa sezione, vengono descritte le tecnologie utilizzate per la realizzazio
 	\item \textbf{Descrizione}:
 	\item \textbf{Utilizzo}:
 	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item 
+	\end{itemize}
 	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item 
+	\end{itemize}
 \end{itemize}
 
 
