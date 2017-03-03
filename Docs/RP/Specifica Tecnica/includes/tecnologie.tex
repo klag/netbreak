@@ -166,43 +166,51 @@ In questa sezione, vengono descritte le tecnologie utilizzate per la realizzazio
 
 \subsection{Leonardo}
 \begin{itemize}
-	\item \textbf{Descrizione}:
-	\item \textbf{Utilizzo}:
+	\item \textbf{Descrizione}: Leonardo è un web server sviluppato completamente in Jolie. 
+	\item \textbf{Utilizzo}: Questa tecnologia sarà utilizzata, visto la sua affinità con le altre tecnologie adottate, come web server per la piattaforma
 	\item \textbf{Vantaggi}:
 	\begin{itemize}
-		\item 
+		\item Affine alle tecnologie utilizzate nel progetto, e ad un approccio a microservizi
+		\item Offre una buona scalabilità per ogni tipo di applicazione
 	\end{itemize}
 	\item \textbf{Svantaggi}:
 	\begin{itemize}
-		\item 
+		\item Leonardo è un web server che presenta tuttora una diffusione molto limitata
+		\item Essendo limitato il bacino di utenza, il supporto per tale piattaforma è anch'esso limitato
 	\end{itemize}
 \end{itemize}
 
 \subsection{MeteorJS}
 \begin{itemize}
-	\item \textbf{Descrizione}:
-	\item \textbf{Utilizzo}:
+	\item \textbf{Descrizione}: Meteor è un framework open source JajaScript scritto usando NodeJs. Esso permette lo sviluppo di applicazioni web cross-platform. Il framework integra MongoDB e utilizza il pattern publish-subcribe per la propagazione dei dati in tempo reale tra client e server. Per la parte client si è deciso di utilizzare il package Meteor-Angular, in modo da poter usare il framework AngularJS per lo sviluppo frontend.
+	\item \textbf{Utilizzo}: Framework principale su cui sarà basata la parte di Market
 	\item \textbf{Vantaggi}:
 	\begin{itemize}
-		\item 
+		\item Isomorfismo, ovvero il codice sviluppato per il client può essere riutilizzato anche sul server;
+		\item Latency compensation: le azioni vengono eseguite inmmediatamente nel lato client, ma il server può eventualmente fare rollback qualora un azione eseguita non fosse valida
+		\item Reattività e Virtual DOM, con le viste che vengono automaticamente ricalcolate al variare dei dati.
+		\item Sono presenti moltissimi package che rispondono a svariate esigenze del prodotto
 	\end{itemize}
 	\item \textbf{Svantaggi}:
 	\begin{itemize}
-		\item 
+		\item La tecnologia non è mai stata utilizzata da nessun membro del team, ed è quindi necessario un periodo di formazione per poterlo utilizzare al meglio
 	\end{itemize}
 \end{itemize}
 
-\subsection{PostgreSQL}
+\subsection{MySQL}
 \begin{itemize}
-	\item \textbf{Descrizione}:
-	\item \textbf{Utilizzo}:
+	\item \textbf{Descrizione}: MySQL è un database di tipo relazionale, open-source e sviluppato da Oracle. Tale database è tuttora il più diffuso e utilizzato nella sua categoria.
+	\item \textbf{Utilizzo}: Questa tecnologia verrà utilizzata per la gestione e il salvataggio dei dati Back-end per l'applicazione
 	\item \textbf{Vantaggi}:
 	\begin{itemize}
-		\item 
+		\item Valida e consolidata esperienza del team per tale piattaforma
+		\item La tecnologia si integra perfettamente con i framework utilizzati
+		\item Documentazione estesa e valido supporto da parte della community
+		\item Sono disponibili numerosi strumenti per la progettazione della base di dati
 	\end{itemize}
 	\item \textbf{Svantaggi}:
 	\begin{itemize}
-		\item 
+		\item Alcune alternative offrono un bacino di funzionalità maggiore, sebbene non risultino adatti per interoperare con le altre tecnologie utilizzate
 	\end{itemize}
 \end{itemize}
 
