@@ -38,28 +38,6 @@
 \usepackage{multirow}
 \usepackage{xcolor,colortbl}
 \usepackage{afterpage}
-\usepackage{mathtools}
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{gray}{rgb}{0.5,0.5,0.5}
-\definecolor{mauve}{rgb}{0.58,0,0.82}
-
-\lstset{frame=tb,
-	language=Java,
-	aboveskip=3mm,
-	belowskip=3mm,
-	showstringspaces=false,
-	columns=flexible,
-	basicstyle={\small\ttfamily},
-	numbers=none,
-	numberstyle=\tiny\color{gray},
-	keywordstyle=\color{blue},
-	commentstyle=\color{dkgreen},
-	stringstyle=\color{mauve},
-	breaklines=true,
-	breakatwhitespace=true,
-	tabsize=3
-}
-
 
 
 %glossary code%
@@ -107,9 +85,6 @@
 \titleformat{\subparagraph}{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
 \titlespacing*{\subparagraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
-\renewcommand*{\arraystretch}{1.6}
-
-
 \makeatletter
 \newcounter{subsubparagraph}[subparagraph]
 \renewcommand\thesubsubparagraph{
@@ -139,4 +114,3 @@
 \newcommand\l@subsubsubparagraph{\@dottedtocline{7}{10em}{6.5em}}
 \newcommand{\subsubsubparagraphmark}[1]{}
 \makeatother
-
