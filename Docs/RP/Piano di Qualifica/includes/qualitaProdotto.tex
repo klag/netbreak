@@ -122,11 +122,11 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 		
 		\paragraph{Metriche}
 			\subparagraph{Percentuale chiamate a microservizi corrette}
-			Indica il numero di chiamate a microservizi andate a buon fine.
+			Indica il numero di chiamate al microservizio j andate a buon fine.
 			
 			\begin{itemize}
-				\item \textbf{nchiamnak(ms(j)} = numero chiamate di un microservizio j fallite o avvenute con successo ma con trisp(ms(j)) > tmediorisp(ms(j)) + 0.3*tmediorisp(ms(j))
-				\item \textbf{nchiamtot(ms(j))} = numero totale chiamate a microservizi
+				\item \textbf{nchiamnak(ms(j))} = numero chiamate di un microservizio j fallite o avvenute con successo ma con trisp(ms(j)) > tmediorisp(ms(j)) + 0.3*tmediorisp(ms(j))
+				\item \textbf{nchiamtot(ms(j))} = numero totale chiamate al microservizio j
 				\item \textbf{percentchiamatecorrette} = \begin{math}
 				\frac{nchiamnak(ms(j)}{nchiamtot(ms(j))}
 				\end{math}
@@ -205,8 +205,8 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 			Indica la percentuale di funzioni comprensibili agli utenti.
 			
 				\begin{itemize}
-				\item \textbf{nfuncomprese} = numero funzionalita' comprensibili agli utenti
-				\item \textbf{nfuntotali} = numero funzionalita' totali
+				\item \textbf{nfuncomprese} = numero funzionalit\`{a} comprensibili agli utenti
+				\item \textbf{nfuntotali} = numero funzionalit\`{a} totali
 				\item \textbf{comprens} = \begin{math}
 				\frac{nfuncomprese}{nfuntotali}
 				\end{math}
@@ -286,7 +286,7 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 		
 		\paragraph{Metriche}
 			\subparagraph{Tempo di risposta}
-			Indica il tempo di risposta per una chiamata ad un microservizio. La seguente formula viene usata per ridurre gli errori nel conteggio del valore medio su un insieme molto grande di dati.
+			Indica il tempo medio di risposta per una chiamata ad un microservizio. La seguente formula viene usata per ridurre gli errori nel conteggio del valore medio su un insieme molto grande di dati.
 			
 			\begin{itemize}
 				\item \textbf{ms(j)} = tempo inizio della i-esima interazione col microservizio j
@@ -303,7 +303,7 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					qualmsg &\begin{math}trisp(ms(j)) >= tmediorisp(ms(j)) + 0.3*tmediorisp(ms(j)) \end{math}& trisp(ms(j)) >= tmediorisp(ms(j)) + 0.05*tmediorisp(ms(j))
+					tmediorisp(ms(j) &\begin{math}trisp(ms(j)) >= tmediorisp(ms(j)) + 0.3*tmediorisp(ms(j)) \end{math}& trisp(ms(j)) >= tmediorisp(ms(j)) + 0.05*tmediorisp(ms(j))
 				\end{longtable}
 				\caption{Tempo di risposta}
 			\end{table}
@@ -331,7 +331,7 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 				\item \textbf{x(i)} =la modifica numero i su un totale di n modifiche iniziali da effettuare
 				\item \textbf{w(i)} = il numero di errori che ha portato la modifica x(i) che corrispono a w(i) nuove modifiche
 				\item \textbf{impattomodifiche} = \begin{math}
-				\frac{1}{x(n)-x(0)}*(\sum_{1}^{n}(w(2i) - 4*w(2i+1) + w(2i+2)(msj))) 
+				\frac{1}{x(n)-x(0)}*(\sum_{1}^{n}(w(2i) - 4*w(2i+1) + w(2i+2))) 
 				\end{math} con n = numero modifiche totali iniziali
 			\end{itemize}
 			
