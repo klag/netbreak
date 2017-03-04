@@ -18,63 +18,98 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 		\paragraph{Metriche}
 			\subparagraph{Completezza delle funzioni sviluppate}
 			Indica la percentuale di funzionalità sviluppate ritenute complete.
-				\begin{table}[H]
-					\begin{center}
-						\begin{tabular}{|c|c|c|}
-							\hline
-							\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-							\hline
-							n° funz ritenute complete/n° funz totali & 90-100 & 100 \\
-							\hline
-						\end{tabular}
-					\end{center}
-					\caption{Completezza delle funzioni sviluppate}
-				\end{table}
+			
+			\begin{itemize}
+				\item \textbf{funcompl} = numero funzioni ritenute complete
+				\item \textbf{funtot} = numero funzioni totali
+				\item \textbf{completezzaf} = \begin{math}
+				\frac{funcompl}{funtot}
+				\end{math}
+			\end{itemize}
+			
+			\begin{table}[H]
+			\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+				\hline
+				\rowcolor{Gray}
+				\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+				\hline
+			     completezzaf & [90, 100] in [0,100]& [90, 100] in [0,100] 
+			\end{longtable}
+			\caption{Completezza delle funzioni sviluppate}
+		\end{table}
+		
 			
 			\subparagraph{Correttezza delle funzioni sviluppate}
-			Indica la percentuale di funzionalità sviluppate ritenute corrette.
-				\begin{table}[H]
-					\begin{center}
-						\begin{tabular}{|c|c|c|}
-							\hline
-							\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-							\hline
-							n° funz ritenute corrette/n° funz totali & 100 & 100 \\
-							\hline
-						\end{tabular}
-					\end{center}
-					\caption{Correttezza delle funzioni sviluppate}
-				\end{table}
+			Indica la percentuale di funzionalità sviluppate ritenute corrette
+			
+			\begin{itemize}
+				\item \textbf{funcorr} = numero funzioni ritenute corrette
+				\item \textbf{funtot} = numero funzioni totali
+				\item \textbf{corretezzaf} = \begin{math}
+				\frac{funcorr}{funtot}
+				\end{math}
+			\end{itemize}
+			
+			\begin{table}[H]
+				\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+					\hline
+					\rowcolor{Gray}
+					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+					\hline
+					corretezzaf & 100 in [0,100]& 100 in [0,100] 
+				\end{longtable}
+				\caption{Corretezza delle funzioni sviluppate}
+			\end{table}
+			
+			
+		
 			
 			\subparagraph{Accuratezza rispetto alle aspettative}
 			Indica la percentuale di risultati conformi alle aspettative.
-				\begin{table}[H]
-					\begin{center}
-						\begin{tabular}{|c|c|c|}
-							\hline
-							\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-							\hline
-							n° test con esito pos/n° test totali & 90-100 & 100 \\
-							\hline
-						\end{tabular}
-					\end{center}
-					\caption{Accuratezza rispetto alle aspettative}
-				\end{table}
+			
+			
+			\begin{itemize}
+				\item \textbf{testpos} = numero test ritenuti corretti
+				\item \textbf{testtot} = numero test totali
+				\item \textbf{accuratezza} = \begin{math}
+				\frac{testpos}{testtot}
+				\end{math}
+			\end{itemize}
+			
+			\begin{table}[H]
+				\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+					\hline
+					\rowcolor{Gray}
+					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+					\hline
+					accuratezza & [90,100] in [0,100]& [90,100] in [0,100] 
+				\end{longtable}
+				\caption{Accuratezza rispetto alle aspettative}
+			\end{table}
+			
 			
 			\subparagraph{Controllo degli accessi}
 			Indica la percentuale di accessi corretti al sistema.
+			
+			\begin{itemize}
+				\item \textbf{accessisuccesso} = numero accessi controllati con successo dal sistema
+				\item \textbf{accessitotali} = numero accessi totali
+				\item \textbf{percentaccessicorretti} = \begin{math}
+				\frac{accessisuccesso}{accessi totali}
+				\end{math}
+			\end{itemize}
+			
 			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-						\hline
-						n° accessi controllati con succ dal sistema/n° accessi tot & 90-100 & 100 \\
-						\hline
-					\end{tabular}
-				\end{center}
+				\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+					\hline
+					\rowcolor{Gray}
+					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+					\hline
+					percentaccessicorretti & [90,100] in [0,100]& 100 in [0,100] 
+				\end{longtable}
 				\caption{Controllo degli accessi}
 			\end{table}
+			
 	
 	\subsubsection{Affidabilità}
 	Rappresenta la capacità del prodotto software di mantenere il livello di prestazione quando viene utilizzato in condizioni specificate.
@@ -86,50 +121,74 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 			\end{itemize}
 		
 		\paragraph{Metriche}
-			\subparagraph{mmmmmm}
+			\subparagraph{Percentuale chiamate a microservizi corrette}
 			Indica il numero di chiamate a microservizi andate a buon fine.
+			
+			\begin{itemize}
+				\item \textbf{nchiamnak(ms(j)} = numero chiamate di un microservizio j fallite o avvenute con successo ma con trisp(ms(j)) > tmediorisp(ms(j)) + 0.3*tmediorisp(ms(j))
+				\item \textbf{nchiamtot(ms(j))} = numero totale chiamate a microservizi
+				\item \textbf{percentchiamatecorrette} = \begin{math}
+				\frac{nchiamnak(ms(j)}{nchiamtot(ms(j))}
+				\end{math}
+			\end{itemize}
+			
 			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-						\hline
-						metodo di calcolo & xx-yy  & xx-yy \\
-						\hline
-					\end{tabular}
-				\end{center}
-				\caption{mmmmmmm}
+				\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+					\hline
+					\rowcolor{Gray}
+					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+					\hline
+					percentchiamatecorrette & [90,100] in [0,100]& 100 in [0,100] 
+				\end{longtable}
+				\caption{Percentuale chiamate a microservizi corrette}
 			\end{table}
+			
 		
 			\subparagraph{Copertura dei test}
 			Indica il livello di copertura dei test.
+			
+			\begin{itemize}
+				\item \textbf{testpiano} = numero test pianificati
+				\item \textbf{testnecessari} = numero test necessari a garantire la copertura richiesta o massima
+				\item \textbf{livellocopertura} = \begin{math}
+				\frac{testpiano}{testnecessari}
+				\end{math}
+			\end{itemize}
+			
 			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-						\hline
-						n° test pianificati/n° test necessari a garantire copertura richiesta o massima & xx-yy  & xx-yy \\
-						\hline
-					\end{tabular}
-				\end{center}
+				\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+					\hline
+					\rowcolor{Gray}
+					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+					\hline
+					livellocopertura & [80,100] in [0,100] & 100 in [0,100] 
+				\end{longtable}
 				\caption{Copertura dei test}
 			\end{table}
 			
+			
 			\subparagraph{Controllo dei guasti}
 			Indica il livello di controllo dei guasti, attraverso il numero di condizioni di errore messe sotto controllo per evitare malfunzionamenti e/o guasti al prodotto.
+			
+			\begin{itemize}
+				\item \textbf{nconderroregestite} = numero condizioni errore gestite correttamente
+				\item \textbf{nconderrorepossibili} = numero condizioni d'errore possibili nel sistema
+				\item \textbf{livellocontrollo} = \begin{math}
+				\frac{nconderroregestite}{nconderrorepossibili}
+				\end{math}
+			\end{itemize}
+			
 			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-						\hline
-						n° cond errore gestite corrett/n° tot cond errore possibili nel sistema & xx-yy  & xx-yy \\
-						\hline
-					\end{tabular}
-				\end{center}
+				\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+					\hline
+					\rowcolor{Gray}
+					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+					\hline
+					livellocontrollo & [80,100] in [0,100] & 100 in [0,100] 
+				\end{longtable}
 				\caption{Controllo dei guasti}
 			\end{table}
+			
 	
 	\subsubsection{Usabilità}
 	Rappresenta la capacità di un prodotto software di essere comprensibile, di poter essere studiato e di risultare attraente da parte di un utente sotto determinate condizioni.
@@ -144,48 +203,77 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 		\paragraph{Metriche}
 			\subparagraph{Comprensibilità delle funzionalità offerte}
 			Indica la percentuale di funzioni comprensibili agli utenti.
+			
+				\begin{itemize}
+				\item \textbf{nfuncomprese} = numero funzionalita' comprensibili agli utenti
+				\item \textbf{nfuntotali} = numero funzionalita' totali
+				\item \textbf{comprens} = \begin{math}
+				\frac{nfuncomprese}{nfuntotali}
+				\end{math}
+			\end{itemize}
+			
 			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-						\hline
-						n° funz comprese/n° funz tot & 80-100  & 90-100 \\
-						\hline
-					\end{tabular}
-				\end{center}
+				\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+					\hline
+					\rowcolor{Gray}
+					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+					\hline
+					comprens & [70,100] in [0,100] & [90,100] in [0,100] 
+				\end{longtable}
 				\caption{Comprensibilità delle funzionalità offerte}
 			\end{table}
+			
 		
 			\subparagraph{Controllo e monitoraggio delle operazioni}
 			Indica la capacità del prodotto di monitorare lo stato delle operazioni eseguite.
+			
+				\begin{itemize}
+				\item \textbf{nfuncontrol} = numero funzionalita' con adeguato controllo e monitoraggio delle operazioni
+				\item \textbf{nfuntotali} = numero funzionalita' con controllo totali
+				\item \textbf{monitoraggio} = \begin{math}
+				\frac{nfuncontrol}{nfuntotali}
+				\end{math}
+			\end{itemize}
+			
 			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-						\hline
-						n° funz con adeguato controllo e monitoraggio op/n° tot funz con controllo & xx-yy  & xx-yy \\
-						\hline
-					\end{tabular}
-				\end{center}
+				\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+					\hline
+					\rowcolor{Gray}
+					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+					\hline
+					monitoraggio & [80,100] in [0,100] & [90,100] in [0,100] 
+				\end{longtable}
 				\caption{Controllo e monitoraggio delle operazioni}
 			\end{table}
 			
+			
+			
 			\subparagraph{Qualità della messaggistica}
 			Indica il grado di chiarezza, completezza e correttezza dei messaggi previsti rispetto alle diverse condizioni gestite dal prodotto (ad esempio, il completamento di una funzione, le condizioni di errore, le scelte da effettuare, etc...).
+			
+			
+			\begin{itemize}
+				\item \textbf{nmsgchiari} = numero messaggi che risultano chiari, completi e corretti
+				\item \textbf{nmsgtot} = numero totale messaggi previsti
+				\item \textbf{qualmsg} = \begin{math}
+				\frac{nmsgchiari}{nmsgtot}
+				\end{math}
+			\end{itemize}
+			
 			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-						\hline
-						n° msg risultano chiari, completi e corretti/n° tot msg previsti & xx-yy  & xx-yy \\
-						\hline
-					\end{tabular}
-				\end{center}
+				\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+					\hline
+					\rowcolor{Gray}
+					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+					\hline
+					qualmsg & [70,100] in [0,100] & 100 in [0,100] 
+				\end{longtable}
 				\caption{Qualità della messaggistica}
 			\end{table}
+			
+			
+			
+			
 	
 	\subsubsection{Efficienza}
 	Rappresenta la capacità di un prodotto software di realizzare le funzioni richieste nel minor tempo possibile ed utilizzando nel miglior modo le risorse necessarie.
@@ -198,34 +286,29 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 		
 		\paragraph{Metriche}
 			\subparagraph{Tempo di risposta}
-			Indica il tempo di risposta per una chiamata ad un microservizio.
+			Indica il tempo di risposta per una chiamata ad un microservizio. La seguente formula viene usata per ridurre gli errori nel conteggio del valore medio su un insieme molto grande di dati.
+			
+			\begin{itemize}
+				\item \textbf{ms(j)} = tempo inizio della i-esima interazione col microservizio j
+				\item \textbf{tinizio(i)(ms(j))} = tempo inizio della i-esima interazione col microservizio j
+				\item \textbf{trisp(i)(ms(j))} = tempo fine della i-esima interazione col microservizio j
+				\item \textbf{tmediorisp(ms(j)} = \begin{math}
+				\frac{1}{tinizio(n)(ms(j))-tinizio(0)(ms(j))}*(\sum_{1}^{n}(tfine(2i)(ms(j)) - 4*tfine(2i+1)(ms(j)) + tfine(2i+2)(ms(j)))) 
+				\end{math} con n = numero interazioni col microservizio j
+			\end{itemize}
+			
 			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-						\hline
-						metodo di calcolo & xx-yy  & xx-yy \\
-						\hline
-					\end{tabular}
-				\end{center}
+				\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+					\hline
+					\rowcolor{Gray}
+					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+					\hline
+					qualmsg &\begin{math}trisp(ms(j)) >= tmediorisp(ms(j)) + 0.3*tmediorisp(ms(j)) \end{math}& trisp(ms(j)) >= tmediorisp(ms(j)) + 0.05*tmediorisp(ms(j))
+				\end{longtable}
 				\caption{Tempo di risposta}
 			\end{table}
-			
-			\subparagraph{Utilizzo di risorse}
-			Indica la dimensione media dei buffer utilizzati dal prodotto.
-			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-						\hline
-						metodo di calcolo & xx-yy  & xx-yy \\
-						\hline
-					\end{tabular}
-				\end{center}
-				\caption{Utilizzo di risorse}
-			\end{table}
+						
+	
 			
 	\subsubsection{Manutenibilità}
 	Rappresenta la capacità di un prodotto software di essere modificato. Le modifiche possono includere correzioni o adattamenti del software a modifiche negli ambienti, nei requisiti e nelle specifiche funzionali.
@@ -239,35 +322,31 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 			\end{itemize}
 	
 		\paragraph{Metriche}
-			\subparagraph{Registro di log}
-			Indica il livello di registrazione delle operazioni eseguite nei file di log.
-				\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-						\hline
-						n° op effettivamente reg/n° tot op & xx-yy  & xx-yy \\
-						\hline
-					\end{tabular}
-				\end{center}
-				\caption{Registro di log}
-			\end{table}
+
 			
 			\subparagraph{Impatto delle modifiche}
 			Indica la percentuale di modifiche effettuate in risposta a failure, le quali hanno portato all’introduzione di nuove failure in altre componenti del sistema.
+			
+			\begin{itemize}
+				\item \textbf{x(i)} =la modifica numero i su un totale di n modifiche iniziali da effettuare
+				\item \textbf{w(i)} = il numero di errori che ha portato la modifica x(i) che corrispono a w(i) nuove modifiche
+				\item \textbf{impattomodifiche} = \begin{math}
+				\frac{1}{x(n)-x(0)}*(\sum_{1}^{n}(w(2i) - 4*w(2i+1) + w(2i+2)(msj))) 
+				\end{math} con n = numero modifiche totali iniziali
+			\end{itemize}
+			
 			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-						\hline
-						 & xx-yy  & xx-yy \\
-						\hline
-					\end{tabular}
-				\end{center}
+				\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+					\hline
+					\rowcolor{Gray}
+					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+					\hline
+					impattomodifiche &impattomodifiche <= 0.25 in [0,1] & impattomodfiche <= 0.1 in [0,1]
+				\end{longtable}
 				\caption{Impatto delle modifiche}
 			\end{table}
+			
+		
 	
 	\subsubsection{Portabilità}
 	Rappresenta la capacità di un prodotto software di poter essere trasportato da un ambiente ad un altro.
@@ -280,20 +359,29 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 		\paragraph{Metriche}
 			\subparagraph{Supporto differenti versioni dei browser}
 			Indica la percentuale di versioni di browser supportate.
+			
+			\begin{itemize}
+				\item \textbf{nversupp} = numero versioni browser supportati
+				\item \textbf{nvertot} = numero totale versioni che devono essere supportate
+				\item \textbf{supporto} = \begin{math}
+				\frac{nversupp}{nvertot}
+				\end{math} 
+			\end{itemize}
+			
 			\begin{table}[H]
-				\begin{center}
-					\begin{tabular}{|c|c|c|}
-						\hline
-						\textbf{Misura} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
-						\hline
-						n° vers support/n° tot versioni che devono essere support & xx-yy  & xx-yy \\
-						\hline
-					\end{tabular}
-				\end{center}
+				\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
+					\hline
+					\rowcolor{Gray}
+					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
+					\hline
+					supporto & [70,100] in [0,100]  & 100 in [0,100] 
+				\end{longtable}
 				\caption{Supporto differenti versioni dei browser}
 			\end{table}
+			
+
 		
-	\subsection{Metriche (da tenere??)}
+	\subsection{Metriche}
 	Le \textbf{metriche interne} si applicano al software non eseguibile, come ad esempio le specifiche tecniche e il codice sorgente, durante i periodi di progettazione e codifica.
 	Esse sono specificate nella norma \textit{ISO/IEC 9126-3\ped{G}}.\\
 	Durante le fasi di sviluppo del software, i prodotti intermedi sono valutati tramite metriche interne che misurano le proprietà intrinseche del prodotto.
@@ -310,7 +398,7 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 			\item \textbf{Range ottimale:} rappresenta l'intervallo di valori desiderati, entro cui dovrebbe collocarsi la misurazione. Nel caso in cui non si rientrasse in questo range, sarà necessario effettuare una verifica più accurata per individuarne le cause e poter applicare le dovute correzioni.
 		\end{itemize}
 	
-	\subsection{Analisi (questa parte non è già in NdP??)}
+	\subsection{Analisi}
 	
 	\subsubsection{Analisi statica}
 	L'analisi statica non necessita dell'esecuzione del codice oggetto ed è applicabile sin da subito su codice e documenti prodotti. Essa ha lo scopo di trovare anomalie e può essere eseguita nei due modi seguenti.
@@ -326,7 +414,7 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 	
 	
 	\subsubsection{Analisi dinamica}
-	Da definire.
+	Parte essenziale del processo di verifica, aumenta il valore di qualit\`{a} del sistema identificandone e rimuovendone difetti tramite test dinamici. I test analizzano il comportamento del programma su un insieme finito di casi selezionato sull'insieme infinito delle esecuzioni possibili e producono uno o pi\`{u} esiti decidibili, che forniscono informazioni circa il sistema nel complesso o su una delle sue parti. Ogni test deve essere progettato per poter essere ripetibile. L'insieme di test dovrebbe idealmente testare tutto il codice prodotto. Il suo inizio non deve essere differito al termine della fase di codifica e le sue esigenze devono essere tenute in conto nella progettazione del sistema.
 	
 	
 	
