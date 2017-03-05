@@ -2,7 +2,7 @@
 \section{Diagrammi dei packages}
 
 \subsection{Introduzione}
-Questa sezione racchiude i diagrammi dei packages, raccolti tramite un approccio top-down. Considerando l'approccio adottato, e il particolare applicativo realizzato con un pattern a Microservizi, non ci discosteremo dalla nomenclatura tradizionale di \textit{Classe} intesa come una categoria di entità in grado di svolgere uno specifico compito. Per mantenere una conformità con lo standard UML dunque, verrà utilizzato il termine \textit{classe} per indicare ciò che all'atto pratico sarà implementato come un microservizio vero e proprio, standalone, e con i propri metodi in grado di fornire la funzionalità preposta. Trattandosi di una progettazione con un livello di dettaglio intermedio, le classi non verranno definite, bensì verrà data una descrizione della loro funzionalità, lo scopo e le relazioni che intercorrono con le altre classi.
+Questa sezione racchiude i diagrammi dei packages, raccolti tramite un approccio top-down. Considerando l'approccio adottato e il particolare applicativo realizzato con un pattern a Microservizi, non ci discosteremo dalla nomenclatura tradizionale di \textit{Classe} intesa come una categoria di entità in grado di svolgere uno specifico compito. Per mantenere una conformità con lo standard UML\ped{G} dunque, verrà utilizzato il termine \textit{classe} per indicare ciò che all'atto pratico sarà implementato come un microservizio vero e proprio, stand-alone, e con i propri metodi in grado di fornire la funzionalità preposta. Trattandosi di una progettazione con un livello di dettaglio intermedio, le classi non verranno definite, bensì verrà data una descrizione della loro funzionalità, lo scopo e le relazioni che intercorrono con le altre classi.
 
 L'applicativo API Market è strutturato, come di consueto, in un lato Front-end ed un lato Back-end, come mostrato dal diagramma seguente:
 
@@ -16,7 +16,7 @@ L'applicativo API Market è strutturato, come di consueto, in un lato Front-end 
 
 \subsection{Front-end}
 
-Il lato Front-end risulta così strutturato:
+Il lato front-end risulta così strutturato:
 
 \begin{figure}[H]
 	\centering
@@ -26,7 +26,7 @@ Il lato Front-end risulta così strutturato:
 	\caption{Package APIM::FrontEnd}
 \end{figure}
 
-Nella parte Front-end sono dunque presenti i package View e ViewModel che rispecchiano l'architettura nativa dei framework da noi utilizzati.
+Nella parte front-end sono dunque presenti i package View e ViewModel che rispecchiano l'architettura nativa dei framework da noi utilizzati.
 
 \subsubsection{View}
 
@@ -57,7 +57,7 @@ Il package per il componente ViewModel contiene i seguenti sub-packages:
 	\caption{Package APIM::FrontEnd::ViewModel}
 \end{figure}
 
-La componente \textit{ViewModel} ha il compito di realizzare il data-binding con i componenti della \textit{View}, interagendo con la componente \textit{Model} che fornisce i dati o ne permette la modifica. La componente \textit{Model} è parte del lato Back-end della piattaforma, sebbene adottando un tale approccio si ha una linea di demarcazione meno netta tra le due parti. Di seguito si analizzano i packages contenuti all'interno del componente \textit{ViewModel}
+La componente \textit{ViewModel} ha il compito di realizzare il data-binding con i componenti della \textit{View}, interagendo con la componente \textit{Model} che fornisce i dati o ne permette la modifica. La componente \textit{Model} è parte del lato back-end della piattaforma, sebbene adottando un tale approccio si ha una linea di demarcazione meno netta tra le due parti. Di seguito si analizzano i packages contenuti all'interno del componente \textit{ViewModel}
 
 \begin{itemize}
 	\item \textbf{Controllers}: 
