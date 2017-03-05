@@ -29,16 +29,8 @@ Il gruppo ha deciso di prendere in esame la situazione di chiamata all'API Gatew
 
 
 \begin{itemize}
-<<<<<<< HEAD
 	\item \textbf{Precondizioni}: La richiesta arriva all'\textit{API Gateway Manager} che la processa;
 	\item \textbf{Postcondizioni}: Il client riceve la risposta alla sua chiamata e i dati relativi alla SLA, se abilitata, sono stati salvati nel database;
 	\item \textbf{Descrizione}: L'\textit{API Gateway Manager invoca i metodi del \textit{Verifier} per eseguire i controlli necessari per verificare l'autenticità della chiamata. All'interno del \textit{Verifier} viene deciso in modo casuale se effettuare il log della SLA.
 	Conclusi questi controlli preliminari con successo, il \textit{Manager} invoca i metodi di \textit{}RequestForwarder} che si occupano di recuperare l'indirizzo dell'API invocata ed salvarlo nel \textit{Service Registry}, effettua un salvataggio relativo alla SLA e conclude la sua esecuzione con la chiamata all'\textit{API target}. Il \textit{Manager} invoca i metodi del \textit{ResponseForwarder}, il quale si occupa di effettuare il salvataggio relativo alla SLA, diminuire il campo \textit{Residue} nel database e inviare la risposta al client chiamante. Infine il \textit{Manager} si occupa di salvare il record della SLA nel database.  
 \end{itemize}
-=======
-	\item \textbf{Precondizioni}: La richiesta arriva all'API Gateway Manager che la processa;
-	\item \textbf{Postcondizioni}: Il client riceve la risposta alla sua chiamata e i dati relativi alla SLA, se abilitata, sono stati salvati nel Database;
-	\item \textbf{Descrizione}: L'API Gateway Manager invoca i metodi del Verifier per eseguire i controlli necessari per verificare l'autenticità della chiamata. All'interno del Verifier viene deciso in modo casuale se effettuare il log della SLA.
-	Conclusi questi controlli preliminari con successo, il Manager invoca i metodi di RequestForwarder che si occupano di recuperare l'indirizzo dell'API invocata ed salvarlo nel Service Registry, effettua un salvataggio relativo alla SLA e conclude la sua esecuzione con la chiamata all'API target. Il Manager invoca i metodi del ResponseForwarder, il quale si occupa di effettuare il salvataggio relativo alla SLA, diminuire il campo Residue nel Database e inviare la risposta al Client chiamante. Infine il Manager si occupa di salvare il record della SLA nel Database.  
-\end{itemize}
->>>>>>> origin/master
