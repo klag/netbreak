@@ -1,9 +1,9 @@
 \newpage
 \section{Qualità di processo}
 
-	Per garantire la qualità del prodotto finale è necessario garantire la qualità dei processi necessari al suo completamento. A questo scopo, si è deciso di adottare lo standard \textit{ISO/IEC 15504\ped{G}}, denominato \textit{SPICE\ped{G}}.
+	Per garantire la qualità del prodotto finale è necessario garantire la qualità dei processi necessari al suo completamento. A questo scopo, si è deciso di adottare lo standard \textbf{\textit{ISO/IEC 15504\ped{G}}}, denominato \textbf{\textit{SPICE\ped{G}}}.
 	Esso si fonda sul principio che ogni processo deve essere controllato costantemente, in modo tale da rilevare possibili errori o debolezze, e correggerli prima che essi si diffondano, provocando un aumento del carico di lavoro e dello spreco di risorse.
-	\textit{SPICE\ped{G}} definisce sei livelli di maturità del processo:
+	SPICE definisce sei livelli di maturità del processo:
 	
 	\begin{itemize}
 		\item \textbf{Level 0 - Incomplete:} processo non ancora implementato o incapace di raggiungere i suoi obiettivi;
@@ -14,11 +14,11 @@
 		\item \textbf{Level 5 - Optimizing:} processo predicibile e capace di adattarsi per raggiungere obiettivi specifici e rilevanti;
 	\end{itemize}
 	
-	Al fine di perseguire correttamente questo modello, è necessario adottare il principio \textit{PDCA\ped{G}}, il quale si compone delle seguenti quattro fasi:
+	Al fine di perseguire correttamente questo modello, è necessario adottare il principio \textbf{\textit{PDCA\ped{G}}}, il quale si compone delle seguenti quattro fasi:
 	
 	\begin{itemize}
-		\item \textbf{Plan:} fase di pianificazione ed individuazione di obiettivi e processi necessari allo scopo di raggiungere i risultati attesi;
-		\item \textbf{Do:} fase di attuazione delle attività pianificate nella precedente fase e raccolta di dati sulla qualità ottenuta;
+		\item \textbf{Plan:} fase di pianificazione ed individuazione di obiettivi e processi, necessari allo scopo di raggiungere i risultati attesi;
+		\item \textbf{Do:} fase di attuazione delle attività pianificate nella precedente fase Plan, e raccolta di dati sulla qualità ottenuta;
 		\item \textbf{Check:} fase di verifica dove vengono confrontati i dati in uscita dalla fase Do con quelli pianificati nella fase Plan;
 		\item \textbf{Act:} fase in cui si determinano le cause delle differenze fra risultati ottenuti e risultati attesi, in modo da individuare le azioni correttive da effettuare per ottenere un miglioramento della qualità.
 	\end{itemize}
@@ -26,34 +26,32 @@
 	\begin{figure}[H]
 		\centering
 		\includegraphics[scale=0.6]{includes/img/pdca.png}
-		\caption{Fasi del principio PDCA.}
+		\caption{Principio PDCA.}
 	\end{figure}
 
-	Infine, il \textit{team\ped{G}} ha individuato dallo standard \textit{ISO/IEC 12207:2008\ped{G}} i processi che ritiene più importanti durante tutto il ciclo di vita del prodotto, al fine di garantire una buona qualità di processo. Per ognuno di essi sono stati individuati obiettivi e metriche coerenti con i livelli di qualità perseguiti.
+	Infine, il team ha individuato dallo standard \textbf{\textit{ISO/IEC 12207:2008\ped{G}}} i processi che ritiene più importanti durante tutto il ciclo di vita del prodotto, al fine di garantire una buona qualità di processo. Per ognuno di essi sono stati individuati obiettivi e metriche coerenti con i livelli di qualità perseguiti.
 	
 	\subsection{Infrastructure Management Process}
 	Questo processo ha lo scopo di fornire, mantenere ed aggiornare l’infrastruttura ed i servizi necessari alla realizzazione del progetto, durante tutto il suo ciclo di vita. Il termine infrastruttura comprende: elementi hardware, software, metodi, strumenti, tecniche e standard impiegati nello sviluppo del prodotto.
 	Essa sarà necessaria allo svolgimento del progetto e dovrà essere mantenuta costantemente aggiornata.
 	L'utilizzo delle metriche scelte, permetterà di individuare eventuali errori all’interno degli strumenti utilizzati, la cui correzione permetterà di produrre dati corretti e coerenti.
+		
 		\subsubsection{Obiettivi}
 		Per tutta la durata del progetto, l’infrastruttura impiegata nello sviluppo dovrà raggiungere i seguenti obiettivi:
 		\begin{itemize}
 			\item ogni procedura riguardante le attività svolte più frequentemente durante lo sviluppo del
-			progetto, sarà descritta nel documento \textsc{NormeDiProgetto 1\_0\_0.pdf};
+			progetto, sarà descritta nel documento \textsc{NormeDiProgetto 2\_0\_0.pdf};
 			\item ogni riferimento normativo ed informativo sarà completo di informazioni utili al proprio
 			reperimento;
 			\item la piattaforma \textit{NetBreakDB} sarà a disposizione di ogni componente del team, in caso di bisogno di accesso ai dati in essa contenuti;
 		\end{itemize}
 		\subsubsection{Metriche}
-			\paragraph{Disponibilità NetBreakDB}
-			Indica la percentuale di disponibilità di utilizzo della piattaforma NetBreakDB, rispetto alle richieste di accesso.
+			\paragraph{Disponibilità \textit{NetBreakDB}}
+			Indica la percentuale di disponibilità di utilizzo della piattaforma \textit{NetBreakDB}, rispetto alle richieste di accesso.
 			
 			\begin{itemize}
-				\item \textbf{nacclogin} = numero accessi corretti alla pagina di login
-				\item \textbf{naclogintot} = totale delle richieste di accesso alla pagina di login inoltrate
-				\item \textbf{disp} = \begin{math}
-				\frac{nacclogin}{naclogintot}
-				\end{math} 
+				\item \textbf{num\ped{AL}} = numero di accessi corretti alla pagina di login
+				\item \textbf{num\ped{ALTot}} = numero totale delle richieste di accesso alla pagina di login inoltrate
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -62,13 +60,13 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					disp & [80,100] in [0,100]  & 100 in [0,100] 
+					\begin{math}
+					\frac{num\ped{AL}}{num\ped{ALTot}}*100
+					\end{math} & [80,100] in [0,100]  & 100 in [0,100] 
 				\end{longtable}
 				\caption{Disponibilità NetBreakDB}
 			\end{table}
 			
-			
-	
 	\subsection{Project Planning, Assessment \& Control Process}
 	Questo processo ha lo scopo di produrre dei piani di sviluppo per il progetto, che comprendano:
 	\begin{itemize}
@@ -78,7 +76,7 @@
 		\item l'allocazione di compiti e responsabilità;
 		\item le misurazioni per rilevare lo stato del progetto, rispetto alle pianificazioni stilate.
 	\end{itemize}
-	Durante tutta l’attività di	progetto, sarà fondamentale mantenere aggiornata la pianificazione effettuata, in modo da essere sempre coerente con la situazione attuale. Nel caso in cui, in una fase di lavoro, venissero rilevati dei valori negativi, attraverso l'utilizzo delle metriche scelte Schedule Variance e Budget Variance, occorrerà compensare tali valori entro la fine dell’attività di progetto, al fine di evitare di eccedere le ore di lavoro totali e, di conseguenza, il preventivo dei costi finale indicato nella pianificazione contenuta nel documento \textsc{PianoDiProgetto 1\_0\_0.pdf}.
+	Durante tutta l’attività di	progetto, sarà fondamentale mantenere aggiornata la pianificazione effettuata, in modo da essere sempre coerente con la situazione attuale. Nel caso in cui, in una fase di lavoro, venissero rilevati dei valori negativi, attraverso l'utilizzo delle metriche scelte Schedule Variance e Budget Variance, occorrerà compensare tali valori entro la fine dell’attività di progetto, al fine di evitare di eccedere le ore di lavoro totali e, di conseguenza, il preventivo dei costi finale indicato nella pianificazione contenuta nel documento \textsc{PianoDiProgetto 2\_0\_0.pdf}.
 		\subsubsection{Obiettivi}
 		L’intero sviluppo del progetto dovrà seguire la pianificazione prodotta:
 		\begin{itemize}
@@ -89,14 +87,11 @@
 		\subsubsection{Metriche}
 			\paragraph{Schedule Variance}
 			Indica se si è o meno in linea con la pianificazione temporale delle attività nella baseline.
-			Se si ottiene 0 significa che il team ha rispettato la pianificazione, altrimenti significa che è in ritardo.
+			Se si ottiene un valore maggiore di 0, significa che il team è in anticipo, se si ottiene 0, significa che il team ha rispettato la pianificazione, altrimenti, in caso di valore negativo, significa che il team è in ritardo.
 			
 				\begin{itemize}
-				\item \textbf{attcompl} = attività effettivamente completate
-				\item \textbf{atttot} = attività totali in linea con la pianificazione
-				\item \textbf{schedulevar} = \begin{math}
-				\frac{atttot - attcompl}{atttot}
-				\end{math} 
+				\item \textbf{att\ped{Compl}} = attività completate ad un certo momento
+				\item \textbf{att\ped{PCompl}} = attività che, secondo la pianificazione, dovrebbero essere state completate a quel momento
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -105,21 +100,20 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					schedulevar & schedulevar <= 0.2 in [0,1]  & schedulevar <= 0.1 in [0,1] 
+					\begin{math}
+					{att\ped{Compl} - att\ped{PCompl}}
+					\end{math}  &  \begin{math}\geq{0} \end{math}  &  \begin{math}\geq{0} \end{math} 
 				\end{longtable}
 				\caption{Schedule Variance}
 			\end{table}
-			
-
 		
 		\paragraph{Budget Variance}
 		Indica se la spesa sostenuta alla data corrente è superiore o inferiore a quella preventivata in sede di pianificazione.
-		Un valore positivo indica che si è speso meno di quanto inizialmente previsto, altrimenti significa che si è speso più del preventivo.
+		Un valore positivo indica che si è speso meno di quanto inizialmente previsto, altrimenti significa che si è speso più della somma preventivata.
 		
 		\begin{itemize}
-			\item \textbf{costopiano} = costo pianificazione per realizzare attivit\`{a} di progetto alla data corrente
-			\item \textbf{costotot} = spesa effettiva alla data corrente
-			\item \textbf{budgetvar} = costopiano - costotot
+			\item \textbf{costo\ped{Plan}} = costo pianificato per realizzare le attività di progetto alla data corrente
+			\item \textbf{costo\ped{Eff}} = costo effettivamente sostenuto alla data corrente
 		\end{itemize}
 		
 		\begin{table}[H]
@@ -128,15 +122,16 @@
 				\rowcolor{Gray}
 				\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 				\hline
-				budgetvar & schedulevar >= 0 in [0,100]  & 100 in [0,100] 
+				\begin{math}
+				{costo\ped{Plan} - costo\ped{Eff}}
+				\end{math} & \begin{math}\geq{0} \end{math}  & \begin{math}\geq{0} \end{math}
 			\end{longtable}
 			\caption{Budget Variance}
 		\end{table}
 		
-	
 	\subsection{Risk Management Process}
 	Questo processo ha l'obiettivo di identificare, analizzare, trattare e monitorare in modo continuo i rischi che possono insorgere durante l’intera attività di progetto.
-	Il livello di probabilità dei rischi analizzati dovrà essere costantemente monitorato. Nel caso si manifestasse un rischio, a qualsiasi livello di pericolosità, il team dovrà attuare le contromisure previste, al fine di mitigare i suoi effetti ed evitare un incremento del livello di pericolosità.
+	Il livello di probabilità dei rischi analizzati dovrà essere costantemente monitorato. Nel caso si manifestasse un rischio, a qualsiasi livello di pericolosità, il team dovrà attuare le contromisure previste, al fine di mitigarne gli effetti ed evitare un incremento del livello di pericolosità.
 		\subsubsection{Obiettivi}
 		Il team dovrà gestire correttamente i rischi:
 		\begin{itemize}
@@ -149,7 +144,7 @@
 			Indicatore che evidenzia i rischi non preventivati.
 			
 			\begin{itemize}
-				\item \textbf{rischinoninar} = un contatore registra i rischi non identificati in analisi dei requisiti
+				\item \textbf{risk\ped{NP}} = contatore che viene incrementato nel momento in cui si manifesta un rischio non individuato nell’attività di analisi dei rischi
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -158,33 +153,31 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					rischinoninar & [0,5]  & 0 
+					risk\ped{NP} & [0,5]  & 0 
 				\end{longtable}
 				\caption{Rischi non preventivati}
-			\end{table}
-			
-			
+			\end{table}			
 	
 	\subsection{System/Software Requirements Analysis Process}
 	Questo processo ha lo scopo di creare un insieme di requisiti tecnici, a partire dall'insieme di requisiti individuati dalle fonti, in modo che diventi la linea guida nella progettazione del prodotto.
-	Ogni requisito individuato dovrà essere inserito correttamente nella piattaforma NetBreakDB, la quale si occuperà di effettuare il tracciamento delle fonti dalle quali derivano i requisiti, delle modifiche effettuate e della loro implementazione nel prodotto.
+	Ogni requisito individuato dovrà essere inserito correttamente nella piattaforma \textit{NetBreakDB}, la quale si occuperà di effettuare il tracciamento delle fonti dalle quali derivano i requisiti, delle modifiche effettuate e della loro implementazione nel prodotto.
+		
 		\subsubsection{Obiettivi}
 		I requisiti identificati dovranno essere gestiti in modo da raggiungere i seguenti obiettivi:
 		\begin{itemize}
 			\item per ogni requisito dovrà essere possibile indicare dei test, da effettuare per verificarne il soddisfacimento da parte del prodotto;
 			\item nessun requisito dovrà risultare ambiguo;
-			\item tutti i requisiti che il prodotto andrà a soddisfare, saranno stati precedentemente approvati dai committenti.
+			\item tutti i requisiti che il prodotto andrà a soddisfare, saranno stati precedentemente approvati dal proponente.
 		\end{itemize}
+		
 		\subsubsection{Metriche}
+			
 			\paragraph{Adempimento requisiti obbligatori}
 			Indica la percentuale di requisiti obbligatori soddisfatti dal prodotto.
 			
 			\begin{itemize}
-				\item \textbf{nreqobblsodd} = numero requisiti obbligatori soddisfatti
-				\item \textbf{nreqobblid} = numero requisiti obbligatori identificati
-				\item \textbf{adempimento} =  \begin{math}
-				\frac{nreqobblsodd}{nreqobblid}
-				\end{math} 
+				\item \textbf{num\ped{ROS}} = numero di requisiti obbligatori soddisfatti
+				\item \textbf{num\ped{ROI}} = numero di requisiti obbligatori identificati 
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -193,14 +186,16 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					adempimento & [90,100] in [0,100]  & 100 in [0,100]
+					\begin{math}
+					\frac{num\ped{ROS}}{num\ped{ROI}}*100
+					\end{math}  & 100 in [0,100]  & 100 in [0,100]
 				\end{longtable}
 				\caption{Adempimento requisiti obbligatori}
 			\end{table}
 			
-	
 	\subsection{System/Software Architectural Design Process}
-	Il processo si pone come obiettivo quello di identificare una corrispondenza fra requisiti di sistema ed elementi del sistema. Nel corso dell’attività di progettazione, sia ad alto livello che di dettaglio, le componenti verranno inserite nella piattaforma NetBreakDB. Essa si occuperà di effettuare i tracciamenti fra le componenti e i requisiti che soddisfano, ed inoltre, il tracciamento tra le relazioni presenti e le varie componenti.
+	Il processo si pone come obiettivo quello di identificare una corrispondenza fra requisiti di sistema ed elementi del sistema. Nel corso dell’attività di Progettazione, sia ad alto livello che di dettaglio, le componenti verranno inserite nella piattaforma \textit{NetBreakDB}. Essa si occuperà di effettuare i tracciamenti fra le componenti e i requisiti che soddisfano, ed inoltre, il tracciamento tra le relazioni presenti e le varie componenti.
+		
 		\subsubsection{Obiettivi}
 		Durante lo svolgimento delle attività previste da questo processo, il team punterà a definire
 		un’architettura adatta agli scopi del progetto:
@@ -217,7 +212,7 @@
 			Tale indicazione consente di stabilire il livello di riuso implementato.
 			
 			\begin{itemize}
-				\item \textbf{increm} = incrementato un contatore ogni volta che un modulo diverso i richiama lo stesso modulo j con i != j
+				\item \textbf{FI} = contatore che viene incrementato nel momento in cui viene individuato un modulo che, durante la sua esecuzione, chiama il modulo in oggetto
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -226,12 +221,10 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					increm & increm >=0  & increm >= 3
+					FI & \begin{math}\geq{0} \end{math}   & \begin{math}\geq{3} \end{math} 
 				\end{longtable}
 				\caption{Fan In}
 			\end{table}
-			
-		
 			
 			\paragraph{Fan Out}
 			In riferimento ad un modulo software, misura quanti moduli vengono utilizzati durante la
@@ -239,9 +232,8 @@
 			Tale indicazione consente di stabilire il livello di accoppiamento implementato.
 			
 			\begin{itemize}
-				\item \textbf{increm} = incrementato un contatore ogni volta lo stesso modulo utilizza un modulo non precedentemente utilizzato da esso
-
-		\end{itemize}
+				\item \textbf{FO} = contatore che viene incrementato nel momento in cui viene individuato un modulo utilizzato dal modulo in oggetto, durante la sua esecuzione
+			\end{itemize}
 	
 		\begin{table}[H]
 		\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
@@ -249,16 +241,15 @@
 			\rowcolor{Gray}
 			\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 			\hline
-			increm & [0,5] & [0,1]
+			FO & [0,5] & [0,1]
 		\end{longtable}
 		\caption{Fan Out}
-		\end{table}
-
-			
+		\end{table}			
 	
 	\subsection{Software Architectural Design Process}
 	Lo scopo del processo è fornire una progettazione di minimo del prodotto che andrà a soddisfare i requisiti individuati.
 	Tutte le attività presenti in questo processo portano alla produzione del documento Specifica Tecnica.
+		
 		\subsubsection{Obiettivi}
 			\begin{itemize}
 				\item fornire un'architettura ad alto livello del prodotto software, in grado di soddisfare i requisiti individuati;
@@ -270,21 +261,23 @@
 	Lo scopo del processo è fornire una progettazione dettagliata del prodotto che andrà ad implementare i requisiti individuati.
 	Sarà necessario effettuare un’analisi dettagliata delle componenti individuate durante l'attività di progettazione
 	architetturale, suddividendole in unità che siano facilmente codificabili e testabili.
+		
 		\subsubsection{Obiettivi}
 		Le attività svolte dovranno raggiungere i seguenti obiettivi:
 		\begin{itemize}
 			\item il livello di dettaglio della progettazione dovrà indicare tutti i metodi, con i relativi parametri e campi dati, forniti da ciascuna classe;
-			\item la struttura a basso livello dell’architettura e le relazioni fra le varie unità software concepite saranno esposte nel documento di Definizione di Prodotto, il quale definirà esattamente cosa implementare;
+			\item la struttura a basso livello dell’architettura e le relazioni fra le varie unità software concepite saranno esposte nel documento \textit{Definizione di Prodotto}, il quale definirà esattamente cosa implementare;
 		\end{itemize}
 		
 		\subsubsection{Metriche}
+			
 			\paragraph{Numero di metodi per classe}
 			Indica il numero di metodi definiti in una classe.
 			Un valore molto alto potrebbe indicare una
 			non buona decomposizione delle funzionalità a livello logico.
 			
 			\begin{itemize}
-				\item \textbf{nmetodi} = viene implementato in netbreakdb un database relazionale che tiene traccia dei metodi di una classe e da qui \`{e} possibile estrarne il numero
+				\item \textbf{num\ped{MetCl}} = contatore che indica il numero di metodi definiti in una classe
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -293,7 +286,7 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					nmetodi & [1,10] & [1,5]
+					num\ped{MetCl} & [1,10] & [1,5]
 				\end{longtable}
 				\caption{Numero di metodi per classe}
 			\end{table}
@@ -304,7 +297,7 @@
 			Un valore molto alto potrebbe indicare un'eccessiva complessità del metodo, il quale potrebbe non essere sufficientemente scomposto in sotto-metodi.
 			
 			\begin{itemize}
-				\item \textbf{nparametri} = viene implementato in netbreakdb un database relazionale che tiene traccia del numero dei parametri dei metodi di una classe e da qui \`{e} possibile estrarne il numero
+				\item \textbf{num\ped{Par}} = contatore che indica il numero di parametri passati ad un metodo
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -313,19 +306,17 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					nparametri & [0,8] & [0,4]
+					num\ped{Par} & [0,8] & [0,4]
 				\end{longtable}
 				\caption{Numero parametri per metodo}
 			\end{table}
 			
-		
-		
 			\paragraph{Numero di attributi per classe}
 			Indica il numero di attributi di una classe.
 			Un valore molto alto potrebbe suggerire la necessità di suddividere tale classe in più classi differenti correlate tra loro.
 			
 			\begin{itemize}
-				\item \textbf{nattributi} = viene implementato in netbreakdb un database relazionale che tiene traccia del numero di attributi di una classe e da qui \`{e} possibile estrarne il numero
+				\item \textbf{num\ped{AttrCl}} = contatore che indica il numero di attributi per una determinata classe
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -334,7 +325,7 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					nattributi & [0,12] & [2,8]
+					num\ped{AttrCl} & [0,12] & [2,8]
 				\end{longtable}
 				\caption{Numero di attributi per classe}
 			\end{table}
@@ -343,7 +334,7 @@
 	\subsection{Software Construction Process}
 	Questo processo definisce le principali attività volte alla produzione di unità software eseguibili, che
 	rispettino quanto prodotto durante la progettazione.
-	Nell’attività di codifica, il \textit{\Progr} dovrà semplicemente attenersi a quanto indicato nel documento Definizione di Prodotto. Inoltre, sarà necessario procedere con la codifica dei test individuati in sede di progettazione, al fine di verificare il corretto funzionamento delle varie unità prodotte.
+	Nell’attività di Codifica, il \textit{\Progr} dovrà semplicemente attenersi a quanto indicato nel documento \textit{Definizione di Prodotto}. Inoltre, sarà necessario procedere con la codifica dei test individuati in sede di progettazione, al fine di verificare il corretto funzionamento delle varie unità prodotte.
 		
 		\subsubsection{Obiettivi}
 		Affinchè le unità software prodotte risultino di qualità, il team ha individuato i seguenti obiettivi:
@@ -355,13 +346,15 @@
 		\end{itemize}
 		
 		\subsubsection{Metriche}
+			
 			\paragraph{Complessità Ciclomatica}
 			Indica la complessità di funzioni, moduli, metodi o classi di un programma, misurando il numero
 			di cammini linearmente indipendenti attraverso il grafo di controllo di flusso.
 			Alti valori di complessità ciclomatica implicano una ridotta manutenibilità del codice; viceversa, bassi valori potrebbero determinare una scarsa efficienza dei metodi.
 			
 				\begin{itemize}
-				\item \textbf{ciclomcompless} = n° archi - n° nodi + 2 
+				\item \textbf{num\ped{Archi}} = numero di archi del grafo di controllo di flusso
+				\item \textbf{num\ped{Nodi}} = numero di nodi del grafo di controllo di flusso
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -370,7 +363,7 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					ciclomcompless & [0,10] & [3,10]
+					num\ped{Archi} - num\ped{Nodi} + 2 & [3,12] & [1,10]
 				\end{longtable}
 				\caption{Complessità Ciclomatica}
 			\end{table}
@@ -381,7 +374,8 @@
 			Un valore elevato implica un’alta complessità ed un basso livello di astrazione del codice.
 			
 			\begin{itemize}
-				\item \textbf{increm} = variabile che incrementa a ogni chiamata a funzioni da un certo metodo
+				\item \textbf{nesting} = contatore che indica il numero di chiamate a funzioni o procedure
+				presenti all’interno di un metodo
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -390,12 +384,10 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					increm & [1,8] & [1,4]
+					nesting & [1,8] & [1,4]
 				\end{longtable}
 				\caption{Numero di livelli di annidamento}
 			\end{table}
-			
-	
 		
 			\paragraph{Linee di commento}
 			Indica la percentuale di linee di commento presenti all’interno del codice sorgente; la loro presenza
@@ -403,11 +395,8 @@
 			prodotto.
 			
 			\begin{itemize}
-				\item \textbf{nlineecomm} = numero linee di commento presenti nel codice
-				\item \textbf{sloc} = sloc totali prodotte
-				\item \textbf{percentcomme} =  \begin{math}
-				\frac{nlineecomm}{sloc}
-				\end{math} 
+				\item \textbf{num\ped{LComm}} = numero di linee di commento presenti nel codice
+				\item \textbf{num\ped{SLOC}} = numero di Source Line Of Code totali prodotte 
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -416,12 +405,12 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					percentcomme & [20,100] in [0, 100] & [35,100] in [0,100]
+					\begin{math}
+					\frac{num\ped{LComm}}{num\ped{SLOC}}*100
+					\end{math}  & [20,100] in [0,100] & [35,100] in [0,100]
 				\end{longtable}
 				\caption{Linee di commento}
 			\end{table}
-			
-		
 	
 	\subsection{System/Software Qualification Testing Process}
 	Lo scopo del processo è quello di assicurare che ogni requisito individuato sia stato implementato nel prodotto.
@@ -440,11 +429,8 @@
 			Indica la percentuale di test di unità eseguiti.
 			
 			\begin{itemize}
-				\item \textbf{ntues} = numero Test Unità eseguiti
-				\item \textbf{ntupian} = numero Test Unità panificati
-				\item \textbf{testu} =  \begin{math}
-				\frac{ntues}{ntupian}
-				\end{math} 
+				\item \textbf{num\ped{TUE}} = numero di test di unità eseguiti
+				\item \textbf{num\ped{TUP}} = numero di test di unità panificati
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -453,21 +439,19 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					testu & [95,100] in [0, 100] & 100 in [0,100]
+					\begin{math}
+					\frac{num\ped{TUE}}{num\ped{TUP}}*100
+					\end{math} & [95,100] in [0,100] & 100 in [0,100]
 				\end{longtable}
 				\caption{Test di Unità}
 			\end{table}
 		
-			
 			\paragraph{Test di Integrazione}
 			Indica la percentuale di test di integrazione eseguiti.
 			
 			\begin{itemize}
-				\item \textbf{nties} = numero Test Integrazione eseguiti
-				\item \textbf{ntipian} = numero Test Integrazione panificati
-				\item \textbf{testi} =  \begin{math}
-				\frac{nties}{ntipian}
-				\end{math} 
+				\item \textbf{num\ped{TIE}} = numero di test di integrazione eseguiti
+				\item \textbf{num\ped{TIP}} = numero di test di integrazione pianificati
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -476,21 +460,19 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					testi & [65,100] in [0, 100] & [75, 100] in [0,100]
+					\begin{math}
+					\frac{num\ped{TIE}}{num\ped{TIP}}*100
+					\end{math} & [65,100] in [0, 100] & [75,100] in [0,100]
 				\end{longtable}
 				\caption{Test di Integrazione}
 			\end{table}
-			
 			
 			\paragraph{Test di Sistema}
 			Indica la percentuale di test di sistema eseguiti.
 			
 			\begin{itemize}
-				\item \textbf{ntses} = numero Test Sistema eseguiti
-				\item \textbf{ntspian} = numero Test Sistema panificati
-				\item \textbf{tests} =  \begin{math}
-				\frac{ntses}{ntspian}
-				\end{math} 
+				\item \textbf{num\ped{TSE}} = numero di test di sistema eseguiti
+				\item \textbf{num\ped{TSP}} = numero di test di sistema pianificati
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -499,21 +481,19 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					tests & [75,100] in [0, 100] & [85, 100] in [0,100]
+					\begin{math}
+					\frac{num\ped{TSE}}{num\ped{TSP}}*100
+					\end{math} & [75,100] in [0,100] & [85,100] in [0,100]
 				\end{longtable}
 				\caption{Test di Sistema}
 			\end{table}
-			
 			
 			\paragraph{Test superati}
 			Indica la percentuale di test totali superati.
 			
 			\begin{itemize}
-				\item \textbf{ntestsup} = numero Test superati
-				\item \textbf{ntesteseg} = numero Test eseguiti
-				\item \textbf{testsuper} =  \begin{math}
-				\frac{ntestsup}{ntesteseg}
-				\end{math} 
+				\item \textbf{num\ped{TS}} = numero di test superati
+				\item \textbf{num\ped{TE}} = numero di test eseguiti
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -522,15 +502,13 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					testsuper & [95,100] in [0, 100] & 100 in [0,100]
+					\begin{math}
+					\frac{num\ped{TS}}{num\ped{TE}}*100
+					\end{math}  & [95,100] in [0,100] & 100 in [0,100]
 				\end{longtable}
-				\caption{Test di Validazione}
+				\caption{Test superati}
 			\end{table}
 			
-			
-			
-
-	
 	\subsection{Software Documentation Management Process}
 	Questo processo ha l'obiettivo di produrre e manutenere le informazioni sul software prodotte dai processi
 	attuati, attraverso un'opportuna documentazione.
@@ -544,15 +522,14 @@
 		\subsubsection{Obiettivi}
 		Il processo di documentazione dovrà perseguire le seguenti direttive:
 			\begin{itemize}
-				\item la documentazione prodotta dovrà essere chiara e comprensibile a tutti gli stakeholderG e
-				sarà resa disponibile alle parti interessate per la consultazione;
-				\item ogni forma di ambiguità sul significato di un termine utilizzato verrà eliminata grazie al
-				Glossario;
+				\item la documentazione prodotta dovrà essere chiara e comprensibile a tutti gli stakeholder e sarà resa disponibile alle parti interessate per la consultazione;
+				\item ogni forma di ambiguità sul significato di un termine utilizzato verrà eliminata grazie al documento \textsc{Glossario 2\_0\_0.pdf};
 				\item la documentazione prodotta sarà sempre aggiornata ed allineata allo stato attuale del
 				processo di sviluppo del prodotto.
 			\end{itemize}
 		
 		\subsubsection{Metriche}
+			
 			\paragraph{Indice Gulpease}
 			L'indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana.
 			Rispetto ad altri indici, questo ha il vantaggio di utilizzare la lunghezza delle parole in lettere, anziché in sillabe, semplificandone il calcolo automatico. L'indice Gulpease considera due variabili linguistiche:
@@ -562,12 +539,10 @@
 			\end{itemize}
 			I risultati sono compresi tra 0 e 100, dove il valore 100 indica la leggibilità più alta, mentre il valore 0 la leggibilità più bassa.
 			
-			
 			\begin{itemize}
-				\item \textbf{gulpease} = 89+ \begin{math}
-				\frac{300*num frasi-10*num lett}{num par}
-				\end{math}
-				
+				\item \textbf{num\ped{Frasi}} = numero di frasi
+				\item \textbf{num\ped{Lettere}} = numero di lettere
+				\item \textbf{num\ped{Parole}} = numero di parole
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -576,7 +551,9 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					gulpease & [40,100] in [0, 100] & 100 in [0,100]
+					\begin{math}89+
+					\frac{300*num\ped{Frasi}-10*num\ped{Lettere}}{num\ped{Parole}}
+					\end{math} & [40,100] in [0,100] & [60,100] in [0,100]
 				\end{longtable}
 				\caption{Indice Gulpease}
 			\end{table}
@@ -585,11 +562,16 @@
 	\subsection{Software Verification Process}
 	Questo processo ha lo scopo di verificare se un qualsiasi elemento del sistema soddisfa in modo esaustivo i requisiti ad esso associati.
 	Durante le varie attività di revisione della documentazione, gli errori più frequenti rilevati verranno
-	riportati in un documento apposito, in modo tale da velocizzare le successive attività di inspection.
+	riportati in un documento apposito, in modo tale da velocizzare le successive attività di \textit{Inspection}.
 	Inoltre, per ogni test effettuato verrà tenuto il tracciamento del suo esito.
 		
 		\subsubsection{Obiettivi}
-		
+		Al fine di garantire qualità durante questo processo, il team ha fissato i seguenti obiettivi:
+		\begin{itemize}
+			\item la documentazione verrà verificata attraverso la tecnica \textit{Inspection}, poiché permette di risparmiare tempo e costi;
+			\item i test dinamici effettuati sui vari elementi saranno automatizzati il più possibile;
+			\item i test dinamici effettuati sui vari elementi del software copriranno una grande parte dei possibili casi d'uso.
+		\end{itemize}
 		
 		\subsubsection{Metriche}
 			\paragraph{Code Coverage}
@@ -598,12 +580,8 @@
 			Per ottenere un indice basso è necessario che l'implementazione dei metodi sia molto semplice, in modo da non richiedere alcuna attività di testing. Ad esempio, i metodi getter e setter.
 			
 			\begin{itemize}
-				\item \textbf{lineemonitor} = numero linee codice monitorato da test
-				\item \textbf{lineeimplem} = numero linee codice implementato in sw
-				\item \textbf{coverage} = \begin{math}
-				\frac{lineemonitor}{lineeimplem}
-				\end{math}
-				
+				\item \textbf{num\ped{LM}} = numero di linee di codice monitorato dai test
+				\item \textbf{num\ped{LI}} = numero di linee di codice implementate nel software
 			\end{itemize}
 			
 			\begin{table}[H]
@@ -612,9 +590,9 @@
 					\rowcolor{Gray}
 					\textbf{Metodo di calcolo} & \textbf{Range accettazione} & \textbf{Range ottimale} \\
 					\hline
-					coverage & [80,100] in [0, 100] & 100 in [0,100]
+					\begin{math}
+					\frac{num\ped{LM}}{num\ped{LI}}*100
+					\end{math} & [50,100] in [0,100] & [75,100] in [0,100]
 				\end{longtable}
 				\caption{Code Coverage}
 			\end{table}
-			
-	
