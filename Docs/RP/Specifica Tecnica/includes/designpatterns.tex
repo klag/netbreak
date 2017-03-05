@@ -13,7 +13,7 @@ L’Abstract Factory è costituito da 5 elementi:
 	\item \textbf{Client}: utilizza l’AbstractFactory per generare i prodotti concreti all’interno del sistema.
 \end{itemize}
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{IMG/abstract-pattern}
 	\caption{Design pattern Abstract Factory}
@@ -33,7 +33,7 @@ I punti di forza di questo design pattern sono:
 Il Publish-Subscribe è un design pattern utilizzato per la comunicazione asincrona fra diversi processi, oggetti o altri agenti. I mittenti e i destinatari dialogano tramite data manager definiti come Broker o Dispatcher che svolgono la funzione di store-and-forward.
 I mittenti (publisher) pubblicano i loro messaggi sui data manager e i destinatari (subscriber) si rivolgono al data manager abbonandosi (subscribing) alla ricezione del messaggio a cui sono interessati. Per garantire un sistema scalabile i publisher non sanno quanti e quali sono i subscriber e viceversa. 
 Con l'utilizzo del framework MeteorJS la componente Broker o Dispatcher è completamente trasparente al programmatore, quindi è necessario pubblicare i dati e abbonarsi ad essi e MeteorJS si occuperà della comunicazione front-end/back-end.
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.5\linewidth]{IMG/pubsub}
 	\caption{Design pattern Publish - Subscribe}
@@ -49,7 +49,7 @@ I punti di forza di questo design pattern sono:
 \subsection{Singleton}
 Il Singleton è un design pattern creazionale che ha lo scopo di garantire che di una determinata classe venga creata una e una sola istanza, e di fornire un punto di accesso globale a tale istanza.
 Gli elementi caratteristici fondamentali per l'implementazione di questo pattern sono due: un costruttore privato, per evitare che la classe possa essere istanziata arbitrariamente, e un metodo statico per accedere alla singola istanza.
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=0.4\linewidth]{IMG/singleton_pattern}
 	\caption{Design pattern Singleton}
