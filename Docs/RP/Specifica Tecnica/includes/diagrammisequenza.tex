@@ -1,0 +1,36 @@
+\newpage
+\section{Diagrammi di attività}
+\subsection{Introduzione}
+Un Diagramma di sequenza) è un diagramma previsto dall'UML utilizzato per descrivere uno scenario.
+Uno scenario è una determinata sequenza di azioni in cui tutte le scelte sono state già effettuate; in pratica nel diagramma non compaiono scelte, né flussi alternativi.
+Il gruppo ha deciso di prendere in esame la situazione di chiamata all'API Gateway suddividendo la sequenza in due parti.
+
+\subsection{Diagramma di sequenza relativa alla chiamata di una API}
+\subsubsection{Diagramma di sequenza di gestione della chiamata}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{"IMG/Sequence Diagram0"}
+	\caption{Diagramma di sequenza di gestione della chiamata}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Precondizioni}: Il client ha effettuato una chiamata ad una API;
+	\item \textbf{Postcondizioni}: La richiesta arriva all'API Gateway Manager che la processa;
+	\item \textbf{Descrizione}: il client effettua una chiamata creando un oggetto API Call. L'oggetto API Call viene aggiunto alla coda QueueAPICall in attesa di essere prelevato dall'API Gateway Manager per la sua esecuzione. Quando la chiamata verrà processata i suoi dati verranno salvati nel Buffer.
+\end{itemize}
+
+\newpage
+\subsubsection{Diagramma di sequenza dell'API Gateway Manager}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{"IMG/Sequence Diagram1"}
+	\caption{Diagramma di sequenza dell'API Gateway Manager}
+\end{figure}
+
+
+\begin{itemize}
+	\item \textbf{Precondizioni}: La richiesta arriva all'API Gateway Manager che la processa;
+	\item \textbf{Postcondizioni}: Il client riceve la risposta alla sua chiamata e i dati relativi alla SLA, se abilitata, sono stati salvati nel Database;
+	\item \textbf{Descrizione}: L'API Gateway Manager invoca i metodi del Verifier per eseguire i controlli necessari per verificare l'autenticità della chiamata. All'interno del Verifier viene deciso in modo casuale se effettuare il log della SLA.
+	Conclusi questi controlli preliminari con successo, il Manager invoca i metodi di RequestForwarder che si occupano di recuperare l'indirizzo dell'API invocata ed salvarlo nel Service Registry, effettua un salvataggio relativo alla SLA e conclude la sua esecuzione con la chiamata all'API target. Il Manager invoca i metodi del ResponseForwarder, il quale si occupa di effettuare il salvataggio relativo alla SLA, diminuire il campo Residue nel Database e inviare la risposta al Client chiamante. Infine il Manager si occupa di salvare il record della SLA nel Database.  
+\end{itemize}
