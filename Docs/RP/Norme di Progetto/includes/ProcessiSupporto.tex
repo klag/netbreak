@@ -72,8 +72,10 @@
 
 			\paragraph{Indice}
 			Ogni documento, ad eccezione dei verbali, deve possedere un indice contenente tutte le sezioni presenti nel documento. L'indice è ordinato nella sequenza in cui appaiono i capitoli, le sezioni e sottosezioni, e contiene il titolo di ognuna. 
+			\begin{comment}
 			Se nel documento sono presenti immagini o tabelle, occorre indicarle con il relativo indice.
-
+			\end{comment}
+			
 			\paragraph{Intestazione e piè di pagina}
 			Tutte le pagine del documento, ad eccezione della prima, hanno un'intestazione e un piè di pagina. L'intestazione è suddivisa in due parti:
 			\begin{itemize}
@@ -95,7 +97,7 @@
 					\item \textit{Corsivo}: deve essere utilizzato per:
 					\begin{itemize}
 						\item Citazioni;
-						\item Parole del glossario (unitamente ad una G maiuscola in pedice);
+						\item Parole del glossario (unitamente ad una G maiuscola in pedice) alla loro prima occorrenza nel documento di riferimento;
 						\item Riferimenti ai ruoli;
 						\item Riferimento all'intero gruppo.
 					\end{itemize}
@@ -170,7 +172,7 @@
 	Il processo di Verifica e Validazione ha lo scopo di controllare ed assicurare che documentazione e software prodotti rispecchino quanto previsto dai requisiti. In particolare, la verifica serve a stabilire che il prodotto rispetti le specifiche, mentre la validazione accerta che le specifiche siano rispettate nel modo più consono.
 
 		\subsubsection{Indice Gulpease}
-		Per verificare l'indice di leggibilità dei documenti, così come definito nel documento \textsc{PianoDiQualifica 2\_0\_0.pdf}, si è deciso di utilizzare uno strumento realizzato da un gruppo degli anni precedenti. Il calcolo dell'indice Gulpease è effettuato da uno script \textit{PHP\ped{G}} che analizza i vari file \textit{.tex} all'interno di una cartella e restituisce il nome del documento, il valore dell'indice e un'indicazione se il valore è superiore al minimo prefissato. 
+		Per verificare l'indice di leggibilità dei documenti, così come definito nel documento \textsc{PianoDiQualifica 2\_0\_0.pdf}, si è deciso di utilizzare uno strumento realizzato da un gruppo degli anni precedenti. Il calcolo dell'indice Gulpease è effettuato direttamente attraverso la piattaforma \textit{NetBreakDB}, la quale è in grado di analizzare i vari file \textit{.tex} all'interno di una cartella e restituire il nome del documento, il valore dell'indice e un'indicazione se il valore è superiore al minimo prefissato. 
 		Questo script è un ottimo strumento per automatizzare il lavoro, in quanto, dopo alcune modifiche, è in grado di esportare i risultati in codice \LaTeX e semplificarne l'integrazione, indicando in quali documenti è necessario intervenire per migliorarne la leggibilità del testo.
 		
 		\subsubsection{Analisi}
