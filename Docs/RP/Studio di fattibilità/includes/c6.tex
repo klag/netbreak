@@ -3,21 +3,21 @@
 
 \subsection{Descrizione}
 
-Il capitolato proposto da Zucchetti SPA consiste nella creazione di un editor \textit{UML\ped{G}}, che a partire dal diagramma delle classi, diagramma delle attività e altre possibili tipologie di diagrammi, generi il codice corrispondente all'applicazione descritta. Il linguaggio di implementazione di un progetto generato automaticamente potrà essere \textit{Java\ped{G}} o \textit{JavaScript\ped{G}}. La caratteristica peculiare del progetto riguarda la possibilità di operare delle decisioni che, sotto forma di input al generatore di codice, diano risultati diversi nel codice prodotto, a parità di linguaggio, per diagrammi di uno stesso progetto. {\MakeUppercase{è}} necessario integrare anche un sistema di \textit{machine learning\ped{G}} che tenga conto delle modifiche usualmente effettuate dopo la generazione del codice, in modo da rendere sempre più definitivo il codice prodotto. Ciò comporterebbe una diminuzione del numero di modifiche necessarie da parte dell'utente dell'editor.
+Il capitolato proposto da Zucchetti SPA consiste nella creazione di un editor \textit{UML\ped{G}}, che a partire dal diagramma delle classi, diagramma delle attività e altre possibili tipologie di diagrammi, generi il codice corrispondente all'applicazione descritta. Il linguaggio di implementazione di un progetto generato automaticamente potrà essere Java o JavaScript. La caratteristica peculiare del progetto riguarda la possibilità di operare delle decisioni che, sotto forma di input al generatore di codice, diano risultati diversi nel codice prodotto, a parità di linguaggio, per diagrammi di uno stesso progetto. {\MakeUppercase{è}} necessario integrare anche un sistema di \textit{machine learning\ped{G}} che tenga conto delle modifiche usualmente effettuate dopo la generazione del codice, in modo da rendere sempre più definitivo il codice prodotto. Ciò comporterebbe una diminuzione del numero di modifiche necessarie da parte dell'utente dell'editor.
 
 \subsection{Dominio applicativo}
 
-Lo scopo di questo prodotto è fornire agli sviluppatori software uno strumento per l'implementazione automatica, totale o parziale, del codice di un progetto, a partire dai diagrammi \textit{UML\ped{G}} dello stesso. Il codice generato utilizzando pattern di progetto risulterà standardizzato,
+Lo scopo di questo prodotto è fornire agli sviluppatori software uno strumento per l'implementazione automatica, totale o parziale, del codice di un progetto, a partire dai diagrammi UML dello stesso. Il codice generato utilizzando pattern di progetto risulterà standardizzato,
 fornendo una base comune più facilmente estendibile e/o modificabile dagli implementatori. Gli utenti del prodotto in questione possono essere: l'amministratore, i progettisti, i programmatori e i verificatori di un progetto software.
 
 \subsection{Tecnologie}
 
-Per la realizzazione dell'editor UML\ped{\textit{G}} richiesto, sono necessarie buone conoscenze per lo sviluppo di applicativi web:
+Per la realizzazione dell'editor UML richiesto, sono necessarie buone conoscenze per lo sviluppo di applicativi web:
 \begin{itemize}
-	\item \textbf{\textit{HTML5\ped{G}}}, \textbf{\textit{CSS3\ped{G}}} e \textbf{\textit{JavaScript\ped{G}}}, per la parte client (obbligatorio);
-	\item \textbf{\textit{Framework\ped{G}}} a scelta open source;
-	\item \textbf{\textit{Java\ped{G}}} con \textit{server\ped{G}} \textbf{\textit{Tomcat\ped{G}}} o \textbf{\textit{JavaScript\ped{G}}} con \textit{server\ped{G}} \textbf{\textit{Node.js\ped{G}}}, per la parte \textit{server\ped{G}}	(obbligatorio);
-	\item \textbf{\textit{OrientDB\ped{G}}} o altro \textit{database NoSQL\ped{G}} a grafo.
+	\item \textbf{HTML5}, \textbf{CSS3} e \textbf{JavaScript}, per la parte client (obbligatorio);
+	\item \textbf{framework} a scelta open source;
+	\item \textbf{Java} con server \textbf{\textit{Tomcat\ped{G}}} o \textbf{JavaScript} con server \textbf{Node.js}, per la parte server	(obbligatorio);
+	\item \textbf{\textit{OrientDB\ped{G}}} o altro database NoSQL a grafo.
 \end{itemize}
 
 \subsection{Aspetti critici}
@@ -28,9 +28,9 @@ Gli aspetti cruciali nello sviluppare un generatore automatico di software consi
 
 Le motivazioni che hanno portato il gruppo a scartare il suddetto capitolato sono le seguenti:
 \begin{itemize}
-	\item {\MakeUppercase{è}} richiesta una conoscenza approfondita del linguaggio \textit{UML\ped{G}}, nonchè di una buona esperienza di utilizzo, che nessun membro del gruppo ancora possiede;
+	\item {\MakeUppercase{è}} richiesta una conoscenza approfondita del linguaggio UML, nonchè di una buona esperienza di utilizzo, che nessun membro del gruppo ancora possiede;
 	\item {\MakeUppercase{è}} necessaria la conoscenza di un gran numero di design pattern e della loro corretta applicazione, a seconda dei differenti contesti di utilizzo;
 	\item {\MakeUppercase{è}} necessario integrare un servizio
-	di \textit{machine learning\ped{G}}, che a partire dal codice, renda le compilazioni successive dei diagrammi di un progetto sempre più efficienti. Inoltre, si deve fornire codice finale pronto all'uso, ovvero che non ha bisogno di ulteriori modifiche;
+	di machine learning, che a partire dal codice, renda le compilazioni successive dei diagrammi di un progetto sempre più efficienti. Inoltre, si deve fornire codice finale pronto all'uso, ovvero che non ha bisogno di ulteriori modifiche;
 	\item Occorre cimentarsi nell'apprendimento autonomo dei database non relazionali.
 \end{itemize}
