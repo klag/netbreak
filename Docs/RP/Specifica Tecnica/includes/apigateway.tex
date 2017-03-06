@@ -63,41 +63,41 @@ Il package \textit{APIGatewayManager}, che rappresenta il servizio omonimo, cont
 \end{figure}
 \FloatBarrier
 
-\subparagraph{Verifier}
+\chapter{\textbf{Verifier}}
 \begin{itemize}
 	\item \textbf{Funzione del componente}: la classe rappresenta un microservizio che si occupa di verificare che la richiesta ricevuta all'API Gateway sia valida;
 	\item \textbf{Relazioni d'uso di altri componenti}: \textit{RequestForwarder};
 	\item \textbf{Attivit\`{a} svolte e dati trattati}: la classe controller\`{a} che l'utente sia un utente valido, che il microservizio esista e sia attivo, che l'API key dell'utente non sia scaduta e che la SLA associata alla richiesta sia rispettata.
 \end{itemize}
 
-\chapter{SLALogger}
+\chapter{\textbf{SLALogger}}
 \begin{itemize}
 	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare un oggetto che rappresenta gli intervalli di inizio e fine di una chiamata a un microservizio;
 	\item \textbf{Relazioni d'uso di altri componenti}: \textit{RequestForwarder}, \textit{ResponseForwarder};
 	\item \textbf{Attivit\`{a} svolte e dati trattati}:  la classe avr\`{a} il compito di salvare in un buffer la data di inizio e fine di una chiamata, sulla base dell'ID di quella chiamata, attraverso dei dati che ricever\`{a} dagli altri componenti dell'API Gateway.	
 \end{itemize}
 
-\chapter{RequestForwarder}
+\chapter{\textbf{RequestForwarder}}
 \begin{itemize}
 	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare un oggetto che avr\`{a} il compito di instradare la richiesta ricevuta al microservizio corretto e salvare i dati della richiesta;
 		\item \textbf{Relazioni d'uso di altri componenti}: \textit{ServiceRegistry}, \textit{SLALogger};
 		\item \textbf{Attivit\`{a} svolte e dati trattati}: la classe, sulla base delle informazioni dell'IP recuperato dal \textit{ServiceRegistry}, inoltrer\`{a} la richiesta ricevuta al microservizio corretto e richieder\`{a} allo \textit{SLALogger} di salvare i dati relativi al tempo di inizio della richiesta.
 \end{itemize}
 
-\chapter{ResponseForwarder}
+\chapter{\textbf{ResponseForwarder}}
 \begin{itemize}
 	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare un oggetto che avr\`{a} il compito di ricevere la risposta da parte di un microservizio sulla base di una chiamata al microservizio e salvare i dati relativi alla richiesta;
 	\item \textbf{Relazioni d'uso di altri componenti}: \textit{SLALogger};
 	\item \textbf{Attivit\`{a} svolte e dati trattati}: comunica con lo \textit{SLALogger} per salvare i dati circa il tempo di fine della richiesta, o in caso di esito negativo della richiesta, di apporre il corretto flag per segnalarlo. Inoltra, poi, i dati di risposta al client richiedente.
 \end{itemize}
 
-\chapter{Buffer}
+\chapter{\textbf{Buffer}}
 \begin{itemize}
 	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare una oggetto che rappresenta un buffer;
 	\item \textbf{Attivit\`{a} svolte e dati trattati}: contiene l'IP dell'host, l'ID dell'utente che ha effettuato la richiesta, l'API Key e il relativo ID, la policy di vendita e un flag relativo alla SLA, per indicare se è rispettata o meno.
 \end{itemize}
 
-\chapter{ServiceRegistry}
+\chapter{\textbf{ServiceRegistry}}
 \begin{itemize}
 	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare una classe oggetto che rappresenta un microservizio;
 	\item \textbf{Relazioni d'uso di altri componenti}: \textit{RequestForwarder};
