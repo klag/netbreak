@@ -29,6 +29,7 @@ Il lato front-end risulta così strutturato:
 
 Nella parte front-end sono dunque presenti i package View e ViewModel che rispecchiano l'architettura nativa dei framework da noi utilizzati.
 
+\begin{minipage}{\linewidth}
 \subsubsection{View}
 
 Il package per il componente View contiene i seguenti sub-packages:
@@ -45,7 +46,7 @@ Il package per il componente View contiene i seguenti sub-packages:
 	\item \textbf{Pages}: Il package \textit{Pages} contiene una classe astratta \textit{Page}. Essa è poi utilizzabile tramite una derivazione concreta di tale classe, e l'implementazione avviene a seconda di ciò che è necessario visualizzare. Tali implementazioni possono usufruire dei template, per gestire situazioni standardizzate.
 	\item \textbf{Templates}: Il package \textit{Templates} contiene un modello standard delle componenti utilizzabili per la rappresentazione. Ogni pagina che presenta situazioni e modelli analoghi può utilizzare un template già definito, per un maggior riuso, e per distinguere nettamente gli elementi contenuti in una pagina dalla loro realizzazione.
 \end{itemize}
-
+\end{minipage}
 
 \paragraph{Pages}
 
@@ -271,7 +272,7 @@ Il package per il componente View contiene i seguenti sub-packages:
 	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro della view che sar\`{a} usata per visualizzare una lista di transazioni e i dati a loro pertinenti.
 \end{itemize}
 
-
+\begin{minipage}{\linewidth}
 \subsubsection{ViewModel}
 
 Il package per il componente ViewModel contiene i seguenti sub-packages:
@@ -292,7 +293,7 @@ La componente \textit{ViewModel} ha il compito di realizzare il data-binding con
 	\item \textbf{Methods}: contiene le classi necessarie a Meteor per la corretta fruizione dei dati.
 	\item \textbf{Routers}: contiene la classe che esegue il routing dell'intera applicazione. 
 \end{itemize}
-
+\end{minipage}
 
 \paragraph{Controllers}
 
