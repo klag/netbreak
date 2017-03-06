@@ -4,7 +4,7 @@
 		\item Tipologia: riunione decisionale;
 		\item Redatto da: \DS;
 		\item Data: 13 febbraio 2017;
-		\item Luogo: LuF2;
+		\item Luogo: LuF2 - Plesso Paolotti;
 		\item Ora inizio: 13.45;
 		\item Ora fine: 18.20;
 		\item Presenti: \AN, \DAN, \DS, \AS, \NS, \MC;
@@ -12,7 +12,7 @@
 	\end{itemize}
 
 \section{Riassunto}
-Questa riunione aveva lo scopo di decidere una policy di vendita sensata per le API, in modo da poter poi concorrentemente aggiornare gli Use Case di \textsc{AnalisiDeiRequisiti 2\_0\_0} in base alla decisione presa e poter poi progettare la base di dati con i campi necessari a monitorare l'utilizzo dei microservizi. Abbiamo optato per tre diverse policy di vendita mutuamente esclusive, sulla base di tre tipologie di consumo delle API.
+Questa riunione aveva lo scopo di decidere una policy di vendita sensata per le API, in modo da poter poi concorrentemente aggiornare gli Use Case di \textsc{AnalisiDeiRequisiti 2\_0\_0.pdf} in base alla decisione presa e poter poi progettare la base di dati con i campi necessari a monitorare l'utilizzo dei microservizi. Abbiamo optato per tre diverse policy di vendita mutuamente esclusive, sulla base di tre tipologie di consumo delle API.
 
 
 \begin{itemize}
@@ -20,22 +20,22 @@ Questa riunione aveva lo scopo di decidere una policy di vendita sensata per le 
 Questa policy \`{e} stata pensata per API con traffico e tempo di utilizzo costanti. La vendita avverr\`{a} prima dell'uso a blocchi di $1*10^x$ o $2*10^x$ o $5*10^x$, con $x \in [2,3,4]$, resi disponibili a seconda della tipologia di utente e l'utilizzo potr\`{a} essere monitorato in tempo reale, con la possibilit\`{a} da parte di un utente di ricevere un'email raggiunto un opportuno $\epsilon$ di chiamate rimanenti.
 	
 	\begin{itemize}
-		\item \textbf{CM}: Costo mantenimento API Market per chiamata. Serve per evitare che API Market vada in perdita.
-		\item \textbf{CS}: Guadagno impostato dallo sviluppatore.
-		\item \textbf{\%APIMarket}: Percentuale trattenuta da API Market sul guadagno impostato.
+		\item \textbf{CM}: Costo mantenimento API Market per chiamata. Serve per evitare che API Market vada in perdita;
+		\item \textbf{CS}: Guadagno impostato dallo sviluppatore;
+		\item \textbf{\%APIMarket}: Percentuale trattenuta da API Market sul guadagno impostato;
 		\item \textbf{NC}: Numero di chiamate che il cliente vuole acquistare.
 	\end{itemize}
 	formula: $(CM + GS + \%APIMarket) * NC
 $
 
 	\item \textbf{Policy per traffico}: Si paga per ogni chiamata e per il traffico generato.
-Questa policy \`{e} stata pensata per API che richiedono il passaggio di dati pesanti (esempio. un rielaboratore di immagini). L'acquisto non avviene prima dell'uso, invece l'utilizzo viene monitorato per poi scalare l'importo dovuto dal conto dell'utente. C'\`{e} la possibilit\`{a} di ricevere un'email ogni volta che si supera una threshold pre-stabilita di importo dovuto.
+Questa policy \`{e} stata pensata per API che richiedono il passaggio di dati pesanti (esempio: un rielaboratore di immagini). L'acquisto non avviene prima dell'uso, invece l'utilizzo viene monitorato per poi scalare l'importo dovuto dal conto dell'utente. C'\`{e} la possibilit\`{a} di ricevere un'email ogni volta che si supera una threshold pre-stabilita di importo dovuto.
 	
 	\begin{itemize}
-		\item \textbf{CM}: Costo mantenimento API Market per chiamata. Serve per evitare che API Market vada in perdita.
-		\item \textbf{GpB}: Guadagno per Byte impostato dallo sviluppatore
-		\item \textbf{\%APIMarket}: Percentuale trattenuta da API Market sul guadagno impostato
-		\item \textbf{NB}: Numero Byte di traffico (ottenuti da Byte dei parametri in entrata + di ritorno)
+		\item \textbf{CM}: Costo mantenimento API Market per chiamata. Serve per evitare che API Market vada in perdita;
+		\item \textbf{GpB}: Guadagno per Byte impostato dallo sviluppatore;
+		\item \textbf{\%APIMarket}: Percentuale trattenuta da API Market sul guadagno impostato;
+		\item \textbf{NB}: Numero Byte di traffico (ottenuti da Byte dei parametri in entrata + di ritorno).
 	\end{itemize}
 	formula: $CM + (GpB + \%APIMarket) * NB
 $
@@ -44,10 +44,10 @@ $
 Questa policy \`{e} pensata per API che eseguono calcoli complessi e quindi richiedono tanto sforzo computazionale, ma non generano tanto traffico. L'acquisto non avviene prima dell'uso, invece l'utilizzo viene monitorato per poi scalare l'importo dovuto dal conto dell'utente. C'\`{e} la possibilit\`{a} di ricevere un'email ogni volta che si supera una threshold pre-stabilita di importo dovuto.
 	
 	\begin{itemize}
-		\item \textbf{CM}: Costo mantenimento API Market per chiamata. Serve ad evitare che API Market vada in perdita.
-		\item \textbf{GpMS}: Guadagno per Millisecondo impostato dallo sviluppatore
-		\item \textbf{\%APIMarket}: Percentuale trattenuta da API Market sul guadagno impostato
-		\item \textbf{NMS}: Numero millisecondi trascorsi tra l'invocazione della chiamata ed il ritorno della chiamata
+		\item \textbf{CM}: Costo mantenimento API Market per chiamata. Serve ad evitare che API Market vada in perdita;
+		\item \textbf{GpMS}: Guadagno per Millisecondo impostato dallo sviluppatore;
+		\item \textbf{\%APIMarket}: Percentuale trattenuta da API Market sul guadagno impostato;
+		\item \textbf{NMS}: Numero millisecondi trascorsi tra l'invocazione della chiamata ed il ritorno della chiamata.
 	\end{itemize}
 	formula: $CM + (GpMS + \%APIMarket) * NMS
 $
