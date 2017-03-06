@@ -9,32 +9,25 @@ Il package principale per il servizio API Gateway è rappresentato dal seguente 
 
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[scale=0.45]{UML/DiagrammiPackage/ApiGateway.png}
-	\caption{Package APIM::BackEnd::ApiGateway}
+	\includegraphics[scale=0.45]{UML/DiagrammiPackage/APIGateway.png}
+	\caption{Package APIM::BackEnd::APIGateway}
 \end{figure}
 
 
 Il package APIGateway, che rappresenta il servizio omonimo, contiene il seguente package:
 
 \begin{itemize}
-	\item \textbf{ApiGatewayManager}: questo package si occupa gestire le richieste in arrivo, instradare la richiesta al microservizio richiesto e di ovviare in modo opportuno alle condizioni di errore.
+	\item \textbf{APIGatewayManager}: questo package si occupa gestire le richieste in arrivo, instradare la richiesta al microservizio richiesto e di ovviare in modo opportuno alle condizioni di errore.
 \end{itemize}
 
 \paragraph{APICall}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare un oggetto che rappresenta la chiamata a un microservizio ricevuta da un client;
+	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare un oggetto che rappresenta la chiamata a un microservizio ricevuta da un client, che verrà poi inserita in QueueAPICall;
 	\item \textbf{Attivit\`{a} svolte e dati trattati}: la classe contiene un id che identifica univocamente una chiamata, un indirizzo IP per sapere dove restituire la risposta della chiamata e la API Key dell'utente;
-	\item \textbf{Relazioni d'uso di altri componenti}: \textit{QueueCall}, \textit{QueueAPICall}.
+	\item \textbf{Relazioni d'uso di altri componenti}: \textit{QueueAPICall}.
 \end{itemize}
 
 \paragraph{QueueAPICall}
-\begin{itemize}
-	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare una oggetto che contiene un riferimento a un oggetto QueueCall, il cui numero di istanze \`{e} finito;
-	\item \textbf{Attivit\`{a} svolte e dati trattati}:  Il suo compito principale sar\`{a} aggiungere la richiesta a un microservizio in coda tramite un riferimento a \textit{QueueCall};
-	\item \textbf{Relazioni d'uso di altri componenti}: \textit{QueueCall}.
-\end{itemize}
-
-\paragraph{QueueCall}
 \begin{itemize}
 	\item \textbf{Funzione del componente}: questa classe istanzier\`{a} un numero finito di oggetti, di numero controllato, in modo da garantire un buon servizio, che conterr\`{a} una struttura dati Vector, usata per contenere le APICall;
 	\item \textbf{Attivit\`{a} svolte e dati trattati}:  Il suo compito principale sar\`{a} registrare la richiesta a un microservizio;
@@ -47,37 +40,37 @@ Il package APIGateway, che rappresenta il servizio omonimo, contiene il seguente
 	\item \textbf{Relazioni d'uso di altri componenti}: \textit{APICall}.
 \end{itemize}
 
-\paragraph{GatewayManager}
+\paragraph{APIGatewayManager}
 \begin{figure}[!htbp]
 	\centering
 	\includegraphics[scale=0.45]{UML/DiagrammiPackage/APIGatewayManager.png}
-	\caption{Package APIM::BackEnd::ApiGateway::ApiGatewayManager}
+	\caption{Package APIM::BackEnd::APIGateway::APIGatewayManager}
 \end{figure}
 
-Il package APIGatewayManger, che rappresenta il servizio omonimo, contiene il seguente package:
+Il package APIGatewayManager, che rappresenta il servizio omonimo, contiene il seguente package:
 \begin{itemize}
-	\item \textbf{ApiGatewayManager}: questo package si occupa gestire le richieste in arrivo, instradare la richiesta al microservizio richiesto e di ovviare in modo opportuno alle condizioni di errore. Il suo compito \`{e} anche quello di monitorare  l'utilizzo dei microservizi.
+	\item \textbf{APIGatewayManager}: questo package si occupa gestire le richieste in arrivo, instradare la richiesta al microservizio richiesto e di ovviare in modo opportuno alle condizioni di errore. Il suo compito \`{e} anche quello di monitorare  l'utilizzo dei microservizi.
 \end{itemize}
 
-\subparagraph{ApiGatewayManager}
+\subparagraph{APIGatewayManager}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: questa classe istanzier\`{a} un oggetto che rappresenta un task ed avr\`{a} la funzione di avviare un Thread che gestir\`{a} le richieste correnti all'APIGateway usando i services;
-	\item \textbf{Relazioni d'uso di altri componenti}: \textit{QueueCall}.
+	\item \textbf{Funzione del componente}: questa classe istanzier\`{a} un oggetto che rappresenta un task ed avr\`{a} la funzione di avviare un Thread che gestir\`{a} le richieste correnti all'APIGateway, immagazzinate in QueueAPICall, usando i services. Inoltre salverà i dati della chiamata correntemente eseguita in Buffer, così da averli a disposizione per l'elaborazione;
+	\item \textbf{Relazioni d'uso di altri componenti}: \textit{QueueAPICall}, \textit{Buffer}, \textit{Verifier}, \textit{SLALogger}, \textit{RequestForwarder}, \textit{ResponseForwarder}, .
 \end{itemize}
 
 \subparagraph{Services}
 \begin{figure}[!htbp]
 	\centering
-	\includegraphics[scale=0.45]{UML/DiagrammiPackage/ApiGatewayManagerServices.png}
-	\caption{Package APIM::BackEnd::ApiGateway::ApiGatewayManager::Services}
+	\includegraphics[scale=0.45]{UML/DiagrammiPackage/APIGatewayManagerServices.png}
+	\caption{Package APIM::BackEnd::APIGateway::APIGatewayManager::Services}
 \end{figure}
 \FloatBarrier
 
 \subparagraph{Verifier}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: la classe rappresenta un microservizio che si occupa di verificare che la richiesta ricevuta all'ApiGateway sia valida;
-	\item \textbf{Attivit\`{a} svolte e dati trattati}: la classe controller\`{a} che l'utente sia un utente valido, che il microservizio esista e sia attivo, che l'ApiKey dell'utente non sia scaduta e la SLA associata alla richiesta sia rispettata;
-	\item \textbf{Relazioni d'uso di altri componenti}: RequestForwarder.
+	\item \textbf{Funzione del componente}: la classe rappresenta un microservizio che si occupa di verificare che la richiesta ricevuta all'APIGateway sia valida;
+	\item \textbf{Attivit\`{a} svolte e dati trattati}: la classe controller\`{a} che l'utente sia un utente valido, che il microservizio esista e sia attivo, che l'APIKey dell'utente non sia scaduta e la SLA associata alla richiesta sia rispettata;
+	\item \textbf{Relazioni d'uso di altri componenti}: \textit{RequestForwarder}.
 
 \end{itemize}
 
