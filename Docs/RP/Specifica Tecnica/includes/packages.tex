@@ -14,6 +14,7 @@ L'applicativo API Market è strutturato, come di consueto, in un lato Front-end 
 	\caption{Package APIM}
 \end{figure}
 
+\newpage
 \subsection{Front-end}
 
 Il lato front-end risulta così strutturato:
@@ -58,65 +59,65 @@ Il package per il componente View contiene i seguenti sub-packages:
 
 \subparagraph{Page}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: rappresenta una pagina web.
-	\item \textbf{Relazioni d’uso di altri componenti}: interfaccia di base da cui derivano le altre pagine web.
+	\item \textbf{Funzione del componente}: rappresenta una pagina web;
+	\item \textbf{Relazioni d’uso di altri componenti}: interfaccia di base da cui derivano le altre pagine web;
 	\item \textbf{Attività svolte e dati trattati}: definisce le caratteristiche minime che ogni pagina deve possedere.
 \end{itemize}
 
 \subparagraph{Index}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: rappresenta la pagina principale dell'API Market.
-	\item \textbf{Relazioni d’uso di altri componenti}: concretizza l'interfaccia Page e utilizza i template MainMenu e SearchForm.
-	\item \textbf{Attività svolte e dati trattati}: permette l'autentificazione dell'utente.
+	\item \textbf{Funzione del componente}: rappresenta la pagina principale dell'API Market;
+	\item \textbf{Relazioni d’uso di altri componenti}: concretizza l'interfaccia Page e utilizza i template MainMenu e SearchForm;
+	\item \textbf{Attività svolte e dati trattati}: permette l'autenticazione dell'utente e permette a un utente non autenticato consultare una lista di API.
 \end{itemize}
 
 \subparagraph{LoginPage}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: rappresenta la pagina di login.
-	\item \textbf{Relazioni d’uso di altri componenti}: concretizza l'interfaccia Page e utilizza il template LoginForm.
-	\item \textbf{Attività svolte e dati trattati}: permette l'autentificazione dell'utente.	
+	\item \textbf{Funzione del componente}: rappresenta la pagina di login;
+	\item \textbf{Relazioni d’uso di altri componenti}: concretizza l'interfaccia Page e utilizza i template MainMenu, LoginForm, PasswordRecoveryForm;
+	\item \textbf{Attività svolte e dati trattati}: permette l'autenticazione dell'utente o il recupero della password.
 \end{itemize}
 
 \subparagraph{RegistrationPage}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 	
+	\item \textbf{Funzione del componente}: rappresenta la pagina di registrazione;
+	\item \textbf{Relazioni d’uso di altri componenti}: concretizza l'interfaccia Page e utilizza il template MainMenu, RegistrationForm;
+	\item \textbf{Attività svolte e dati trattati}: permette la registrazione di un utente.
 \end{itemize}
 
 \subparagraph{ProfilePage}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 	
+	\item \textbf{Funzione del componente}: rappresenta la pagina dove sono presenti le informazioni di profilo di un utente;
+	\item \textbf{Relazioni d’uso di altri componenti}: concretizza l'interfaccia Page e utilizza i template MainMenu, ProfileForm, EditProfileForm, UserMenu, TransactionList, Transaction, MyAPIList;
+	\item \textbf{Attività svolte e dati trattati}: permette la consultazione dei dati di profilo a un utente registrato, la modifica dei dati di profilo, la visualizzazione delle API acquistate o registrate come lista o in dettaglio.
 \end{itemize}
 
 \subparagraph{AdministrationPage}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 	
+	\item \textbf{Funzione del componente}: rappresenta la pagina di un amministratore;
+	\item \textbf{Relazioni d’uso di altri componenti}: concretizza l'interfaccia Page e utilizza il template MainMenu, TransactionList, UserList, User, TransactionList, Transaction, SearchForm, SearchResult;
+	\item \textbf{Attività svolte e dati trattati}: permette a un Admin di moderare gli utenti, vedere una lista di utenti e di API con possibilit\`{a} di rimuovere un utente o un'API ed effettuare una ricerca su utenti o API vedendone il risultato.
 \end{itemize}
 
 \subparagraph{APIPage}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 	
+	\item \textbf{Funzione del componente}: rappresenta la pagina di un'API o di una lista di API;
+	\item \textbf{Relazioni d’uso di altri componenti}: concretizza l'interfaccia Page e utilizza i template MainMenu, APIList, API, SearchResult, MyAPIList, APIRegistrationForm, APIEditForm, CheckoutForm, SearchForm, SearchResult;
+	\item \textbf{Attività svolte e dati trattati}: permette a un utente di consultare i dati di un'API, di ricercare un'API e vederne il risultato a schermo, consultare un lista di proprie API acquistate o registrate e se le API sono proprie registrate di modificarle. \`{E} possibile acquistare un API e portare a termine l'acquisto tramite un form.
 \end{itemize}
 
 \subparagraph{SearchPage}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 	
+	\item \textbf{Funzione del componente}: rappresenta la pagina di ricerca;
+	\item \textbf{Relazioni d’uso di altri componenti}: concretizza l'interfaccia Page e utilizza i template MainMenu, SearchForm e SearchResult;
+	\item \textbf{Attività svolte e dati trattati}: permette la ricerca di un'API o un utente.	
 \end{itemize}
 
 \subparagraph{CategoryListPage}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 	
+	\item \textbf{Funzione del componente}: rappresenta la pagina di una categoria;
+	\item \textbf{Relazioni d’uso di altri componenti}: concretizza l'interfaccia Page e utilizza i template MainMenu, CategoryList e Category;
+	\item \textbf{Attività svolte e dati trattati}: permette la consultazione di un'API per categoria.
 \end{itemize}
 
 
@@ -130,144 +131,144 @@ Il package per il componente View contiene i seguenti sub-packages:
 	\caption{Package APIM::FrontEnd::View::Templates}
 \end{figure}
 
-\subparagraph{MainMnu}
+\subparagraph{MainMenu}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template del menu principale;
+	\item \textbf{Relazioni d’uso di altri componenti}: tutte le pagine derivate da Page;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro del menu che sar\`{a} presente su ogni pagina, la modifica del quale si rifletter\`{a} su tutte le view.
 \end{itemize}
 
 \subparagraph{UserMenu}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template del menu utente;
+	\item \textbf{Relazioni d’uso di altri componenti}: tutte le pagine derivate da Page di un utente autenticato;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro del menu utente
 \end{itemize}
 
 \subparagraph{LoginForm}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template del form per il login;
+	\item \textbf{Relazioni d’uso di altri componenti}: LoginPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro del form che sar\`{a} usato per autenticarsi all'applicazione web.
 \end{itemize}
 
 \subparagraph{RegistrationForm}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template del form per la registrazione;
+	\item \textbf{Relazioni d’uso di altri componenti}: RegistrationPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro del form che sar\`{a} usato per registrarsi all'applicazione web.
 \end{itemize}
 
 \subparagraph{PasswordRecoveryForm}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template del form per il recupero della password;
+	\item \textbf{Relazioni d’uso di altri componenti}: LoginPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro del form che sar\`{a} usato per recuperare la password.
 \end{itemize}
 
-\subparagraph{EditPorfileForm}
+\subparagraph{EditProfileForm}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template del form per la modifica del profilo utente;
+	\item \textbf{Relazioni d’uso di altri componenti}: ProfilePage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro del form che sar\`{a} usato per modificare il profilo.
 \end{itemize}
 
 \subparagraph{SearchForm}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template del form per la ricerca;
+	\item \textbf{Relazioni d’uso di altri componenti}: SearchPage;
+	\item \textbf{Attività svolte e dati trattati}:  \`{e} lo scheletro del form che sar\`{a} usato per la ricerca.
 \end{itemize}
 
 \subparagraph{SearchResultForm}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template del form per visualizzare i risultati della ricerca;
+	\item \textbf{Relazioni d’uso di altri componenti}: SearchPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro del form che sar\`{a} usato per visualizzare i risultati della ricerca.
 \end{itemize}
 
 \subparagraph{API}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}:  rappresenta il template della view usata per visualizzare i dati di un'API;
+	\item \textbf{Relazioni d’uso di altri componenti}: APIPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro della view che sar\`{a} usata per visualizzare i dati di un'API.
 \end{itemize}
 
 \subparagraph{APIList}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template della view usata per visualizzare una lista di API;
+	\item \textbf{Relazioni d’uso di altri componenti}: APIPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro della view che sar\`{a} usata per visualizzare una lista di API.
 \end{itemize}
 
 \subparagraph{Category}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template di una categoria;
+	\item \textbf{Relazioni d’uso di altri componenti}: CategoryListPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro della view che sar\`{a} usata per visualizzare una categoria.
 \end{itemize}
 
 \subparagraph{CategoryList}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template della view che sar\`{a} usata per visualizzare una lista di categorie;
+	\item \textbf{Relazioni d’uso di altri componenti}: CategoryListPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro della view che sar\`{a} usata per visualizzare una lista di categorie.
 \end{itemize}
 
 \subparagraph{APIRegistrationForm}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template del form per la registrazione di un'API;
+	\item \textbf{Relazioni d’uso di altri componenti}: RegistrationPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro del form che sar\`{a} usato per la registrazione di un'API.
 \end{itemize}
 
 \subparagraph{APIEditForm}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template del form per modificare un'API;
+	\item \textbf{Relazioni d’uso di altri componenti}: APIPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro del form che sar\`{a} usato per la modifica di un'API.
 \end{itemize}
 
 \subparagraph{CheckoutForm}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template del form per effettuare il checkout per l'acquisto un'API;
+	\item \textbf{Relazioni d’uso di altri componenti}: APIPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro del form che sar\`{a} usato per effettuare il checkout per l'acquisto un'API.
 \end{itemize}
 
 \subparagraph{User}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template di un utente;
+	\item \textbf{Relazioni d’uso di altri componenti}: AdministrationPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro della view che sar\`{a} usata per visualizzare un utente o i suoi dati.
 \end{itemize}
 
 \subparagraph{UserList}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template di una lista di utenti;
+	\item \textbf{Relazioni d’uso di altri componenti}: AdministrationPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro della view che sar\`{a} usata per visualizzare una lista di utenti e i dati a loro pertinenti.
 \end{itemize}
 
 \subparagraph{MyAPIList}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template di una lista di API;
+	\item \textbf{Relazioni d’uso di altri componenti}: APIPage, ProfilePage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro della view che sar\`{a} usata per visualizzare una lista di API e i dati a loro pertinenti.
 \end{itemize}
 
 \subparagraph{Transaction}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template di una transazione;
+	\item \textbf{Relazioni d’uso di altri componenti}: ProfilePage, AdministrationPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro della view che sar\`{a} usata per visualizzare una transazione e i dati a essa pertinenti.
 \end{itemize}
 
 \subparagraph{TransactionList}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: rappresenta il template di una lista di transazioni;
+	\item \textbf{Relazioni d’uso di altri componenti}: ProfilePage, AdministrationPage;
+	\item \textbf{Attività svolte e dati trattati}: \`{e} lo scheletro della view che sar\`{a} usata per visualizzare una lista di transazioni e i dati a loro pertinenti.
 \end{itemize}
 
 
@@ -312,113 +313,110 @@ La componente \textit{ViewModel} ha il compito di realizzare il data-binding con
 \subparagraph{ManageProfileController}
 \begin{itemize}
 	\item \textbf{Funzione del componente}: permette la gestione del proprio profilo utente.
-	\item \textbf{Relazioni d’uso di altri componenti}: utilizza i templates ...
+	\item \textbf{Relazioni d’uso di altri componenti}: utilizza i templates TransactionList, Transaction, EditProfileForm, MyAPIList
 	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di gestione che può svolgere un utente registrato, come gestire le proprie transazioni e vedere lo stato dei suoi abbonamenti. 
 \end{itemize}
 
 \subparagraph{SearchController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la gestione della ricerca.
+	\item \textbf{Relazioni d’uso di altri componenti}: utilizza i templates SearchForm, SearchResult
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di ricerca che può svolgere un utente non registrato o registrato, in base ai privilegi annessi.
 \end{itemize}
 
 \subparagraph{APIController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la gestione di un'API;
+	\item \textbf{Relazioni d’uso di altri componenti}: utilizza i templates TransactionList, Transaction, EditProfileForm, MyAPIList
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione con un'API.
 \end{itemize}
 
 \subparagraph{APIListController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
+	\item \textbf{Funzione del componente}: permette la gestione di una lista di API
 	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione con una lista di API.
 \end{itemize}
 
 \subparagraph{CategoryController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la gestione di una categoria;
+	\item \textbf{Relazioni d’uso di altri componenti}: utilizza il template Category;
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione con una categoria.
 \end{itemize}
 
 \subparagraph{CategoryListController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la gestione di una lista di categorie;
+	\item \textbf{Relazioni d’uso di altri componenti}: utilizza il template CategoryList;
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione con una lista di categorie.
 \end{itemize}
 
 \subparagraph{NewAPIController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la creazione di un'API	
+	\item \textbf{Relazioni d’uso di altri componenti}: utilizza il template APIRegistrationForm;
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione nel contesto dell'inserimento di una nuova API.
 \end{itemize}
 
 \subparagraph{EditAPIController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la modifica di un'API;
+	\item \textbf{Relazioni d’uso di altri componenti}: utilizza il template APIEditForm;
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione nel contesto della modifica di un'API.
 \end{itemize}
 
 \subparagraph{CheckoutController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette il checkout;
+	\item \textbf{Relazioni d’uso di altri componenti}: utilizza il template CheckoutForm;
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione nel contesto del checkout per l'acquisto di un'API.
 \end{itemize}
 
 \subparagraph{TransactionController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la gestione di una transazione;
+	\item \textbf{Relazioni d’uso di altri componenti}: utilizza il template Transaction;
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione con una transazione.
 \end{itemize}
 
 \subparagraph{TransactionListController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la gestione di una lista di transazioni;
+	\item \textbf{Relazioni d’uso di altri componenti}: utilizza il template TransactionList;
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione con una lista di transazioni.
 \end{itemize}
 
 \subparagraph{UserController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la gestione di un utente;
+	\item \textbf{Relazioni d’uso di altri componenti}: utilizza il template User;
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione con un utente.
 \end{itemize}
 
 \subparagraph{UserListController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la gestione di una lista di utenti;
+	\item \textbf{Relazioni d’uso di altri componenti}: utilizza il template UserList;
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione con una lista di utenti.
 \end{itemize}
 
 \subparagraph{NewPolicyController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la gestione dell'aggiunta di una policy;
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione con una policy.
 \end{itemize}
 
 \subparagraph{EditPolicyController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la modifica di una policy;
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione nel contesto della modifica di una policy.
 \end{itemize}
 
 \subparagraph{PolicyListController}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: 
-	\item \textbf{Relazioni d’uso di altri componenti}: 
-	\item \textbf{Attività svolte e dati trattati}: 
+	\item \textbf{Funzione del componente}: permette la gestione di una lista di policy;
+	\item \textbf{Attività svolte e dati trattati}: coordina tutte le funzionalità di visualizzazione e interazione con una lista di policy.
 \end{itemize}
 
 
