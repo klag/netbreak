@@ -2,10 +2,10 @@
 \section{Introduzione}
 
 \subsection{Scopo del documento}
-Lo scopo del presente documento è la definizione ad alto livello della struttura che dovrà avere il prodotto \progetto. Verranno presentati la gerarchia dei packages, le principali classi contenute in essi, le interazioni fra esse, e tutti i design pattern utilizzati. Il documento servirà come guida per i \textit{Programmatori} del gruppo NetBreak durante la successiva attività di Codifica.
+Lo scopo del presente documento è la definizione ad alto livello della struttura che dovrà avere il prodotto \textit{API Market\ped{G}}. Verranno presentati la gerarchia dei packages, le principali classi contenute in essi, le interazioni fra esse, e tutti i design pattern utilizzati. Il documento servirà come guida per i \textit{\Progrs} del team \textit{\gruppo} durante le successive attività di Codifica.
 
 \subsection{Scopo del prodotto}
-Lo scopo del prodotto è la realizzazione di un \textit{API Market\ped{G}} per l'acquisto e la vendita di \textit{microservizi\ped{G}}. Il sistema offrirà la possibilità di registrare nuove \textit{API\ped{G}} per la vendita, permetterà la consultazione e la ricerca di \textit{API\ped{G}} ai potenziali acquirenti, gestendo i permessi di accesso ed utilizzo tramite creazione e controllo di relative \textit{API key\ped{G}}. Il sistema, oltre alla web app stessa, sarà corredato di un \textit{API Gateway\ped{G}} per la gestione delle richieste e il controllo delle chiavi, e fornirà funzionalità avanzate di statistiche per il gestore della piattaforma e per i fornitori dei \textit{microservizi\ped{G}}.
+Lo scopo del prodotto è la realizzazione di un \progetto\ per l'acquisto e la vendita di \textit{microservizi\ped{G}}. Il sistema offrirà la possibilità di registrare nuove \textit{API\ped{G}} per la vendita, permetterà la consultazione e la ricerca di API ai potenziali acquirenti, gestendo i permessi di accesso ed utilizzo tramite creazione e controllo di relative \textit{API key\ped{G}}. Il sistema, oltre alla web app stessa, sarà corredato di un \textit{API Gateway\ped{G}} per la gestione delle richieste e il controllo delle chiavi, e fornirà funzionalità avanzate di statistiche per il gestore della piattaforma e per i fornitori dei microservizi.
 
 \subsection{Riferimenti normativi}
 \begin{itemize}
@@ -17,18 +17,21 @@ Lo scopo del prodotto è la realizzazione di un \textit{API Market\ped{G}} per l
 \begin{itemize}
 	\item \textbf{Ingegneria del software - Ian Sommerville - 8a edizione:}\\
 	Porzione dedicata alla Progettazione Architetturale (Capitolo 11)
-	\item \textbf{Slides del corso - Design patterns}\\
-	\url{http://}
-	\item \textbf{Slides del corso - Diagrammi delle classi}\\
-	\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/E02a.pdf}
+	\item \textbf{Slides del corso - Design patterns strutturali}\\
+	\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/E04.pdf}
+	\item \textbf{Slides del corso - Design patterns creazionali}\\
+	\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/E05.pdf}
+	\item \textbf{Slides del corso - Design patterns architetturali}\\
+	\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/E08.pdf}\\
+	\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/E09.pdf}
 	\item \textbf{Slides del corso - Diagrammi dei packages}\\
 	\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/E02b.pdf}
+	\item \textbf{Slides del corso - Diagrammi delle classi}\\
+	\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/E02a.pdf}
 	\item \textbf{Slides del corso - Diagrammi di sequenza}\\
 	\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/E03a.pdf}
 	\item \textbf{Slides del corso - Diagrammi di attività}\\
 	\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/E03b.pdf}
-	\item \textbf{Slides del corso - Design pattern creazionali}\\
-	\url{http://www.math.unipd.it/~tullio/IS-1/2016/Dispense/E05.pdf}
 	\item \textbf{Risorsa online sui microservizi}\\
 	\url{http://microservices.io}
 	\item \textbf{Design pattern a microservizi}\\
@@ -43,7 +46,7 @@ Lo scopo del prodotto è la realizzazione di un \textit{API Market\ped{G}} per l
 	\url{http://getbootstrap.com/}
 	\item \textbf{JQuery Javascript Library}\\
 	\url{https://jquery.com/}
-	\item \textbf{AngularJS 2}\\
+	\item \textbf{Angular 2}\\
 	\url{https://www.angularjs.org/}
 	\item \textbf{PostgreSQL Open-source Database}\\
 	\url{https://www.postgresql.org/}
@@ -52,4 +55,4 @@ Lo scopo del prodotto è la realizzazione di un \textit{API Market\ped{G}} per l
 \end{itemize}
 
 \subsection{Glossario}
-Per semplificare la consultazione e disambiguare alcune terminologie tecniche, le voci indicate con la lettera \textit{G} a pedice sono descritte approfonditamente nel documento \textsc{Glossario 1\_0\_0.pdf}.
+Per semplificare la consultazione e disambiguare alcune terminologie tecniche, le voci indicate con la lettera \textit{G} a pedice sono descritte approfonditamente nel documento \textsc{Glossario 2\_0\_0.pdf} e specificate solo alla prima occorrenza all'interno del suddetto documento.
