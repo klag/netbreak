@@ -1,0 +1,83 @@
+\documentclass[10pt]{beamer}
+\definecolor{aliceblue}{rgb}{0.94, 0.97, 1.0}
+\setbeamercolor{background canvas}{bg=aliceblue}
+\usetheme[progressbar=frametitle]{metropolis}
+\usepackage{appendixnumberbeamer}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+\usepackage{xspace}
+\usepackage[yyyymmdd,hhmmss]{datetime}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+
+
+
+\titlegraphic{
+	\begin{picture}(0,49.5)(10,-10)
+	\includegraphics[scale=0.025]{img/logo.png}
+	\end{picture}
+}
+
+\setbeamertemplate{footline}[frame number]
+\logo{\includegraphics[scale=0.025,keepaspectratio]{img/logo.png}}
+
+\setbeamertemplate{sidebar right}{}
+\defbeamertemplate*{footline}{logo-frame number}
+{
+	\rlap{\raisebox{-6.5ex}[0pt][0pt]{\makebox[\paperwidth]{\insertlogo}}}%
+	\hfill%
+	\usebeamercolor[fg]{page number in head/foot}%
+	\usebeamerfont{page number in head/foot}%
+	\insertframenumber\,/\,  \inserttotalframenumber\kern3em\vskip20pt%
+}
+
+
+
+\title{Netbreak}
+\subtitle{Revisione di Progettazione}
+\author{
+	Dan Serbanoiu\\      
+	\and
+	Andrea Scalabrin\\  
+	\and
+	Nicol\`{o} Scapin\\  
+	\and
+	Alberto Nicol\`{e}\\  
+	\and
+	Davide Scarparo\\  
+	\and
+	Marco Casagrande\\   
+}
+% \date{\today}
+\date{\today}
+
+\institute{Universit\`{a} di Padova}
+% \titlegraphic{\hfill\includegraphics[height=1.5cm]{logo.pdf}}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Table of contents}
+	\begin{enumerate}
+		\item Tecnologie
+		\item Design Architetturale
+		\item Front-End
+		\item Back-End
+	\end{enumerate}
+\end{frame}
+
+\include{includes/tecnologie}
+\include{includes/designarchitettura}
+\include{includes/frontend}
+\include{includes/backend}
+\include{includes/pianoqualifica}
+\include{includes/pianoprogetto}
+
+
+
+
+
+\end{document}
