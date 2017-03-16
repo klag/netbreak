@@ -1,0 +1,52 @@
+% Sostituisco i placeholder registrati con la specifica variabile per il documento corrente. Questa parte iniziale contiene intestazioni e templates.
+
+% Modificare ad ogni modifica e documento
+\newcommand{\documento}{\AdR}
+\newcommand{\nomedocumentofisico}{AnalisiDeiRequisiti 2\_0\_0.pdf}
+\newcommand{\redazione}{\MC \\& \DAN \\& \AS \\& \DS}
+\newcommand{\verifica}{\AN \\ & \DS}
+\newcommand{\versione}{2.0.0}
+\newcommand{\approvazione}{\NS}
+\newcommand{\uso}{Esterno}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \IS}
+\newcommand{\datacreazione}{02 Dicembre 2016}
+\newcommand{\datamodifica}{04 Marzo 2017}
+\newcommand{\stato}{Approvato}
+
+%Abilitazione indice delle tabelle e figure
+\def\TABELLE{false}
+\def\FIGURE{false}
+
+%Inclusione di layout e variabili (Non modificare)
+\input{../../template/layoutDocumento.tex}
+\input{../../template/comandiVeloci.tex}
+
+%Inclusione del changelog per il documento corrente
+\input{includes/changelog.tex}
+
+%Imposto la profondità degli indici
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+
+\begin{document}
+
+%Inclusione del template per la homepage (Non modificare)
+\input{../../template/homepage.tex}
+
+%Registro delle modifiche e indice (Non modificare)
+\pagenumbering{Roman}
+\input{../../template/changelogMultiPage.tex}
+\input{../../template/index.tex}
+
+%Inclusione delle varie sezioni di contenuto
+%Introduzione e contenuti di ogni tipo
+
+\input{includes/introduzione.tex}
+\input{includes/DescrizioneGenerale.tex}
+\input{includes/UseCase.tex}
+\input{includes/tabellaRequisiti.tex}
+\input{includes/browser.tex}
+\appendix
+
+
+\end{document}

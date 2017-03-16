@@ -1,0 +1,61 @@
+% Sostituisco i placeholder registrati con la specifica variabile per il documento corrente. Questa parte iniziale contiene intestazioni e templates.
+
+% Modificare ad ogni modifica e documento
+\newcommand{\documento}{\ST}
+\newcommand{\nomedocumentofisico}{SpecificaTecnica 1\_0\_0.pdf}
+\newcommand{\redazione}{\MC \\ & \DAN \\ & \AN \\ & \AS \\ & \NS}
+\newcommand{\verifica}{\NS \\ & \AS}
+\newcommand{\versione}{1.0.0}
+\newcommand{\approvazione}{\DS}
+\newcommand{\uso}{Esterno}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \proponente}
+\newcommand{\datacreazione}{25 Febbraio 2017}
+\newcommand{\datamodifica}{5 Marzo 2017}
+\newcommand{\stato}{Approvato}
+
+%Abilitazione indice delle tabelle e figure
+\def\TABELLE{false}
+\def\FIGURE{true}
+
+%Inclusione di layout e variabili (Non modificare)
+\input{../../template/layoutDocumento.tex}
+\input{../../template/comandiVeloci.tex}
+
+%Inclusione del changelog per il documento corrente
+\input{includes/changelog.tex}
+
+
+%Imposto la profondità degli indici
+\setcounter{secnumdepth}{8}
+\setcounter{tocdepth}{8}
+
+
+
+
+
+\begin{document}
+
+%Inclusione del template per la homepage (Non modificare)
+\input{../../template/homepage.tex}
+
+%Registro delle modifiche e indice (Non modificare)
+\pagenumbering{Roman}
+\input{../../template/changelogMultiPage.tex}
+\newpage
+\input{../../template/index.tex}
+
+%Inclusione delle varie sezioni di contenuto
+%Introduzione e contenuti di ogni tipo
+
+\input{includes/introduzione.tex}
+\input{includes/specificaprodotto.tex}
+\input{includes/tecnologie.tex}
+\input{includes/designpatterns.tex}
+\input{includes/packages.tex}
+\input{includes/backend.tex}
+\input{includes/diagrammiattivita.tex}
+\input{includes/diagrammisequenza.tex}
+\input{includes/tracciamento.tex}
+
+
+\end{document}

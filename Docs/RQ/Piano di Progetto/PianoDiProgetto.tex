@@ -1,0 +1,58 @@
+% Sostituisco i placeholder registrati con la specifica variabile per il documento corrente. Questa parte iniziale contiene intestazioni e templates.
+
+% Modificare ad ogni modifica e documento
+\newcommand{\documento}{\PdP}
+\newcommand{\nomedocumentofisico}{PianoDiProgetto 2\_0\_0.pdf}
+\newcommand{\redazione}{\AN \\ & \DS \\ & \MC \\ & \AS}
+\newcommand{\verifica}{\NS \\ & \DAN}
+\newcommand{\versione}{2.0.0}
+\newcommand{\approvazione}{\DS}
+\newcommand{\uso}{Esterno}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \IS}
+\newcommand{\datacreazione}{02 Dicembre 2016}
+\newcommand{\datamodifica}{22 Febbraio 2017}
+\newcommand{\stato}{Approvato}
+
+%Abilitazione indice delle tabelle e figure
+\def\TABELLE{false}
+\def\FIGURE{false}
+
+%Inclusione di layout e variabili (Non modificare)
+\input{../../template/layoutDocumento.tex}
+\input{../../template/comandiVeloci.tex}
+
+%Inclusione del changelog per il documento corrente
+\input{includes/changelog.tex}
+
+%Imposto la profondità degli indici
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+
+
+\begin{document}
+
+%Inclusione del template per la homepage (Non modificare)
+\input{../../template/homepage.tex}
+
+%Registro delle modifiche e indice (Non modificare)
+\pagenumbering{Roman}
+\input{../../template/changelogLayout.tex}
+\input{../../template/index.tex}
+
+%Inclusione delle varie sezioni di contenuto
+%Introduzione e contenuti di ogni tipo
+\renewcommand*{\arraystretch}{1.6}
+
+\input{includes/introduzione.tex}
+\input{includes/scadenze.tex}
+\input{includes/analisiRischi.tex}
+\input{includes/modelloSviluppo.tex}
+\input{includes/pianificazione.tex}
+\input{includes/SuddivisioneOre.tex}
+\input{includes/RegistroSuddivisioneLavoro.tex}
+\input{includes/QuadroEconomico.tex}
+\input{includes/ConsuntivoPeriodo.tex}
+\input{includes/Organizzazione.tex}
+
+
+\end{document}

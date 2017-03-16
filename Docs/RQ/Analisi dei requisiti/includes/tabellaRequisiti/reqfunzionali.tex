@@ -1,0 +1,518 @@
+\subsection{Catalogazione dei requisiti}
+
+Di seguito sono elencati tutti i requisiti rilevati e descritti nel documento. Essi saranno catalogati secondo la nomenclatura indicata nel documento \textsc{NormeDiProgetto 2\_0\_0.pdf} di cui si cita la sezione di seguito:
+
+\begin{center}
+	R[Tipologia][Rilevanza][Codice]
+\end{center}
+\textbf{Tipologia:} può assumere uno dei seguenti valori:
+\begin{itemize}
+	\item \textbf{V:} requisito di vincolo;
+	\item \textbf{F:} requisito di funzionalità;
+	\item \textbf{Q:} requisito di qualità;
+	\item \textbf{P:} requisito prestazionale.
+\end{itemize}
+\textbf{Rilevanza:} può assumere uno dei seguenti valori, elencati in ordine di importanza:
+\begin{itemize}
+	\item \textbf{O:} requisito obbligatorio;
+	\item \textbf{D:} requisito desiderabile;
+	\item \textbf{F:} requisito facoltativo.
+\end{itemize}
+\textbf{Codice:} assume un numero sequenziale e univoco, necessario a catalogare e riconoscere ogni requisito progettuale.
+
+\subsection{Requisiti di funzionalità}
+
+\begin{longtable}{|c|p{8cm}|c|}
+\caption{Tabella dei requisiti di funzionalità} \\
+
+\hline
+\thead*{\textbf{Codice requisito}} &\thead{\textbf{Descrizione}}  &\thead{\textbf{Fonte}} \\
+\hline
+\endhead
+
+\hline
+\endfoot
+\hline
+\endlastfoot
+
+\hypertarget{RFO1}{RFO1} & L'utente non autenticato può registrarsi & \makecell*{Capitolato\\UC3} \\
+\hline
+
+\hypertarget{RFO1.1}{RFO1.1} & L'utente non autenticato può inserire il proprio nome & \makecell*{Interno\\UC3\\UC3.1} \\
+\hline
+\hypertarget{RFO1.2}{RFO1.2} & L'utente non autenticato può inserire il proprio cognome & \makecell*{Interno\\UC3\\UC3.2} \\
+\hline
+\hypertarget{RFO1.3}{RFO1.3} & L'utente non autenticato può inserire il proprio username & \makecell*{Interno\\UC3\\UC3.3} \\
+\hline
+\hypertarget{RFO1.4}{RFO1.4} & L'utente non autenticato può inserire la propria email & \makecell*{Interno\\UC3\\UC3.4} \\
+\hline
+\hypertarget{RFO1.5}{RFO1.5} & L'utente non autenticato può inserire la propria password & \makecell*{Interno\\UC3\\UC3.5} \\
+\hline
+\hypertarget{RFO1.6}{RFO1.6} & L'utente non autenticato può confermare l'inserimento della propria password & \makecell*{Interno\\UC3\\UC3.6} \\
+\hline
+\hypertarget{RFD1.7}{RFD1.7} & L'utente non autenticato può inserire il proprio avatar & \makecell*{Interno\\UC3\\UC3.7} \\
+\hline
+\hypertarget{RFO1.8}{RFO1.8} &  L'applicazione web mostra un messaggio di errore nel caso l'inserimento dell'avatar sia fallito & \makecell*{Interno\\UC3\\UC3.8} \\
+\hline
+\hypertarget{RFO1.9}{RFO1.9} & L'utente non autenticato può confermare i dati inseriti, confermando la propria registrazione & \makecell*{Interno\\UC3\\UC3.9} \\
+\hline
+\hypertarget{RFF1.10}{RFF1.10} & L'applicazione web mostra un messaggio di errore nel caso la registrazione sia fallita & \makecell*{Interno\\UC3\\UC3.10} \\
+\hline
+
+\hypertarget{RFO2}{RFO2} & L'utente non autenticato può effettuare il login & \makecell*{Capitolato\\UC4} \\
+\hline
+
+\hypertarget{RFO2.1}{RFO2.1} & L'utente non autenticato può effettuare il login tramite API Market & \makecell*{Capitolato\\UC4\\UC4.1} \\
+\hline
+
+\hypertarget{RFO2.1.1}{RFO2.1.1} & L'utente non autenticato può inserire uno username o una email & \makecell*{Interno\\UC4\\UC4.1\\UC4.1.1} \\
+\hline
+\hypertarget{RFO2.1.2}{RFO2.1.2} & L'utente non autenticato può inserire una password & \makecell*{Interno\\UC4\\UC4.1\\UC4.1.2} \\
+\hline
+\hypertarget{RFO2.1.3}{RFO2.1.3} & L'utente non autenticato può confermare i dati inseriti, effettuando il login & \makecell*{Interno\\UC4\\UC4.1\\UC4.1.3} \\
+\hline
+\hypertarget{RFO2.1.4}{RFO2.1.4} & L'applicazione web mostra un messaggio di errore nel caso il login tramite API Market sia fallito & \makecell*{Interno\\UC4\\UC4.1\\UC4.1.4} \\
+\hline
+
+\hypertarget{RFF2.2}{RFF2.2} & L'utente non autenticato può effettuare il login tramite Facebook & \makecell*{Interno\\UC4\\UC4.2\\UC4.2.1} \\
+\hline
+\hypertarget{RFF2.2.2}{RFF2.2.2} & L'applicazione web mostra un messaggio di errore nel caso il login tramite Facebook sia fallito & \makecell*{Interno\\UC4\\UC4.2\\UC4.2.2} \\
+\hline
+
+\hypertarget{RFF2.3}{RFF2.3} & L'utente non autenticato può effettuare il login tramite Twitter & \makecell*{Interno\\UC4\\UC4.3\\UC4.3.1} \\
+\hline
+\hypertarget{RFF2.3.2}{RFF2.3.2} & L'applicazione web mostra un messaggio di errore nel caso il login tramite Twitter sia fallito & \makecell*{Interno\\UC4\\UC4.3\\UC4.3.2} \\
+\hline
+
+\hypertarget{RFF2.4}{RFF2.4} & L'utente non autenticato può effettuare il login tramite LinkedIn & \makecell*{Interno\\UC4\\UC4.4\\UC4.4.1} \\
+\hline
+\hypertarget{RFF2.4.2}{RFF2.4.2} & L'applicazione web mostra un messaggio di errore nel caso il login tramite LinkedIn sia fallito & \makecell*{Interno\\UC4\\UC4.4\\UC4.4.2} \\
+\hline
+
+\hypertarget{RFF2.5}{RFF2.5} & L'utente non autenticato può effettuare il login tramite Google+ & \makecell*{Interno\\UC4\\UC4.5\\YC4.5.1} \\
+\hline
+\hypertarget{RFF2.5.2}{RFF2.5.2} & L'applicazione web mostra un messaggio di errore nel caso il login tramite Google+ sia fallito & \makecell*{Interno\\UC4\\UC4.5\\UC4.5.2} \\
+\hline
+
+\hypertarget{RFD3}{RFD3} & L'utente non autenticato può recuperare la propria password & \makecell*{Interno\\UC5} \\
+\hline
+
+\hypertarget{RFD3.1}{RFD3.1} & L'utente non autenticato può inserire la propria email & \makecell*{Interno\\UC5\\UC5.1} \\
+\hline
+\hypertarget{RFD3.2}{RFD3.2} & L'utente non autenticato può confermare l'email inserita, permettendo all'applicazione web di inviare un'email, con un link per il reset, a quell'indirizzo & \makecell*{Interno\\UC5\\UC5.2} \\
+\hline
+\hypertarget{RFD3.3}{RFD3.3} & L'applicazione web mostra un messaggio di errore nel caso l'email per il recupero password non sia valida & \makecell*{Interno\\UC5\\UC5.3} \\
+\hline
+\hypertarget{RFD3.4}{RFD3.4} & L'utente non autenticato può scegliere una nuova password per il proprio account & \makecell*{Interno\\UC5\\UC5.4} \\
+\hline
+
+\hypertarget{RFO4}{RFO4} & L'utente generico può eseguire la ricerca sulle API sulla base dell'inserimento di alcune keywords & \makecell*{Capitolato\\Interno\\UC6} \\
+\hline
+
+\hypertarget{RFO4.1}{RFO4.1} & L'utente generico può inserire le keywords di ricerca & \makecell*{Interno\\UC6\\UC6.1} \\
+\hline
+\hypertarget{RFO4.2}{RFO4.2} & L'utente generico può confermare la ricerca  & \makecell*{Interno\\UC6\\UC6.2} \\
+\hline
+
+\hypertarget{RFO4.3}{RFO4.3} & L'utente generico può visualizzare i risultati ottenuti dall'applicazione web, dopo aver confermato i parametri di ricerca scelti & \makecell*{Interno\\UC6\\UC6.1\\UC6.3} \\
+\hline
+\hypertarget{RFO4.3.1}{RFO4.3.1} & L'utente generico può visualizzare il nome dell'API & \makecell*{Interno\\UC6\\UC6.1\\UC6.3\\UC6.3.1} \\
+\hline
+\hypertarget{RFO4.3.2}{RFO4.3.2} & L'utente generico può visualizzare l'autore dell'API & \makecell*{Interno\\UC6\\UC6.1\\UC6.3\\UC6.3.2} \\
+\hline
+
+\hypertarget{RFO4.3.3}{RFO4.3.3} & L'utente generico può visualizzare la categoria dell'API & \makecell*{Interno\\UC6\\UC6.1\\UC6.3\\UC6.3.3} \\
+\hline
+\hypertarget{RFD4.3.4}{RFD4.3.4} & L'utente generico può visualizzare il logo dell'API & \makecell*{Interno\\UC6\\UC6.1\\UC6.3\\UC6.3.4} \\
+\hline
+\hypertarget{RFO4.3.5}{RFO4.3.5} & L'utente generico può visualizzare il link alla pagina di visualizzazione dell'API & \makecell*{Interno\\UC6\\UC6.1\\UC6.3\\UC6.3.5} \\
+\hline
+
+\hypertarget{RFO5}{RFO5} & L'utente generico può visualizzare la pagina dei dati relativi all'API selezionata & \makecell*{Capitolato\\UC7} \\
+\hline
+
+\hypertarget{RFO5.1}{RFO5.1} & L'utente generico può visualizzare il nome dell'API & \makecell*{Interno\\UC7\\UC7.1} \\
+\hline
+\hypertarget{RFO5.2}{RFO5.2} & L'utente generico può visualizzare la descrizione dell'API & \makecell*{Interno\\UC7\\UC7.2} \\
+\hline
+\hypertarget{RFO5.3}{RFO5.3} & L'utente generico può visualizzare l'autore dell'API & \makecell*{Interno\\UC7\\UC7.3} \\
+\hline
+\hypertarget{RFO5.4}{RFO5.4} & L'utente generico può visualizzare la categoria dell'API & \makecell*{Interno\\UC7\\UC7.4} \\
+\hline
+
+\hypertarget{RFO5.5}{RFO5.5} & L'utente generico può visualizzare l'interfaccia dell'API & \makecell*{Interno\\UC7\\UC7.5} \\
+\hline
+\hypertarget{RFO5.5.1}{RFO5.5.1} & L'utente generico può visualizzare l'interfaccia testuale dell'API & \makecell*{Interno\\UC7\\UC7.5\\UC7.5.1} \\
+\hline
+\hypertarget{RFO5.5.2}{RFO5.5.2} & L'utente generico può visualizzare il link di download dell'interfaccia dell'API & \makecell*{Interno\\UC7\\UC7.5\\UC7.5.2} \\
+\hline
+
+\hypertarget{RFO5.6}{RFO5.6} & L'utente generico può consultare la documentazione dell'API & \makecell*{Capitolato\\UC7\\UC7.6} \\
+\hline
+\hypertarget{RFO5.6.1}{RFO5.6.1} & L'utente generico può consultare la versione PDF della documentazione dell'API & \makecell*{Capitolato\\UC7\\UC7.6\\UC7.6.1} \\
+\hline
+\hypertarget{RFD5.6.2}{RFD5.6.2} & L'utente generico può consultare la versione esterna della documentazione dell'API, seguendo un link dell'autore dell'API  & \makecell*{Capitolato\\UC7\\UC7.6\\UC7.6.2} \\
+\hline
+
+\hypertarget{RFO5.7}{RFO5.7} & L'utente generico può visualizzare i dati di utilizzo dell'API & \makecell*{Capitolato\\UC7\\UC7.7} \\
+\hline
+\hypertarget{RFD5.7.1}{RFD5.7.1} & L'utente generico può visualizzare il numero di licenze attive dell'API & \makecell*{Interno\\UC7\\UC7.7\\UC7.7.1} \\
+\hline
+\hypertarget{RFO5.7.2}{RFO5.7.2} & L'utente generico può visualizzare i dati della SLA dell'API & \makecell*{Capitolato\\UC7\\UC7.7\\UC7.7.2} \\
+\hline
+
+\hypertarget{RFO5.8}{RFO5.8} & L'utente generico può visualizzare il prezzo dell'API & \makecell*{Interno\\UC7\\UC7.8} \\
+\hline
+\hypertarget{RFO5.9}{RFO5.9} & L'utente generico può visualizzare la data dell'ultima modifica all'API & \makecell*{Interno\\UC7\\UC7.9} \\
+\hline
+\hypertarget{RFO5.10}{RFO5.10} & L'utente generico può visualizzare la versione dell'API & \makecell*{Interno\\UC7\\UC7.10} \\
+\hline
+\hypertarget{RFD5.11}{RFD5.11} & L'utente generico può visualizzare il logo dell'API & \makecell*{Interno\\UC7\\UC7.11} \\
+\hline
+\hypertarget{RFO5.12}{RFO5.12} & L'utente generico può visualizzare la policy di vendita dell'API & \makecell*{Interno\\UC7\\UC7.12} \\
+\hline
+\hypertarget{RFO5.13}{RFO5.13} & L'utente generico può visualizzare il link d'acquisto dell'API & \makecell*{Interno\\UC7\\UC7.13} \\
+\hline
+
+\hypertarget{RFO6}{RFO6} & Il cliente può visualizzare le API acquistate & \makecell*{Capitolato\\UC8} \\
+\hline
+
+\hypertarget{RFO6.1}{RFO6.1} & Il cliente può visualizzare il numero di API acquistate & \makecell*{Interno\\UC8\\UC8.1} \\
+\hline
+
+\hypertarget{RFO6.2}{RFO6.2} & Il cliente può visualizzare la lista delle API acquistate & \makecell*{Capitolato\\UC8\\UC8.2} \\
+\hline
+
+\hypertarget{RFO6.2.1}{RFO6.2.1} & Il cliente può visualizzare il nome dell'API & \makecell*{Interno\\UC8\\UC8.2\\UC8.2.1} \\
+\hline
+\hypertarget{RFO6.2.2}{RFO6.2.2} & Il cliente può visualizzare il link alla pagina di visualizzazione dell'API & \makecell*{Interno\\UC8\\UC8.2\\UC8.2.2} \\
+\hline
+\hypertarget{RFO6.2.3}{RFO6.2.3} & Il cliente può visualizzare l'autore dell'API & \makecell*{Interno\\UC8\\UC8.2\\UC8.2.3} \\
+\hline
+\hypertarget{RFO6.2.4}{RFO6.2.4} & Il cliente può visualizzare la policy di vendita dell'API & \makecell*{Interno\\UC8\\UC8.2\\UC8.2.4} \\
+\hline
+\hypertarget{RFO6.2.5}{RFO6.2.5} & Il cliente può visualizzare la scadenza della licenza dell'API & \makecell*{Interno\\UC8\\UC8.2\\UC8.2.5} \\
+\hline
+\hypertarget{RFD6.2.6}{RFD6.2.6} & Il cliente può visualizzare gli avvisi riguardanti l'API & \makecell*{Interno\\UC8\\UC8.2\\UC8.2.6} \\
+\hline
+\hypertarget{RFD6.2.7}{RFD6.2.7} & Il cliente può visualizzare il logo dell'API & \makecell*{Interno\\UC8\\UC8.2\\UC8.2.7} \\
+\hline
+
+\hypertarget{RFO7}{RFO7} & Il cliente può acquistare l'API & \makecell*{Capitolato\\UC9} \\
+\hline
+
+\hypertarget{RFO7.1}{RFO7.1} & Il cliente può visualizzare i dati d'acquisto dell'API & \makecell*{Interno\\UC9\\UC9.1} \\
+\hline
+
+\hypertarget{RFO7.1.1}{RFO7.1.1} & Il cliente può visualizzare il nome dell'API & \makecell*{Interno\\UC9\\UC9.1\\UC9.1.1} \\
+\hline
+\hypertarget{RFO7.1.2}{RFO7.1.2} & Il cliente può visualizzare l'autore dell'API & \makecell*{Interno\\UC9\\UC9.1\\UC9.1.2} \\
+\hline
+\hypertarget{RFO7.1.3}{RFO7.1.3} & Il cliente può visualizzare la policy di vendita dell'API & \makecell*{Interno\\UC9\\UC9.1\\UC9.1.3} \\
+\hline
+
+\hypertarget{RFO7.2}{RFO7.2} & Il cliente può scegliere il blocco d'acquisto dell'API & \makecell*{Interno\\UC9\\UC9.2} \\
+\hline
+\hypertarget{RFO7.3}{RFO7.3} & Il cliente può visualizzare una previsione del saldo finale & \makecell*{Interno\\UC9\\UC9.3} \\
+\hline
+
+\hypertarget{RFO7.4}{RFO7.4} & Il cliente può confermare l'acquisto dell'API & \makecell*{Interno\\UC9\\UC9.4} \\
+\hline
+
+\hypertarget{RFO7.5}{RFO7.5} & Il cliente può visualizzare il riepilogo dell'acquisto effettuato & \makecell*{Interno\\UC9\\UC9.5} \\
+\hline
+
+\hypertarget{RFD7.5.1}{RFD7.5.1} & Il cliente può visualizzare il ringraziamento per l'acquisto dell'API & \makecell*{Interno\\UC9\\UC9.5.1} \\
+\hline
+\hypertarget{RFO7.5.2}{RFO7.5.2} & Il cliente può visualizzare il nome dell'API acquistata & \makecell*{Interno\\UC9\\UC9.5.2} \\
+\hline
+\hypertarget{RFO7.5.3}{RFO7.5.3} & Il cliente può visualizzare la chiave API dell'API acquistata & \makecell*{Capitolato\\UC9\\UC9.5.3} \\
+\hline
+
+\hypertarget{RFO7.6}{RFO7.6} & L'applicazione web mostra un messaggio di errore nel caso l'acquisto dell'API sia fallito & \makecell*{Interno\\UC9\\UC9.6} \\
+\hline
+
+\hypertarget{RFO8}{RFO8} & Lo sviluppatore può visualizzare le API registrate & \makecell*{Capitolato\\UC10} \\
+\hline
+
+\hypertarget{RFO8.1}{RFO8.1} & Lo sviluppatore può visualizzare il numero di API registrate & \makecell*{Interno\\UC10\\UC10.1} \\
+\hline
+
+\hypertarget{RFO8.2}{RFO8.2} & Lo sviluppatore può visualizzare la lista delle API registrate & \makecell*{Interno\\UC10\\UC10.2} \\
+\hline
+\hypertarget{RFO8.2.1}{RFO8.2.1} & Lo sviluppatore può visualizzare il nome dell'API & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.1} \\
+\hline
+\hypertarget{RFO8.2.2}{RFO8.2.2} & Lo sviluppatore può visualizzare il link alla pagina di visualizzazione dell'API & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.2} \\
+\hline
+\hypertarget{RFO8.2.3}{RFO8.2.3} & Lo sviluppatore può visualizzare il numero di licenze attive dell'API & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.3} \\
+\hline
+
+\hypertarget{RFO8.2.4}{RFO8.2.4} & Lo sviluppatore può modificare l'API registrata & \makecell*{Capitolato\\Interno\\UC10\\UC10.2\\UC10.2.4} \\
+\hline
+
+\hypertarget{RFO8.2.4.1}{RFO8.2.4.1} & Lo sviluppatore può modificare il nome dell'API & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.4\\UC10.2.4.1} \\
+\hline
+\hypertarget{RFO8.2.4.2}{RFO8.2.4.2} & Lo sviluppatore può modificare la descrizione dell'API & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.4\\UC10.2.4.2} \\
+\hline
+\hypertarget{RFD8.2.4.3}{RFD8.2.4.3} & Lo sviluppatore può modificare la categoria dell'API & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.4\\UC10.2.4.3} \\
+\hline
+\hypertarget{RFO8.2.4.4}{RFO8.2.4.4} & Lo sviluppatore può modificare l'interfaccia dell'API & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.4\\UC10.2.4.4} \\
+\hline
+\hypertarget{RFO8.2.4.5}{RFO8.2.4.5} & Lo sviluppatore può modificare la documentazione PDF dell'API & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.4\\UC10.2.4.5} \\
+\hline
+\hypertarget{RFD8.2.4.6}{RFD8.2.4.6} & Lo sviluppatore può modificare il link alla documentazione esterna dell'API & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.4\\UC10.2.4.6} \\
+\hline
+\hypertarget{RFO8.2.4.7}{RFO8.2.4.7} & Lo sviluppatore può modificare il logo dell'API & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.4\\UC10.2.4.7} \\
+\hline
+\hypertarget{RFO8.2.4.8}{RFO8.2.4.8} & Lo sviluppatore può confermare le modifiche all'API & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.4\\UC10.2.4.8} \\
+\hline
+
+\hypertarget{RFO8.2.4.9}{RFO8.2.4.9} & L'applicazione web mostra un errore nel caso la modifica dell'API sia fallita & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.4\\UC10.2.4.9} \\
+\hline
+\hypertarget{RFO8.2.4.10}{RFO8.2.4.10} & L'applicazione web mostra un errore nel caso la modifica alla documentazione PDF dell'API sia fallita & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.4\\UC10.2.4.10} \\
+\hline
+\hypertarget{RFO8.2.4.11}{RFO8.2.4.11} & L'applicazione web mostra un errore nel caso la modifica al logo dell'API sia fallita & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.4\\UC10.2.4.11} \\
+\hline
+
+\hypertarget{RFD8.2.5}{RFD8.2.5} & Lo sviluppatore può visualizzare gli avvisi riguardanti l'API registrata & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.5} \\
+\hline
+\hypertarget{RFD8.2.6}{RFD8.2.6} & Lo sviluppatore può aggiornare gli avvisi riguardanti l'API registrata & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.6} \\
+\hline
+\hypertarget{RFD8.2.7}{RFD8.2.7} & Lo sviluppatore può visualizzare il logo dell'API registrata & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.7} \\
+\hline
+\hypertarget{RFO8.2.8}{RFO8.2.8} & Lo sviluppatore può visualizzare il guadagno netto, in base alla policy, dell'API registrata & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.8} \\
+\hline
+
+\hypertarget{RFO8.2.9}{RFO8.2.9} & Lo sviluppatore può cancellare l'API registrata & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.9} \\
+\hline
+
+\hypertarget{RFO8.2.9.1}{RFO8.2.9.1} & Lo sviluppatore può confermare la cancellazione dell'API registrata & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.9.1} \\
+\hline
+\hypertarget{RFO8.2.9.2}{RFO8.2.9.2} & L'applicazione web mostra un errore nel caso la cancellazione dell'API sia fallita & \makecell*{Interno\\UC10\\UC10.2\\UC10.2.9.2} \\
+\hline
+
+\hypertarget{RFO9}{RFO9} & Lo sviluppatore può registrare una nuova API & \makecell*{Capitolato\\UC11} \\
+\hline
+
+\hypertarget{RFO9.1}{RFO9.1} & Lo sviluppatore può inserire il nome dell'API & \makecell*{Interno\\UC11\\UC11.1} \\
+\hline
+\hypertarget{RFO9,2}{RFO9.2} & Lo sviluppatore può inserire la descrizione dell'API & \makecell*{Interno\\UC11\\UC11.2} \\
+\hline
+\hypertarget{RFD9.3}{RFD9.3} & Lo sviluppatore può inserire la categoria dell'API & \makecell*{Interno\\UC11\\UC11.3} \\
+\hline
+\hypertarget{RFO9.4}{RFO9.4} & Lo sviluppatore può inserire l'interfaccia dell'API & \makecell*{Interno\\UC11\\UC11.4} \\
+\hline
+\hypertarget{RFO9.5}{RFO9.5} & Lo sviluppatore può inserire la documentazione PDF dell'API & \makecell*{Interno\\UC11\\UC11.5} \\
+\hline
+\hypertarget{RFD9.6}{RFD9.6} & L'applicazione web mostra un errore nel caso l'inserimento del PDF fallisca & \makecell*{Interno\\UC11\\UC11.6} \\
+\hline
+\hypertarget{RFD9.7}{RFD9.7} & Lo sviluppatore può inserire il link alla documentazione esterna dell'API & \makecell*{Interno\\UC11\\UC11.7} \\
+\hline
+
+\hypertarget{RFO9.8}{RFO9.8} & Lo sviluppatore può scegliere la policy di vendita dell'API & \makecell*{Capitolato\\UC11\\UC11.8} \\
+\hline
+
+\hypertarget{RFO9.8.1}{RFO9.8.1} & Lo sviluppatore può scegliere la policy di vendita per numero di chiamate & \makecell*{Capitolato\\UC11\\UC11.8.1} \\
+\hline
+\hypertarget{RFO9.8.2}{RFO9.8.2} & Lo sviluppatore può scegliere la policy di vendita per tempo di utilizzo & \makecell*{Capitolato\\UC11\\UC11.8.2} \\
+\hline
+\hypertarget{RFO9.8.3}{RFO9.8.3} & Lo sviluppatore può scegliere la policy di vendita per traffico di dati & \makecell*{Capitolato\\UC11\\UC11.8.3} \\
+\hline
+
+\hypertarget{RFO9.9}{RFO9.9} & Lo sviluppatore può stabilire il guadagno netto, in base alla policy di vendita, desiderato dell'API & \makecell*{Interno\\UC11\\UC11.9} \\
+\hline
+\hypertarget{RFD9.10}{RFD9.10} & Lo sviluppatore può inserire il logo dell'API & \makecell*{Interno\\UC11\\UC11.10} \\
+\hline
+\hypertarget{RFD9.11}{RFD9.11} & L'applicazione web mostra un errore nel caso l'inserimento del logo fallisca & \makecell*{Interno\\UC11\\UC11.11} \\
+\hline
+\hypertarget{RFO9.12}{RFO9.12} & Lo sviluppatore può confermare la registrazione della nuova API & \makecell*{Interno\\UC11\\UC11.12} \\
+\hline
+\hypertarget{RFD9.13}{RFD9.13} & L'applicazione web mostra un errore nel caso la registrazione della nuova API fallisca & \makecell*{Interno\\UC11\\UC11.13} \\
+\hline
+
+\hypertarget{RFO10}{RFO10} & Il cliente può visualizzare il menù del profilo utente & \makecell*{Capitolato\\UC12} \\
+\hline
+
+\hypertarget{RFO10.1}{RFO10.1} & Il cliente può gestire le informazioni personali & \makecell*{Capitolato\\UC12\\UC12.1} \\
+\hline
+
+\hypertarget{RFO10.1.1}{RFO10.1.1} & Il cliente può visualizzare le informazioni personali del proprio profilo utente &\makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.1} \\
+\hline
+
+\hypertarget{RFO10.1.1.1}{RFO10.1.1.1} & Il cliente può visualizzare il proprio nome & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.1\\UC12.1.1.1} \\
+\hline
+\hypertarget{RFO10.1.1.2}{RFO10.1.1.2} & Il cliente può visualizzare il proprio cognome & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.1\\UC12.1.1.2} \\
+\hline
+\hypertarget{RFO10.1.1.3}{RFO10.1.1.3} & Il cliente può visualizzare il proprio username & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.1\\UC12.1.1.3} \\
+\hline
+\hypertarget{RFO10.1.1.4}{RFO10.1.1.4} & Il cliente può visualizzare la propria email & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.1\\UC12.1.1.4} \\
+\hline
+\hypertarget{RFD10.1.1.5}{RFD10.1.1.5} & Il cliente può visualizzare il proprio avatar & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.1\\UC12.1.1.5} \\
+\hline
+\hypertarget{RFD10.1.1.6}{RFD10.1.1.6} & Il cliente può visualizzare la tipologia del proprio account & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.1\\UC12.1.1.6} \\
+\hline
+
+\hypertarget{RFO10.1.2}{RFO10.1.2} & Il cliente può modificare le informazioni personali del proprio profilo utente &\makecell*{Capitolato\\UC12\\UC12.1\\UC12.1.2} \\
+\hline
+
+\hypertarget{RFO10.1.2.1}{RFO10.1.2.1} & Il cliente può modificare il proprio nome & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.1} \\
+\hline
+\hypertarget{RFO10.1.2.2}{RFO10.1.2.2} & Il cliente può modificare il proprio cognome & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.2} \\
+\hline
+\hypertarget{RFO10.1.2.3}{RFO10.1.2.3} & Il cliente può modificare il proprio username & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.3} \\
+\hline
+\hypertarget{RFO10.1.2.4}{RFO10.1.2.4} & Il cliente può modificare la propria email & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.4} \\
+\hline
+\hypertarget{RFO10.1.2.5}{RFO10.1.2.5} & Il cliente può modificare la propria password & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.5} \\
+\hline
+\hypertarget{RFD10.1.2.6}{RFD10.1.2.6} & Il cliente può modificare il proprio avatar & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.6} \\
+\hline
+\hypertarget{RFO10.1.2.7}{RFO10.1.2.7} & Il cliente può confermare le modifiche alle informazione del profilo & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.7} \\
+\hline
+\hypertarget{RFO10.1.2.8}{RFO10.1.2.8} & L'applicazione web può mostrare un errore nel caso le modifiche alle info del profilo siano fallite & \makecell*{Interno\\UC12\\UC12.1\\UC12.1.2\\UC12.1.2.8} \\
+\hline
+
+\hypertarget{RFO10.2}{RFO10.2} & Il cliente può gestire il proprio conto &\makecell*{Capitolato\\UC12\\UC12.2} \\
+\hline
+
+\hypertarget{RFO10.2.1}{RFO10.2.1} & Il cliente può visualizzare il saldo del proprio conto & \makecell*{Interno\\UC12\\UC12.2\\UC12.2.1} \\
+\hline
+\hypertarget{RFO10.2.2}{RFO10.2.2} & Il cliente può ricaricare il proprio conto & \makecell*{Interno\\UC12\\UC12.2\\UC12.2.2} \\
+\hline
+
+\hypertarget{RFO10.2.2.1}{RFO10.2.2.1} & Il cliente può effettuare la ricarica tramite PayPal & \makecell*{Interno\\UC12\\UC12.2\\UC12.2.2\\UC12.2.2.1} \\
+\hline
+
+\hypertarget{RFO10.2.2.2}{RFO10.2.2.2} & L'applicazione web può mostrare un errore nel caso la ricarica tramite PayPal sia fallita & \makecell*{Interno\\UC12\\UC12.2\\UC12.2.2\\UC12.2.2.2} \\
+\hline
+
+\hypertarget{RFO10.3}{RFO10.3} & Il cliente può visualizzare lo storico delle proprie transazioni & \makecell*{Interno\\UC12\\UC12.3} \\
+\hline
+
+\hypertarget{RFO10.3.1}{RFO10.3.1} & Il cliente può scegliere i filtri dello storico delle proprie transazioni & \makecell*{Interno\\UC12\\UC12.3.1} \\
+\hline
+
+\hypertarget{RFO10.3.1.1}{RFO10.3.1.1} & Il cliente può scegliere il filtro per ordine cronologico dello storico delle proprie transazioni & \makecell*{Interno\\UC12\\UC12.3.1\\UC12.3.1.1} \\
+\hline
+\hypertarget{RFO10.3.1.2}{RFO10.3.1.2} & Il cliente può scegliere il filtro per tipologia di transazione dello storico delle proprie transazioni & \makecell*{Interno\\UC12\\UC12.3.1\\UC12.3.1.2} \\
+\hline
+
+\hypertarget{RFO10.3.2}{RFO10.3.2} & Il cliente può visualizzare la lista delle proprie transazioni concluse & \makecell*{Interno\\UC12\\UC12.3.2} \\
+\hline
+
+\hypertarget{RFO10.3.2.1}{RFO10.3.2.1} & Il cliente può visualizzare il codice della propria transazione & \makecell*{Interno\\UC12\\UC12.3.2\\UC12.3.2.1} \\
+\hline
+\hypertarget{RFO10.3.2.2}{RFO10.3.2.2} & Il cliente può visualizzare l'API di riferimento della propria transazione & \makecell*{Interno\\UC12\\UC12.3.2\\UC12.3.2.2} \\
+\hline
+\hypertarget{RFO10.3.2.3}{RFO10.3.2.3} & Il cliente può visualizzare la tipologia della propria transazione & \makecell*{Interno\\UC12\\UC12.3.2\\UC12.3.2.3} \\
+\hline
+\hypertarget{RFO10.3.2.4}{RFO10.3.2.4} & Il cliente può visualizzare l'ammontare della propria transazione & \makecell*{Interno\\UC12\\UC12.3.2\\UC12.3.2.4} \\
+\hline
+\hypertarget{RFO10.3.2.5}{RFO10.3.2.5} & Il cliente può visualizzare la data della propria transazione & \makecell*{Interno\\UC12\\UC12.3.2\\UC12.3.2.5} \\
+\hline
+
+\hypertarget{RFO10.3.3}{RFO10.3.3} & Lo sviluppatore può visualizzare la lista dei propri crediti & \makecell*{Interno\\UC12\\UC12.3.3} \\
+\hline
+
+\hypertarget{RFO10.3.3.1}{RFO10.3.3.1} & Lo sviluppatore può visualizzare il codice del proprio credito & \makecell*{Interno\\UC12\\UC12.3.3.1} \\
+\hline
+\hypertarget{RFO10.3.3.2}{RFO10.3.3.2} & Lo sviluppatore può visualizzare l'API di riferimento del proprio credito & \makecell*{Interno\\UC12\\UC12.3.3.2} \\
+\hline
+\hypertarget{RFO10.3.3.3}{RFO10.3.3.3} & Lo sviluppatore può visualizzare l'ammontare del proprio credito & \makecell*{Interno\\UC12\\UC12.3.3.3} \\
+\hline
+\hypertarget{RFO10.3.3.4}{RFO10.3.3.4} & Lo sviluppatore può visualizzare la data del proprio credito & \makecell*{Interno\\UC12\\UC12.3.3.4} \\
+\hline
+
+\hypertarget{RFO11}{RFO11} & L'utente autenticato può effettuare il logout & \makecell*{Capitolato\\UC13} \\
+\hline
+
+\hypertarget{RFO12}{RFO12} & L'amministratore API Market può amministrare l'applicazione web & \makecell*{Capitolato\\UC14} \\
+\hline
+
+\hypertarget{RFO12.1}{RFO12.1} & L'amministratore API Market può scegliere una API & \makecell*{Interno\\UC14\\UC14.1} \\
+\hline
+
+\hypertarget{RFO12.1.1}{RFO12.1.1} & L'amministratore API Market può effettuare delle operazioni sull'API scelta & \makecell*{Interno\\UC14\\UC14.1.1} \\
+\hline
+
+\hypertarget{RFO12.1.1.1}{RFO12.1.1.1} & L'amministratore API Market può visualizzare i dati avanzati dell'API scelta & \makecell*{Capitolato\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.1} \\
+\hline
+
+\hypertarget{RFO12.1.1.1.1}{RFO12.1.1.1.1} & L'amministratore API Market può visualizzare il numero di licenze attive dell'API scelta & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.1\\UC14.1.1.1.1} \\
+\hline
+\hypertarget{RFO12.1.1.1.2}{RFO12.1.1.1.2} & L'amministratore API Market può visualizzare il numero di chiamate giornaliere dell'API scelta & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.1\\UC14.1.1.1.2} \\
+\hline
+\hypertarget{RFD12.1.1.1.3}{RFD12.1.1.1.3} & L'amministratore API Market può visualizzare il tempo di utilizzo medio giornaliero dell'API scelta & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.1\\UC14.1.1.1.3} \\
+\hline
+\hypertarget{RFD12.1.1.1.4}{RFD12.1.1.1.4} & L'amministratore API Market può visualizzare il traffico medio giornaliero dell'API scelta & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.1\\UC14.1.1.1.4} \\
+\hline
+
+\hypertarget{RFO12.1.1.1.5}{RFO12.1.1.1.5} & L'amministratore API Market può visualizzare la lista degli utenti con licenza attiva dell'API scelta & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.1\\UC14.1.1.1.5} \\
+\hline
+
+\hypertarget{RFO12.1.1.1.5.1}{RFO12.1.1.1.5.1} & L'amministratore API Market può visualizzare la lista dei nomi degli utenti con licenza attiva dell'API scelta & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.1\\UC14.1.1.1.5\\UC14.1.1.1.5.1} \\
+\hline
+\hypertarget{RFF12.1.1.1.5.2}{RFF12.1.1.1.5.2} & L'amministratore API Market può visualizzare la lista del parametro di scadenza degli utenti con licenza attiva dell'API scelta & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.1\\UC14.1.1.1.5\\UC14.1.1.1.5.2} \\
+\hline
+
+\hypertarget{RFD12.1.1.1.6}{RFD12.1.1.1.6} & L'amministratore API Market può visualizzare il tempo medio di risposta dell'API scelta & \makecell*{Capitolato\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.1\\UC14.1.1.1.6} \\
+\hline
+
+\hypertarget{RFO12.1.1.2}{RFO12.1.1.2} & L'amministratore API Market può sospendere l'API scelta & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.2} \\
+\hline
+
+\hypertarget{RFO12.1.1.2.1}{RFO12.1.1.2.1} & L'amministratore API Market può confermare la sospensione dell'API scelta & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.2\\UC14.1.1.2.1} \\
+\hline
+\hypertarget{RFO12.1.1.2.2}{RFO12.1.1.2.2} & L'applicazione web mostra un messaggio di errore nel caso la sospensione dell'API scelta sia fallita & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.2\\UC14.1.1.2.2} \\
+\hline
+
+\hypertarget{RFD12.1.1.3}{RFD12.1.1.3} & L'amministratore API Market può cancellare l'API scelta & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.3} \\
+\hline
+
+\hypertarget{RFD12.1.1.3.1}{RFD12.1.1.3.1} & L'amministratore API Market può confermare la cancellazione dell'API scelta & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.3\\UC14.1.1.3.1} \\
+\hline
+\hypertarget{RFD12.1.1.3.2}{RFD12.1.1.3.2} & L'applicazione web mostra un messaggio di errore nel caso la cancellazione dell'API scelta sia fallita & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.3\\UC14.1.1.3.2} \\
+\hline
+\hypertarget{RFO12.1.1.3.3}{RFO12.1.1.3.3} & L'amministratore API Market può visualizzare un avviso riguardo la cancellazione dell'API scelta & \makecell*{Interno\\UC14\\UC14.1\\UC14.1.1\\UC14.1.1.3\\UC14.1.1.3.3} \\
+\hline
+
+\hypertarget{RFO12.2}{RFO12.2} & L'amministratore API Market può scegliere un utente & \makecell*{Interno\\UC14\\UC14.2} \\
+\hline
+\hypertarget{RFO12.2.1}{RFO12.2.1} & L'amministratore API Market può moderare l'utente scelto & \makecell*{Interno\\UC14\\UC14.2.1} \\
+\hline
+
+\hypertarget{RFO12.2.1.1}{RFO12.2.1.1} & L'amministratore API Market può sospendere un utente & \makecell*{Interno\\UC14\\UC14.2\\UC14.2.1\\UC14.2.1.1} \\
+\hline
+
+\hypertarget{RFO12.2.1.1.1}{RFO12.2.1.1.1} & L'amministratore API Market può confermare la sospensione dell'utente & \makecell*{Interno\\UC14\\UC14.2\\UC14.2.1\\UC14.2.1.1\\UC14.2.1.1.1} \\
+\hline
+
+\hypertarget{RFO12.2.1.1.2}{RFO12.2.1.1.2} & L'applicazione web mostra un messaggio di errore nel caso la sospensione dell'utente scelto sia fallita & \makecell*{Interno\\UC14\\UC14.2\\UC14.2.1\\UC14.2.1.1\\UC14.2.1.1.2} \\
+\hline
+
+\hypertarget{RFO12.2.1.2}{RFO12.2.1.2} & L'amministratore API Market può sospendere i pagamenti verso un utente & \makecell*{Interno\\UC14\\UC14.2\\UC14.2.1\\UC14.2.1.2} \\
+\hline
+
+\hypertarget{RFO12.2.1.2.1}{RFO12.2.1.2.1} & L'amministratore API Market può confermare la sospensione dei pagamenti verso l'utente & \makecell*{Interno\\UC14\\UC14.2\\UC14.2.1\\UC14.2.1.2\\UC14.2.1.2.1} \\
+\hline
+
+\hypertarget{RFO12.2.1.2.2}{RFO12.2.1.2.2} & L'applicazione web mostra un messaggio di errore nel caso la sospensione dei pagamenti verso l'utente scelto sia fallita & \makecell*{Interno\\UC14\\UC14.2\\UC14.2.1\\UC14.2.1.2\\UC14.2.1.2.2} \\
+\hline
+
+\hypertarget{RFO12.2.1.3}{RFO12.2.1.3} & L'amministratore API Market può revocare la sospensione di un utente & \makecell*{Interno\\UC14\\UC14.2\\UC14.2.1\\UC14.2.1.3} \\
+\hline
+
+\hypertarget{RFO12.2.1.4}{RFO12.2.1.4} & L'amministratore API Market può revocare la sospensione dei pagamenti di un utente & \makecell*{Interno\\UC14\\UC14.2\\UC14.2.1\\UC14.2.1.4} \\
+\hline
+
+\hypertarget{RFO12.2.1.5}{RFO12.2.1.5} & L'amministratore API Market può cancellare l'utente scelto & \makecell*{Interno\\UC14\\UC14.2\\UC14.2.1\\UC14.2.1.5} \\
+\hline
+
+\hypertarget{RFO12.2.1.5.1}{RFO12.2.1.5.1} & L'amministratore API Market può confermare la cancellazione dell'utente & \makecell*{Interno\\UC14\\UC14.2\\UC14.2.1\\UC14.2.1.5\\UC14.2.1.5.1} \\
+\hline
+
+\hypertarget{RFO12.2.1.5.2}{RFO12.2.1.5.2} & L'applicazione web mostra un messaggio di errore nel caso la cancellazione dell'utente scelto sia fallita & \makecell*{Interno\\UC14\\UC14.2\\UC14.2.1\\UC14.2.1.5\\UC14.2.1.5.2} \\
+\hline
+
+\end{longtable}
+

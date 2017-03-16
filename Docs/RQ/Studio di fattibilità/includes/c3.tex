@@ -1,0 +1,36 @@
+\newpage
+\section{Capitolato C3}
+
+\subsection{Descrizione}
+
+Il capitolato proposto da RiskApp riguarda la simulazione di eventuali danni economici dovuti a un evento esterno, che può interrompere il business di un'azienda. L’applicazione web deve poter offrire all’utente la possibilità di inserire, tramite appositi form, un piano dettagliato dei processi produttivi della propria azienda. Una volta inviati i dati al \textit{server\ped{G}} di analisi dei dati, esso applicherà l'algoritmo RiskApp. Quest'ultimo serve a simulare l'impatto di un certo tipo di danno nel bilancio aziendale, in termici di fatturato e quota di mercato. Inoltre, fornisce un grafo integrato in una mappa geografica, che rappresenta la struttura del processo produttivo e i possibili scenari di danno che possono colpire l’azienda, con relativo danno economico. Si richiede che l'applicazione web sia utilizzabile su dispositivi mobile, in particolare su tablet, con supporto alle gesture tipiche e l'inserimento con riconoscimento vocale.
+
+\subsection{Dominio applicativo}
+
+Lo scopo del progetto è fornire una web app per l'inserimento e la successiva elaborazione di dati per quantificare il danno economico causato da un'interruzione del processo produttivo di un'azienda. L'applicazione sarà, quindi, utile anche in ambito assicurativo, in quanto permetterà di quantificare correttamente l'importo di una polizza.
+
+\subsection{Tecnologie}
+L'azienda proponente RiskApp suggerisce di procedere adottando il suo attuale stack tecnologico:
+\begin{itemize}
+	\item \textbf{HTML5}, \textbf{CSS3} e \textbf{JavaScript}, per la struttura e l'interfaccia grafica dell'applicazione web;
+	\item \textbf{Bootstrap 3}, \textbf{\textit{React\ped{G}}}, \textbf{\textit{Hammer.js\ped{G}}} e \textbf{\textit{Yeoman\ped{G}}}, come framework per la parte front-end;
+	\item \textbf{\textit{Django\ped{G}}}, per la parte back-end;
+	\item \textbf{\textit{Python 3\ped{G}}}, per conoscere il prodotto attuale di RiskApp;
+	\item \textbf{\textit{PostgreSQL\ped{G}}}, come database SQL, e qualsiasi \textbf{\textit{NoSQL\ped{G}}}, come database non relazionale;
+	\item \textbf{\textit{RStudio\ped{G}}} con \textbf{\textit{Shiny\ped{G}}}, per il processamento dati.
+\end{itemize}
+
+\subsection{Aspetti critici}
+
+La nostra analisi ha portato a individuare diversi punti critici:
+\begin{itemize}
+	\item Trasportare il grafo rappresentante il processo produttivo dell’azienda su di una mappa geografica, con evidenziato il percorso della merce e i luoghi di lavorazione e deposito di quest'ultima;
+	\item L'utilizzo della web app anche in assenza di collegamento alla rete, quindi come vengono incapsulati e successivamente inviati i dati una volta che si ritorna online;
+	\item La restituzione dei dati nello stesso formato di input: i dati inviati al server di analisi devono essere convertiti, e la lettura nel formato di input necessita un'ulteriore decodifica. Questo punto potrebbe essere risolto, in parte, con lo studio dell’algoritmo di RiskApp.
+\end{itemize}
+
+\subsection{Considerazioni conclusive}
+
+La creazione di un'applicazione web connessa ad un sistema di analisi già esistente, non ha generato un forte stimolo nel gruppo. Lo studio approfondito dell’algoritmo RiskApp, per comprendere il meccanismo di elaborazione dei dati e la generazione dell'output, e la realizzazione di un'applicativo disponibile e funzionante offline, sono gli elementi che più hanno allontanato il gruppo dallo scegliere questo capitolato. 
+Inoltre, è necessaria la conoscenza del linguaggio Pyhton 3, che nessun membro del gruppo possiede, e il possibile utilizzo di database NoSQL.
+Per questi motivi, il gruppo ha deciso di scartare questo capitolato. 

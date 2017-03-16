@@ -1,0 +1,33 @@
+\newpage
+\section{Descrizione generale}
+\subsection{Obiettivo del prodotto}
+Con la realizzazione di questo progetto, si vuole principalmente fornire un ambiente online di archiviazione e compravendita di API di microservizi. Un secondo obiettivo implicito, riguarda il voler favorire la diffusione e lo sviluppo del linguaggio Jolie, la tecnologia principale dell'azienda committente ItalianaSoftware. Jolie è un progetto internazionale ed open-source, ed introduce un paradigma di programmazione orientato ai microservizi. Nonostante questa idea sia in fase di sviluppo da anni, solo recentemente ha assunto una forma definita e dei risultati concreti. Infatti, approfittando dell'interesse per le architetture a microservizi, Jolie vorrebbe affermarsi come uno dei principali linguaggi di programmazione ed il marketplace proposto da ItalianaSoftware mira a questo traguardo. \MakeUppercase{è} richiesto lo sviluppo di una applicazione web che permetta la compravendita di API di microservizi Jolie. Per garantire ciò, sarà necessario poter consultare le interfacce dei microservizi presenti sul marketplace e la rispettiva documentazione, permettere la gestione di tutte le operazioni legate alle API (inserimento di nuove API e modifica/rimozione di quelle pubblicate) e monitorarne l'utilizzo, al fine di estrapolarne dati utili a verificarne il corretto funzionamento ed eventualmente, effettuare indagini di mercato mirate).
+
+\subsection{Funzioni del prodotto}
+Le caratteristiche peculiari del progetto riguardano la possibilità, non solo di gestire i microservizi alla stregua di un marketplace, consentendo a questa nuova tecnologia di emergere, ma di integrare funzionalità di controllo tramite un API Gateway che sia in grado di: effettuare un'analisi statistica dei dati di utilizzo più rilevanti, e regolare l'accesso alle API registrate tramite opportune API key, limitandone l'utilizzo per coloro che non sono in possesso di una chiave valida. La creazione dell'applicazione web sarà affrontata tramite l'utilizzo delle consuete tecnologie per lo sviluppo web in lato front-end e back-end. Il progetto adempie alle necessità di un comune marketplace, con la sola peculiarità di avere come merce delle API di microservizi:
+\begin{itemize}
+\item Gestione profili utenti registrati;
+\item Inserimento e modifica di API (di microservizi) nel database;
+\item Ricerca e consultazione di API (interfaccia e relativa documentazione);
+\item Compravendita delle API tramite API key;
+\item Monitoraggio dell'uso delle API in base alle API key;
+\item Visualizzazione dati d'uso delle API.
+\end{itemize}
+Un'applicazione web permette facile acceso a tali funzionalità: il suo front-end comunica con gli utenti, mentre il suo back-end svolge il lavoro su un apposito server di ItalianaSoftware. Ad occuparsi di coordinare e presentare i risultati dei vari servizi forniti è l'API Gateway, realizzato anch'esso con un'architettura a microservizi.
+
+\subsection{Caratteristiche degli utenti}
+Il bacino degli utenti dell'API Market sarà molto specializzato, composto quasi esclusivamente da aziende e privati nell'ambito informatico. Sia Jolie, che è un linguaggio di programmazione in fase di sviluppo, sia l'architettura a microservizi, per quanto interessante ed innovativa, non sono ad oggi elementi sufficientemente conosciuti. Di fatto, solo chi lavora nel loro specifico ambito, troverà molto interessante il prodotto \progetto\ e potrà usufruire appieno delle sue potenzialità. Ad esempio, un utente informato sulle architetture a microservizi potrà pubblicare e fornire una propria API solo se l'interfaccia sarà scritta in linguaggio Jolie. Tutte le funzionalità del marketplace saranno disponibili a qualsiasi utente, ma ciascuna ne identifica una categoria generale. Gli utenti meno familiari con le tecnologie impiegate, potranno consultare facilmente e senza impegno la documentazione delle API per valutarne l'utilità. Gli utenti più esperti ed ambiziosi, invece, potranno sfruttare al meglio il paradigma di programmazione a microservizi costruendo nuove API a partire da quelle già presenti nel database. Infine, gli utenti intenzionati a diventare veri e propri venditori e fornitori, avranno a disposizione alcuni dati significativi riguardo alle proprie API, su cui basare i prodotti futuri. Data l'estrema versatilità e componibilità della programmazione a microservizi, non esistono distinzioni di particolare rilievo tra utenti privati o aziende.
+
+\subsection{Piattaforma di esecuzione}
+Il prodotto finale dovrà eseguire su una macchina server fornita da ItalianaSoftware oppure in locale. Inoltre, dovrà essere utilizzabile sui più comuni browser presenti sul mercato, secondo la lista di compatibilità indicata nella sezione conclusiva del documento (\textbf{\hyperref[Tabella-browser-supportati]{Tabella browser supportati}}). Per un corretto utilizzo della piattaforma, è necessario che il dispositivo finale sia pienamente compatibile con gli standard delle tecnologie adottate (HTML5, CSS3 e JavaScript).
+
+\subsection{Vincoli generali}
+\begin{itemize}
+\item Per le interfacce delle API è consigliato l'uso di Jolie;
+\item Per l'API Gateway è obbligatorio l'uso di un'architettura a microservizi, quindi verrà utilizzato un linguaggio orientato ai microservizi (Jolie);
+\item Le componenti web possono essere realizzate con le seguenti tecnologie: HTML5, CSS3, JavaScript e qualsivoglia framework;
+\item Per il database possono essere utilizzati sia database SQL che NoSQL;
+\item Nel caso in cui ItalianaSoftware richieda il superamento di specifici test, il progetto dovrà essere in grado di superarli;
+\item Il progetto terminato dovrà essere distribuito con licenza open source e caricato su un repository Git;
+\item \MakeUppercase{è} richiesto un breve report tecnico che evidenzi gli aspetti positivi e gli aspetti negativi di un'architettura a microservizi.
+\end{itemize}

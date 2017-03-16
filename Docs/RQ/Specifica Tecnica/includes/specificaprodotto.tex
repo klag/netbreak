@@ -1,0 +1,73 @@
+\newpage
+\section{Specifica del prodotto}
+In questa sezione verrà descritta in maniera macroscopica l'architettura che verrà adottata durante l'attività di Progettazione. Per semplificare la comprensione, verrà utilizzato un approccio top-down, partendo dalle linee generali, fino a giungere ad una descrizione in dettaglio delle componenti.
+
+\subsection{Architettura generale}
+Il software API Market si caratterizza dalle comuni applicazioni per l'approccio a microservizi adottato nell'implementazione. In maniera differente da un applicazione monolitica, ogni componente viene realizzato come microservizio a sè stante. L'aggregazione di questi microservizi definisce l'applicazione finale e ne realizza il comportamento definitivo. Esulando dall'approccio a microservizi, il sistema sarà realizzato al pari di una classica applicazione \textit{Client-Server}, dove il lato \textit{front-end\ped{G}} (Client) si occuperà di fornire all'utente finale l'interfaccia web su cui poter interagire, mentre il lato \textit{back-end\ped{G}} (Server) gestirà e salverà i dati, e si occuperà della gestione delle chiamate API (tramite l'opportuna componente \textit{API Gateway}). La base di dati utilizzata, si occupa della raccolta di dati sensibili dell'utenza, della gestione delle applicazioni e delle chiavi e, infine, della gestione dei dati statistici.
+
+Il sistema verrà realizzato, per il lato back-end, tramite microservizi con interfaccia Jolie, che verranno implementati con codice \textit{Java\ped{G}}. Questo approccio, sebbene la tematica sia di recente sviluppo, risulta molto gettonato dalle grandi realtà che recentemente hanno deciso di affacciarsi a questa realtà (come ad esempio l'\textit{AWS\ped{G}} Service Registry \textit{Eureka}, usato dalla piattaforma Netflix). Il lato front-end, invece, verrà implementato tramite \textit{HTML\ped{G}} e \textit{JavaScript\ped{G}}, in particolare, l'utilizzo del framework full-stack \textit{MeteorJS\ped{G}} consentirà un binding in real-time per la rappresentazione delle informazioni.
+Nella realizzazione dell'API Market richiesto, verrà utilizzato il desing pattern architetturale \textbf{\textit{Model View ViewModel}}. Alcune componenti di questo pattern adotteranno un design pattern a microservizi, espresso in due varianti: a catena (\textit{Chain}) e di aggregazione (\textit{Aggregator}).
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.7\linewidth]{IMG/MVVMPattern}
+	\caption{Il design pattern Model View ViewModel}
+\end{figure}
+
+\subsubsection{Pattern architetturale front-end}
+Il design pattern \textit{Model View ViewModel} (MVVM) è suddiviso in tre componenti, ed in questa sezione verranno spiegate brevemente la funzionalità di ognuna. Verrà motivata, inoltre, la scelta di tale pattern da parte del team.
+
+\begin{itemize}
+	\item \textbf{Model}: rappresenta il punto di accesso ai dati, si occupa dell'interazione con essi e ne specifica le modalità di accesso. Nella definizione dell'API Market, il Model si trova nel back-end;
+	\item \textbf{View}: è in grado di gestire eventi, eseguire operazioni ed effettuare il data-binding;
+	\item \textbf{ViewModel}: è il punto di incontro tra la View e il Model. I dati ricevuti da quest’ultimo sono elaborati per essere presentati e passati alla View.
+\end{itemize}
+
+In fase di progettazione, il gruppo ha preso in esame diversi design pattern architetturali, ma la volontà di realizzare pagine web dinamiche e reattive, unitamente all'uso di tecnologie moderne, quali AngularJS e il sistema di comunicazione MeteorJS, hanno indirizzato la scelta verso il pattern MVVM.
+
+\paragraph{Componente Model}
+Il Model è situato nella parte back-end del sistema e svolge le seguenti funzioni:
+\begin{itemize}
+	\item Interagisce con i database, nei quali vengono salvati i dati del sistema, come API, transazioni e profili utenti. Le funzionalità incluse comprendono microservizi in grado di caricare, salvare, modificare e cancellare dati sui database;
+	\item Offre un'interfaccia logica di accesso al ViewModel, attraverso la quale può richiedere dati ed effettuare operazioni su di essi, tramite funzionalità del framework MeteorJS, come \textit{Publishing} e \textit{Subscribing}.
+\end{itemize}
+
+\paragraph{Componente View}
+La componente View è situata nella parte front-end del sistema e ha lo scopo di:
+\begin{itemize}
+	\item Rappresentare i dati del ViewModel (non interagisce in nessun modo con essi);
+	\item Visualizzare le funzionalità offerte all'utente.
+\end{itemize} 
+La componente View è un'interfaccia web, ed il gruppo ha scelto di utilizzare \textit{CSS3\ped{G}} e \textit{HTML5\ped{G}} per le parti statiche, mentre \textit{Angular 2\ped{G}} per le parti dinamiche. 
+
+\paragraph{Componente ViewModel}
+La componente ViewModel è situata nella parte front-end del sistema e comunica sia con la View che con il Model. Essa è l'unica componente a conoscere gli altri, realizzando un totale disaccopiamento tra View e Model. Il ViewModel ha tre compiti fondamentali, ovvero:
+\begin{itemize}
+	\item Realizzare il data-binding;
+	\item Passare gli input della View e tradurli in azioni Model;
+	\item Richiedere i dati al Model tramite la tecnica \textit{Publish-Subscribe} di MeteorJS, ed infine inviarli alla View.
+\end{itemize}
+
+\subsubsection{Pattern architetturale back-end}
+All'interno della componente Model sono presenti una serie di microservizi relizzati con il design pattern \textbf{\textit{Aggregator Microservices}}. 
+\begin{figure}[H]
+	\centering
+	\includegraphics
+	[width=0.7\linewidth]
+	{IMG/microservices-aggregator}
+	\caption{Aggregator Microservices design pattern}
+\end{figure}
+Questo design pattern si compone di un aggregatore, ovvero un microservizio in grado di collezionare i dati che gli vengono forniti da diversi microservizi, per poi renderli fruibili all'utente, tramite la componente View. Utilizzando un design pattern a microservizi è necessario che le varie componenti siano indipendenti tra loro e, quindi, che lo siano anche i relativi database. La realizzazione di un unico database avrebbe portato alla realizzazione di un'architettura \textit{SOA\ped{G}}, ovvero un'architettura orientata ai servizi, e non basata sui microservizi. Tutti i microservizi contenuti in un package, sono indipendenti da microservizi contenuti in altri package, ed ogni microservizio opera sul proprio database.
+
+\subsubsection{Pattern architetturale API Gateway}
+Il design pattern architetturale scelto per l'API Gateway è il design pattern \textbf{\textit{Chain Microservices}}. Questo tipo di pattern è una sequenza di azioni prestabilite, innescate da una richiesta \textit{HTTP\ped{G}}. 
+\begin{figure}[H]
+	\centering
+	\includegraphics
+	[width=0.7\linewidth]
+	{IMG/microservices-chain}
+	\caption{Chain Microservices design pattern}
+\end{figure}
+Ogni servizio non può intraprendere la propria esecuzione se non è terminato il servizio precedente. Un punto critico di questa scelta è la lunghezza della catena. L'API Gateway è progettato per elaborare una richiesta e ritornare una risposta al chiamante, trattandosi, dunque, di richieste sincrone. Una catena troppo lunga crea una tempo di attesa non indifferente per il client, considerando che bisogna valutare anche il tempo impiegato dal microservizio target della chiamata all'API Gateway.
+
+\subsubsection{SOA vs. Microservices Architecture}
+In sede di scelta architetturale, il gruppo \textit{\gruppo} ha analizzato le principali architetture in materia di microservizi. L'architettura \textbf{\textit{Service Oriented Architecture}} è una scelta intermedia tra le applicazioni monolitiche e le applicazioni completamente a microservizi. In una \textit{SOA}, l'applicazione è composta da una sorta di collezione di servizi. L'applicazione base viene, quindi, scomposta in una collezione di servizi. L’approccio a microservizi tende, invece, alla realizzazione di una singola applicazione composta da un numero arbitrario di servizi. Essi vengono, quindi, sviluppati ed implementati in maniera indipendente. Tale approccio presenta un alto livello di flessibilità e scalabilità, predisponendo la massima indipendenza dei componenti (microservizi). Un esempio è la scelta di utilizzo del database citata precedentemente: nella traduzione di un'applicazione da monolitica (oppure \textit{SOA}) ad un'architettura a microservizi, il database viene scomposto in parti indipendenti. La comunicazione tra i servizi è basata su HTTP, tramite le \textit{API RESTful\ped{G}}, con passaggio dei dati in formato \textit{JSON\ped{G}}. Nello specifico caso del nostro applicativo, la comunicazione sarà gestita su un diverso livello di astrazione, tramite i framework MeteorJS e AngularJS, i quali si occuperanno della trasmissione dati in formato JSON con maggior autonomia.

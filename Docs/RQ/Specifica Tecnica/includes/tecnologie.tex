@@ -1,0 +1,218 @@
+\newpage
+\section{Tecnologie utilizzate}
+In questa sezione, vengono descritte le tecnologie utilizzate per la realizzazione della piattaforma \progetto. Verranno elencati i pregi e i difetti individuati durante l'analisi, e le motivazioni che hanno spinto il gruppo \textit{\gruppo} a intraprendere tali scelte progettuali e tecnologiche.
+
+\subsection{Angular 2}
+\begin{itemize}
+	\item \textbf{Descrizione}: AngularJS è un framework JavaScript per lo sviluppo di applicazioni web Client-side. Può essere aggiunto alle pagine HTML tramite opportune inclusioni. \MakeUppercase{è} distribuito come un file JavaScript.
+	\item \textbf{Utilizzo}: questa tecnologia verrà utilizzata per rendere le pagine HTML reattive e responsive alle richieste in real-time.
+	\item \textbf{Vantaggi}: 
+	\begin{itemize}
+		\item Interazioni in tempo reale con l'utente per pagine dinamiche single-page;
+		\item Facilita e snellisce lo sviluppo;
+		\item Risulta facile da testare;
+		\item Estende HTML;
+		\item Offre la possibilità di un data-binding bidirezionale.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Semplice da imparare, ma con una curva di apprendimento essenzialmente logaritmica;
+		\item Potrebbe essere complicato un debug degli errori;
+		\item Documentazione non particolarmente sviluppata rispetto a tecnologie più consolidate.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Bootstrap 3}
+\begin{itemize}
+	\item \textbf{Descrizione}: Bootstrap 3 è un framework CSS3, utilizzato per semplificare la definizione di un interfaccia grafica sulla struttura HTML.
+	\item \textbf{Utilizzo}: questa tecnologia verrà utilizzata per la realizzazione dell'interfaccia grafica per il prodotto \progetto.
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item Supporta la maggior parte dei browser;
+		\item Permette un ampio riuso del codice;
+		\item \MakeUppercase{è} basato su SASS, un diffuso pre-processore per il linguaggio CSS;
+		\item La documentazione è vasta e completa, ed è ben supportato dalla community;
+		\item Leggero e facilmente personalizzabile;
+		\item Pensato per un modello responsive, con griglie e breakpoint predisposti.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item La scrittura dello stile può risultare verbosa e può generare HTML poco elegante;
+		\item I siti realizzati con questo framework, se non personalizzati, risultano molto similari tra loro.
+	\end{itemize}
+\end{itemize}
+
+\subsection{CSS3}
+\begin{itemize}
+	\item \textbf{Descrizione}: CSS3 è la principale e più aggiornata tecnologia, e viene utilizzata per la descrizione della componente grafica di un sito.
+	\item \textbf{Utilizzo}: questa tecnologia viene utilizzata per la personalizzazione dell'aspetto grafico precedentemente definito tramite Bootstrap 3.
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item Rappresenta l'ultima versione stabile di questo linguaggio;
+		\item Aiuta nella creazione di pagine con lo stesso stile e formato;
+		\item \MakeUppercase{è} supportato ampiamente dalla maggior parte dei browser;
+		\item Risulta facile da apprendere.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item L'uso di questa tecnologia può rendere caotica la creazione di siti utilizzando software di terze parti.
+	\end{itemize}
+\end{itemize}
+
+\subsection{HTML5}
+\begin{itemize}
+	\item \textbf{Descrizione}: HTML è il linguaggio di markup principale per la definizione di una struttura per un sito.
+	\item \textbf{Utilizzo}: questa tecnologia verrà utilizzata per descrivere la struttura delle pagine front-end.
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item L'ultima versione adottata ha introdotto significativi miglioramenti riguardo la pulizia del codice;
+		\item Sono state introdotte funzionalità avanzate, assenti nelle versioni precedenti;
+		\item La semantica è stata standardizzata in maniera più rigorosa.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Il supporto all'ultima versione di questo standard potrebbe non essere completamente definita in browser non aggiornati.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Java}
+\begin{itemize}
+	\item \textbf{Descrizione}: Java è un linguaggio di programmazione orientato agli oggetti, che presenta il grande vantaggio di essere indipendente dalla piattaforma in cui viene eseguito. Java è, ad oggi, il linguaggio di programmazione più diffuso ed utilizzato al mondo.
+	\item \textbf{Utilizzo}: questa tecnologia verrà utilizzata nell'implementazione delle interfacce definite in linguaggio Jolie.
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item Può essere eseguito ovunque sia disponibile una versione della \textit{Java Virtual Machine\ped{G}};
+		\item Ha una gestione automatica della memoria, tramite \textit{Garbage Collector\ped{G}};
+		\item \MakeUppercase{è} relativamente facile da imparare;
+		\item Supporta nativamente la concorrenza e distribuzione.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Essendo un linguaggio interpretato ha un maggior overhead rispetto ai linguaggi compilati;
+		\item Necessità di una gestione esplicita delle eccezioni;
+		\item La Java Virtual Machine sfrutta in maniera più consistente le risorse del sistema.
+	\end{itemize}
+\end{itemize}
+
+\subsection{JavaScript ES6}
+\begin{itemize}
+	\item \textbf{Descrizione}: JavaScript è il principale linguaggio per estendere le funzionalità front-end di un sito.
+	\item \textbf{Utilizzo}: questa tecnologia sarà utilizzata per l'implementazione di funzionalità aggiuntive, assieme ai framework Angular 2 e MeteorJS.
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item \MakeUppercase{è} un linguaggio relativamente semplice da imparare;
+		\item Estende le funzionalità delle pagine web;
+		\item JavaScript è relativamente veloce per l'utente finale.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Può presentare facilmente falle relative alla sicurezza;
+		\item Rallenta il caricamento delle pagine in dispositivi non particolarmente performanti;
+		\item Deve essere esplicitamente abilitato dall'end-user per poter usufruire delle funzionalità.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Jolie}
+\begin{itemize}
+	\item \textbf{Descrizione}: Jolie è il primo linguaggio esplicitamente orientato ai microservizi. 
+	\item \textbf{Utilizzo}: Jolie verrà utilizzato per la definizione delle interfacce nei microservizi che saranno realizzati per il lato back-end.
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item Non necessita di framework, ma solamente di un interprete;
+		\item Funziona tramite una Java Virtual Machine;
+		\item \MakeUppercase{è} nativamente compatibile con Java per l'estensione delle funzionalità;
+		\item La distribuzione di un microservizio può avvenire su più macchine, senza modificarne l'esecuzione.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Linguaggio molto giovane e di scarsa diffusione;
+		\item Documentazione scarna;
+		\item Limitate tecnologie in grado di interfacciarsi con applicazioni Jolie.
+	\end{itemize}
+\end{itemize}
+
+\subsection{JQuery}
+\begin{itemize}
+	\item \textbf{Descrizione}: JQuery è una libreria per il linguaggio JavaScript. Viene utilizzata per estendere le funzionalità di tale linguaggio, aggiungendo operazioni implementabili con semplicità.
+	\item \textbf{Utilizzo}: questa tecnologia verrà utilizzata per aggiungere funzionalità nel lato front-end.
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item \MakeUppercase{è} ben supportato dalla community;
+		\item Rende la manipolazione DOM molto più agevole;
+		\item Possiede diversi plug-in che estendono in modo ancor maggiore le funzionalità.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Presenta un ulteriore livello di appesantimento della struttura front-end;
+		\item La curva di apprendimento è logaritmica e può risultare difficile.
+	\end{itemize}
+\end{itemize}
+
+\subsection{JWT}
+\begin{itemize}
+	\item \textbf{Descrizione}: JSON Web Tokens (JWT) è uno standard che definisce una metodologia compatta e sicura per la trasmissione tra due parti di un oggetto JSON. JWT utilizza il protocollo di codifica RSA.
+	\item \textbf{Utilizzo}: questa tecnologia verrà utilizzata per secretare lo scambio di dati sensibili con la piattaforma.
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item Supporto RSA a 256-bit con altissima sicurezza;
+		\item Riduce il numero di transazioni con il database;
+		\item Relativamente semplice da utilizzare.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item La sicurezza di JWT è basata su una singola chiave, rappresentandone anche uno dei suoi più gravi rischi.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Leonardo}
+\begin{itemize}
+	\item \textbf{Descrizione}: Leonardo è un web server sviluppato completamente in Jolie. 
+	\item \textbf{Utilizzo}: questa tecnologia sarà utilizzata, visto la sua affinità con le altre tecnologie adottate, come web server per la piattaforma.
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item Affine alle tecnologie utilizzate nel progetto e ad un approccio a microservizi;
+		\item Offre una buona scalabilità per ogni tipo di applicazione.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Leonardo è un web server che presenta tuttora una diffusione molto limitata;
+		\item Essendo limitato il bacino di utenza, il supporto per tale piattaforma è anch'esso limitato.
+	\end{itemize}
+\end{itemize}
+
+\subsection{MeteorJS}
+\begin{itemize}
+	\item \textbf{Descrizione}: MeteorJS è un framework open source JavaScript scritto con \textit{Node.js\ped{G}}. Esso permette lo sviluppo di applicazioni web cross-platform. Il framework integra \textit{MongoDB\ped{G}} e utilizza il pattern publish-subcribe per la propagazione dei dati in tempo reale tra client e server. Per la parte client, si è deciso di utilizzare il package Meteor-Angular, in modo da poter usare il framework Angular 2 per lo sviluppo front-end.
+	\item \textbf{Utilizzo}: framework principale su cui sarà basata la parte front-end dell'API Market.
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item Isomorfismo, ovvero il codice sviluppato per il client può essere riutilizzato anche sul server;
+		\item Latency compensation, ovvero le azioni vengono eseguite inmmediatamente nel client, ma il server può eventualmente fare roll-back qualora un'azione eseguita non fosse valida;
+		\item Reattività e Virtual DOM, con le viste che vengono automaticamente ricalcolate al variare dei dati;
+		\item Sono presenti moltissimi package che rispondono a svariate esigenze del prodotto.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item La tecnologia non è mai stata utilizzata da nessun membro del team, ed è quindi necessario un periodo di formazione per poterla utilizzare al meglio.
+	\end{itemize}
+\end{itemize}
+
+\subsection{MySQL}
+\begin{itemize}
+	\item \textbf{Descrizione}: MySQL è un database di tipo relazionale, open-source e sviluppato da Oracle. Tale database è tuttora il più diffuso e utilizzato nella sua categoria.
+	\item \textbf{Utilizzo}: questa tecnologia verrà utilizzata per la gestione e il salvataggio dei dati back-end per l'applicazione.
+	\item \textbf{Vantaggi}:
+	\begin{itemize}
+		\item Valida e consolidata esperienza del team per tale piattaforma;
+		\item La tecnologia si integra perfettamente con i framework utilizzati;
+		\item Documentazione estesa e valido supporto da parte della community;
+		\item Sono disponibili numerosi strumenti per la progettazione della base di dati.
+	\end{itemize}
+	\item \textbf{Svantaggi}:
+	\begin{itemize}
+		\item Alcune alternative offrono un bacino di funzionalità maggiore, sebbene non risultino adatti per interoperare con le altre tecnologie utilizzate.
+	\end{itemize}
+\end{itemize}
+
+
+

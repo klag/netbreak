@@ -1,0 +1,80 @@
+% Sostituisco i placeholder registrati con la specifica variabile per il documento corrente. Questa parte iniziale contiene intestazioni e templates.
+
+% Modificare ad ogni modifica e documento
+\newcommand{\documento}{\G}
+\newcommand{\nomedocumentofisico}{Glossario 2\_0\_0.pdf}
+\newcommand{\redazione}{\MC \\ & \AN \\& \DAN \\& \AS \\& \NS \\& \DS}
+\newcommand{\verifica}{\AS\\ &\NS \\ & \DAN}
+\newcommand{\versione}{2.0.0}
+\newcommand{\approvazione}{\DS}
+\newcommand{\uso}{Esterno}
+\newcommand{\destinateTo}{\proponente, \\ & \TV, \\ & \RC, \\ & \gruppo}
+\newcommand{\datacreazione}{12 Dicembre 2016}
+\newcommand{\datamodifica}{2 Marzo 2017}
+\newcommand{\stato}{Approvato}
+
+%Abilitazione indice delle tabelle e figure
+\def\TABELLE{false}
+\def\FIGURE{false}
+
+%Inclusione di layout e variabili (Non modificare)
+\input{../../template/layoutDocumento.tex}
+\input{../../template/comandiVeloci.tex}
+
+%Inclusione del changelog per il documento corrente
+\input{includes/changelog.tex}
+
+%Imposto la profondità degli indici
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+
+\makeglossaries
+\makeindex
+\renewcommand*{\glssubentrycounterlabel}{\Roman{glossarysubentry})\space}
+\renewcommand{\glossarysection}[2][]{}
+
+
+
+\begin{document}
+%Inclusione del template per la homepage (Non modificare)
+\input{../../template/homepage.tex}
+
+%Registro delle modifiche e indice (Non modificare)
+\input{../../template/changelogMultiPage.tex}
+%\input{../../template/index.tex}
+
+%Inclusione delle varie includes di contenuto
+%Introduzione e contenuti di ogni tipo
+
+\input{includes/A.tex}
+\input{includes/B.tex}
+\input{includes/C.tex}
+\input{includes/D.tex}
+\input{includes/E.tex}
+\input{includes/F.tex}
+\input{includes/G.tex}
+\input{includes/H.tex}
+\input{includes/I.tex}
+\input{includes/J.tex}
+\input{includes/K.tex}
+\input{includes/L.tex}
+\input{includes/M.tex}
+\input{includes/N.tex}
+\input{includes/O.tex}
+\input{includes/P.tex}
+\input{includes/Q.tex}
+\input{includes/R.tex}
+\input{includes/S.tex}
+\input{includes/T.tex}
+\input{includes/U.tex}
+\input{includes/V.tex}
+\input{includes/W.tex}
+\input{includes/X.tex}
+\input{includes/Y.tex}
+\input{includes/Z.tex}
+
+
+\glsaddall
+\printglossary[style=myaltlistgroup]
+
+\end{document}
