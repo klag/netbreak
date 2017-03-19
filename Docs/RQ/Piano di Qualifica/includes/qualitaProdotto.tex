@@ -3,10 +3,25 @@
 	
 Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha individuato dallo standard \textbf{\textit{ISO/IEC 9126\ped{G}}} le qualità che ritiene più importanti durante tutto il ciclo di vita del prodotto \progetto. Per ognuna delle qualità individuate, sono stati definiti obiettivi e metriche coerenti con i livelli di qualità dichiarati.
 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.35]{includes/img/9126.png}
+	\caption{Standard ISO/IEC 9126}
+\end{figure}
+
+Le \textbf{metriche interne} si applicano al software non eseguibile, come ad esempio le specifiche tecniche e il codice sorgente, durante i periodi di progettazione e codifica.
+Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-3\ped{G}}}.\\
+Durante le fasi di sviluppo del software, i prodotti intermedi sono valutati tramite metriche interne che misurano le proprietà intrinseche del prodotto.
+Le misure effettuate permettono di prevedere il livello di qualità esterna ed in uso del prodotto finale, in quanto gli attributi interni influenzano le caratteristiche esterne e quelle in uso.
+Le metriche interne misurano attributi interni del software e forniscono indicazioni sulle caratteristiche esterne del prodotto finale, tramite l'analisi statica dei prodotti intermedi.
+Le metriche interne si applicano anche alla documentazione del prodotto.\\
+Le \textbf{metriche esterne} misurano i comportamenti del prodotto software rilevabili dai test, dall'operatività e dall'osservazione durante la su esecuzione, in funzione degli obiettivi stabiliti.
+Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.	
+
 \subsection{Definizione degli obiettivi di qualità}
 
 	\subsubsection{Funzionalità}
-	Rappresenta la capacità del prodotto nel fornire le funzionalità richieste e soddisfare tutti i requisiti descritti nel documento \textsc{AnalisiDeiRequisiti 2\_0\_0.pdf}.
+	Rappresenta la capacità del prodotto nel fornire le funzionalità richieste e soddisfare tutti i requisiti descritti nel documento \textsc{AnalisiDeiRequisiti 3\_0\_0.pdf}.
 		
 		\paragraph{Obiettivi}
 			\begin{itemize}
@@ -24,7 +39,7 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 				\item \textbf{fun\ped{Tot}} = numero di funzioni totali
 			\end{itemize}
 			
-			\begin{table}[H]
+		\begin{table}[H]
 			\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
 				\hline
 				\rowcolor{Gray}
@@ -374,39 +389,4 @@ Al fine di garantire una buona qualità di prodotto, il \textit{team\ped{G}} ha 
 				\end{longtable}
 				\caption{Supporto differenti versioni dei browser}
 			\end{table}
-			
-
-		
-	\subsection{Metriche}
-	Le \textbf{metriche interne} si applicano al software non eseguibile, come ad esempio le specifiche tecniche e il codice sorgente, durante i periodi di progettazione e codifica.
-	Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-3\ped{G}}}.\\
-	Durante le fasi di sviluppo del software, i prodotti intermedi sono valutati tramite metriche interne che misurano le proprietà intrinseche del prodotto.
-	Le misure effettuate permettono di prevedere il livello di qualità esterna ed in uso del prodotto finale, in quanto gli attributi interni influenzano le caratteristiche esterne e quelle in uso.
-	Le metriche interne misurano attributi interni del software e forniscono indicazioni sulle caratteristiche esterne del prodotto finale, tramite l'analisi statica dei prodotti intermedi.
-	Le metriche interne si applicano anche alla documentazione del prodotto.\\
-	Le \textbf{metriche esterne} misurano i comportamenti del prodotto software rilevabili dai test, dall'operatività e dall'osservazione durante la su esecuzione, in funzione degli obiettivi stabiliti.
-	Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
-		
-		\subsubsection{Misure}
-		Per conseguire dei risultati concreti, il processo di Verifica deve fornire dei dati quantificabili per poter valutare se gli obiettivi sono stati raggiunti o meno. Queste è possibile tramite l’utilizzo di metriche e misure. Per ogni metrica sono indicati due range:
-		\begin{itemize}
-			\item \textbf{Range accettazione:} rappresenta l'intervallo di valori minimi richiesti per il raggiungimento degli obiettivi di qualità definiti;
-			\item \textbf{Range ottimale:} rappresenta l'intervallo di valori desiderati, entro cui dovrebbe collocarsi la misurazione. Nel caso in cui non si rientrasse in questo range, sarà necessario effettuare una verifica più accurata, al fine di individuarne le cause e poter applicare le dovute correzioni.
-		\end{itemize}
-	
-	\subsection{Analisi}
-	
-	\subsubsection{Analisi statica}
-	L'analisi statica non necessita dell'esecuzione del codice oggetto ed è applicabile sin da subito su codice e documenti prodotti. Essa ha lo scopo di trovare anomalie e può essere eseguita nei due modi seguenti.
-	
-	\paragraph{Formal Walkthrough}
-	Questa tecnica consiste nella ricerca a largo spettro di qualsiasi tipo di errore, nel modo più generico possibile. 
-	Viene utilizzata nelle prime attività di verifica: durante ogni verifica, verrà stilata una lista degli errori più frequenti, in modo da facilitare l’individuazione delle anomalie nelle successive verifiche. 
-	Nel momento in cui si avrà a disposizione una lista sufficientemente dettagliata, sarà possibile passare al metodo \textit{Inspection}.
-	
-	\paragraph{Formal Inspection}
-	Questa tecnica fa riferimento alla lista prodotta in precedenza con il metodo \textit{Walkthrough}. In questo modo, si andranno a ricercare, in modo mirato, gli errori già individuati, prestando comunque attenzione a nuovi possibili errori, che andranno poi ad aggiungersi alla lista.
-	
-	\subsubsection{Analisi dinamica}
-	Parte essenziale del processo di Verifica, in grado di aumentare il valore della qualità del sistema, identificandone e rimuovendone difetti, tramite test dinamici. I test analizzano il comportamento del prodotto su un insieme finito di casi, selezionato sull'insieme infinito delle esecuzioni possibili. Essi producono uno o più esiti decidibili, i quali forniscono informazioni circa il sistema nel complesso o su una delle sue parti. Ogni test deve essere progettato per poter essere ripetibile. L'insieme di test dovrebbe idealmente testare tutto il codice prodotto. Il suo inizio non deve essere differito al termine dell'attività di Codifica, e le sue esigenze devono essere tenute in conto nella progettazione del sistema.	
 	
