@@ -19,22 +19,22 @@ Il package \textit{APIGateway}, che rappresenta il servizio omonimo, contiene il
 
 \paragraph{APICall}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare un oggetto che rappresenta la chiamata a un microservizio ricevuta da un client, che verrà poi inserita in \textit{QueueAPICall};
-	\item \textbf{Relazioni d'uso di altri componenti}: \textit{QueueAPICall};
-	\item \textbf{Attività svolte e dati trattati}: la classe contiene un id che identifica univocamente una chiamata, un indirizzo IP per sapere dove restituire la risposta della chiamata e la API key dell'utente.
+	\item \textbf{Funzione del componente}: istanzierà un oggetto che rappresenta la chiamata a un microservizio ricevuta da un client, che verrà poi inserita in \textit{QueueAPICall};
+	\item \textbf{Relazioni d'uso di altri componenti}: verrà inserita in \textit{QueueAPICall};
+	\item \textbf{Attività svolte e dati trattati}: il microservizio contiene un id che identifica univocamente una chiamata, un indirizzo IP per sapere dove restituire la risposta della chiamata e la API key dell'utente.
 \end{itemize}
 
 \paragraph{QueueAPICall}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: questa classe istanzier\`{a} un numero finito di oggetti, di numero controllato, in modo da garantire un buon servizio, che conterr\`{a} una struttura dati Vector, usata per contenere le \textit{APICall};
-	\item \textbf{Relazioni d'uso di altri componenti}: \textit{APICall};
-	\item \textbf{Attività svolte e dati trattati}: il suo compito principale sar\`{a} registrare la richiesta a un microservizio.
+	\item \textbf{Funzione del componente}: istanzierà un numero finito di oggetti, di numero controllato, in modo da garantire un buon servizio, che conterrà una struttura dati Vector, usata per contenere le \textit{APICall};
+	\item \textbf{Relazioni d'uso di altri componenti}: contiene un Vector di \textit{APICall} e trasmette i dati della singola chiamata al \textit{Buffer};
+	\item \textbf{Attività svolte e dati trattati}: registrerà la richiesta a un microservizio.
 \end{itemize}
 
 \paragraph{GatewayException}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: questa classe istanzier\`{a} un oggetto che rappresenta una condizione d'errore nella richiesta ricevuta;
-	\item \textbf{Relazioni d'uso di altri componenti}: \textit{APICall}.
+	\item \textbf{Funzione del componente}: istanzierà un oggetto che rappresenta una condizione d'errore nella richiesta ricevuta;
+	\item \textbf{Relazioni d'uso di altri componenti}: può venir sollevato da \textit{APIGatewayManager}.
 \end{itemize}
 
 \paragraph{APIGatewayManager}
@@ -51,8 +51,8 @@ Il package \textit{APIGatewayManager}, che rappresenta il servizio omonimo, cont
 
 \subparagraph{APIGatewayManager}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: questa classe istanzier\`{a} un oggetto che rappresenta un task, il quale avr\`{a} il compito di avviare un thread che gestir\`{a} le richieste correnti all'APIGateway, immagazzinate in \textit{QueueAPICall}, mediante i servizi forniti. Inoltre, salverà i dati della chiamata correntemente eseguita in \textit{Buffer}, così da averli a disposizione per l'elaborazione;
-	\item \textbf{Relazioni d'uso di altri componenti}: \textit{QueueAPICall}, \textit{Buffer}, \textit{Verifier}, \textit{SLALogger}, \textit{RequestForwarder}, \textit{ResponseForwarder}.
+	\item \textbf{Funzione del componente}: istanzierà un oggetto che rappresenta un task, il quale avrà il compito di avviare un thread che gestirà le richieste correnti all'APIGateway, immagazzinate in \textit{QueueAPICall}, mediante i servizi forniti. Inoltre, salverà i dati della chiamata correntemente eseguita in \textit{Buffer}, così da averli a disposizione per l'elaborazione;
+	\item \textbf{Relazioni d'uso di altri componenti}: utilizzerà i servizi offerti da \textit{QueueAPICall}, \textit{Buffer}, \textit{Verifier}, \textit{SLALogger}, \textit{RequestForwarder}, \textit{ResponseForwarder}.
 \end{itemize}
 
 \subparagraph{Services}
@@ -65,41 +65,42 @@ Il package \textit{APIGatewayManager}, che rappresenta il servizio omonimo, cont
 
 \chapter{\textbf{Verifier}}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: la classe rappresenta un microservizio che si occupa di verificare che la richiesta ricevuta all'API Gateway sia valida;
-	\item \textbf{Relazioni d'uso di altri componenti}: \textit{RequestForwarder};
-	\item \textbf{Attivit\`{a} svolte e dati trattati}: la classe controller\`{a} che l'utente sia un utente valido, che il microservizio esista e sia attivo, che l'API key dell'utente non sia scaduta e che la SLA associata alla richiesta sia rispettata.
+	\item \textbf{Funzione del componente}: si occuperà di verificare che la richiesta ricevuta all'API Gateway sia valida;
+	\item \textbf{Relazioni d'uso di altri componenti}: trasmetterà il risultato della propria elaborazione ad \textit{APIGatewayManager};
+	\item \textbf{Attività svolte e dati trattati}: controllerà che l'utente sia un utente valido, che il microservizio esista e sia attivo, che l'API key dell'utente non sia scaduta e che la SLA associata alla richiesta sia rispettata.
 \end{itemize}
 
 \chapter{\textbf{SLALogger}}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare un oggetto che rappresenta gli intervalli di inizio e fine di una chiamata a un microservizio;
-	\item \textbf{Relazioni d'uso di altri componenti}: \textit{RequestForwarder}, \textit{ResponseForwarder};
-	\item \textbf{Attivit\`{a} svolte e dati trattati}:  la classe avr\`{a} il compito di salvare in un buffer la data di inizio e fine di una chiamata, sulla base dell'ID di quella chiamata, attraverso dei dati che ricever\`{a} dagli altri componenti dell'API Gateway.	
+	\item \textbf{Funzione del componente}: si occuperà di istanziare un oggetto che rappresenta gli intervalli di inizio e fine di una chiamata a un microservizio;
+	\item \textbf{Relazioni d'uso di altri componenti}: riceverà dati da \textit{RequestForwarder} e \textit{ResponseForwarder}, e li archivierà nel database;
+	\item \textbf{Attività svolte e dati trattati}: salverà in un buffer la data di inizio e fine di una chiamata, sulla base dell'ID di quella chiamata, attraverso dei dati che riceverà dagli altri componenti dell'API Gateway.	
 \end{itemize}
 
 \chapter{\textbf{RequestForwarder}}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare un oggetto che avr\`{a} il compito di instradare la richiesta ricevuta al microservizio corretto e salvare i dati della richiesta;
-		\item \textbf{Relazioni d'uso di altri componenti}: \textit{ServiceRegistry}, \textit{SLALogger};
-		\item \textbf{Attivit\`{a} svolte e dati trattati}: la classe, sulla base delle informazioni dell'IP recuperato dal \textit{ServiceRegistry}, inoltrer\`{a} la richiesta ricevuta al microservizio corretto e richieder\`{a} allo \textit{SLALogger} di salvare i dati relativi al tempo di inizio della richiesta.
+	\item \textbf{Funzione del componente}: si occuperà di istanziare un oggetto che avrà il compito di instradare la richiesta ricevuta al microservizio corretto e salvare i dati della richiesta;
+		\item \textbf{Relazioni d'uso di altri componenti}: trasmetterà il risultato della propria elaborazione ad \textit{APIGatewayManager}, \textit{ServiceRegistry}, \textit{SLALogger};
+		\item \textbf{Attività svolte e dati trattati}: sulla base delle informazioni dell'IP recuperato dal \textit{ServiceRegistry}, inoltrerà la richiesta ricevuta al microservizio corretto e richiederà allo \textit{SLALogger} di salvare i dati relativi al tempo di inizio della richiesta.
 \end{itemize}
 
 \chapter{\textbf{ResponseForwarder}}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare un oggetto che avr\`{a} il compito di ricevere la risposta da parte di un microservizio sulla base di una chiamata al microservizio e salvare i dati relativi alla richiesta;
-	\item \textbf{Relazioni d'uso di altri componenti}: \textit{SLALogger};
-	\item \textbf{Attivit\`{a} svolte e dati trattati}: comunica con lo \textit{SLALogger} per salvare i dati circa il tempo di fine della richiesta, o in caso di esito negativo della richiesta, di apporre il corretto flag per segnalarlo. Inoltra, poi, i dati di risposta al client richiedente.
+	\item \textbf{Funzione del componente}: si occuperà di istanziare un oggetto che avrà il compito di ricevere la risposta da parte di un microservizio sulla base di una chiamata al microservizio e salvare i dati relativi alla richiesta;
+	\item \textbf{Relazioni d'uso di altri componenti}: trasmetterà il risultato della propria elaborazione ad\textit{APIGatewayManager}, \textit{SLALogger};
+	\item \textbf{Attività svolte e dati trattati}: comunica con lo \textit{SLALogger} per salvare i dati circa il tempo di fine della richiesta, o in caso di esito negativo della richiesta, di apporre il corretto flag per segnalarlo. Inoltra, poi, i dati di risposta al client richiedente.
 \end{itemize}
 
 \chapter{\textbf{Buffer}}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare una oggetto che rappresenta un buffer;
-	\item \textbf{Attivit\`{a} svolte e dati trattati}: contiene l'IP dell'host, l'ID dell'utente che ha effettuato la richiesta, l'API Key e il relativo ID, la policy di vendita e un flag relativo alla SLA, per indicare se è rispettata o meno.
+	\item \textbf{Funzione del componente}: si occuperà di istanziare una oggetto che rappresenta un buffer;
+	\item \textbf{Relazioni d'uso di altri componenti}: riceverà dati da \textit{APIGatewayManager};
+	\item \textbf{Attività svolte e dati trattati}: contiene l'IP dell'host, l'ID dell'utente che ha effettuato la richiesta, l'API key e il relativo ID, la policy di vendita e un flag relativo alla SLA, per indicare se è rispettata o meno.
 \end{itemize}
 
 \chapter{\textbf{ServiceRegistry}}
 \begin{itemize}
-	\item \textbf{Funzione del componente}: la classe si occuper\`{a} di istanziare una classe oggetto che rappresenta un microservizio;
-	\item \textbf{Relazioni d'uso di altri componenti}: \textit{RequestForwarder};
-	\item \textbf{Attivit\`{a} svolte e dati trattati}: la classe fornisce le generalit\`{a} del microservizio (IP e nome).
+	\item \textbf{Funzione del componente}: si occuperà di istanziare una classe oggetto che rappresenta un microservizio;
+	\item \textbf{Relazioni d'uso di altri componenti}: riceverà dati da \textit{RequestForwarder} e \textit{ResponseForwarder};
+	\item \textbf{Attività svolte e dati trattati}: fornisce le generalità del microservizio (IP e nome).
 \end{itemize}
