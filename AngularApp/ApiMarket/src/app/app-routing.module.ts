@@ -1,13 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [
-    { path: 'not-found', loadChildren: './not-found/not-found.module#NotFoundModule' },
-    { path: '**', redirectTo: 'not-found' }
+import { NotFound } from './not-found.component';
+import {HeroListComponent} from './user/user.component';
+
+const appRoutes: Routes = [
+  {path: '', component: HeroListComponent },
+  { path: 'not-found', component: NotFound },
+  { path: '**', redirectTo: 'not-found' }
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    imports: [
+      RouterModule.forRoot(appRoutes)
+    ],
+    exports: [
+      RouterModule
+    ]
 })
 export class AppRoutingModule { }
