@@ -1,10 +1,10 @@
-import { ApiMarketPage } from './app.po';
+import { ApimarketPage } from './app.po';
 
-describe('api-market App', function() {
-  let page: ApiMarketPage;
+describe('apimarket App', () => {
+  let page: ApimarketPage;
 
   beforeEach(() => {
-    page = new ApiMarketPage();
+    page = new ApimarketPage();
   });
 
   it('should display message saying app works', () => {
