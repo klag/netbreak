@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
-import {AppRoutingModule} from './app-routing';
+import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './SharedElements/header/header.component';
 import { FooterComponent } from './SharedElements/footer/footer.component';
-import { HomeComponent } from './home/home.component';
+import { LayoutComponent } from './layout/layout.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    HomeComponent,
+    LayoutComponent,
     NotFoundComponent
   ],
   imports: [
