@@ -1,0 +1,36 @@
+\newpage
+\section{Diagrammi di sequenza}
+\subsection{Introduzione}
+Un diagramma di sequenza è un diagramma previsto dall'UML utilizzato per descrivere uno scenario.
+Uno scenario è una determinata sequenza di azioni in cui tutte le scelte sono state già effettuate; in pratica, nel diagramma non compaiono nè scelte, né flussi alternativi.
+Il gruppo ha deciso di prendere in esame la situazione di chiamata di un microservizio passante per l'API Gateway, suddividendo la sequenza in due parti.
+
+\subsection{Diagramma di sequenza relativa alla chiamata di una API}
+\subsubsection{Diagramma di sequenza di gestione della chiamata}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{"IMG/Sequence Diagram0"}
+	\caption{Diagramma di sequenza di gestione della chiamata}
+\end{figure}
+
+\begin{itemize}
+	\item \textbf{Precondizioni}: il client ha effettuato una chiamata ad un'API;
+	\item \textbf{Postcondizioni}: la richiesta arriva all'\textit{API Gateway Manager} che la processa;
+	\item \textbf{Descrizione}: il client effettua una chiamata, creando un oggetto \textit{APICall}. L'oggetto \textit{APICall} viene aggiunto alla coda \textit{QueueAPICall} in attesa di essere prelevato dall'\textit{API Gateway Manager} per la sua esecuzione. Quando la chiamata verrà processata i suoi dati verranno salvati nel \textit{Buffer}.
+\end{itemize}
+
+\newpage
+\subsubsection{Diagramma di sequenza dell'API Gateway Manager}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=1.0\linewidth]{"IMG/Sequence Diagram1"}
+	\caption{Diagramma di sequenza dell'API Gateway Manager}
+\end{figure}
+
+
+\begin{itemize}
+	\item \textbf{Precondizioni}: la richiesta arriva all'\textit{API Gateway Manager} che la processa;
+	\item \textbf{Postcondizioni}: il client riceve la risposta alla sua chiamata e i dati relativi alla SLA, se abilitata, vengono salvati nel database;
+	\item \textbf{Descrizione}: l'\textit{API Gateway Manager }invoca i metodi del \textit{Verifier} per eseguire i controlli necessari, al fine di verificare l'autenticità della chiamata. All'interno del \textit{Verifier} viene deciso, in modo casuale, se effettuare il log della SLA.
+	Conclusi questi controlli preliminari con successo, il \textit{Manager} invoca i metodi di \textit{RequestForwarder} che si occupano di recuperare l'indirizzo dell'API invocata e salvarlo nel \textit{Service Registry}, effettuare un salvataggio relativo alla SLA e concludere la sua esecuzione con la chiamata all'\textit{API target}. Il \textit{Manager} invoca i metodi del \textit{ResponseForwarder}, il quale si occupa di effettuare il salvataggio relativo alla SLA, diminuire il campo \textit{Residue} nel database e inviare la risposta al client chiamante. Infine, il \textit{Manager} si occupa di salvare il record della SLA nel database.  
+\end{itemize}

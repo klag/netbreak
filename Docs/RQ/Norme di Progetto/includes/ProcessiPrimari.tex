@@ -1,0 +1,169 @@
+\newpage
+\section{Processi primari}
+
+	\subsection{Fornitura}
+		\subsubsection{Studio di Fattibilità}
+		Questa fase vedrà la realizzazione di un documento redatto a partire da ciò che emergerà dalle riunioni, alle quali è richiesta la partecipazione dell'intero team. Ciò consentirà di scegliere di comune accordo il capitolato più adatto. Durante tali riunioni, verrà stilata una lista di pro e contro per ogni capitolato d'appalto proposto. Successivamente, gli \textit{\Anas} avranno l'incarico di effettuare la stesura degli studi per ogni singolo capitolato. Il documento prodotto sarà strutturato nel seguente modo:
+		\begin{itemize}
+		\item \textbf{Descrizione:} introduzione generale del capitolato, nel quale si evidenziano le funzionalità minime richieste per il prodotto finale;
+		\item \textbf{Dominio applicativo:} descrizione del bacino di utenza e dell'ambito in cui il prodotto sarà utilizzato;
+		\item \textbf{Tecnologie:} breve elenco delle tecnologie di interesse, fondamentali nella realizzazione del prodotto richiesto;
+		\item \textbf{Aspetti critici:} elenco delle problematiche, dei rischi e delle difficoltà che potrebbero nascere in fase di sviluppo del prodotto;
+		\item \textbf{Considerazioni conclusive:} valutazione finale e soggettiva del gruppo, che fornisce le motivazioni per cui è stato scelto oppure scartato il capitolato in analisi.
+		\end{itemize}
+
+	\subsection{Sviluppo}
+	
+		\subsubsection{Analisi dei Requisiti}
+		L'attività di \AdR\ dovrà essere successiva allo \SdF. Essa, infatti, analizzerà, in modo quanto più accurato possibile, i requisiti necessari, per ciascun ambito del progetto scelto. Inoltre, verranno stilati i casi d'uso del prodotto, corredati da un'opportuna descrizione ed analisi. La struttura del documento prodotto sarà organizzata nei seguenti punti:
+		\begin{itemize}
+			\item \textbf{Casi d'uso};
+			\item \textbf{Requisiti progettuali}.
+		\end{itemize}
+		
+		\paragraph{Casi d'uso}
+		
+			\subparagraph{Nomenclatura}
+			La scelta del nome per i casi d'uso avverrà secondo la seguente codifica:
+			\begin{center}
+				UC[Codice categoria].[Codice progressivo]
+			\end{center}
+			dove:
+			\begin{itemize}
+				\item\textbf{Codice categoria}: identifica il codice entro cui lo specifico caso d'uso viene raggruppato. Può essere organizzato in ulteriori sottocategorie oppure omesso;
+				\item\textbf{Codice progressivo}: identificativo dello specifico caso d'uso.
+			\end{itemize}
+			
+			\subparagraph{Struttura}
+			L'analisi di ciascun caso d'uso dovrà essere strutturata come segue, avendo cura di mantenere l'ordine indicato:
+			\begin{itemize}
+				\item\textbf{Sigla e nome}: identifica il caso d'uso. Va indicato nel titolo del paragrafo corrispondente;
+				\item\textbf{Diagramma}: immagine del diagramma \textit{UML\ped{G}} per il caso d'uso;
+				\item\textbf{Attori}: descrizione degli attori coinvolti;
+				\item\textbf{Descrizione}: breve descrizione del caso d'uso;
+				\item\textbf{Pre-Condizioni}: descrive lo state iniziale per il caso d'uso;
+				\item\textbf{Post-Condizioni}: descrive lo stato finale che deve valere al termine dello scenario descritto;
+				\item\textbf{Scenario Principale}: analisi completa del flusso di esecuzione principale del caso d'uso;
+				\item\textbf{Scenari Alternativi}: se presenti, elenca e descrive gli eventuali scenari alternativi per il caso d'uso.
+			\end{itemize}
+		
+		\paragraph{Requisiti progettuali}
+		Gli \textit{\Anas} hanno il compito di produrre il documento \textsc{AnalisiDeiRequisiti 2\_0\_0.pdf} contenente un elenco di requisiti, con annesse peculiarità richieste ed informazioni sulla loro tipologia e rilevanza.
+		
+			\subparagraph{Nomenclatura}
+			La scelta del nome per i requisiti progettuali avverrà secondo la seguente procedura:
+			\begin{center}
+			R[Tipologia][Rilevanza][Codice]
+			\end{center}
+			\textbf{Tipologia:} può assumere uno dei seguenti valori:
+			\begin{itemize}
+				\item \textbf{V:} requisito di vincolo;
+				\item \textbf{F:} requisito di funzionalità;
+				\item \textbf{Q:} requisito di qualità;
+				\item \textbf{P:} requisito prestazionale.
+			\end{itemize}
+			\textbf{Rilevanza:} può assumere uno dei seguenti valori, elencati in ordine di importanza:
+			\begin{itemize}
+				\item \textbf{O:} requisito obbligatorio;
+				\item \textbf{D:} requisito desiderabile;
+				\item \textbf{F:} requisito facoltativo.
+			\end{itemize}
+			\textbf{Codice:} assume un numero sequenziale e univoco, necessario a catalogare e riconoscere ogni requisito progettuale.
+		
+			\subparagraph{Struttura}
+			L'analisi di ciascun requisito dovrà essere strutturata come segue, avendo cura di mantenere l'ordine indicato:
+			\begin{itemize}
+			  \item \textbf{Descrizione:} descrizione sintetica e concisa del requisito;
+			  \item \textbf{Fonte:} descrive la fonte del requisito, ovvero da chi è stato sollevato e in che ambito. Può assumere i seguenti valori: capitolato, caso d'uso, interno.
+			\end{itemize}
+	
+	\subsubsection{Progettazione}
+	La Progettazione è l'attività fondamentale in cui viene realizzata un'astrazione di quella che diverrà la struttura software del prodotto. \MakeUppercase{è} successiva alla produzione di una completa \AdR, in quanto da essa vengono tracciate le linee guida per la progettazione. I documenti risultanti da questa attività fungeranno, poi, da percorso per la produzione del software vero e proprio. Una progettazione svolta al meglio è utile per un'attività di codifica ottimale.
+	
+		\paragraph{Obiettivi}
+		Durante questa attività, il team si prefigge i seguenti obiettivi:
+		\begin{itemize}
+			\item Fornire una visione macroscopica del percorso da seguire nella codifica software;
+			\item Acquisire una profonda conoscenza di tutto ciò che riguarda lo sviluppo del software;
+			\item Realizzare un prodotto rispettando gli standard prefissati nelle attività di \SdF\ e \AdR;
+			\item Flessibilità del prodotto, per poter far fronte, in modo rapido, a repentine ed eventuali modifiche rilevanti, pur non condizionando il lavoro pregresso;
+			\item Soddisfare le richieste del committente.
+		\end{itemize}
+	\paragraph{Diagrammi}
+	Per la progettazione, il gruppo ha deciso di utilizzare quattro tipologie di diagrammi UML:
+		\begin{itemize}
+			\item \textbf{\textit{Diagrammi dei package\ped{G}:}} raggruppano le classi in un'unità di alto livello;
+			\item \textbf{\textit{Diagrammi delle classi\ped{G}:}} descrivono le caratteristiche delle singole unità;
+			\item \textbf{\textit{Diagrammi di attività\ped{G}:}} illustrano il flusso di operazioni relativo ad un'attività che è possibile svolgere sul prodotto. Possono essere utilizzati per descrivere la logica di un algoritmo specifico;
+			\item \textbf{\textit{Diagrammi di sequenza\ped{G}:}} descrivono le sequenze di azioni dove tutte le decisioni sono già state effettuate, quindi sono assenti scelte dell'utente e flussi alternativi.
+		\end{itemize}
+	
+	\subsubsection{Codifica}
+	L'attività di Codifica si prefigge la realizzazione pratica del codice dell'applicativo richiesto. I \textit{\Progrs} sono i principali responsabili di questa attività, i quali, tenendo conto degli stadi precedenti e seguendo nel dettaglio quanto precedentemente stilato, realizzano un prodotto efficace. Ogni \textit{\Progr} deve essere, come requisito prioritario, strettamente ancorato alle linee guida stabilite.
+	
+		\paragraph{Best practices}
+		L'attività di Codifica richiede di essere molto scrupolosi, attenendosi alle linee guida definite all'interno del presente documento. Esse compongono gli standard di codifica per la realizzazione del progetto. I seguenti standard hanno il compito di:
+		\begin{itemize}
+			\item Fornire uno strumento per garantire una più agevole cooperazione tra i diversi sviluppatori;
+			\item Favorire la creazione di un codice valido e ben formato;
+			\item Favorire la realizzazione di un software di qualità;
+			\item Rendere più agevole la lettura e la modifica del codice a tutti i componenti del team.
+		\end{itemize}
+		Le regole stilistiche del codice riguardano le parti non prettamente implementative, ma di ausilio ai \textit{Programmatori}, al fine di permettere una miglior cooperazione e comprensione del codice stesso. Le tecniche di scrittura del codice, descritte nel presente documento, sono suddivise in tre categorie: Impostazione, Nomenclatura e Commenti.
+	
+			\subparagraph{Impostazione}
+			L'impostazione stilistica del documento consente una più semplice comprensione e lettura del codice, e pertanto è importante fornire una logica comune. Di seguito sono elencate le principali convenzioni relative alla formattazione del codice: 
+			\begin{itemize}
+				\item I blocchi di codice vanno indentati tramite i rientri standard, evitando spaziature singole. Ogni porzione di codice interna ad un altra dev'essere rigorosamente indentata a sua volta;
+				\item Utilizzare gli spazi per separare gli operatori, ove possibile. Aggiungere spazi che aumentino la leggibilità del codice in tutte le situazioni dove ciò sia permesso, a patto che il funzionamento non venga compromesso;
+				\item Dividere il codice in più moduli e non utilizzare un unico file di ingenti dimensioni e di difficile modifica. Ciò è un requisito fondamentale per un corretto e miglior utilizzo dei sistemi di versionamento.
+			\end{itemize}
+	
+			\subparagraph{Nomenclatura}
+			Di seguito, sono elencati gli standard di nomenclatura utilizzati per il codice che verrà prodotto. Tale aspetto è fondamentale per una miglior comprensione del codice.
+			\begin{itemize}
+			\item Assegnare nomi univoci ai costrutti, evitando possibili ambiguità dovute a nomi similari. I costrutti devono avere nomi quanto più significativi possibili, anche se utilizzati in porzioni marginali. Le variabili formate da un solo carattere sono, invece, consentite qualora si tratti di iterazioni circoscritte;
+			\item Scegliere nomi descrittivi per file e cartelle. \MakeUppercase{è} importante che indichino, nel modo più accurato possibile, il proprio contenuto;
+			\item Accertarsi che ogni parola utilizzata sia scritta nella corretta forma della lingua a cui appartiene;
+			\item Nella scrittura di nomi composti utilizzare la forma \textit{Camel Case\ped{G}}, ottenuta scrivendo con iniziale minuscola la prima parola di un nome composto, seguito dalle successive parole, ognuna con iniziale sempre maiuscola;
+			\item Nella descrizione di funzioni, utilizzare come prima voce il verbo dell'azione svolta, seguito dal nome dell'azione o dell'oggetto su cui viene eseguita;
+			\item Accertarsi che non vi sia ambiguità nelle abbreviazioni utilizzate, avendo cura di verificare che non possano venir impiegate due abbreviazioni simili per funzionalità differenti.
+			\end{itemize}
+			
+			\subparagraph{Commenti}
+			Ogni commento deve essere ampio, uniforme e sufficientemente dettagliato, seguendo i criteri e le linee guida elencate:
+			\begin{itemize}
+			\item Produrre e/o mantenere aggiornata un'intestazione per ciascun file. Essa deve sempre avere una breve descrizione di ciò che è incluso nello specifico file;
+			\item Indicare pre e post-condizione di ogni funzionalità di rilievo, in modo da favorire un riutilizzo di eventuale codice già scritto. \MakeUppercase{è}, inoltre, consigliato introdurre una breve descrizione concisa riguardante la funzionalità;
+			\item Inserire commenti nella riga precedente al codice o porzione che si desidera commentare. Non è consentito commentare, dunque, in modalità "inline";
+			\item Stilare commenti completi, di senso compiuto e grammaticalmente corretti. Documentare, inoltre, durante la stesura del codice, per evitare di doverne rianalizzare una porzione, al solo fine di documentarla.
+			\end{itemize}
+		
+	\subsubsection{Strumenti utilizzati}
+	
+		\paragraph{TeXstudio}
+		In seguito a un breve periodo di test, la scelta del team per l'editor di documenti \textit{\LaTeX\ped{G}} è ricaduta su \textit{\textbf{TeXstudio\ped{G}}}. Esso è un noto fork di un altrettanto famoso editor, \textit{TexMaker\ped{G}}, ma con la peculiarità di essere completamente gratuito, open source e disponibile per i più diffusi sistemi operativi. L'editor consente un semplice utilizzo dei file \textit{.tex} e una comoda gestione di inclusione e accorpamento di documenti. Tale caratteristica viene incontro alle esigenze del gruppo per via della predisposizione alla modularità dei documenti richiesti dal progetto. L'editor scelto, inoltre, possiede numerose features rilevanti, quali l'autocompletamento e il controllo della sintassi e dell'ortografia, e l'anteprima in PDF incorporata. Per questi motivi, TeXstudio sarà il principale strumento tramite cui verranno redatti tutti i documenti.
+	
+		\paragraph{Astah}
+		Per la modellazione dei diagrammi dei casi d'uso in linguaggio UML, la scelta è ricaduta su \textit{\textbf{Astah\ped{G}}}, editor multi-piattaforma e gratuito. Il suo punto forte rispetto ad altre soluzioni è la semplicità di utilizzo. Tra le funzionalità interessanti ai fini del team, c'è la possibilità di esportare i diagrammi creati direttamente in un file immagine con estensione \textit{.png}. Il software Astah sarà utilizzato per la creazione di tutti i diagrammi necessari richiesti durante le attività di Progettazione ed \AdR.
+		
+		\paragraph{Smartsheet}
+		Per la realizzazione dei \textit{diagrammi di Gantt\ped{G}} richiesti dall'attività di Pianificazione, si è scelto di utilizzare lo strumento \textit{\textbf{Smartsheet\ped{G}}}, il quale consente di creare diagrammi secondo le attività pianificate per uno specifico periodo di tempo, indicato dall'utente.
+		Smartsheet è uno strumento gratuito e intuitivo, fruibile tramite interfaccia web. Le funzioni offerte sono ampie e immediate, ed è possibile personalizzare i diagrammi con una formattazione condizionale per evidenziare attività, punti critici o \textit{milestone\ped{G}}. Smartsheet semplifica notevolmente la collaborazione in tempo reale e permette a diverse persone di rimanere aggiornate in tempo reale sugli sviluppi del progetto. \MakeUppercase{è} risultato molto utile per la creazione dei grafici presenti nel documento \textsc{PianoDiProgetto 2\_0\_0.pdf}.
+		
+		\paragraph{NetBreakDB}
+		Per il tracciamento dei documenti, preponderante specialmente nei periodi di \AdR e Progettazione, la scelta del team è ricaduta sull'utilizzo di uno strumento dedicato, per permettere una più agevole gestione. Il software utilizzato è un fork di un progetto esistente, \textit{PragmaDB}, creato da un gruppo di studenti degli scorsi anni e modificato secondo le esigenze del team \textit{\gruppo}. NetBreakDB permette la gestione di casi d'uso, attori, componenti, metriche, fonti e il calcolo automatizzato dell'indice Gulpease, effettuato direttamente sui documenti contenuti in una repository di \textit{GitHub\ped{G}}. I risultati dell'indice vengono visualizzati in una tabella secondo questo ordine:
+		\begin{center}
+			Nome Documento | Valore Indice Gulpease | Esito
+		\end{center}
+		L'applicativo è in grado di generare codice \LaTeX\ a seguito di un'indicizzazione dei requisiti all'interno del database. La possibilità di esportare le voci necessarie al tracciamento in maniera automatizzata rende il lavoro più uniforme, ordinato e semplificato.
+		
+		\paragraph{Docker}
+		\textbf{\textit{Docker\ped{G}}} è un progetto open source per gli sviluppatori e gli amministratori di sistema, che permette di automatizzare la distribuzione di applicazioni all'interno di contenitori software su macchine virtuali e nel cloud. Il principio su cui si basa, promuove lo sviluppo agile, il quale garantisce maggiore efficienza e flessibilità alle iniziative cloud e di modernizzazione delle applicazioni. Docker è un contenitore che permette di integrare applicazioni o parti di esse, e fornisce tutto il necessario per l'esecuzione ed installazione su un server. Ciò garantisce che il software funzionerà sempre allo stesso modo, indipendentemente dall'ambiente in cui verrà eseguito. Questo strumento permette di creare software più performanti, accelerare lo sviluppo ed eliminare possibili problemi dovuti all'esecuzione su macchine diverse. Il contenitore isola l'applicazione dai livelli sottostanti della struttura, in modo da garantire protezione all'applicazione. 
+			
+		\paragraph{SwaggerHub}
+		\textbf{\textit{SwaggerHub\ped{G}}} è uno strumento software online, sviluppato da SmartBear Software, per la produzione di API condivise tra un massimo di 25 sviluppatori. Esso si prefigge di accompagnare lo sviluppo durante l'intero ciclo di vita del software, in modo incrementale. SwaggerHub supporta numerosi differenti linguaggi di programmazione e permette l'integrazione con servizi di controllo della versione come GitHub. 
+		Una caratteristica rilevante è la creazione in tempo reale della documentazione relativa all'API che si sta sviluppando. La manutenzione è facile ed è possibile distribuire l'API prodotta direttamente su piattaforme come \textit{AWS\ped{G}} e \textit{Microsoft Azure\ped{G}}.
+		
+		\paragraph{Sublime Text}
+		\textbf{\textit{Sublime Text\ped{G}}} è l'editor scelto dal team per la scrittura del codice. Esso è caratterizzato da un'interfaccia intuitiva, un'ampia gamma di features innovative e ottime prestazioni. Questo editor è compatibile con diversi sistemi operativi ed è personalizzabile in molti aspetti. Una caratteristica peculiare è il \textit{simultaneous editing}, ovvero la possibilità di modificare più porzioni di codice contemporaneamente, premendo il tasto Shift e posizionando il cursore nel punto esatto in cui si intende effettuare delle modifiche. Le caratteristiche di personalizzazione riguardano i temi, l'interfaccia e le modalità di visione del codice. Inoltre, l'auto-completamento del codice in base al linguaggio scelto e il salvataggio automatico sono altre funzionalità che hanno portato il gruppo a scegliere questo strumento.

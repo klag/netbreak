@@ -1,0 +1,67 @@
+\newpage
+\section{Capitolato C4}
+
+\subsection{Descrizione}
+
+Il capitolato proposto da Mivoq consiste nella realizzazione di un'applicazione
+in ambiente \textit{Android\ped{G}} per dispositivi mobili, come smartphone e tablet,
+che sia in grado di agevolare la lettura alle persone affette da dislessia,
+grazie all'aiuto della sintesi vocale. Per rendere il prodotto finale
+quanto più riusabile, dovranno essere progettate due componenti ben
+distinte:
+\begin{itemize}
+	\item Una libreria per accedere alle funzionalità di sintesi vocale e alle informazioni per la sincronizzazione a partire dal testo;
+	\item Un'applicazione, che potrà consistere in un lettore di e-book o un client di messaggistica.
+\end{itemize}
+
+Dovranno essere implementate obbligatoriamente
+le seguenti funzionalità: 
+\begin{itemize}
+	\item Lettura di almeno una sorgente di testo,
+	con conseguente riproduzione dell'audio sintetizzato;
+	\item Evidenziazione del testo in modo sincronizzato rispetto all'audio (in stile Karaoke).
+\end{itemize}
+
+Altre funzionalità che possono essere prese in considerazione per un'eventuale implementazione sono: 
+\begin{itemize}
+	\item Possibilità di cambiare la voce e la lingua;
+	\item Possibilità di modificare la velocità di riproduzione dell'audio;
+	\item Possibilità di modificare la visualizzazione del testo da leggere (ad esempio tramite colori dello sfondo e del font, spaziatura fra i caratteri, dimensione e tipo dei caratteri, layout di visualizzazione).
+\end{itemize}
+
+\subsection{Dominio applicativo}
+
+Il prodotto finale è destinato a tutte le persone affette da dislessia, ovvero con evidenti problemi nella lettura di semplice testo, sia esso in qualsiasi formato, al fine di dimostrare l'efficacia della sintesi vocale. Infatti, ad oggi, questa tecnologia non è sfruttata al massimo delle sue capacità, ma è conosciuta solo per il suo utilizzo
+in ambiti come le voci guida dei navigatori satellitari, gli annunci dei mezzi di trasporto pubblico, i centralini telefonici, i comandi vocali sui dispositivi mobili, etc..
+
+\subsection{Tecnologie}
+
+Le tecnologie consigliate per il raggiungimento degli scopi del progetto proposto sono:
+\begin{itemize}
+	\item \textbf{\textit{FA-TTS\ped{G}}},
+	come motore di sintesi vocale open-source;
+	\item \textbf{Android}, come piattaforma ed ambiente di sviluppo;
+	\item \textbf{\textit{Java\ped{G}}}, come linguaggio di programmazione per lo sviluppo dell'applicazione
+	(vincolato dalla scelta di Android come piattaforma);
+	\item \textbf{\textit{ePub\ped{G}}}, come libreria open-source per lo sviluppo di un e-book
+	reader;
+	\item \textbf{\textit{Telegram\ped{G}}}, come client di messaggistica open-source.
+\end{itemize}
+
+\subsection{Aspetti critici}
+
+Uno degli aspetti critici è che, generalmente, i servizi di sintesi vocale su dispositivi mobili non forniscono le informazioni necessarie
+alla sincronizzazione di audio e testo: in questo specifico caso,
+l'azienda committente suggerisce l'utilizzo dell'engine FA-TTS,
+premettendo che, nonostante anche questo motore di sintesi non fornisca
+informazioni per la sincronizzazione, sia semplice da modificare in
+modo tale che le fornisca. Questa modifica si presume venga fatta in collaborazione con Mivoq,
+tuttavia si richiede uno studio sulla configurazione e sull'utilizzo delle funzionalità del motore di sintesi, tecnologia del tutto sconosicuta al gruppo. 
+
+\subsection{Considerazioni conclusive}
+
+Questo capitolato non è stato scelto perchè, seppure
+la sintesi vocale sia una tecnologia in forte sviluppo ed utilizzo, la realizzazione di un'applicazione in ambiente Android destinata
+a dispositivi mobile, non è per niente banale. Android è una piattaforma
+molto vasta, ed essendo per il gruppo il primo approccio a tale ambiente, è richiesta una buona e solida formazione autodidatta, che in termini di tempo potrebbe risultare insufficiente per lo sviluppo dell'applicazione richiesta. Inoltre, la dislessia è un forte punto su cui bisogna ragionare affinchè si possa produrre qualcosa che effettivamente venga utilizzato
+nell'immediato e con buoni risultati. Quindi, dato che l'applicazione richiede un alto livello di flessibilità ed usabilità rispetto al target di utenti, a nostro avviso occorre una buona esperienza in merito e una formazione minima su Android e il suo interfacciamento con il motore di sintesi vocale, che è il core del progetto.

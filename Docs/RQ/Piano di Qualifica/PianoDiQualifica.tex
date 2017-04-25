@@ -1,0 +1,58 @@
+% Sostituisco i placeholder registrati con la specifica variabile per il documento corrente. Questa parte iniziale contiene intestazioni e templates.
+
+% Modificare ad ogni modifica e documento
+\newcommand{\documento}{\PdQ}
+\newcommand{\nomedocumentofisico}{PianoDiQualifica 3\_0\_0.pdf}
+\newcommand{\redazione}{\AN \\ & \NS \\ & \DS}
+\newcommand{\verifica}{\AS}
+\newcommand{\versione}{3.0.0}
+\newcommand{\approvazione}{\DS}
+\newcommand{\uso}{Esterno}
+\newcommand{\destinateTo}{\TV, \\ & \RC, \\ & \IS}
+\newcommand{\datacreazione}{20 Dicembre 2016}
+\newcommand{\datamodifica}{19 Marzo 2017}
+\newcommand{\stato}{Approvato}
+
+
+%Abilitazione indice delle tabelle e figure
+\def\TABELLE{false}
+\def\FIGURE{false}
+
+%Inclusione di layout e variabili (Non modificare)
+\input{../../template/layoutDocumento.tex}
+\input{../../template/comandiVeloci.tex}
+
+%Inclusione del changelog per il documento corrente
+\input{includes/changelog.tex}
+
+%Imposto la profondità degli indici
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+
+
+\begin{document}
+
+%Inclusione del template per la homepage (Non modificare)
+\input{../../template/homepage.tex}
+
+%Registro delle modifiche e indice (Non modificare)
+\pagenumbering{Roman}
+\input{../../template/changelogLayout.tex}
+\input{../../template/index.tex}
+
+%Inclusione delle varie sezioni di contenuto
+%Introduzione e contenuti di ogni tipo
+\renewcommand*{\arraystretch}{1.6}
+
+
+\input{includes/introduzione.tex}
+\input{includes/qualitaProdotto.tex}
+\input{includes/qualitaProcesso.tex}
+\input{includes/test.tex}
+\appendix
+\input{includes/resocontoVerificaDocumenti.tex}
+\input{includes/resocontoQualitaProdotto.tex}
+\input{includes/resocontoQualitaProcesso.tex}
+
+
+\end{document}
