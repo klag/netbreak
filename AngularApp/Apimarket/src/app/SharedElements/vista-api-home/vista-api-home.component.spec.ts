@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChatComponent } from './chat.component';
+import { VistaApiHomeComponent } from './vista-api-home.component';
 
-describe('ChatComponent', () => {
-  let component: ChatComponent;
-  let fixture: ComponentFixture<ChatComponent>;
+describe('VistaApiHomeComponent', () => {
+  let component: VistaApiHomeComponent;
+  let fixture: ComponentFixture<VistaApiHomeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ChatComponent ]
+      declarations: [ VistaApiHomeComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChatComponent);
+    fixture = TestBed.createComponent(VistaApiHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

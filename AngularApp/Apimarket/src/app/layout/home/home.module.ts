@@ -4,11 +4,6 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-import {
-    TimelineComponent,
-    NotificationComponent,
-    ChatComponent
-} from './components';
 
 
 @NgModule({
@@ -17,10 +12,7 @@ import {
       HomeRoutingModule,
     ],
     declarations: [
-      HomeComponent,
-        TimelineComponent,
-        NotificationComponent,
-        ChatComponent
+      HomeComponent
     ]
 })
 export class HomeModule { }

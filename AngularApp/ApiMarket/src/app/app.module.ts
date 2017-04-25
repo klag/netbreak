@@ -6,6 +6,9 @@ import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { SearchComponent } from './SharedElements/search/search.component';
+import { VistaApiHomeComponent } from './SharedElements/vista-api-home/vista-api-home.component';
+
 @NgModule({
     declarations: [
         AppComponent,
