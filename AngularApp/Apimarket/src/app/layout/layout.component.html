@@ -1,8 +1,12 @@
 <app-header></app-header>
 
-<section class="main-container" style="padding: 50%;">
-  arrivo a layout.component.html
- <router-outlet></router-outlet>
-</section>
+<section class="main-container">
 
+  <router-outlet>
+      <app-home></app-home>
+  </router-outlet>
+
+  <span style="padding-top: 40%">arrivo a layout component</span>
+
+</section>
 <app-footer></app-footer>

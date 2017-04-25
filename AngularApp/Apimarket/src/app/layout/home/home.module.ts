@@ -1,19 +1,26 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { HomeRoutingModule } from './home-routing';
+
+import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
-/*
-import { HeaderComponent} from '../../SharedElements/header/header.component';
-import { FooterComponent} from '../../SharedElements/footer/footer.component';
-*/
+import {
+    TimelineComponent,
+    NotificationComponent,
+    ChatComponent
+} from './components';
+
+
 @NgModule({
-  imports: [
-    CommonModule,
-    HomeRoutingModule
-  ],
-  declarations: [
-    HomeComponent
-  ]
+    imports: [
+        CommonModule,
+      HomeRoutingModule,
+    ],
+    declarations: [
+      HomeComponent,
+        TimelineComponent,
+        NotificationComponent,
+        ChatComponent
+    ]
 })
-export class HomeModule {}
+export class HomeModule { }
