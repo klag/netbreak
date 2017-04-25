@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
+import { VistaApiHomeComponent } from '../../SharedElements/vista-api-home/vista-api-home.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { HomeComponent } from './home.component';
       HomeRoutingModule,
     ],
     declarations: [
-      HomeComponent
+      HomeComponent,
+      VistaApiHomeComponent
     ]
 })
 export class HomeModule { }

@@ -7,7 +7,7 @@ import { LayoutComponent } from './layout.component';
 import { FooterComponent} from '../SharedElements/footer/footer.component';
 import { HeaderComponent} from '../SharedElements/header/header.component';
 import { SearchComponent} from '../SharedElements/search/search.component';
-import { VistaApiHomeComponent } from '../SharedElements/vista-api-home/vista-api-home.component';
+// import { VistaApiHomeComponent } from '../SharedElements/vista-api-home/vista-api-home.component';
 import { HomeComponent } from './home/home.component';
 
 
@@ -23,7 +23,7 @@ import { HomeComponent } from './home/home.component';
         FooterComponent,
       SearchComponent,
         HomeComponent,
-      VistaApiHomeComponent
+     // VistaApiHomeComponent
     ]
 })
 export class LayoutModule { }
