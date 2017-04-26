@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
-import  {ApiHome} from '../../.././../class/apiHome';
+import {ApiHome} from '../../.././../class/apiHome';
 @Component({
     selector: 'app-notification',
-    templateUrl: './notification.component.html',
-    styleUrls: ['./notification.component.scss']
+    templateUrl: './tableHome.component.html',
+    styleUrls: ['./tableHome.component.scss']
 })
-export class NotificationComponent implements OnInit {
+export class TableHomeComponent implements OnInit {
     api: ApiHome;
     constructor() {
         this.api = {
