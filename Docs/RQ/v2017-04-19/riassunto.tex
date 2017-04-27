@@ -1,0 +1,38 @@
+\section{Introduzione}
+
+	\begin{itemize}
+		\item Tipologia: riunione informativa;
+		\item Redatto da: \MC;
+		\item Data: 19 aprile 2017;
+		\item Luogo: 1BC45 - Torre Archimede e Skype;
+		\item Ora inizio: 10.00;
+		\item Ora fine: 11.00;
+		\item Presenti: \MC, \DAN, \DS, \NS, \AS;	
+		\item Assenti: \AN.
+	\end{itemize}
+
+\section{Riassunto}
+Il giorno mercoledì 19 aprile, il team \gruppo\ ed il proponente si confrontano via Skype per alcuni chiarimenti riguardanti il front-end dell'applicazione web e un particolare caso di possibile errore che il gateway dovrebbe gestire.\\
+Il gruppo propone il marketplace di Mashape \url{https://market.mashape.com/} come spunto di ispirazione per la codifica del front-end dell'applicazione ed il proponente concorda in modo più che positivo.\\
+Successivamente, viene introdotto un quesito riguardante un probabile caso di errore nell'API Gateway, ovvero l'aggregazione di più microservizi in un'unica interfaccia, con possibili conflitti nei nomi delle rispettive \textit{operation}.\\
+La soluzione suggerita dal proponente consiste nell'utilizzo del tool \textit{jolie2surface} (\url{http://docs.jolie-lang.org/#!documentation/other_tools/jolie2surface.html}) che viene dato con Jolie, il quale in automatico restituisce l'interfaccia totale di un servizio visibile su una \textit{outputPort}.
+Assieme a questo tool, viene suggerito l'utilizzo di due javaservice interni a Jolie: \textit{MetaJolie} e \textit{Parser}.\\
+Con il primo vengono estratti i metadati di una porta di un servizio (decodificati in un value Jolie), mentre con il secondo c'è una API che genera l'interfaccia a partire dai metadati.
+
+\section{Tracciamento decisioni}
+Di seguito, vengono evidenziate le principali decisioni prese durante la riunione esterna del 19 aprile 2017.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|p{3cm}| p{11cm}|}
+			\hline
+			\textbf{Identificativo}	& \textbf{Descrizione} \\
+			\hline
+			VE\_14	&  Marketplace Mashape come fonte di ispirazione per il front-end dell'applicazione web \\
+			\hline
+			VE\_15 &  Scelta del tool \textit{jolie2surface} e dei javaservice \textit{MetaJolie} e \textit{Parser} per la documentazione di una API\\
+			\hline
+		\end{tabular}
+		\caption{Tracciamento decisioni riunione 19 aprile 2017}
+	\end{center}
+\end{table}

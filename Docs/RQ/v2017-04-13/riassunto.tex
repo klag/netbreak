@@ -1,0 +1,40 @@
+\section{Introduzione}
+
+	\begin{itemize}
+		\item Tipologia: riunione informativa e di progettazione;
+		\item Redatto da: \AS;
+		\item Data: 13 aprile 2017;
+		\item Luogo: Skype;
+		\item Ora inizio: 15.00;
+		\item Ora fine: 17.30;
+		\item Presenti: \AN, \MC, \DAN, \DS, \NS, \AS;	
+		\item Assenti: nessuno.
+	\end{itemize}
+
+\section{Riassunto}
+Il giorno giovedì 13 aprile, il team \gruppo\ ed il proponente si confrontano via Skype per alcuni chiarimenti riguardanti la piattaforma \progetto.\\
+Come prima cosa, viene chiesto al proponente se sia giusto assumere che un servizio abbia una sola interfaccia oppure prevedere che ne possa avere anche più di una (ad esempio, nel caso fosse un servizio composto da altri microservizi con interfacce associate).\\
+Il proponente suggerisce che un servizio può avere n interfacce come n \textit{outputPort}, se necessario.
+Successivamente, viene affrontato il punto riguardante come l'utente può inserire la documentazione dell'API che intende caricare sulla piattaforma \progetto.\\
+Il proponente consiglia fortemente il tool \textbf{JolieDoc} perchè è un tool che viene installato con Jolie ed è in grado di generare la documentazione a partire da una porta. Basta semplicemente commentare opportunamente l'interfaccia in modo che i commenti vengano riportati in automatico nella documentazione (la documentazione nel sito di Jolie è generata proprio con questo tool).\\
+Infine, viene sottolineata l'importanza della piattaforma nel collezionare i \textbf{dati di monitoring} dell'utilizzo delle varie API, che differisce dal concetto di deployment del singolo microservizio presente sul marketplace.
+
+\section{Tracciamento decisioni}
+Di seguito, vengono evidenziate le principali decisioni prese durante la riunione esterna del 13 aprile 2017.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|p{3cm}| p{11cm}|}
+			\hline
+			\textbf{Identificativo}	& \textbf{Descrizione} \\
+			\hline
+			VE\_11	&  Il proponente concorda che è corretto assumere 1 servizio = n interfacce = n outputPort \\
+			\hline
+			VE\_12 &  Scelta di JolieDoc come tool per l'inserimento della documentazione di un microservizio \\
+			\hline
+			VE\_13 & La piattaforma \progetto\ non sarà responsabile del deployment dei microservizi, ma avrà il compito di collezionare microservizi e tenere traccia dei relativi dati di utilizzo (data monitoring) \\
+			\hline
+		\end{tabular}
+		\caption{Tracciamento decisioni riunione 13 aprile 2017}
+	\end{center}
+\end{table}

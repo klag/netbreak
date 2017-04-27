@@ -1,0 +1,51 @@
+\section{Introduzione}
+
+	\begin{itemize}
+		\item Tipologia: riunione informativa e di progettazione;
+		\item Redatto da: \AS;
+		\item Data: 17 marzo 2017;
+		\item Luogo: 2BC30 - Torre Archimede e Skype;
+		\item Ora inizio: 10.00;
+		\item Ora fine: 11.30;
+		\item Presenti: \AS, \NS, \DAN;	
+		\item Assenti: \MC, \AN, \DS.
+	\end{itemize}
+
+\section{Riassunto}
+Il giorno venerdì 17 marzo, i progettisti del team hanno sostenuto una comunicazione via Skype con il proponente in merito a tre grossi punti riguardanti la progettazione dell'API Gateway: dynamic redirection, dynamic embedding e dynamic binding nel linguaggio Jolie.
+I dubbi sono su come includere e/o creare un'interfaccia e una outputPort a tempo di runtime.\\
+La risposta del proponente viene riassunta nei seguenti punti:
+\begin{itemize}
+	\item è possibile fare \textbf{binding dinamico} a runtime di \textit{protocollo} e \textit{location};
+	\item è possibile creare dinamicamente una \textit{outputPort} utilizzando \textit{setOutputPort} del servizio \textit{Runtime} (la \textit{outputPort} creata sarà senza interfaccia associata);
+	\item è possibile impostare dinamicamente una \textit{redirection} sulla porta appena creata tramite \textit{setRedirection};
+	\item è possibile fare \textbf{dynamic embedding} di un file Jolie con \textit{loadEmbeddedService};
+	\item non è possibile, invece, fare binding dinamico di un'interfaccia su una porta (sia di input che di output).
+\end{itemize}
+Infine, vengono forniti dei link utili a comprendere le risposte date:
+\begin{itemize}
+	\item Documentazione Jolie del servizio \textit{Runtime}\\ \url{http://docs.jolie-lang.org/#!documentation/jsl/Runtime.html};
+	\item Documentazione Jolie riguardo l'argomento \textit{Redirection}\\ \url{http://docs.jolie-lang.org/#!documentation/architectural_composition/redirection.html}.
+\end{itemize}
+
+\section{Tracciamento decisioni}
+Di seguito, vengono evidenziate le principali decisioni prese durante la riunione esterna del 17 marzo 2017.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|p{3cm}| p{11cm}|}
+			\hline
+			\textbf{Identificativo}	& \textbf{Descrizione} \\
+			\hline
+			VE\_01	& Viene richiesto al proponente se è possibile includere/creare dinamicamente interfaccia e outputPort in Jolie	\\
+			\hline
+			VE\_02 & Visione della documentazione ufficiale Jolie suggerita dal proponente \\
+			\hline
+			VE\_03 & Presa di accordi col proponente secondo le sue dirette specifiche in merito all'API Gateway \\
+			\hline
+			VE\_04 & Dopo la chiamata Skype, i progettisti del team si accordano secondo le specifiche appena fornite \\
+			\hline
+		\end{tabular}
+		\caption{Tracciamento decisioni riunione 17 marzo 2017}
+	\end{center}
+\end{table}

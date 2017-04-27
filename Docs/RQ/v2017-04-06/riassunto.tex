@@ -1,0 +1,40 @@
+\section{Introduzione}
+
+	\begin{itemize}
+		\item Tipologia: riunione informativa e di progettazione;
+		\item Redatto da: \DAN;
+		\item Data: 06 aprile 2017;
+		\item Luogo: 1BC45 Torre Archimede e Skype;
+		\item Ora inizio: 14.00;
+		\item Ora fine: 16.00;
+		\item Presenti: \DS, \AN, \DAN, \MC, \NS, \AS;	
+		\item Assenti: nessuno.
+	\end{itemize}
+
+\section{Riassunto}
+Il giorno giovedì 06 aprile, il team ha sostenuto una comunicazione via Skype con il proponente, sottoponendo alla sua attenzione il primo prototipo di API Gateway progettato ed implementato, ed alcune domande inerenti al suo funzionamento.\\
+Il proponente suggerisce la seguente soluzione: invece che costringere il client a dover sempre chiamare la \textit{execute} e specificare l'\textit{operation} che vuole eseguire (poco attraente come feature per uno sviluppatore), si vorrebbe che lo sviluppatore chiamasse direttamente la API che desidera (con controllo del token di autenticazione - API Key).\\
+Pertanto, la soluzione proposta è l'implementazione di un gateway che fornisca un servizio di \textit{redirection}, il quale dovrà inoltrare la richiesta ad un servizio con \textit{aggregation}, che applica la \textit{courier} e che a sua volta reinoltra all'API target finale.
+A questo punto, l'utente dovrà scaricarsi l'endpoint dell'API di interesse con l'URL che verrà passato al \textit{redirector}.\\
+Il redirector verrà notificato tutte le volte che verrà inserito un nuovo microservizio sul market con il suo endpoint, ed a quel punto autocaricherà la \textit{outputPort} sulla quale fare redirezione.
+Infine, viene fatto notare che si potrebbero avere anche più punti di accesso per i client, senza necessariamente averne uno solo (ossia avere più \textit{redirector}), introducendo così l'ipotesi di una futura versione distribuita dell'API Gateway.
+
+\section{Tracciamento decisioni}
+Di seguito, vengono evidenziate le principali decisioni prese durante la riunione esterna del 06 aprile 2017.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|p{3cm}| p{11cm}|}
+			\hline
+			\textbf{Identificativo}	& \textbf{Descrizione} \\
+			\hline
+			VE\_05	& Viene sottoposto al proponente il primo prototipo di API Gateway \\
+			\hline
+			VE\_06 &  Il proponente suggerisce una soluzione che utilizzi aggregation e courier, combinate con un servizio di redirection dinamica \\
+			\hline
+			VE\_07 & Con la soluzione proposta sarà possibile estendere il gateway, fornendone una versione distribuita\\
+			\hline
+		\end{tabular}
+		\caption{Tracciamento decisioni riunione 06 aprile 2017}
+	\end{center}
+\end{table}

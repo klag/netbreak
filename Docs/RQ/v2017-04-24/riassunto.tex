@@ -1,0 +1,36 @@
+\section{Introduzione}
+
+	\begin{itemize}
+		\item Tipologia: riunione informativa;
+		\item Redatto da: \AS;
+		\item Data: 24 aprile 2017;
+		\item Luogo: Skype;
+		\item Ora inizio: 10.30;
+		\item Ora fine: 12.30;
+		\item Presenti: \DS, \NS, \MC, \DAN, \AS, \AN;	
+		\item Assenti: nessuno.
+	\end{itemize}
+
+\section{Riassunto}
+Il giorno lunedì 24 aprile, il team \gruppo\ ed il proponente si confrontano via Skype per valutare l'avanzamento del progetto.\\
+Il problema della generazione della documentazione è stato risolto con l'ausilio del proponente, ed è stato affrontato l'ambito sicurezza delle API Key.\\
+Inizialmente, il team aveva pensato ad una soluzione che richiedeva l'utilizzo di algoritmi di criptaggio a chiave pubblica, con lo svantaggio di peggiorare le performance,  appesantendo l'API Gateway, responsabile del controllo della validità di una API Key al momento del suo inserimento per utilizzo lato client.\\
+Il proponente, al momento, suggerisce una soluzione "non protetta", in stile API Google, dove al massimo le API Key potranno essere codificate con qualche funzione di hash, giusto perchè non appaiano in chiaro.
+
+\section{Tracciamento decisioni}
+Di seguito, vengono evidenziate le principali decisioni prese durante la riunione esterna del 24 aprile 2017.
+
+\begin{table}[H]
+	\begin{center}
+		\begin{tabular}{|p{3cm}| p{11cm}|}
+			\hline
+			\textbf{Identificativo}	& \textbf{Descrizione} \\
+			\hline
+			VE\_16	&  Risolto il problema della generazione automatica della documentazione \\
+			\hline
+			VE\_17 & Secondo il proponente, per il momento, le API Key non richiedono alcun livello di protezione e possono essere trasmesse senza controlli o criptaggi vari \\
+			\hline
+		\end{tabular}
+		\caption{Tracciamento decisioni riunione 24 aprile 2017}
+	\end{center}
+\end{table}
