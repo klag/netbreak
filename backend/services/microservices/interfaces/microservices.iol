@@ -74,28 +74,31 @@ type listservices: void {
 
 
 /*info servizio per aggiunterlo ad apim da front-end */
-type aservice: int {
+type aaservice: int {
 	.subservices[0, *]: void {
 		.location:string
 		.protocol:string
 		.interfaces[0, *]: string 
 	}
-	//.name: string
-	//.description: string
-	//.version: int
-	//.idDeveloper: string
-	//.logo: string
-	//.docpdf: string
-	//.docexternal: string
-	//.profit: int
-	//.isActive: string
-	//.slaguaranteed: double
-	//.policy: int
+	.name: string
+	.description: string
+	.version: int
+	.idDeveloper: string
+	.logo: string
+	.docpdf: string
+	.docexternal: string
+	.profit: int
+	.isActive: string
+	.slaguaranteed: double
+	.policy: int
+
 }
 
-interface microservices_db_readerInterface {
+
+
+interface MSInterface {
 	RequestResponse:
-	    insert_service(aservice)(void),
+	    insert_service(aaservice)(void),
 		retrieve_all_ms_info( void )( listservices ),
 		retrieve_ms_info( msid )( msfound ),
 		retrieve_intf_info( intfid )( intffound ),

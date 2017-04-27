@@ -1,45 +1,37 @@
 include "interfaces/microservices.iol"
-include "interfaces/clientinterfacegeneratorinterface.iol"
-include "interfaces/couriergeneratorinterface.iol"
+include "interfaces/serviceinteractionhandlerinterface.iol"
 include "database.iol"
 include "console.iol"
 
-execution { sequential }
+execution { concurrent }
 
 /*---------*/
-outputPort CourierGenerator {
-   Interfaces: CourierGeneratorInterface
-}
-
-embedded {
-  Jolie: "../../gateway/couriergenerator.ol" in CourierGenerator
-}
-
-outputPort ClientInterfaceGenerator {
+/*porta per comunicare con gestore delle interazioni dei microservizi*/
+outputPort ServiceInteractionHandler {
    Location: "socket://localhost:8322"
    Protocol: http 
-   Interfaces: ClientInterfaceGeneratorInterface
+   Interfaces: ServiceInteractionHandlerInterface
 }
 /*-----------*/
 
-
-inputPort microservices_db_readerJSONInput {
+inputPort MSrv {
   Location: "socket://localhost:8121"
   Protocol: http 
-  Interfaces: microservices_db_readerInterface
+  Interfaces: MSInterface
 }
 
-/*procedura per trovare un id seguente al max id di un servizio*/
+
+/*PROCEDURE (in Jolie sono come i metodi privati, solo il servizio stesso vi accede)*/
+/*1. Procedura per trovare un id seguente al max id di un servizio*/
 define __findNextMaxIdMS {
   q = "SELECT MAX(IdMS) FROM microservices;";
   query@Database(q)(maxid);
-  msid = maxid.row[0].IdMs + 1
+  msid = maxid.IdMs + 1
 }
 
 init
 {
 	println@Console( "microservices Db Reader started" )();
-
   //connect to microservices database
   with( connectionInfo ) {
       .host = "apimmicroservicesdb.cpfnkeifjbmu.eu-west-2.rds.amazonaws.com"; 
@@ -55,37 +47,69 @@ init
 
 main
 {
+
   [insert_service( request )( response ) {
+    /*genero un courier temporaneo*/
+    courierreq.subservices->request.subservices;
     __findNextMaxIdMS;
-    generatecourier@CourierGenerator(request)()
-    //generateclientinterface@ClientInterfaceGenerator(request)(rr)
+    courierreq = msid;
+    courierreq.subservices->request.subservices; //ricavo richiesta per generatore courier
+    generateCourier@ServiceInteractionHandler(courierreq)(rr);
+    /*uso il generatore di interfacce per estrarre i metadati*/
+    interfreq = 1;
+    interfreq.name -> request.name;
+    generateClientInterface@ServiceInteractionHandler(interfreq)(rr)
+    //a questo punto so che le interfacce sono a posto
+    //richiamo il gateway affinche' faccia il binding di questo nuovo servizio a se stesso
+    //genero la documentazione in automatico usando quello che ho fatto nel punto a.
   }]
+
+  /*author: Dan Ser*/
+  /*PRE = (posso assumere che non ci sono inconsistenze a livello di database)*/
   [retrieve_all_ms_info( request )( response ) {
     q = "select microservices.idMS, interfaces.Interf, interfaces.Loc, 
       interfaces.Protoc from interfaces, microservices where interfaces.idMS = microservices.idMS
       ORDER BY microservices.idMS ASC;";
     query@Database(q)(result);
-    serv = -1; subserv = -1; ninterf = 0; currloc = ""; currid = -1;
+
+    service_index = -1; currId = -1;
     for ( i=0, i<#result.row, i++ ) {
         //diverso id vuol dire che ho altro servizio
-        if (currid != result.row[i].idMS) {
-          serv++; subserv = -1; currloc = ""; currid = result.row[i].idMS;
-          response.services[serv] << result.row[i].idMS
+        if (currId != result.row[i].idMS) {
+          currId = result.row[i].idMS;
+          service_index++; 
+          response.services[service_index] << currId
         };
-        //se cambia location ma stesso servizio e' composto da altro subservice:
-        if (currloc != result.row[i].Loc) {
-          subserv++; ninterf = 0; currloc = result.row[i].Loc;
-          response.services[serv].subservices[subserv].location << result.row[i].Loc;
-          response.services[serv].subservices[subserv].protocol << result.row[i].Protoc;
-          response.services[serv].subservices[subserv].interfaces[ninterf] << result.row[i].Interf
+        /*controllo se la location di questa riga e' uguale a quella di subservizi precedenti*/
+        j = 0; trovato = false;
+        while (j < #response.services[service_index].subservices && !trovato) {
+            if (response.services[service_index].subservices[j].location == result.row[i].Loc) {
+              trovato = true
+            } else {
+              j++
+            }
+        };        
+        if (!trovato) {
+        /*se location mai trovata nei subservice precedente ho un nuovo subservice*/
+          subservice_index = #response.services[service_index].subservices;
+          interf_index = #response.services[service_index].subservices[subservice_index].interfaces;
+          response.services[service_index].subservices[subservice_index].location << result.row[i].Loc;
+          response.services[service_index].subservices[subservice_index].protocol << result.row[i].Protoc;
+          response.services[service_index].subservices[subservice_index].interfaces[interf_index] << result.row[i].Interf
         } 
-        //se la location non cambia e stesso servizio e' stesso subservice composto da piu' interfacce
+        /*se la location trovata nei subservice precedenti aggiungi interfaccia a quel subservice dove trovata*/
         else {
-          ninterf++; 
-          response.services[serv].subservices[subserv].interfaces[ninterf] << result.row[i].Interf
+          interf_index = #response.services[service_index].subservices[j].interfaces;
+          response.services[service_index].subservices[j].interfaces[interf_index] << result.row[i].Interf
         }
     }
   }]
+  /*POST = (ritorna le info per fare il binding a livello di gateway)*/
+
+
+
+
+
   [retrieve_ms_info( request )( response ) {
 
     //query

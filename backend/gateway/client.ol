@@ -1,4 +1,7 @@
 include "interfaces/clientinterfacegeneratorinterface.iol"
+include "console.iol"
+include "file.iol"
+
 
 outputPort ClientInterfaceGenerator {
    Location: "socket://localhost:8322"
@@ -6,8 +9,25 @@ outputPort ClientInterfaceGenerator {
    Interfaces: ClientInterfaceGeneratorInterface
 }
 
+
+
 main {
-    r = 1;
-    r.name = "CalcService";
-    generateclientinterface@ClientInterfaceGenerator(r)(rr)
+  install( NumberException=>
+    println@Console( main.NumberException.exceptionMessage )()
+  );
+
+
+    r = "couriers/Service1Courier.ol";
+    getServiceMetaFromCourier@ClientInterfaceGenerator(r)(rr);
+     install( ParserException=>
+      println@Console( "main.ParserException.exceptionMessage" )()
+    );
+    println@Console(rr)()
+    /*generateclientinterface@ClientInterfaceGenerator(rr)(rrr);
+    with (filereq) {
+         .content = rrr;
+         .filename = "Interface.iol"
+     };
+    writeFile@File(filereq)()*/
+
 }

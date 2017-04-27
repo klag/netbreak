@@ -27,6 +27,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `categories` (
+  `idMS` int(11) NOT NULL AUTO_INCREMENT,
   `idCategory` int(11) NOT NULL AUTO_INCREMENT,
   `Name` varchar(20) NOT NULL,
   `Image` varchar(50) NOT NULL,

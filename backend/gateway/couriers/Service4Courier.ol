@@ -10,13 +10,6 @@ OneWay:
 	faxwithnoresponse( Request ) 
 }
 
-interface HelloInterface {
-  RequestResponse:
-    sayhello( string )( string ),
-    saysuperhello(string)(string),
-    sayagreeting(int)(string),
-}
-
 type mailreq:void {
   .mail:string
   .content:string
@@ -27,6 +20,13 @@ interface MailInterface {
     mailwithnoresponse( mailreq ) 
   RequestResponse:
     mail(mailreq)( string )
+}
+
+interface HelloInterface {
+  RequestResponse:
+    sayhello( string )( string ),
+    saysuperhello(string)(string),
+    sayagreeting(int)(string),
 }
 
 
@@ -49,7 +49,7 @@ interface AggregatorInterface {
     mock(string)(string)
 }
 outputPort SubService0 {
- Interfaces: FaxInterface
+ Interfaces: FaxInterface, MailInterface
  Location: "socket://localhost:9202"
  Protocol: sodep
 }
@@ -60,35 +60,29 @@ outputPort SubService1 {
  Protocol: http
 }
 
-outputPort SubService2 {
- Interfaces: MailInterface
- Location: "socket://localhost:9202"
- Protocol: sodep
-}
-
 inputPort Client {
  Location: "local"
  Interfaces: AggregatorInterface
- Aggregates: SubService0 with AuthInterfaceExtender, SubService1 with AuthInterfaceExtender, SubService2 with AuthInterfaceExtender 
+ Aggregates: SubService0 with AuthInterfaceExtender, SubService1 with AuthInterfaceExtender 
 }
 
  courier Client {
     [ interface FaxInterface( request )( response ) ] {
        forward ( request )( response )
     }
-    [ interface HelloInterface( request )( response ) ] {
+    [ interface MailInterface( request )( response ) ] {
        forward ( request )( response )
     }
-    [ interface MailInterface( request )( response ) ] {
+    [ interface HelloInterface( request )( response ) ] {
        forward ( request )( response )
     }
     [ interface FaxInterface( request ) ] {
        forward ( request )
     }
-    [ interface HelloInterface( request ) ] {
+    [ interface MailInterface( request ) ] {
        forward ( request )
     }
-    [ interface MailInterface( request ) ] {
+    [ interface HelloInterface( request ) ] {
        forward ( request )
     }
  }
