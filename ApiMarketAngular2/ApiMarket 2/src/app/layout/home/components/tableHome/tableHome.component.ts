@@ -7,14 +7,24 @@ import {ApiHome} from '../../.././../class/apiHome';
     styleUrls: ['./tableHome.component.scss']
 })
 export class TableHomeComponent implements OnInit {
-    api: ApiHome;
-    constructor() {
-        this.api = {
+
+    apis = [
+        new ApiHome('photoshop', 'adobe1', 500, 'www.photoshop.it'),
+        new ApiHome('illustrator', 'adobe2', 600, 'www.illustrator.it')
+    ];
+
+    /*constructor() {
+        this.api = ({
+            nomeApi: 'Api di prova',
+            autore: 'pinco pallino',
+            prezzo: 20,
+            logo: 'www.logo.it',
+        }, {
             nomeApi: 'Api di prova',
             autore: 'pinco pallino',
             prezzo: 20,
             logo: 'www.logo.it'
-        };
-    }
+        });
+    }*/
     ngOnInit() { }
 }

@@ -1,6 +1,8 @@
 export class ApiHome {
-    nomeApi: string;
-    autore: string;
-    prezzo: number;
-    logo: string;
+    constructor(
+        public  nomeApi: string,
+        public autore: string,
+        public prezzo: number,
+        public logo: string
+    ) {}
 }
