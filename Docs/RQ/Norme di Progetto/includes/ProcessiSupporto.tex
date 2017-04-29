@@ -165,14 +165,33 @@
 		\begin{itemize}
 			\item \textbf{Classificazione}: esterno;
 			\item \textbf{Destinazione}: gruppo, committente e proponente;
-			\item \textbf{Contenuto}: questo documento ha lo scopo di definire nel dettaglio le singole componenti del sistema partendo dai casi d'uso definiti nel documento di Analisi dei Requisiti.
+			\item \textbf{Contenuto}: lo scopo di questo documento è fornire una visione generale del prodotto e dei suoi requisiti. In particolare, viene mostrata una progettazione ad
+			alto livello, basata su diagrammi dei package, per la descrizione delle componenti, diagrammi di sequenza e di attività, per la descrizione degli scenari d'uso.\\
+			Inoltre, vengono elencate le tecnologie che si intendono utilizzare per la realizzazione del progetto.
+		\end{itemize}
+		
+		\paragraph{\DDP}
+		\begin{itemize}
+			\item \textbf{Classificazione}: esterno;
+			\item \textbf{Destinazione}: gruppo, committente e proponente;
+			\item \textbf{Contenuto}: questo documento ha lo scopo di fornire una progettazione dettagliata del
+			prodotto. In esso vengono forniti tutti i dettagli implementativi del prodotto, fondamentali in fase di codifica, che comprendono i diagrammi delle classi e i relativi metodi.
+		\end{itemize}
+	
+		\paragraph{\MU}
+		\begin{itemize}
+			\item \textbf{Classificazione}: esterno;
+			\item \textbf{Destinazione}: gruppo, committente e proponente;
+			\item \textbf{Contenuto}: questo documento ha lo scopo di fornire all'utente una guida dettagliata riguardo tutte le funzionalità offerte dal prodotto realizzato.
 		\end{itemize}
 
 	\subsection{Verifica e Validazione}
-	Il processo di Verifica e Validazione ha lo scopo di controllare ed assicurare che documentazione e software prodotti rispecchino quanto previsto dai requisiti. In particolare, la verifica serve a stabilire che il prodotto rispetti le specifiche, mentre la validazione accerta che le specifiche siano rispettate nel modo più consono.
+	Il processo di Verifica e Validazione ha lo scopo di controllare ed assicurare che documentazione e software prodotti rispecchino quanto previsto dai requisiti.\\
+	In particolare, la verifica serve a stabilire che il prodotto rispetti le specifiche, mentre la validazione accerta che le specifiche siano rispettate nel modo più consono.
 
 		\subsubsection{Indice Gulpease}
-		Per verificare l'indice di leggibilità dei documenti, così come definito nel documento \textsc{PianoDiQualifica 2\_0\_0.pdf}, si è deciso di utilizzare uno strumento realizzato da un gruppo degli anni precedenti. Il calcolo dell'indice Gulpease è effettuato direttamente attraverso la piattaforma \textit{NetBreakDB}, la quale è in grado di analizzare i vari file \textit{.tex} all'interno di una cartella e restituire il nome del documento, il valore dell'indice e un'indicazione se il valore è superiore al minimo prefissato. 
+		Per verificare l'indice di leggibilità dei documenti, così come definito nel documento \textsc{PianoDiQualifica 3\_0\_0.pdf}, si è deciso di utilizzare uno strumento realizzato da un gruppo degli anni precedenti.\\
+		Il calcolo dell'indice Gulpease è effettuato direttamente attraverso la piattaforma \textit{NetBreakDB}, la quale è in grado di analizzare i vari file \textit{.tex} all'interno di una cartella e restituire il nome del documento, il valore dell'indice e un'indicazione se il valore è superiore al minimo prefissato.\\
 		Questo script è un ottimo strumento per automatizzare il lavoro, in quanto, dopo alcune modifiche, è in grado di esportare i risultati in codice \LaTeX\ e semplificarne l'integrazione, indicando in quali documenti è necessario intervenire per migliorarne la leggibilità del testo.
 		
 		\subsubsection{Analisi}
@@ -188,8 +207,8 @@
 			L'analisi dinamica è applicata esclusivamente sul software prodotto, in quanto consiste nell'effettuare dei test per verificare il corretto funzionamento dell'applicativo prodotto.
 	
 			
-		\subsubsection{Livelli dei test}
-		Il sistema adottato per il testing prende atto della struttura comune a tutto il software, decomponendo l'attività, a partire da elementi semplici fino a giungere ai test dell'intero sistema, seguendo opportune strategie di integrazione.
+		\subsubsection{Test}
+		Il sistema adottato per testare l'operato prodotto, prende atto della struttura comune a tutto il software, decomponendo l'attività, a partire da elementi semplici fino a giungere ai test dell'intero sistema, seguendo opportune strategie di integrazione.
 		
 		\paragraph{Test di unità}
 		Questa tipologia di test è atta ad analizzare ogni piccola unità software singolarmente. Così facendo, si tende a minimizzare il numero di errori, a partire da ogni singola componente. Testando i singoli moduli, si rende necessaria la presenza di componenti fittizie per simulare parti di sistema incomplete e altrimenti non testabili singolarmente. Il codice utilizzato per denotare questa fase di test sarà:
@@ -237,10 +256,21 @@
 			TA[Identificativo test]
 		\end{center}
 	
-		\subsubsection{Strumenti utilizzati}
+		\subsubsection{Strumenti}
+		
+		\paragraph{Strumenti per l'analisi statica}
+		
 		\begin{itemize}
 			\item \textbf{\textit{W3C Markup Validator Service\ped{G}}}: validatore online di codice \textit{HTML\ped{G}}, utile per trovare eventuali errori nel codice. L'indirizzo web di riferimento è: \url{https://validator.w3.org/};
 			\item \textbf{\textit{CSSLint\ped{G}}}: validatore online di codice \textit{CSS\ped{G}}, utile per trovare eventuali errori nel codice. L'indirizzo web di riferimento è: \url{http://csslint.net/};
-			\item \textbf{\textit{SQLFiddle\ped{G}}}: validatore online di codice \textit{MySQL\ped{G}}. Utile per verificare la consistenza del codice del database. \MakeUppercase{è} compatibile anche con \textit{PostgreSQL\ped{G}}. L'indirizzo web di riferimento è: \url{http://sqlfiddle.com/};
-			\item \textbf{Strumenti per sviluppatori Google Chrome}: è uno strumento atto a controllare l'utilizzo di risorse del prodotto, l'usabilità su differenti dispositivi, nonchè simulare situazioni di carico della rete. L'indirizzo web di riferimento è: \url{https://www.google.it/chrome/}.
+			\item \textit{\textbf{JSHint\ped{G}}}: è uno strumento che aiuta a rilevare possibili
+			errori nel codice \textit{JavaScript\ped{G}}. L'indirizzo web di riferimento è: \url{http://jshint.com/};
+			\item \textbf{\textit{SQLFiddle\ped{G}}}: validatore online di codice \textit{SQL\ped{G}}, utile per verificare la consistenza del codice del database, e compatibile con \textit{MySQL\ped{G}} e \textit{PostgreSQL\ped{G}}. L'indirizzo web di riferimento è: \url{http://sqlfiddle.com/}.
+		\end{itemize}
+	
+	\paragraph{Strumenti per l'analisi dinamica}
+		\begin{itemize}
+			\item \textbf{\textit{Google Chrome DevTools\ped{G}}}: è uno strumento atto a controllare l'utilizzo di risorse del prodotto, l'usabilità su differenti dispositivi, nonchè simulare situazioni di carico della rete. L'indirizzo web di riferimento è: \url{https://www.google.it/chrome/};
+			\item \textbf{\textit{Jasmine\ped{G}}}: framework utile ad eseguire test di unità su codice JavaScript. L'indirizzo di riferimento è: \url{https://jasmine.github.io/};
+			\item \textbf{\textit{Protractor\ped{G}}}: framework per effettuare test su applicazioni sviluppate in AngularJS. L'indirizzo di riferimento è: \url{http://www.protractortest.org/#/}.
 		\end{itemize}

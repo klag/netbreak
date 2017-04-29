@@ -78,7 +78,15 @@
 			\end{itemize}
 	
 	\subsubsection{Progettazione}
-	La Progettazione è l'attività fondamentale in cui viene realizzata un'astrazione di quella che diverrà la struttura software del prodotto. \MakeUppercase{è} successiva alla produzione di una completa \AdR, in quanto da essa vengono tracciate le linee guida per la progettazione. I documenti risultanti da questa attività fungeranno, poi, da percorso per la produzione del software vero e proprio. Una progettazione svolta al meglio è utile per un'attività di codifica ottimale.
+	La Progettazione è l'attività fondamentale in cui viene realizzata un'astrazione di quella che diverrà la struttura software del prodotto. \MakeUppercase{è} successiva alla produzione di una completa \AdR, in quanto da essa vengono tracciate le linee guida per la progettazione.\\
+	I documenti risultanti da questa attività fungeranno, poi, da percorso per la produzione del software vero e proprio. Una progettazione svolta al meglio è utile per un'attività di codifica ottimale.\\
+	I \textit{\Progs} sono responsabili delle attività di progettazione, e sono tenuti ad avere:
+	\begin{itemize}
+		\item una profonda conoscenza di tutto ciò che riguarda il processo di sviluppo del software;
+		\item la capacità di saper anticipare i cambiamenti;
+		\item una forte inventiva per riuscire a trovare una soluzione progettuale accettabile anche in mancanza di una metodologia che sia sufficientemente espressiva;
+		\item la capacità di individuare con rapidità e sicurezza le soluzioni più opportune.
+	\end{itemize}
 	
 		\paragraph{Obiettivi}
 		Durante questa attività, il team si prefigge i seguenti obiettivi:
@@ -89,14 +97,53 @@
 			\item Flessibilità del prodotto, per poter far fronte, in modo rapido, a repentine ed eventuali modifiche rilevanti, pur non condizionando il lavoro pregresso;
 			\item Soddisfare le richieste del committente.
 		\end{itemize}
-	\paragraph{Diagrammi}
-	Per la progettazione, il gruppo ha deciso di utilizzare quattro tipologie di diagrammi UML:
+		
+		\paragraph{Diagrammi}
+		Per la progettazione, il gruppo ha deciso di utilizzare quattro tipologie di diagrammi UML:
 		\begin{itemize}
 			\item \textbf{\textit{Diagrammi dei package\ped{G}:}} raggruppano le classi in un'unità di alto livello;
 			\item \textbf{\textit{Diagrammi delle classi\ped{G}:}} descrivono le caratteristiche delle singole unità;
 			\item \textbf{\textit{Diagrammi di attività\ped{G}:}} illustrano il flusso di operazioni relativo ad un'attività che è possibile svolgere sul prodotto. Possono essere utilizzati per descrivere la logica di un algoritmo specifico;
 			\item \textbf{\textit{Diagrammi di sequenza\ped{G}:}} descrivono le sequenze di azioni dove tutte le decisioni sono già state effettuate, quindi sono assenti scelte dell'utente e flussi alternativi.
 		\end{itemize}
+	
+	\paragraph{Specifica tecnica}
+	I \textit{Progettisti} devono definire la struttura ad alto livello dell'architettura del sistema e delle singole componenti, raccogliendo il tutto nel documento \textsc{Specifica Tecnica 2\_0\_0.pdf}. Inoltre, hanno il compito di definire i test di integrazione tra le varie componenti, che verranno inseriti in appendice al documento \textsc{Piano di Qualifica 3\_0\_0.pdf}. \\
+	Il documento di \textit{Specifica Tecnica} conterrà i seguenti argomenti:
+	\begin{itemize}
+		\item \textbf{Diagrammi UML:} diagrammi dei packages, diagrammi delle classi, diagrammi di sequenza e diagrammi di attività.
+		\item \textbf{Design patterns:} i \textit{Progettisti} devono fornire una descrizione dei design patterns adottati nella definizione dell'architettura. Questa descrizione dovrà essere accompagnata da un diagramma UML, che ne esemplifichi il funzionamento, e dalle motivazioni che hanno portato all'adozione di tale pattern;
+		\item \textbf{Tracciamento delle componenti:} ogni componente dovrà essere tracciato ed associato ad almeno un requisito. Così facendo, si potrà essere certi che tutti i requisiti vengano soddisfatti, e che ogni componente presente nell'architettura soddisfi almeno un requisito. Tale tracciamento dovrà essere effettuato tramite \textit{NetBreakDB}, che si occupa di generare in modo automatico le relative tabelle.
+		\item \textbf{Test d'integrazione:} i \textit{Progettisti} devono definire delle strategie di verifica per poter dimostrare la corretta integrazione tra le varie componenti definite.
+	\end{itemize}
+	
+	\paragraph{Definizione di Prodotto}
+	I \textit{\Progs}, a partire dal documento di \textit{Specifica Tecnica}, hanno il compito di produrre la \textit{Definizione di Prodotto}, nella quale viene descritta la progettazione di dettaglio del sistema.\\
+	Lo scopo di questo documento è quello di definire dettagliatamente ogni singola unità
+	di cui è composto il sistema, in modo da semplificare l’attività di codifica, e allo stesso
+	tempo, non fornire alcun grado di libertà ai \textit{\Progrs}.\\
+	Parallelamente alla progettazione di dettaglio dei componenti software, si dovranno prevedere e progettare i relativi test di unità.\\
+	Il documento di \textit{Definizio di Prodotto} conterrà i seguenti argomenti:
+	\begin{itemize}
+		\item \textbf{Diagrammi UML:} diagrammi dei packages, diagrammi delle classi, diagrammi di sequenza.
+		\item \textbf{Definizione delle classi:} ogni classe progettata viene descritta più in dettaglio, fornendo una descrizione più approfondita dello scopo, delle sue funzionalità e del suo funzionamento. Per ogni classe, dovranno essere anche definiti i vari metodi e attributi che la caratterizzano;
+		\item \textbf{Tracciamento delle classi:} ogni classe deve essere tracciata ed associata ad almeno un requisito, così facendo è possibile avere la certezza che tutti i requisiti vengano soddisfatti, e che ogni classe presente nell'architettura soddisfi almeno un requisito.\\
+		Questo tracciamento dev'essere effettuato tramite \textit{DocumentsDB}, che si occupa di generare in modo automatico le tabelle di tracciamento.
+		\item \textbf{Test di unità:} i \textit{\Progs} devono definire le strategie di verifica delle varie classi, in modo che durante l'attività di codifica sia possibile verificare che la classe si comporti in modo corretto.
+	\end{itemize}
+	
+	\paragraph{Norme progettuali}
+	\subparagraph{Tecniche di modularizzazione}
+	Prima di iniziare l'attività di progettazione, i \textit{\Progs} hanno bisogno di definire delle tecniche di modularizzazione, affinchè l'architettura software progettata sia di elevata qualità.\\
+	Essi devono necessariamente adottare delle tecniche che consentano la scomposizione del sistema in moduli e definire una descrizione precisa della struttura modulare e delle relazioni che esistono tra i singoli moduli.\\
+	La modularizzazione porterà i seguenti vantaggi:
+	\begin{itemize}
+		\item Semplificazione della verifica della correttezza semantica e nella correzione di errori;
+		\item Leggibilità del codice;
+		\item Riusabilità del software;
+		\item Possibilità di realizzazione di prototipi;
+		\item Semplificazione dell'attività di manutenzione.
+	\end{itemize}
 	
 	\subsubsection{Codifica}
 	L'attività di Codifica si prefigge la realizzazione pratica del codice dell'applicativo richiesto. I \textit{\Progrs} sono i principali responsabili di questa attività, i quali, tenendo conto degli stadi precedenti e seguendo nel dettaglio quanto precedentemente stilato, realizzano un prodotto efficace. Ogni \textit{\Progr} deve essere, come requisito prioritario, strettamente ancorato alle linee guida stabilite.
@@ -129,15 +176,25 @@
 			\item Nella descrizione di funzioni, utilizzare come prima voce il verbo dell'azione svolta, seguito dal nome dell'azione o dell'oggetto su cui viene eseguita;
 			\item Accertarsi che non vi sia ambiguità nelle abbreviazioni utilizzate, avendo cura di verificare che non possano venir impiegate due abbreviazioni simili per funzionalità differenti.
 			\end{itemize}
-			
-			\subparagraph{Commenti}
-			Ogni commento deve essere ampio, uniforme e sufficientemente dettagliato, seguendo i criteri e le linee guida elencate:
-			\begin{itemize}
+					
+		\subparagraph{Commenti}
+		All'interno del codice sorgente è di fondamentale importanza la presenza di commenti, al fine di facilitare la comprensione del flusso logico.
+		Di seguito, vengono elencati alcuni metodi di inserimento dei commenti:
+		\begin{itemize}
 			\item Produrre e/o mantenere aggiornata un'intestazione per ciascun file. Essa deve sempre avere una breve descrizione di ciò che è incluso nello specifico file;
 			\item Indicare pre e post-condizione di ogni funzionalità di rilievo, in modo da favorire un riutilizzo di eventuale codice già scritto. \MakeUppercase{è}, inoltre, consigliato introdurre una breve descrizione concisa riguardante la funzionalità;
-			\item Inserire commenti nella riga precedente al codice o porzione che si desidera commentare. Non è consentito commentare, dunque, in modalità "inline";
-			\item Stilare commenti completi, di senso compiuto e grammaticalmente corretti. Documentare, inoltre, durante la stesura del codice, per evitare di doverne rianalizzare una porzione, al solo fine di documentarla.
-			\end{itemize}
+			\item Ogni qualvolta si modifica il codice, occorre mantenere sempre aggiornati i relativi commenti;
+			\item All'inizio di ogni funzione o procedura, è utile fornire commenti che ne indichino le limitazioni, i presupposti e lo scopo;
+			\item Evitare l'aggiunta di commenti alla fine di una riga di codice, poichè può rendere più difficoltosa la lettura del codice. Tuttavia, questo tipo di commento è accettabile in caso di annotazione di dichiarazioni di variabili;
+			\item Evitare commenti confusi come righe intere di asterischi, bensì si raccomanda di utilizzare spazi vuoti per separare i commenti dal codice;
+			\item Quando si scrivono commenti, utilizzare frasi di senso compiuto. La funzione dei commenti consiste nel chiarire il significato del codice senza aggiungere alcun tipo di ambiguità;
+			\item Inserire commenti in fase di scrittura del codice, in quanto ciò potrebbe non essere possibile in un secondo momento;
+			\item Evitare commenti superflui o inappropriati, come annotazioni umoristiche;
+			\item Commentare tutto ciò che si ritiene poco chiaro all'interno del codice;
+			\item Utilizzare sempre i commenti nel caso di codice relativo a correzioni di errori e a potenziali soluzioni, al fine di evitare problemi ricorrenti e reintrodurre errori già corretti in precedenza;
+			\item Aggiungere commenti al codice costituito da cicli e diramazioni logiche, per facilitarne la comprensione;
+			\item Creare commenti adottando uno stile uniforme e una struttura e una punteggiatura coerenti.
+		\end{itemize}
 		
 	\subsubsection{Strumenti utilizzati}
 	
