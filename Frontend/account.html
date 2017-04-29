@@ -53,6 +53,8 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mark Twain<span class="caret"></span></a>
             <ul class="dropdown-menu">
               <li><a href="account.html">Gestione Account</a></li>
+              <li><a href="login.html">Login</a></li>
+              <li><a href="registrautente.html">Registrati</a></li>
               <li><a href="registraapi.html">Aggiungi API</a></li>
               <li role="separator" class="divider"></li>
               <li><a href="#">Logout</a></li>
@@ -79,7 +81,7 @@
           <ul class="list-group" >
             <li class="list-group-item"><a href="account.html">Dati personali</a></li>
             <li class="list-group-item"><a href="apiacquistate.html">API acquistate</a></li>
-            <li class="list-group-item"><a href="#">API registrate</a></li>
+            <li class="list-group-item"><a href="apiregistrate.html">API registrate</a></li>
           </ul>
         </div>
         <div class="panel panel-default">
@@ -106,6 +108,14 @@
 
               <form class="datiPersonaliForm" >
                 <fieldset disabled>
+                  <div class="form-group">
+                      <label for="nomeInput">Avatar</label>
+                      <div class="thumbnail">
+                        <img style="max-width: 100px;" class="img-circle" src="images/profilo.png" alt="apilogo">
+                      </div>
+                      <input type="file" id="exampleInputFile">
+                      <p class="help-block">Puoi scegliere un altro avatar</p>
+                  </div>
                   <div class="form-group">
                     <label for="nomeInput">Nome</label>
                     <input type="text" class="form-control" id="nomeInput" placeholder="Nome" >
