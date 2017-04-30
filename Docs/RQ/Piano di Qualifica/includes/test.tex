@@ -6,6 +6,13 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 
 	\subsection{Test di unità}
 	Questa tipologia di test serve a verificare il corretto comportamento dei singoli metodi o funzioni implementate.
+	I test di unità saranno descritti nel modo seguente:
+	\begin{center}
+		\textbf{TU}[\textit{IdTest}]
+	\end{center}
+	\begin{center}
+		dove \textbf{\textit{IdTest}} rappresenta il codice identificativo progressivo dell'unità presa in considerazione.
+	\end{center}
 	
 	\subsection{Test di integrazione}
 	Questa tipologia di test serve a verificare il corretto funzionamento delle singole componenti di sistema progettate durante l'attività di progettazione ad alto livello.
@@ -15,4 +22,161 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 	Questa tipologia di test serve a verificare il corretto comportamento e funzionamento dell’architettura.
 	
 	\subsection{Test di validazione}
-	Questa tipologia di test serve a verificare che il prodotto soddisfi le richieste del proponente attraverso le funzionalità implementate.
+	Questa tipologia di test serve a verificare che il prodotto soddisfi le richieste del proponente attraverso le funzionalità implementate.\\
+	Per questo motivo, occorrerà simulare il comportamento generale dell'applicativo e dell'utente che interagisce con esso, attraverso delle macro azioni.
+	I test di validazione saranno organizzati nel modo seguente:
+	\begin{center}
+		\textbf{TV}[\textit{TipologiaRequisito}][\textit{RilevanzaRequisito}][\textit{CodiceRequisito}]
+	\end{center}
+	dove:
+	\begin{itemize}
+		\item
+		\textbf{TipologiaRequisito} può assumere valori tra:
+		\begin{itemize}
+			\item
+			\textit{V} per i requisiti di vincolo;
+			\item
+			\textit{F} per i requisiti di funzionalità;
+			\item
+			\textit{Q} per i requisiti di qualità;
+			\item
+			\textit{P} per i requisiti prestazionali.
+		\end{itemize}
+		\item 
+		\textbf{RilevanzaRequisito} può assumere valori tra:
+		\begin{itemize}
+			\item
+			\textit{O} per i requisiti obbligatori;
+			\item
+			\textit{D} per i requisiti desiderabili;
+			\item
+			\textit{F} per i requisiti facoltativi.
+		\end{itemize}
+		\item
+		\textbf{CodiceRequisito} assume un valore gerarchico che identifica il singolo requisito.
+	\end{itemize}
+
+	% TABELLA
+	\normalsize
+	\begin{longtable}[ht]{|c|>{}m{8cm}|c|}
+		\hline 
+		\textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
+		\hline
+		\endhead
+		\hypertarget{TVFO1}{TVFO1} & L’utente intende registrarsi alla piattaforma \progetto. All’utente è richiesto di:
+		\begin{itemize}
+			\item Trovarsi nella sezione apposita;
+			\item Compilare il form di registrazione;
+			\item Premere il pulsante di conferma;
+			\item Verificare attraverso l’autenticazione che la registrazione sia avvenuta correttamente.
+		\end{itemize}
+		& \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFO2}{TVFO2} & L’utente intende autenticarsi alla piattaforma \progetto. All’utente è richiesto di:
+		\begin{itemize}
+			\item Trovarsi nella sezione apposita;
+			\item Inserire le credenziali nell’apposito form;
+			\item Premere il pulsante di autenticazione;
+			\item Verificare che l’autenticazione sia effettivamente avvenuta.
+		\end{itemize}
+		& \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFO11}{TVFO11} & L’utente intende disconnettersi dalla piattaforma \progetto. All’utente è richiesto di:
+		\begin{itemize}
+			\item Essere autenticato;
+			\item Trovarsi nella sezione apposita;
+			\item Premere il pulsante di logout;
+			\item Verificare che la disconnessione sia effettivamente avvenuta.
+		\end{itemize}
+		& \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFO10.1}{TVFO10.1} & L’utente autenticato intende gestire i propri dati. All’utente è richiesto di:
+		\begin{itemize}
+			\item Essere autenticato;
+			\item Trovarsi nella sezione apposita;
+			\item Modificare i campi dati consentiti;
+			\item Premere il tasto conferma modifica;
+			\item Visualizzare il profilo dell’utente modificato.
+		\end{itemize}
+		& \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFxxx}{TVFxxx} & L’utente autenticato  intende modificare la tipologia di utenza. All’utente è richiesto di:
+		\begin{itemize}
+			\item Essere autenticato;
+			\item Trovarsi nella sezione apposita;
+			\item Cambiare la tipologia di utenza;
+			\item Verificare la modifica effettuata.
+		\end{itemize} & \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFxxx}{TVFxxx} & L’utente autenticato  intende eliminare il proprio account. All’utente è richiesto di:
+		\begin{itemize}
+			\item Essere autenticato;
+			\item Trovarsi nella sezione apposita;
+			\item Premere il tasto di eliminazione account;
+			\item Verificare che la disconnessione della sessione sia avvenuta;
+			\item Verificare che l’autenticazione con le credenziali dell’utente eliminato provochi un errore.
+		\end{itemize} & \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFO4}{TVFO4} & L’utente autenticato  intende ricercare una API sul marketplace. All’utente è richiesto di:
+		\begin{itemize}
+			\item Trovarsi nella sezione apposita;
+			\item Ricercare una API digitando le keywords;
+			\item Visualizzazione dei dati relativi alla API cercata.
+		\end{itemize} & \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFO7}{TVFO7} & L’utente autenticato  intende acquistare l'API che sta visualizzando. All’utente è richiesto di:
+		\begin{itemize}
+			\item Essere autenticato;
+			\item Trovarsi nella sezione apposita;
+			\item Selezionare la policy di vendita;
+			\item Confermare l'acquisto attraverso l'apposito pulsante;
+			\item Verificare la transazione nel proprio storico.
+		\end{itemize} & \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFxxx}{TVFxxx} & L’utente autenticato intende caricare una propria API sulla piattaforma \progetto. All’utente è richiesto di:
+		\begin{itemize}
+			\item Essere un utente sviluppatore autenticato;
+			\item Trovarsi nella sezione apposita;
+			\item Premere il pulsante "Inserisci API";
+			\item Inserire i dati necessari alla pubblicazione della propria API;
+			\item Premere il pulsante di conferma inserimento nuova API;
+			\item Verificare che sia stata aggiunta al marketplace l'API.
+		\end{itemize} & \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFxxx}{TVFxxx} & L’utente autenticato intende modificare i dati relativi ad una sua API caricata. All’utente è richiesto di:
+		\begin{itemize}
+			\item Essere un utente sviluppatore autenticato;
+			\item Trovarsi nella sezione apposita;
+			\item Premere il pulsante "Modifica API";
+			\item Modificare i dati dell'API selezionata;
+			\item Premere il pulsante di conferma modifica;
+			\item Verificare che sia stata modificata l'API.
+		\end{itemize} & \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFxxx}{TVFxxx} & L’utente autenticato intende visualizzare le API da lui caricate sulla piattaforma \progetto. All’utente è richiesto di:
+		\begin{itemize}
+			\item Essere un utente sviluppatore autenticato;
+			\item Trovarsi nella sezione apposita;
+			\item Verificare che vengano visualizzati tutte le proprie API inserite.
+		\end{itemize} & \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFxxx}{TVFxxx} & L’utente autenticato intende visualizzare il numero di licenze attive per le API da lui caricate sulla piattaforma \progetto. All’utente è richiesto di:
+		\begin{itemize}
+			\item Essere un utente sviluppatore autenticato;
+			\item Trovarsi nella sezione apposita;
+			\item Verificare che vengano visualizzati i dati relativi alle licenze per le proprie API inserite.
+		\end{itemize} & \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFxxx}{TVFxxx} & L’utente amministratore della piattaforma \progetto intende moderare un determinato utente registrato. All’utente è richiesto di:
+		\begin{itemize}
+			\item Essere un utente amministratore autenticato;
+			\item Trovarsi nella sezione apposita;
+			\item Selezionare l'utente che si vuole moderare;
+			\item Inserire i dati del rapporto di moderazione;
+			\item Verificare che l'utente sia stato effettivamente moderato.
+		\end{itemize} & \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFO10.1.1}{TVFO10.1.1} & L’utente autenticato intende visualizzare il proprio profilo. All’utente è richiesto di:
+		\begin{itemize}
+			\item Essere autenticato;
+			\item Trovarsi nella sezione apposita;
+			\item Visualizzare il proprio profilo.
+		\end{itemize} & \textit{Non Implementato}\\ \hline
+		\hypertarget{TVFxxx}{TVFxxx} & L’utente autenticato intende visualizzare lo storico delle transazioni effettuate. All’utente è richiesto di:
+		\begin{itemize}
+			\item Essere autenticato;
+			\item Trovarsi nella sezione apposita;
+			\item Visualizzare lo storico delle transazioni.
+		\end{itemize} & \textit{Non Implementato}\\ \hline
+		\caption[Test di Validazione]{Test di Validazione}
+		\label{tabella:test0}
+	\end{longtable}
+	\clearpage
+	
