@@ -20,6 +20,102 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 	
 	\subsection{Test di sistema}
 	Questa tipologia di test serve a verificare il corretto comportamento e funzionamento dell’architettura.
+	I test di sistema saranno organizzati nel modo seguente:
+	\begin{center}
+		\textbf{TS}[\textit{TipologiaRequisito}][\textit{RilevanzaRequisito}][\textit{CodiceRequisito}]
+	\end{center}
+	dove:
+	\begin{itemize}
+		\item
+		\textbf{TipologiaRequisito} può assumere valori tra:
+		\begin{itemize}
+			\item
+			\textit{V} per i requisiti di vincolo;
+			\item
+			\textit{F} per i requisiti di funzionalità;
+			\item
+			\textit{Q} per i requisiti di qualità;
+			\item
+			\textit{P} per i requisiti prestazionali.
+		\end{itemize}
+		\item 
+		\textbf{RilevanzaRequisito} può assumere valori tra:
+		\begin{itemize}
+			\item
+			\textit{O} per i requisiti obbligatori;
+			\item
+			\textit{D} per i requisiti desiderabili;
+			\item
+			\textit{F} per i requisiti facoltativi.
+		\end{itemize}
+		\item
+		\textbf{CodiceRequisito} assume un valore gerarchico che identifica il singolo requisito.
+	\end{itemize}
+	
+	% TABELLA
+	\normalsize
+	\begin{longtable}{|>{\centering\arraybackslash}p{2.3cm}|>{\centering\arraybackslash}p{7.5cm} | >{\centering\arraybackslash}p{3.8cm}|}
+		\hline \rowcolor{Gray}
+		\textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
+		\hline
+		\endhead
+		\hypertarget{TSFO1}{TSFO1} & Viene verificato che il sistema registri correttamente un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO2}{TSFO2} & Viene verificato che il sistema riesca a far effettuare correttamente il login ad un utente attraverso \progetto. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO11}{TSFO11} & Viene verificato che il sistema riesca a far effettuare correttamente il logout ad un utente.  & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO10.1}{TSFO10.1} & Viene verificato che il sistema permetta di gestire correttamente ad un utente le informazioni del proprio profilo. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO10.1.2}{TSFO10.1.2} & Viene verificato che il sistema modifichi correttamente le informazioni di un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFxxx}{TSFxxx} & Viene verificato che il sistema effettui correttamente l'upgrade dell'account di un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO4}{TSFO4} & Viene verificato che il sistema ricerchi correttamente una API. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFxxx}{TSFxxx} & Viene verificato che il sistema permetta il corretto inserimento di una nuova API da parte di uno sviluppatore. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFxxx}{TSFxxx} & Viene verificato che il sistema visualizzi correttamente le API inserite da uno sviluppatore. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFxxx}{TSFxxx} & Viene verificato che il sistema modifichi correttamente i dati di una API di uno sviluppatore. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFxxx}{TSFxxx} & Viene verificato che il sistema rimuova correttamente una API dal marketplace. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFxxx}{TSFxxx} & Viene verificato che il sistema visualizzi correttamente i dati relativi ad una API. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFD3}{TSFD3} & Viene verificato che il sistema permetta il recupero della password per un utente registrato ad \progetto. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO4.3}{TSFO4.3} & Viene verificato che il sistema restituisca un insieme di risultati coerenti secondo i parametri di ricerca specificati da un utente. & \textit{Non Implementato}\\ \hline	
+		\hypertarget{TSFO5}{TSFO5} & Viene verificato che il sistema visualizzi correttamente i dati relativi ad una API. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO5.6}{TSFO5.6} & Viene verificato che il sistema consenta la consultazione della documentazione di una API. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO5.7}{TSFO5.7} & Viene verificato che il sistema visualizzi correttamente i dati di utilizzo di una API. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO6.2}{TSFO6.2} & Viene verificato che il sistema visualizzi correttamente la lista di API acquistate da un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO7}{TSFO7} & Viene verificato che il sistema consenta l'acquisto di una API, con conseguente rilascio di una API Key, per un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO7.5.3}{TSFO7.5.3} & Viene verificato che il sistema crei e visualizzi correttamente l'API Key associata ad una API, per cui è stata acquistata una licenza da un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO8.2}{TSFO8.2} & Viene verificato che il sistema visualizzi correttamente la lista delle API registrate da uno sviluppatore. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO8.2.4}{TSFO8.2.4} & Viene verificato che il sistema modifichi correttamente le informazioni relative ad una API registrata da uno sviluppatore. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO8.2.8}{TSFO8.2.8} & Viene verificato che il sistema visualizzi correttamente il guadagno netto, in base alla policy, di una API da lui inserita. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO8.2.9}{TSFO8.2.9} & Viene verificato che il sistema elimini correttamente una API su richiesta dello sviluppatore autore. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO9}{TSFO9} & Viene verificato che il sistema inserisca correttamente nel marketplace una nuova API. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO10.1.1}{TSFO10.1.1} & Viene verificato che il sistema visualizzi correttamente le informazioni del profilo di un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO10.2}{TSFO10.2} & Viene verificato che il sistema permetta di gestire correttamente ad un utente il proprio conto. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO10.2.1}{TSFO10.2.1} & Viene verificato che il sistema visualizzi correttamente il saldo attuale del conto di un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO10.2.2}{TSFO10.2.2} & Viene verificato che il sistema permetta ad un utente di ricaricare il saldo del proprio conto attraverso PayPal. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO10.3}{TSFO10.3} & Viene verificato che il sistema visualizzi correttamente lo storico delle transazioni di un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO10.3.2}{TSFO10.3.2} & Viene verificato che il sistema visualizzi correttamente la lista delle transazioni concluse di un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO12.1.1.1}{TSFO12.1.1.1} & Viene verificato che il sistema visualizzi correttamente i dati avanzati di una API da parte di un amministratore. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO12.1.1.2}{TSFO12.1.1.2} & Viene verificato che il sistema sospenda correttamente una API su richiesta di un amministratore. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFD12.1.1.3}{TSFD12.1.1.3} & Viene verificato che il sistema elimini correttamente una API su richiesta di un amministratore. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO12.2.1.1}{TSFO12.2.1.1} & Viene verificato che il sistema permetta ad un amministratore di sospendere correttamente un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO12.2.1.2}{TSFO12.2.1.2} & Viene verificato che il sistema permetta ad un amministratore di sospendere correttamente i pagamenti veso un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO12.2.1.3}{TSFO12.2.1.3} & Viene verificato che il sistema permetta ad un amministratore di revocare correttamente la sospensione ad un utente sospeso. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO12.2.1.5}{TSFO12.2.1.5} & Viene verificato che il sistema permetta ad un amministratore di eliminare correttamente un utente. & \textit{Non Implementato}\\ \hline		
+		\hypertarget{TSVOxx}{TSFOxx} & Viene verificato che il sistema abbia un'architettura a microservizi. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVOxx}{TSFOxx} & Viene verificato che il sistema utilizzi il linguaggio \textit{Jolie} per l'API Gateway, il back-end dell'applicazione web e le interfacce dei microservizi. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVOxx}{TSVOxx} & Viene verificato che il sistema utilizzi il linguaggio di markup \textit{HTML5}. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVOxx}{TSVOxx} & Viene verificato che il sistema utilizzi fogli di stile in \textit{CSS3}. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVOxx}{TSVOxx} & Viene verificato che il sistema utilizzi il linguaggio \textit{JavaScript}. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVOxx}{TSVOxx} & Viene verificato che il sistema funzioni su \textit{Google Chrome} versione 55.0 o superiore & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVOxx}{TSVOxx} & Viene verificato che il sistema funzioni su \textit{Mozilla Firefox} versione 51.0 o superiore & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVOxx}{TSVOxx} & Viene verificato che il sistema funzioni su \textit{Safari} versione 10.0 o superiore & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVDxx}{TSVDxx} & Viene verificato che il sistema funzioni su \textit{Opera} versione 42.0 o superiore & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVDxx}{TSVDxx} & Viene verificato che il sistema funzioni su \textit{Internet Explorer} versione 11.0 o superiore & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVOxx}{TSVOxx} & Viene verificato che il sistema funzioni su \textit{Microsoft Edge} versione 38.0 o superiore & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVOxx}{TSVOxx} & Viene verificato che il sistema funzioni su \textit{Android Browser} versione 5.1 o superiore & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVOxx}{TSVOxx} & Viene verificato che il sistema funzioni su \textit{Safari} per iOS 10 o versioni superiori & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVFxx}{TSVFxx} & Viene verificato che il sistema funzioni su \textit{Google Chrome} per iOS versione 56.0 o superiore & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVFxx}{TSVFxx} & Viene verificato che il sistema funzioni su \textit{Google Chrome} per Android versione 56.0 o superiore & \textit{Non Implementato}\\ \hline
+		\caption[Test di Sistema]{Test di Sistema}
+		\label{tabella:test1}
+	\end{longtable}
+	\clearpage
 	
 	\subsection{Test di validazione}
 	Questa tipologia di test serve a verificare che il prodotto soddisfi le richieste del proponente attraverso le funzionalità implementate.\\
@@ -58,8 +154,8 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 
 	% TABELLA
 	\normalsize
-	\begin{longtable}[ht]{|c|>{}m{8cm}|c|}
-		\hline 
+	\begin{longtable}{|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{7.5cm} | >{\centering\arraybackslash}p{4cm}|}
+		\hline \rowcolor{Gray}
 		\textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
 		\hline
 		\endhead
