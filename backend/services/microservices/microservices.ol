@@ -187,4 +187,24 @@ main
     println@Console("Retrieved microservice " + response.MSIdData.IdMS + " from interface " + request.Id)()
   }]
 
+
+  [retrieve_ms_info_view( request )( response ) {
+
+    //query
+    q = "SELECT * FROM microservices";
+    query@Database( q )( result );
+
+    if ( #result.row == 0 ) {
+      println@Console("Microservice not found")()
+    }
+    else {
+      /*for ( i=0, i<#result.row, i++ ) {
+        println@Console( "Got microservice with id "+ request.Id )();
+        response.MSData[i] << result.row[i]
+      }*/
+      response = result;
+    };
+    //println@Console("Retrieved all info about microservice " + response.MSData.Name)()
+  }]
+
 }
