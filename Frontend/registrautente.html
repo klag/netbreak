@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-     <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
-  <!-- Optional theme -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/logic.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
       <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -66,11 +67,13 @@
 
 
 
+
+
   <div class="row">
       <div class="col-xs-8 col-sm-6 col-md-4 col-xs-offset-2 col-sm-offset-3 col-md-offset-4">
           <h3 class="text-center">Registrazione Utente:</h3>
-          <form>
-            <div class="alert alert-success" role="alert">Registrazione avvenuta con successo! Benvenuto!</div>
+          <form ng-app="myApp" ng-controller="formCtrl">
+            <div class="alert alert-success" role="alert">Registrazione avvenuta con successo! Benvenuto! <a href="login.html">Login</a></div>
             <div class="alert alert-danger" role="alert">Err. 1 Password non corrispondono</div> 
             <div class="alert alert-danger" role="alert">Err. 2 Formato avatar non va bene</div>  
             <div class="alert alert-danger" role="alert">Err. 3 Email o Username gia' scelti</div>  
@@ -86,6 +89,20 @@
             <div class="form-group">
               <label for="exampleInputEmail1">Username:</label>
               <input type="nomeapi" class="form-control" id="exampleInputEmail1" placeholder="es. johndoe85">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Cittadinanza:</label>
+              <select class="form-control">
+                <option ng-repeat="country in countries">{{country}}</option>
+              </select>
+             </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">About Me:</label>
+              <textarea class="form-control" rows="3" placeholder="Descrizione"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Link a Sito:</label>
+              <input type="nomeapi" class="form-control" id="exampleInputEmail1" placeholder="es. http://johndoe85.com">
             </div>
             <div class="form-group">
               <label for="exampleInputEmail1">Email:</label>
@@ -104,6 +121,10 @@
                   <label for="exampleInputFile">Scegli Avatar</label>
                   <input type="file" id="exampleInputFile">
                   <p class="help-block">L'avatar deve essere in formato png, jpeg oppure gif</p>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Email Paypal:</label>
+              <input type="nomeapi" class="form-control" id="exampleInputEmail1" placeholder="es. johndoe85@forli.it">
             </div>
             <!-- Conferma -->
             <button type="submit" class="btn btn-default">Registrati ad APIM</button>
