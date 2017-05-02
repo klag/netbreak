@@ -161,8 +161,8 @@ main
   [retrieve_last_registered_ms( request )( response ) {
 
     //query
-    q = "SELECT Name,Logo FROM microservices ORDER BY LastUpdate DESC LIMIT :l";
-    q.l = request.number;
+    q = "SELECT IdMS,Name,IdDeveloper,Logo FROM microservices ORDER BY LastUpdate DESC LIMIT :l";
+    q.l = request.Number;
     query@Database( q )( result );
 
     if ( #result.row == 0 ) {

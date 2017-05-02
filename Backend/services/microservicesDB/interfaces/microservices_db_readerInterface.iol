@@ -85,10 +85,12 @@ type msid: void {
 	.Id: int
 }
 
-// retrieve last 5 api id
+// retrieve last shownumber ms list
 
 type msreglistdata: void {
+	.IdMS: int
 	.Name: string
+	.IdDeveloper: int
 	.Logo: string
 }
 
@@ -97,7 +99,7 @@ type lastmsreglistfound: void {
 }
 
 type shownumber: void {
-	.number: int
+	.Number: int
 }
 
 interface microservices_db_readerInterface {

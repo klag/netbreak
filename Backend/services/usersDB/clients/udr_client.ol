@@ -9,7 +9,7 @@ outputPort user_db_readerOutput {
 
 main
 {
-	
+	/*
 	// admin info getter
 	adminid.Id = 1;
 	println@Console("Getting admin info... about " + adminid.Id)();
@@ -24,7 +24,7 @@ main
 			println@Console( .Password )()
     }
   }
-  
+  */
   /*
   // client info getter
   clientid.Id = 2;
@@ -39,6 +39,18 @@ main
 			println@Console( .Password )();
 			println@Console( .Avatar )();
       println@Console( .Credits )()
+    }
+  }
+  */
+  /*
+  // client fullname getter
+  clientid.Id = 2;
+  println@Console("Getting client fullname... about " + clientid.Id)();
+  retrieve_client_fullname@user_db_readerOutput( clientid )( response );
+  for( i=0, i<#response, i++ ) {
+    with ( response ) {
+      println@Console( .Name )();
+      println@Console( .Surname )()
     }
   }
   */
@@ -87,5 +99,4 @@ main
     }
 	}
 	*/
-  
 }

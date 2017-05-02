@@ -80,6 +80,25 @@ main
     println@Console("Retrieved info about client " + response.ClientData.Name + " " + response.ClientData.Surname)()
   }]
 
+  [retrieve_client_fullname( request )( response ) {
+
+    //query
+    q = "SELECT Name,Surname FROM clients WHERE IdClient=:i";
+    q.i = request.Id;
+    query@Database( q )( result );
+
+    if ( #result.row == 0 ) {
+      println@Console("Client not found")()
+    }
+    else {
+      for ( i=0, i<#result.row, i++ ) {
+        println@Console( "Got client "+ result.row[i].Name )();
+        response << result.row[i]
+      }
+    };
+    println@Console("Retrieved info about client " + response.Name + " " + response.Surname)()
+  }]
+
   [retrieve_client_type( request )( response ) {
 
     //query

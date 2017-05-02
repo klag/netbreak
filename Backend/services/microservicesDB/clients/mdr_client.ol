@@ -95,7 +95,7 @@ main
     }
   }
   */
-
+  /*
   // last registered microservice lister
   shownumber.number = 4;
   println@Console("Getting last registered microservices")();
@@ -107,5 +107,5 @@ main
       println@Console( .Logo )()
     }
   }
-
+  */
 }

@@ -1,0 +1,19 @@
+<!doctype html>
+<html ng-app="myApp">
+	<head>
+		<title>AngularJS Homepage Last MS List</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<script src="homepagemslist.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="homepagemslistCntrl">
+			<div ng-repeat="HomepageMSData in mslistdata.HomepageMSData">
+				<h1>{{HomepageMSData.Name}}</h1>
+				<p>Developer: {{HomepageMSData.DeveloperName}} {{HomepageMSData.DeveloperSurname}}</p>
+				<p>Logo: {{HomepageMSData.Logo}}</p>
+				<button ng-repeat="Category in HomepageMSData.Category">{{Category.Name}}</button>
+			</div>
+		</div>
+	</body>
+</html>

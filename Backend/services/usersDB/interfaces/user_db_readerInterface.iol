@@ -36,6 +36,13 @@ type clientid: void {
 	.Id: int
 }
 
+// retrieve client name
+
+type clientfullnamefound: void {
+	.Name: string
+	.Surname: string
+}
+
 // retrieve client type
 
 type typeidfound: void {
@@ -97,6 +104,7 @@ interface user_db_readerInterface {
 	RequestResponse:
 		retrieve_admin_info( adminid )( adminfound ),
 		retrieve_client_info( clientid )( clientfound ),
+		retrieve_client_fullname( clientid )( clientfullnamefound ),
 		retrieve_client_type( clientid )( typeidfound ),
 		retrieve_moderation_info( modentryid )( entryfound ),
 		retrieve_modtype_info( modtypeid )( modtypefound ),
