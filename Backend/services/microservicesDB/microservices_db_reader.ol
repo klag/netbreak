@@ -1,4 +1,4 @@
-include "microservices_db_readerInterface.iol"
+include "interfaces/microservices_db_readerInterface.iol"
 
 include "database.iol"
 include "console.iol"
@@ -19,8 +19,8 @@ inputPort microservices_db_readerJSONInput {
     .response.headers.("Access-Control-Allow-Methods") = "POST,GET,OPTIONS";
     .response.headers.("Access-Control-Allow-Origin") = "*";
     .response.headers.("Access-Control-Allow-Headers") = "Content-Type";
-      .format = "json"
-      }
+    .format = "json"
+    }
   Interfaces: microservices_db_readerInterface
 }
 
@@ -43,7 +43,6 @@ init
 
 main
 {
-  
   [retrieve_ms_info( request )( response ) {
 
     //query
