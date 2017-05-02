@@ -1,4 +1,4 @@
-include "userMSInterface.iol"
+include "interfaces/userMSInterface.iol"
 
 include "console.iol"
 include "database.iol"
