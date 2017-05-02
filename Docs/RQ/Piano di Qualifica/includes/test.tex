@@ -5,7 +5,8 @@ Tutte le attività di testing prodotte devono poter essere ripetibili e determin
 Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scelto di rappresentare delle tabelle di log di facile consultazione, le quali forniscono un'indicazione degli output delle attività di verifica, eventuali errori e/o risultati non coerenti con quanto fissato.
 
 	\subsection{Test di unità}
-	Questa tipologia di test serve a verificare il corretto comportamento dei singoli metodi o funzioni implementate.
+	Questa tipologia di test serve a verificare ogni singola unità del prodotto software; per unità, si intende la più piccola quantità di software che è utile verificare singolarmente e che viene prodotta da un singolo \textit{\Progr}.\\
+	Tramite questi test si verifica il corretto funzionamento dei moduli che compongono l'intero sistema, in modo da eliminare possibili errori di implementazione da parte dei \textit{\Progrs}.
 	I test di unità saranno descritti nel modo seguente:
 	\begin{center}
 		\textbf{TU}[\textit{IdTest}]
@@ -15,11 +16,49 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 	\end{center}
 	
 	\subsection{Test di integrazione}
-	Questa tipologia di test serve a verificare il corretto funzionamento delle singole componenti di sistema progettate durante l'attività di progettazione ad alto livello.
-	Per questa tipologia di test, l'idea è quella di utilizzare un approccio top-down, il quale rispecchia la strategia incrementale.
+	Questa tipologia di test serve a verificare il corretto funzionamento delle singole componenti di sistema progettate durante l'attività di progettazione ad alto livello. Per questa tipologia di test, l'idea è quella di utilizzare un approccio top-down, in modo da sottoporre a test e integrare per primi i moduli di livello più alto.
+	Così facendo, però, sarà necessario simulare le componenti di livello inferiore con degli stub. Una volta codificate, le componenti di livello più basso dovranno essere a loro volta integrate e testate.\\
+	L'approccio top-down rientra tra le strategie di integrazione incrementale, che consentono di poter determinare in modo più rapido quale componente è la causa di problemi, poichè i difetti rilevati dai test saranno da attribuirsi all'ultima componente aggiunta.
+	I test di integrazione saranno descritti nel modo seguente:
+	\begin{center}
+		\textbf{TI}[\textit{IdComponente}]
+	\end{center}
+	dove:
+	\begin{itemize}
+		\item
+		\textbf{IdComponente} rappresenta il codice identificativo progressivo del componente preso in considerazione.
+	\end{itemize}
+	
+	% TABELLA
+	\normalsize
+	\begin{longtable}{|>{\centering\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{8cm} | >{\centering\arraybackslash}p{3.8cm}|}
+		\hline \rowcolor{Gray}
+		\textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
+		\hline
+		\endhead
+		\hypertarget{TI1}{TI1} & Viene verificato che l’applicazione web \progetto\ gestisca
+		correttamente il front-end del prodotto e le sue interazioni con il back-end. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TI2}{TI2} & Viene verificato che i \textit{Controllers} del front-end si integrino
+		correttamente nell’applicazione web. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TI3}{TI3} & Viene verificato che i \textit{Services} permettano una corretta interazione con il back-end. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TI4}{TI4} & Viene verificato che il \textit{Model} si integri correttamente con i
+		\textit{Services} e con il resto delle componenti dell’applicazione che lo utilizzano. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TI5}{TI5} & Viene verificato che le \textit{Views} si integrino correttamente con i
+		\textit{Controllers}, in modo da visualizzare senza errori i dati ricevuti. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TI6}{TI6} & Viene verificato che l’applicazione web gestisca	correttamente il back-end del prodotto, in modo tale da fornire al front-end le informazioni richieste. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TI7}{TI7} & Viene verificato che il \textit{Server} sia configurato e che sia in grado di caricare correttamente tutte le librerie necessarie all'istanziazione delle classi in modo corretto. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TI8}{TI8} & Viene verificato che la \textit{Single Page App} si integri correttamente con i microservizi \textit{Jolie} utilizzati per il back-end. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TI9}{TI9} & Viene verificato che i \textit{Controllers} si integrino correttamente
+		e gestiscano le richieste inoltrate dai \textit{Routers}. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TI10}{TI10} & Viene verificato che il \textit{Model} si integri correttamente con i
+		\textit{Controllers} per la gestione dell’inserimento, della modifica e della cancellazione dei dati. & \textit{Non Implementato}\\ \hline
+		\caption[Test di Integrazione]{Test di Integrazione}
+		\label{tabella:test2}
+	\end{longtable}
+	\clearpage
 	
 	\subsection{Test di sistema}
-	Questa tipologia di test serve a verificare il corretto comportamento e funzionamento dell’architettura.
+	Questa tipologia di test serve a verificare il corretto comportamento e funzionamento dell’architettura. Tale tipologia di test deve verificare che ci sia la copertura totale dei requisiti software stabiliti durante l'\AdR.
 	I test di sistema saranno organizzati nel modo seguente:
 	\begin{center}
 		\textbf{TS}[\textit{TipologiaRequisito}][\textit{RilevanzaRequisito}][\textit{CodiceRequisito}]
@@ -115,6 +154,9 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 		\label{tabella:test1}
 	\end{longtable}
 	\clearpage
+	
+	\subsection{Test di regressione}
+	Questa tipologia di test consiste nell'eseguire nuovamente i test che coinvolgono le componenti software che hanno subito modifiche, in modo da verificare che i cambiamenti apportati non compromettano il funzionamento di componenti che non sono stati aggiornati e che, precedentemente, non erano soggetti ad errori.
 	
 	\subsection{Test di validazione}
 	Questa tipologia di test serve a verificare che il prodotto soddisfi le richieste del proponente attraverso le funzionalità implementate.\\
