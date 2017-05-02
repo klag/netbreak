@@ -15,6 +15,44 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 		dove \textbf{\textit{IdTest}} rappresenta il codice identificativo progressivo dell'unità presa in considerazione.
 	\end{center}
 	
+	% TABELLA
+	\normalsize
+	\begin{longtable}{|>{\centering\arraybackslash}p{1.5cm}|>{\centering\arraybackslash}p{8cm} | >{\centering\arraybackslash}p{3.8cm}|}
+		\hline \rowcolor{Gray}
+		\textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
+		\hline
+		\endhead
+		\hypertarget{TU1}{TU1} & Verificare che, ricevendo delle richieste conformi alle API definite, l’oggetto passi il controllo al corretto Controller o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU2}{TU2} & Verificare che il messaggio d’errore venga costruito in modo coerente rispetto ai dati passati al costruttore o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU3}{TU3} & Verificare che, in base ai parametri forniti in input, il metodo effettui le operazioni richieste, verificando che l’utente che esegue la richiesta sia effettivamente
+		un utente autenticato e mantenendo aggiornate le
+		informazioni riguardanti l’utente
+		o che, in caso di errore, la risposta riporti lo stato
+		anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU4}{TU4} & Verificare che, in base ai parametri forniti in input, i
+		metodi effettuino le operazioni richieste, mantenendo
+		aggiornati i dati dell'utente o che, in caso di
+		errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU5}{TU5} & Verificare che, in base ai parametri forniti in input, i
+		metodi effettuino le operazioni richieste, mantenendo
+		aggiornato lo storico delle transazioni o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU6}{TU6} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, mantenendo aggiornati la gestione delle informazioni del profilo utente o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU7}{TU7} & Verificare che, in base ai parametri forniti in input,	il metodo crei un nuovo record nel relativo DB per il microservizio inserito dall'utente sviluppatore o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU8}{TU8} & Verificare che, in base ai parametri forniti in input,	il metodo effettui le operazioni richieste, verificando che il microservizio inserito dallo sviluppatore sia sia effettivamente aggiunto o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU9}{TU9} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, mantenendo aggiornate le informazioni riguardanti i microservizi inseriti da uno sviluppatore o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU10}{TU10} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, mantenendo aggiornate le informazioni riguardanti le licenze attive relative all'acquisto di una API da parte di un utente o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU11}{TU11} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, verificando la password inserita in fase di autenticazione e restituendone un messaggio di conferma	o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU12}{TU12} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, mantenendo aggiornate le informazioni di un microservizio in modo corretto, inserendo un nuovo microservizio e aggiornandone le informazioni o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline		
+		\hypertarget{TU13}{TU13} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, mantenendo aggiornate le informazioni di un microservizio acquistato e/o utilizzato in modo corretto, creando il report di SLA o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU14}{TU14} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo i dettagli dei microservizi, richiamando i metodi del relativo \textit{Service}. Nello specifico, restituendo i dettagli dei microservizi inseriti da uno sviluppatore e le licenze attive per ogni microservizio proprio o che, nel caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU15}{TU15} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo l'autenticazione al sistema, in particolare la richiesta di autenticazione, registrazione e recupero della password dimenticata o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU16}{TU16} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo: il logout dal sistema, il login al sistema, la registrazione al sistema, la possibilità di effettuare il redirect alla pagina di visualizzazione profilo utente, di gestione profilo utente, di visualizzazione delle proprie transazioni, e di gestione del conto o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		
+		\caption[Test di Unità]{Test di Unità}
+		\label{tabella:test3}
+	\end{longtable}
+	\clearpage
+	
 	\subsection{Test di integrazione}
 	Questa tipologia di test serve a verificare il corretto funzionamento delle singole componenti di sistema progettate durante l'attività di progettazione ad alto livello. Per questa tipologia di test, l'idea è quella di utilizzare un approccio top-down, in modo da sottoporre a test e integrare per primi i moduli di livello più alto.
 	Così facendo, però, sarà necessario simulare le componenti di livello inferiore con degli stub. Una volta codificate, le componenti di livello più basso dovranno essere a loro volta integrate e testate.\\
