@@ -1,10 +1,9 @@
-include "sla_db_readerInterface.iol"
+include "interfaces/sla_db_readerInterface.iol"
 
 include "database.iol"
 include "console.iol"
 
 execution { sequential }
-
 
 inputPort sla_db_readerInput {
   Location: "socket://localhost:8211"
@@ -14,7 +13,13 @@ inputPort sla_db_readerInput {
 
 inputPort sla_db_readerJSONInput {
   Location: "socket://localhost:8111"
-  Protocol: http { .format = "json" }
+  Protocol: http { 
+    //Access-Control-Allow-Origin response header to tell the browser that the content of this page is accessible to certain origins
+    .response.headers.("Access-Control-Allow-Methods") = "POST,GET,OPTIONS";
+    .response.headers.("Access-Control-Allow-Origin") = "*";
+    .response.headers.("Access-Control-Allow-Headers") = "Content-Type";
+    .format = "json"
+    }
   Interfaces: sla_db_readerInterface
 }
 
@@ -24,7 +29,7 @@ init
 
   //connect to sla database
   with( connectionInfo ) {
-      .host = "apimsladb.cpfnkeifjbmu.eu-west-2.rds.amazonaws.com"; 
+      .host = "apimslainstance.ccsrygwsp8kn.eu-west-2.rds.amazonaws.com"; 
       .driver = "mysql";
       .port = 3306;
       .database = "SLADB";
@@ -37,7 +42,6 @@ init
 
 main
 {
-  
   [retrieve_apikey_slasurvey_list( request )( response ) {
 
     //query
@@ -79,7 +83,7 @@ main
   [retrieve_slasurvey_info( request )( response ) {
 
     //query
-    q = "SELECT IdSLASurvey,Timestamp,ResponseTime,IsCompliant FROM slasurveys WHERE IdSLASurvey=:i";
+    q = "SELECT IdSLASurvey,IdMS,Timestamp,ResponseTime,IsCompliant FROM slasurveys WHERE IdSLASurvey=:i";
     q.i = request.Id;
     query@Database( q )( result );
 

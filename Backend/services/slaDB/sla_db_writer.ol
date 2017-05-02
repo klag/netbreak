@@ -1,4 +1,4 @@
-include "sla_db_writerInterface.iol"
+include "interfaces/sla_db_writerInterface.iol"
 
 include "database.iol"
 include "console.iol"
@@ -13,7 +13,13 @@ inputPort sla_db_writerInput {
 
 inputPort sla_db_writerJSONInput {
   Location: "socket://localhost:8112"
-  Protocol: http { .format = "json" }
+  Protocol: http { 
+    //Access-Control-Allow-Origin response header to tell the browser that the content of this page is accessible to certain origins
+    .response.headers.("Access-Control-Allow-Methods") = "POST,GET,OPTIONS";
+    .response.headers.("Access-Control-Allow-Origin") = "*";
+    .response.headers.("Access-Control-Allow-Headers") = "Content-Type";
+    .format = "json"
+    }
   Interfaces: sla_db_writerInterface
 }
 
@@ -23,7 +29,7 @@ init
 
   //connect to sla database
   with( connectionInfo ) {
-      .host = "apimsladb.cpfnkeifjbmu.eu-west-2.rds.amazonaws.com"; 
+      .host = "apimslainstance.ccsrygwsp8kn.eu-west-2.rds.amazonaws.com"; 
       .driver = "mysql";
       .port = 3306;
       .database = "SLADB";
@@ -36,7 +42,6 @@ init
 
 main
 {
-
   [slasurvey_insert( request )( response ) {
 
     //query
