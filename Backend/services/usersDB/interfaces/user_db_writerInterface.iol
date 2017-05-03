@@ -7,7 +7,6 @@ type basicclientdata: void {
 	.Password: string
 	.Avatar: string
 	.Registration: string
-	.Credits: int
 }
 
 // developer upgrade

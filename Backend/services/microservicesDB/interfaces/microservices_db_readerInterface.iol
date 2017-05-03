@@ -33,6 +33,16 @@ type msidfound: void {
 	.MSIdData: msiddata
 }
 
+// retrieve microservices list from category
+
+type msidbycatlistdata: void {
+	.IdMS: int
+} 
+
+type msidbycatlistfound: void {
+	.MSIdByCatListData [0,*]: msidbycatlistdata
+}
+
 // retrieve interfaces of a microservice
 
 type intfidlistdata: void {
@@ -102,13 +112,32 @@ type shownumber: void {
 	.Number: int
 }
 
+// retrieve last shownumber ms list by category
+
+type shownumberandidms: void {
+	.Number: int
+	.IdMS: int
+}
+
+type msregbyidlistdata: void {
+	.Name: string
+	.IdDeveloper: int
+	.Logo: string
+}
+
+type lastmsregbyidlistfound: void {
+	.MSRegByIdListData [0,*]: msregbyidlistdata
+}
+
 interface microservices_db_readerInterface {
 	RequestResponse:
 		retrieve_ms_info( msid )( msfound ),
 		retrieve_intf_info( intfid )( intffound ),
 		retrieve_interfaces_of_ms( msid )( intfidlistfound ),
 		retrieve_ms_from_interface( intfid )( msidfound ),
+		retrieve_msidlist_from_category( categoryid )( msidbycatlistfound ),
 		retrieve_category_info( categoryid )( categoryfound ),
 		retrieve_categories_of_ms( msid )( categoryidlistfound ),
-		retrieve_last_registered_ms( shownumber )( lastmsreglistfound )
+		retrieve_last_registered_ms( shownumber )( lastmsreglistfound ),
+		retrieve_last_registered_ms_byid( shownumberandidms )( lastmsregbyidlistfound )
 }

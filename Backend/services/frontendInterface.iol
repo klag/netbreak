@@ -1,5 +1,8 @@
 include "usersDB/interfaces/user_db_readerInterface.iol"
+include "usersDB/interfaces/user_db_writerInterface.iol"
 include "microservicesDB/interfaces/microservices_db_readerInterface.iol"
+
+// homepage ms list
 
 type homepagecategorydata: void {
 	.Name: string
@@ -20,5 +23,6 @@ type homepagemslistfound: void {
 
 interface frontendInterface { 
 	RequestResponse:
-		homepage_ms_list( void )( homepagemslistfound )
+		homepage_ms_list( void )( homepagemslistfound ),
+		homepage_filter_cat_list( categoryid )( homepagemslistfound )
 }

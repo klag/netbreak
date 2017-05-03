@@ -120,6 +120,25 @@ main
     println@Console("Retrieved microservice " + response.MSIdData.IdMS + " from interface " + request.Id)()
   }]
 
+  [retrieve_msidlist_from_category( request )( response ) {
+
+    //query
+    q = "SELECT IdMS FROM jnmscat WHERE IdCategory=:i";
+    q.i = request.Id;
+    query@Database( q )( result );
+
+    if ( #result.row == 0 ) {
+      println@Console("Microservice not found")()
+    }
+    else {
+      for ( i=0, i<#result.row, i++ ) {
+        println@Console( "Got microservice "+ result.row[i].IdMS )();
+        response.MSIdByCatListData[i] << result.row[i]
+      }
+    };
+    println@Console("Retrieved microservices from category " + request.Id)()
+  }]
+
   [retrieve_category_info( request )( response ) {
 
     //query
@@ -175,5 +194,25 @@ main
       }
     };
     println@Console("Retrieved last registered microservices")()
+  }]
+
+  [retrieve_last_registered_ms_byid( request )( response ) {
+
+    //query
+    q = "SELECT Name,IdDeveloper,Logo FROM microservices WHERE IdMS=:i ORDER BY LastUpdate DESC LIMIT :l";
+    q.l = request.Number;
+    q.i = request.IdMS;
+    query@Database( q )( result );
+
+    if ( #result.row == 0 ) {
+      println@Console("Last microservices list by msid not found")()
+    }
+    else {
+      for ( i=0, i<#result.row, i++ ) {
+        println@Console( "Got microservice number " + i )();
+        response.MSRegByIdListData[i] << result.row[i]
+      }
+    };
+    println@Console("Retrieved last registered microservices by msid")()
   }]
 }

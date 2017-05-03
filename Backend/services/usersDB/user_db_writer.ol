@@ -46,15 +46,14 @@ main
 
     //query
     q = "INSERT INTO clients (Name,Surname,Email,Password,Avatar,Registration,Credits,ClientType,AboutMe,Citizenship,LinkToSelf,PayPal) 
-      VALUES (:n,:s,:e,:p,:a,:r,1,'','','','')";
+      VALUES (:n,:s,:e,:p,:a,:r,0,1,'','','','')";
     with( request ) {
       q.n = .Name;
       q.s = .Surname;
       q.e = .Email;
       q.p = .Password;
       q.a = .Avatar;
-      q.r = .Registration;
-      q.c = .Credits
+      q.r = .Registration
     };
     update@Database( q )( result );
     println@Console("Registering new basic client " + request.Name + " " + request.Surname)()
