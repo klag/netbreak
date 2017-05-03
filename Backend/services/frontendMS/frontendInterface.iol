@@ -1,6 +1,5 @@
-include "usersDB/interfaces/user_db_readerInterface.iol"
-include "usersDB/interfaces/user_db_writerInterface.iol"
-include "microservicesDB/interfaces/microservices_db_readerInterface.iol"
+include "../usersDB/user_dbInterface.iol"
+include "../microservicesDB/microservices_dbInterface.iol"
 
 // homepage ms list
 

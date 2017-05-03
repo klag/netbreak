@@ -1,15 +1,14 @@
-include "interfaces/microservices_db_readerInterface.iol"
+include "microservices_dbInterface.iol"
 
 include "database.iol"
 include "console.iol"
 
 execution { sequential }
 
-
-inputPort microservices_db_readerInput {
+inputPort microservices_dbInput {
   Location: "socket://localhost:8221"
   Protocol: sodep
-  Interfaces: microservices_db_readerInterface
+  Interfaces: microservices_dbInterface
 }
 
 inputPort microservices_db_readerJSONInput {
@@ -21,12 +20,12 @@ inputPort microservices_db_readerJSONInput {
     .response.headers.("Access-Control-Allow-Headers") = "Content-Type";
     .format = "json"
     }
-  Interfaces: microservices_db_readerInterface
+  Interfaces: microservices_dbInterface
 }
 
 init
 {
-	println@Console( "Microservices Db Reader started" )();
+	println@Console( "Microservices Db Microservice started" )();
 
   //connect to microservices database
   with( connectionInfo ) {
@@ -56,10 +55,10 @@ main
     else {
       for ( i=0, i<#result.row, i++ ) {
         println@Console( "Got microservice with id "+ request.Id )();
-        response.MSData[i] << result.row[i]
+        response << result.row[i]
       }
     };
-    println@Console("Retrieved all info about microservice " + response.MSData.Name)()
+    println@Console("Retrieved all info about microservice " + response.Name)()
   }]
 
   [retrieve_intf_info( request )( response ) {
@@ -75,11 +74,11 @@ main
     else {
       for ( i=0, i<#result.row, i++ ) {
         println@Console( "Got interface with id " + request.Id )();
-        response.IntfData[i] << result.row[i]
+        response << result.row[i]
       }
     };
-    println@Console("Retrieved interface gateway info (interface)(location:" + response.IntfData.Loc + ")(protocol" 
-      + response.IntfData.Protoc + ")" )()
+    println@Console("Retrieved interface gateway info (interface)(location:" + response.Loc + ")(protocol" 
+      + response.Protoc + ")" )()
   }]
 
   [retrieve_interfaces_of_ms( request )( response ) {
@@ -114,10 +113,10 @@ main
     else {
       for ( i=0, i<#result.row, i++ ) {
         println@Console( "Got microservice "+ result.row[i].IdMS )();
-        response.MSIdData[i] << result.row[i]
+        response << result.row[i]
       }
     };
-    println@Console("Retrieved microservice " + response.MSIdData.IdMS + " from interface " + request.Id)()
+    println@Console("Retrieved microservice " + response.IdMS + " from interface " + request.Id)()
   }]
 
   [retrieve_msidlist_from_category( request )( response ) {
@@ -152,7 +151,7 @@ main
     else {
       for ( i=0, i<#result.row, i++ ) {
         println@Console( "Got category with id "+ request.Id )();
-        response.CategoryData[i] << result.row[i]
+        response << result.row[i]
       }
     };
     println@Console("Retrieved category " + response.CategoryData.Name)()
@@ -214,5 +213,101 @@ main
       }
     };
     println@Console("Retrieved last registered microservices by msid")()
+  }]
+
+  [microservice_registration( request )( response ) {
+
+    //query
+    q = "INSERT INTO microservices (Name,Description,Version,LastUpdate,IdDeveloper,Logo,DocPDF,DocExternal,Profit,
+      IsActive,SLAGuaranteed,Policy) VALUES (:n,:d,:v,:lu,:idv,:lg,:dp,:de,:pf,:isa,:sg,:py)";
+    with( request ) {
+      q.n = .Name;
+      q.d = .Description;
+      q.v = .Version;
+      q.lu = .LastUpdate;
+      q.idv = .IdDeveloper;
+      q.lg = .Logo;
+      q.dp = .DocPDF;
+      q.de = .DocExternal;
+      q.pf = .Profit;
+      q.isa = .IsActive;
+      q.sg = .SLAGuaranteed;
+      q.py = .Policy
+    };
+    update@Database( q )( result );
+    println@Console( "Registering new microservice with name " + request.Name + " by developer " + request.IdDeveloper )()
+  }]
+
+  [microservice_update( request )( response ) {
+
+    //query
+    q = "UPDATE microservices SET Name=:n,Description=:d,Version=:v,LastUpdate=:lu,Logo=:lg,DocPDF=:dp,
+      DocExternal=:de,Profit=:pf,SLAGuaranteed=:sg WHERE IdMS=:i";
+    with( request ) {
+      q.i = .IdMS;
+      q.n = .Name;
+      q.d = .Description;
+      q.v = .Version;
+      q.lu = .LastUpdate;
+      q.lg = .Logo;
+      q.dp = .DocPDF;
+      q.de = .DocExternal;
+      q.pf = .Profit;
+      q.sg = .SLAGuaranteed
+    };
+    update@Database( q )( result );
+    println@Console("Updating microservice with id " + request.IdMS)()
+  }]
+
+  [interface_registration( request )( response ) {
+
+    //query
+    q = "INSERT INTO interfaces (IdMS,Interf,Loc,Protoc) VALUES (:ims,:ii,:l,:p)";
+    with( request ) {
+      q.ims = .IdMS;
+      q.ii = .Interf;
+      q.l = .Loc;
+      q.p = .Protoc
+    };
+    update@Database( q )( result );
+    println@Console( "Registering new interface of microservice " + request.IdMS )()
+  }]
+
+  [interface_update( request )( response ) {
+
+    //query
+    q = "UPDATE interfaces SET Interf=:i,Loc=:l,Protoc=:p WHERE IdInterface=:ii";
+    with( request ) {
+      q.ii = .IdInterface;
+      q.i = .Interf;
+      q.l = .Loc;
+      q.p = .Protoc
+    };
+    update@Database( q )( result );
+    println@Console( "Updating interface " + request.IdInterface )()
+  }]
+
+  [add_category_to_ms( request )( response ) {
+
+    //query
+    q = "INSERT INTO jnmscat (IdMS,IdCategory) VALUES (:ims,:c)";
+    with( request ) {
+      q.ims = .IdMS;
+      q.c = .IdCategory
+    };
+    update@Database( q )( result );
+    println@Console( "Adding a new category to microservice " + request.IdMS )()
+  }]
+
+  [remove_category_from_ms( request )( response ) {
+
+    //query
+    q = "DELETE FROM jnmscat WHERE IdMS=:ims AND IdCategory=:c";
+    with( request ) {
+      q.ims = .IdMS;
+      q.c = .IdCategory
+    };
+    update@Database( q )( result );
+    println@Console( "Removing category from microservice " + request.IdMS )()
   }]
 }

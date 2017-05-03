@@ -1,17 +1,17 @@
-include "interfaces/user_db_readerInterface.iol"
+include "user_dbInterface.iol"
 
 include "database.iol"
 include "console.iol"
 
 execution { sequential }
 
-inputPort user_db_readerInput {
+inputPort user_dbInput {
   Location: "socket://localhost:8201"
   Protocol: sodep
-  Interfaces: user_db_readerInterface
+  Interfaces: user_dbInterface
 }
 
-inputPort user_db_readerJSONInput {
+inputPort user_dbJSONInput {
   Location: "socket://localhost:8101"
   Protocol: http { 
   	//Access-Control-Allow-Origin response header to tell the browser that the content of this page is accessible to certain origins
@@ -20,12 +20,12 @@ inputPort user_db_readerJSONInput {
 		.response.headers.("Access-Control-Allow-Headers") = "Content-Type";
   	.format = "json"
   	}
-  Interfaces: user_db_readerInterface
+  Interfaces: user_dbInterface
 }
 
 init
 {
-	println@Console( "User Db Reader started" )();
+	println@Console( "User Db Microservice started" )();
 
   //connect to user database
   with( connectionInfo ) {
@@ -55,10 +55,10 @@ main
     else {
       for ( i=0, i<#result.row, i++ ) {
         println@Console( "Got admin "+ result.row[i].Name )();
-        response.AdminData[i] << result.row[i]
+        response << result.row[i]
       }
     };
-    println@Console("Retrieved info about admin " + response.AdminData.Name + " " + response.AdminData.Surname)()
+    println@Console("Retrieved info about admin " + response.Name + " " + response.Surname)()
   }]
 
   [retrieve_client_info( request )( response ) {
@@ -74,10 +74,10 @@ main
     else {
       for ( i=0, i<#result.row, i++ ) {
         println@Console( "Got client "+ result.row[i].Name )();
-        response.ClientData[i] << result.row[i]
+        response << result.row[i]
       }
     };
-    println@Console("Retrieved info about client " + response.ClientData.Name + " " + response.ClientData.Surname)()
+    println@Console("Retrieved info about client " + response.Name + " " + response.Surname)()
   }]
 
   [retrieve_client_fullname( request )( response ) {
@@ -129,10 +129,10 @@ main
     else {
       for ( i=0, i<#result.row, i++ ) {
         println@Console( "Got moderation entry "+ result.row[i].IdEntry )();
-        response.EntryData[i] << result.row[i]
+        response << result.row[i]
       }
     };
-    println@Console("Retrieved entry " + response.EntryData.IdEntry)()
+    println@Console("Retrieved entry " + response.IdEntry)()
   }]
 
   [retrieve_modtype_info( request )( response ) {
@@ -148,10 +148,10 @@ main
     else {
       for ( i=0, i<#result.row, i++ ) {
         println@Console( "Got moderation type "+ result.row[i].IdModType )();
-        response.ModTypeData[i] << result.row[i]
+        response << result.row[i]
       }
     };
-    println@Console("Retrieved moderation type " + response.ModTypeData.IdModType)()
+    println@Console("Retrieved moderation type " + response.IdModType)()
   }]
 
   [retrieve_clienttype_info( request )( response ) {
@@ -167,9 +167,103 @@ main
     else {
       for ( i=0, i<#result.row, i++ ) {
         println@Console( "Got client type "+ result.row[i].IdClientType )();
-        response.ClientTypeData[i] << result.row[i]
+        response << result.row[i]
       }
     };
-    println@Console("Retrieved client type " + response.ClientTypeData.Name)()
+    println@Console("Retrieved client type " + response.Name)()
+  }]
+
+
+  [basicclient_registration( request )( response ) {
+
+    //query
+    q = "INSERT INTO clients (Name,Surname,Email,Password,Avatar,Registration,Credits,ClientType,AboutMe,Citizenship,LinkToSelf,PayPal) 
+      VALUES (:n,:s,:e,:p,:a,:r,0,1,'','','','')";
+    with( request ) {
+      q.n = .Name;
+      q.s = .Surname;
+      q.e = .Email;
+      q.p = .Password;
+      q.a = .Avatar;
+      q.r = .Registration
+    };
+    update@Database( q )( result );
+    println@Console("Registering new basic client " + request.Name + " " + request.Surname)()
+  }]
+
+  [developer_upgrade( request )( response ) {
+
+    //query
+    q = "UPDATE clients SET ClientType=2,AboutMe=:am,Citizenship=:c,LinkToSelf=:l,PayPal=:pp WHERE IdClient=:i";
+    with( request ) {
+      q.i = .IdClient;
+      q.am = .AboutMe;
+      q.c = .Citizenship;
+      q.l = .LinkToSelf;
+      q.pp = .PayPal
+    };
+    update@Database( q )( result );
+    println@Console("Upgrading basic client with id " + request.IdClient +" to developer status")()
+  }]
+
+  [basicclient_downgrade( request )( response ) {
+
+    //query
+    q = "UPDATE clients SET ClientType=1,AboutMe='',Citizenship='',LinkToSelf='',PayPal='' WHERE IdClient=:i";
+    with( request ) {
+      q.i = .Id
+    };
+    update@Database( q )( result );
+    println@Console("Downgrading developer with id " + request.Id +" to basic client status")()
+  }]
+
+  [client_moderation( request )( response ) {
+
+    //query
+    q = "INSERT INTO moderationlog (IdClient,IdAdmin,Timestamp,ModType,Report) 
+      VALUES (:ic,:ia,:t,:mt,:r)";
+    with( request ) {
+      q.ic = .IdClient;
+      q.ia = .IdAdmin;
+      q.t = .Timestamp;
+      q.mt = .ModType;
+      q.r = .Report
+    };
+    update@Database( q )( result );
+    println@Console("Creating new moderation entry")()
+  }]
+
+  [client_update( request )( response ) {
+
+    //query
+    q = "UPDATE clients 
+      SET Name=:n,Surname=:s,Email=:e,Password=:p,Avatar=:a,Credits=:c,AboutMe=:am,Citizenship=:ct,LinkToSelf=:l,PayPal=:pp 
+      WHERE IdClient=:i";
+    with( request ) {
+      q.i = .IdClient;
+      q.n = .Name;
+      q.s = .Surname;
+      q.e = .Email;
+      q.p = .Password;
+      q.a = .Avatar;
+      q.c = .Credits;
+      q.am = .AboutMe;
+      q.ct = .Citizenship;
+      q.l = .LinkToSelf;
+      q.pp = .PayPal
+    };
+    update@Database( q )( result );
+    println@Console("Updating user profile with id " + request.IdClient)()
+  }]
+
+  [client_delete( request )( response ) {
+
+    //query
+    q = "DELETE FROM clients WHERE IdClient=:i";
+    with( request ) {
+      q.i = .Id
+    };
+    update@Database( q )( result );
+    println@Console("Deleting client with id " + request.Id +" forever")()
   }]
 }
