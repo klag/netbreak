@@ -47,6 +47,23 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 		\hypertarget{TU14}{TU14} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo i dettagli dei microservizi, richiamando i metodi del relativo \textit{Service}. Nello specifico, restituendo i dettagli dei microservizi inseriti da uno sviluppatore e le licenze attive per ogni microservizio proprio o che, nel caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TU15}{TU15} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo l'autenticazione al sistema, in particolare la richiesta di autenticazione, registrazione e recupero della password dimenticata o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
 		\hypertarget{TU16}{TU16} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo: il logout dal sistema, il login al sistema, la registrazione al sistema, la possibilità di effettuare il redirect alla pagina di visualizzazione profilo utente, di gestione profilo utente, di visualizzazione delle proprie transazioni, e di gestione del conto o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU17}{TU17} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, permettendo di gestire l'inserimento di un nuovo microservizio e modifica di quelli già inseriti in precedenza e presenti sul marketplaceo o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU18}{TU18} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo il recupero della password dimenticata da un utente, in particolare la comunicazione con il servizio che si occupa di inviare la mail e la gestione dell'evento redirect alla pagina di login o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU19}{TU19} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo il profilo personale dell'utente, in particolare l'invio delle nuove informazioni al service tramite l'apposito metodo. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU20}{TU20} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo la registrazione di un utente al sistema, che nel caso di buona riuscita deve essere mostrato un messaggio di successo, e il redirect alla pagina di login, mentre nel caso di registrazione fallita, deve essere mostrato un messaggio di errore. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU21}{TU21} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo tutti i microservizi inseriti da un utente sviluppatore, recuperando tutte le informazioni a essi associate e gestendo l'evento click sul pulsante di modifica di un microservizio o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU22}{TU22} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo le licenze per i microservizi tramite concessione di API key o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU23}{TU23} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo la visualizzazione dei dati di utilizzo di un singolo microservizio, restituendo un'indicazione se la SLA dichiarata dal microservizio è stata rispettata durante le varie chiamate dei clienti o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU24}{TU24} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, permettendo la visualizzazione della homepage dell'applicazione web, ovvero che siano presenti all'interno della home tutte le funzionalità previste o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU25}{TU25} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo la ricerca di microservizi ed API all'interno del marketplace attraverso l'evento click sui pulsanti per visualizzare il microservizio selezionato, per acquistare una licenza (API key), per visualizzarne la documentazione o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU26}{TU26} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo la generazione di una nuova API key nel caso l'utente abbia perso o dimenticato la precedente fornitagli al momento della transazione o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU27}{TU27} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo il rinnovo di una licenza per un microservizio attraverso una nuova transazione o, nel caso di un errore, deve garantire che la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU28}{TU28} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo le informazioni di un microservizio; in particolare i metodi devono permettere di modificare il nome del microservizio, l'autore, la versione, la data di ultimo aggiornamento, l'interfaccia ed eventuali avvisi riguardanti il suo funzionamento o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU29}{TU29} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, memorizzando i dati relativi ad un utente e gestendoli richiamando i relativi \textit{Controller}. Nello specifico, gestendo l'autenticazione dell'utente al sistema, la ricerca di microservizi e sviluppatori all'interno dell'applicazione web, i dati e le statistiche riguardanti un microservizio o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU30}{TU30} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, costruendo l’oggetto contenente le informazioni sull'errore, ritornando correttamente il titolo, il messaggio ed il codice dell’errore o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textcolor{Green}{\textit{Superato}}\\ \hline
+		\hypertarget{TU31}{TU31} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo le chiamate ai microservizi, ossia il loro inoltro e salvataggio; in particolare i metodi devono permettere di inviare una richiesta di chiamata ad un microservizio e di registrarne i dati di utilizzo o, nel caso di un errore, deve garantire che la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU32}{TU32} & Verificare che, in base ai parametri forniti in input, i metodi effettuino le operazioni richieste, gestendo la registrazione e l'autenticazione di un utente, permettendo di controllare se un utente è già autenticato, di effettuare il login, il logout, la registrazione e il recupero della password o che, nel caso di un errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TU33}{TU33} & Verificare che, in base ai parametri forniti in input, i metodi richiedano in maniera corretta il reperimento e il salvataggio dei dati di un utente registrato (cliente o sviluppatore che sia), che i dati vengano restituiti nella maniera attesa o che, in caso di errore, la risposta riporti lo stato anomalo riscontrato. & \textit{Non Implementato}\\ \hline
 		
 		\caption[Test di Unità]{Test di Unità}
 		\label{tabella:test3}
@@ -137,18 +154,9 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 		\hline
 		\endhead
 		\hypertarget{TSFO1}{TSFO1} & Viene verificato che il sistema registri correttamente un utente. & \textit{Non Implementato}\\ \hline
-		\hypertarget{TSFO2}{TSFO2} & Viene verificato che il sistema riesca a far effettuare correttamente il login ad un utente attraverso \progetto. & \textit{Non Implementato}\\ \hline
-		\hypertarget{TSFO11}{TSFO11} & Viene verificato che il sistema riesca a far effettuare correttamente il logout ad un utente.  & \textit{Non Implementato}\\ \hline
-		\hypertarget{TSFO10.1}{TSFO10.1} & Viene verificato che il sistema permetta di gestire correttamente ad un utente le informazioni del proprio profilo. & \textit{Non Implementato}\\ \hline
-		\hypertarget{TSFO10.1.2}{TSFO10.1.2} & Viene verificato che il sistema modifichi correttamente le informazioni di un utente. & \textit{Non Implementato}\\ \hline
-		\hypertarget{TSFD10.1.2.9}{TSFD10.1.2.9} & Viene verificato che il sistema effettui correttamente l'upgrade dell'account di un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO2}{TSFO2} & Viene verificato che il sistema riesca a far effettuare correttamente il login ad un utente attraverso \progetto. & \textit{Non Implementato}\\ \hline	
+		\hypertarget{TSFD3}{TSFD3} & Viene verificato che il sistema permetta il recupero della password per un utente registrato ad \progetto. & \textit{Non Implementato}\\ \hline	
 		\hypertarget{TSFO4}{TSFO4} & Viene verificato che il sistema ricerchi correttamente una API. & \textit{Non Implementato}\\ \hline
-		\hypertarget{TSFxxx}{TSFxxx} & Viene verificato che il sistema permetta il corretto inserimento di una nuova API da parte di uno sviluppatore. & \textit{Non Implementato}\\ \hline
-		\hypertarget{TSFxxx}{TSFxxx} & Viene verificato che il sistema visualizzi correttamente le API inserite da uno sviluppatore. & \textit{Non Implementato}\\ \hline
-		\hypertarget{TSFxxx}{TSFxxx} & Viene verificato che il sistema modifichi correttamente i dati di una API di uno sviluppatore. & \textit{Non Implementato}\\ \hline
-		\hypertarget{TSFxxx}{TSFxxx} & Viene verificato che il sistema rimuova correttamente una API dal marketplace. & \textit{Non Implementato}\\ \hline
-		\hypertarget{TSFxxx}{TSFxxx} & Viene verificato che il sistema visualizzi correttamente i dati relativi ad una API. & \textit{Non Implementato}\\ \hline
-		\hypertarget{TSFD3}{TSFD3} & Viene verificato che il sistema permetta il recupero della password per un utente registrato ad \progetto. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO4.3}{TSFO4.3} & Viene verificato che il sistema restituisca un insieme di risultati coerenti secondo i parametri di ricerca specificati da un utente. & \textit{Non Implementato}\\ \hline	
 		\hypertarget{TSFO5}{TSFO5} & Viene verificato che il sistema visualizzi correttamente i dati relativi ad una API. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO5.6}{TSFO5.6} & Viene verificato che il sistema consenta la consultazione della documentazione di una API. & \textit{Non Implementato}\\ \hline
@@ -156,17 +164,22 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 		\hypertarget{TSFO6.2}{TSFO6.2} & Viene verificato che il sistema visualizzi correttamente la lista di API acquistate da un utente. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO7}{TSFO7} & Viene verificato che il sistema consenta l'acquisto di una API, con conseguente rilascio di una API Key, per un utente. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO7.5.3}{TSFO7.5.3} & Viene verificato che il sistema crei e visualizzi correttamente l'API Key associata ad una API, per cui è stata acquistata una licenza da un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO8}{TSFO8} & Viene verificato che il sistema gestisca correttamente le API inserite da uno sviluppatore. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO8.2}{TSFO8.2} & Viene verificato che il sistema visualizzi correttamente la lista delle API registrate da uno sviluppatore. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO8.2.4}{TSFO8.2.4} & Viene verificato che il sistema modifichi correttamente le informazioni relative ad una API registrata da uno sviluppatore. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO8.2.8}{TSFO8.2.8} & Viene verificato che il sistema visualizzi correttamente il guadagno netto, in base alla policy, di una API da lui inserita. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO8.2.9}{TSFO8.2.9} & Viene verificato che il sistema elimini correttamente una API su richiesta dello sviluppatore autore. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO9}{TSFO9} & Viene verificato che il sistema inserisca correttamente nel marketplace una nuova API. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO10.1}{TSFO10.1} & Viene verificato che il sistema permetta di gestire correttamente ad un utente le informazioni del proprio profilo. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO10.1.1}{TSFO10.1.1} & Viene verificato che il sistema visualizzi correttamente le informazioni del profilo di un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO10.1.2}{TSFO10.1.2} & Viene verificato che il sistema modifichi correttamente le informazioni di un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFD10.1.2.9}{TSFD10.1.2.9} & Viene verificato che il sistema effettui correttamente l'upgrade dell'account di un utente. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO10.2}{TSFO10.2} & Viene verificato che il sistema permetta di gestire correttamente ad un utente il proprio conto. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO10.2.1}{TSFO10.2.1} & Viene verificato che il sistema visualizzi correttamente il saldo attuale del conto di un utente. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO10.2.2}{TSFO10.2.2} & Viene verificato che il sistema permetta ad un utente di ricaricare il saldo del proprio conto attraverso PayPal. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO10.3}{TSFO10.3} & Viene verificato che il sistema visualizzi correttamente lo storico delle transazioni di un utente. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO10.3.2}{TSFO10.3.2} & Viene verificato che il sistema visualizzi correttamente la lista delle transazioni concluse di un utente. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSFO11}{TSFO11} & Viene verificato che il sistema riesca a far effettuare correttamente il logout ad un utente.  & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO12.1.1.1}{TSFO12.1.1.1} & Viene verificato che il sistema visualizzi correttamente i dati avanzati di una API da parte di un amministratore. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO12.1.1.2}{TSFO12.1.1.2} & Viene verificato che il sistema sospenda correttamente una API su richiesta di un amministratore. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFD12.1.1.3}{TSFD12.1.1.3} & Viene verificato che il sistema elimini correttamente una API su richiesta di un amministratore. & \textit{Non Implementato}\\ \hline
@@ -174,8 +187,8 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 		\hypertarget{TSFO12.2.1.2}{TSFO12.2.1.2} & Viene verificato che il sistema permetta ad un amministratore di sospendere correttamente i pagamenti veso un utente. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO12.2.1.3}{TSFO12.2.1.3} & Viene verificato che il sistema permetta ad un amministratore di revocare correttamente la sospensione ad un utente sospeso. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSFO12.2.1.5}{TSFO12.2.1.5} & Viene verificato che il sistema permetta ad un amministratore di eliminare correttamente un utente. & \textit{Non Implementato}\\ \hline		
-		\hypertarget{TSVO1}{TSFO1} & Viene verificato che il sistema abbia un'architettura a microservizi. & \textit{Non Implementato}\\ \hline
-		\hypertarget{TSVO2}{TSFO2} & Viene verificato che il sistema utilizzi il linguaggio \textit{Jolie} per l'API Gateway, il back-end dell'applicazione web e le interfacce dei microservizi. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVO1}{TSVO1} & Viene verificato che il sistema abbia un'architettura a microservizi. & \textit{Non Implementato}\\ \hline
+		\hypertarget{TSVO2}{TSVO2} & Viene verificato che il sistema utilizzi il linguaggio \textit{Jolie} per l'API Gateway, il back-end dell'applicazione web e le interfacce dei microservizi. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSVO3}{TSVO3} & Viene verificato che il sistema utilizzi il linguaggio di markup \textit{HTML5}, unito a fogli di stile in \textit{CSS3} e linguaggio di scripting \textit{JavaScript}. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSVO4}{TSVO4} & Viene verificato che il sistema utilizzi il DBMS di tipo relazionale \textit{MySQL}. & \textit{Non Implementato}\\ \hline
 		\hypertarget{TSVO5}{TSVO5} & Viene verificato che il sistema funzioni su \textit{Google Chrome} versione 55.0 o superiore & \textit{Non Implementato}\\ \hline
@@ -233,7 +246,7 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 
 	% TABELLA
 	\normalsize
-	\begin{longtable}{|>{\centering\arraybackslash}p{2cm}|>{\centering\arraybackslash}p{7.5cm} | >{\centering\arraybackslash}p{4cm}|}
+	\begin{longtable}{|>{\centering\arraybackslash}p{2.3cm}|>{\centering\arraybackslash}p{7.5cm} | >{\centering\arraybackslash}p{4cm}|}
 		\hline \rowcolor{Gray}
 		\textbf{Id Test} & \textbf{Descrizione} & \textbf{Stato}\\
 		\hline
@@ -354,7 +367,7 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 			\item Verificare che la disconnessione sia effettivamente avvenuta.
 		\end{itemize}
 		& \textit{Non Implementato}\\ \hline
-		\hypertarget{TVFO12.2.1}{TVFO12.2.1} & L’utente amministratore della piattaforma \progetto intende moderare un determinato utente registrato. All’utente è richiesto di:
+		\hypertarget{TVFO12.2.1}{TVFO12.2.1} & L’utente amministratore della piattaforma \progetto\ intende moderare un determinato utente registrato. All’utente è richiesto di:
 		\begin{itemize}
 			\item Essere autenticato;
 			\item Trovarsi nella sezione apposita;
@@ -367,3 +380,4 @@ Per avere un tracciamento dei test prodotti e dei risultati ottenuti, si è scel
 	\end{longtable}
 	\clearpage
 	
+\input{includes/tracciamento.tex}
