@@ -10,137 +10,103 @@
   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-  <!-- Latest compiled and minified JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  <script src="js/logic.js"></script>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
 
 </head>
 <body>
-  <nav class="navbar navbar-default">
-      <div class="container-fluid">
-          <!-- Logo APIMarket -->
-          <div class="navbar-header">
-              <!-- Pulsante con Menu per Mobile -->
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-              </button>
-              <!-- Logo APIMarket -->
-              <a class="navbar-brand" href="#!/api_list">APIMarket</a>
-          </div>
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-              <!-- UC6 - Ricerca API -->
-              <form class="navbar-form navbar-left">
-                  <div class="form-group">
-                      <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                      <input type="text"  class="form-control" placeholder="Ricerca APIs">
-                  </div>
-              </form>
-
-
-              <ul class="nav navbar-nav navbar-right">
-                  <li class="dropdown">
-                      <!-- Immagine profilo Utente e menu navigazione -->
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mark Twain<span class="caret"></span></a>
-                      <ul class="dropdown-menu">
-                          <li><a href="account.html">Gestione Account</a></li>
-                          <li><a href="login.html">Login</a></li>
-                          <li><a href="registrautente.html">Registrati</a></li>
-                          <li><a href="registraapi.html">Aggiungi API</a></li>
-                          <li role="separator" class="divider"></li>
-                          <li><a href="#">Logout</a></li>
-                      </ul>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </nav>
-
-  <div class="row">
-      <!-- Lista Categorie API -->
-      <div class="col-xs-10 col-sm-3 col-md-2 col-xs-offset-1 col-sm-offset-0 col-md-offset-0">
-
-          <div class="panel panel-default">
-              <div class="panel-heading">Categorie</div>
-				<div class="list-group">
-				<!-- Da implementare le views per cambiare la visualizzazione delle categorie, ad ogni categoria corrisponde una view diversa -->
-                  <form method="post">
-                      <button type="hidden" value="0" class="list-group-item">Tutte</button>
-                  </form>
-                  <form>
-                      <button type="hidden" value="1"  class="list-group-item">Giochi</button>
-                  </form>
-                  <form>
-                      <button type="hidden" value="2"  class="list-group-item">Multimedia</button>
-                  </form>
-                  <form>
-                      <button type="hidden" value="3"  class="list-group-item">Notizie</button>
-                  </form>
-                  <form>
-                      <button type="hidden" value="4"  class="list-group-item">Database</button>
-                  </form>
-                  <form>
-                      <button type="hidden" value="5"  class="list-group-item">Geo</button>
-                  </form>
-              </div>
-          </div>
-      </div>
-		
-	  <!-- View di default con tutti i microservizi di ogni categoria, ordinati dal più recente -->
-      <div class="col-xs-12 col-sm-9 col-md-10">
-        <div class="row">
-            <div ng-controller="api_homeCtrl">
-                <div ng-repeat="HomepageMSData in mslistdata.HomepageMSData">
-                    <div class="col-xs-10 col-sm-6 col-md-4 col-xs-offset-1 col-sm-offset-0 col-md-offset-0">
-                        <div class="thumbnail">
-                            <img src="{{HomepageMSData.Logo}}">
-                            <div class="caption">
-                                <h3 class="text-center">{{HomepageMSData.Name}}</h3>
-                                <p class="text-center">{{HomepageMSData.DeveloperName}} {{HomepageMSData.DeveloperSurname}}</p>
-                                <p class="text-center">
-                                    <a class="btn btn-primary" role="button">Scopri di Piu'</a>
-                                </p>
-                                <button ng-repeat="Category in HomepageMSData.Category">{{Category.Name}}</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <!-- Logo APIMarket -->
+        <div class="navbar-header">
+            <!-- Pulsante con Menu per Mobile -->
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- Logo APIMarket -->
+            <a class="navbar-brand" href="#!/api_home">APIMarket</a>
         </div>
-      </div>
-  </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-  <p>gggggggggg</p>
-  <div ng-view></div>
-  <p>hhhhhhhhhhh</p>
+            <!-- UC6 - Ricerca API -->
+            <form class="navbar-form navbar-left">
+                <div class="form-group">
+                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                    <input type="text"  class="form-control" placeholder="Ricerca APIs">
+                </div>
+            </form>
 
-  <!-- Codice per saltare una riga  -->
-  <div class="row"><p></p><p></p></div>
-  <!-- Footer  -->
-  <div class="panel-footer"><p class="text-center">APIM</p></div>
 
-  <!--inclusione views-->
-  <script src="app.js"></script>
-  <script src="views/view1/view1.js"></script>
-  <script src="views/view2/view2.js"></script>
-  <script src="views/api_list/api_list.js"></script>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <!-- Immagine profilo Utente e menu navigazione -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mark Twain<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="account.html">Gestione Account</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="registrautente.html">Registrati</a></li>
+                        <li><a href="registraapi.html">Aggiungi API</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-  <!--inclusione services-->
-  <script src="services/api_home.js"></script>
+<div class="row">
+    <!-- Lista Categorie API -->
+    <div class="col-xs-10 col-sm-3 col-md-2 col-xs-offset-1 col-sm-offset-0 col-md-offset-0">
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-  <!-- Include all compiled plugins (below), or include individual files as needed -->
-  <script src="js/bootstrap.min.js"></script>
+        <div class="panel panel-default">
+            <div class="panel-heading">Categorie</div>
+            <div class="list-group">
+			  <!-- Da implementare le views per cambiare la visualizzazione delle categorie, ad ogni categoria corrisponde una view diversa -->
+				<a href="#api_home"><button type="button" class="list-group-item">Tutte</button></a>
+                <a href="#api_cat_giochi"><button type="button" class="list-group-item">Giochi</button></a>
+                <a href="#api_cat_multimedia"><button type="button" class="list-group-item">Multimedia</button></a>
+                <a href="#api_cat_notizie"><button type="button" class="list-group-item">Notizie</button></a>
+                <a href="#api_cat_database"><button type="button" class="list-group-item">Database</button></a>
+                <a href="#api_cat_geo"><button type="button" class="list-group-item">Geo</button></a>
+              </div>
+        </div>
+    </div>
+
+    <div ng-view></div>
+</div>
+
+
+<!-- Codice per saltare una riga  -->
+<div class="row"><p></p><p></p></div>
+<!-- Footer  -->
+<div class="panel-footer"><p class="text-center">APIM</p></div>
+  
+  <!-- Bower Components -->
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
+  <!-- File js setup views -->
+  <script src="app.js"></script>
+  <!-- Views menù categorie -->
+  <script src="views/api_home/api_home.js"></script>
+  <script src="views/api_cat_giochi/api_cat_giochi.js"></script>
+  <script src="views/api_cat_multimedia/api_cat_multimedia.js"></script>
+  <script src="views/api_cat_notizie/api_cat_notizie.js"></script>
+  <script src="views/api_cat_database/api_cat_database.js"></script>
+  <script src="views/api_cat_geo/api_cat_geo.js"></script>
+  <!-- Inserire qui nuove views -->
+  <!-- Components -->
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

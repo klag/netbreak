@@ -16,12 +16,12 @@ type homepagemsdata: void {
 	.Category [0,*]: homepagecategorydata
 }
 
-type homepagemslistfound: void {
+type homepagemslist: void {
 	.HomepageMSData [0,*]: homepagemsdata
 }
 
 interface frontendInterface { 
 	RequestResponse:
-		homepage_ms_list( void )( homepagemslistfound ),
-		homepage_filter_cat_list( categoryid )( homepagemslistfound )
+		homepage_ms_list( void )( homepagemslist ),
+		homepage_filter_cat_list( categoryid )( homepagemslist )
 }
