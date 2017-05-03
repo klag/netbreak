@@ -16,7 +16,24 @@ Le misure effettuate permettono di prevedere il livello di qualità esterna ed i
 Le metriche interne misurano attributi interni del software e forniscono indicazioni sulle caratteristiche esterne del prodotto finale, tramite l'analisi statica dei prodotti intermedi.
 Le metriche interne si applicano anche alla documentazione del prodotto.\\
 Le \textbf{metriche esterne} misurano i comportamenti del prodotto software rilevabili dai test, dall'operatività e dall'osservazione durante la su esecuzione, in funzione degli obiettivi stabiliti.
-Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.	
+Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.\\
+Le metriche per la qualità di prodotto saranno identificate con la seguente sintassi:
+\begin{center}
+	\textbf{MPD}\_[\textit{Target}][[\textit{Id}]
+\end{center}
+dove:
+\begin{itemize}
+	\item \textbf{\textit{Target}} rappresenta la qualità di interesse della metrica e può assumere i valori:
+	\begin{itemize}
+		\item \textbf{\textit{F}} (Funzionalità);
+		\item \textbf{\textit{A}} (Affidabilità);
+		\item \textbf{\textit{U}} (Usabilità);
+		\item \textbf{\textit{E}} (Efficienza);
+		\item \textbf{\textit{M}} (Manutenibilità);
+		\item \textbf{\textit{P}} (Portabilità);
+	\end{itemize}
+	\item \textbf{\textit{Id}} rappresenta il codice identificativo progressivo della metrica riguardante la qualità \textit{Target}. Questo indice viene fatto partire da 1 per ogni differente qualità.
+\end{itemize}	
 
 \subsection{Definizione degli obiettivi di qualità}
 
@@ -32,7 +49,8 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 		
 		\paragraph{Metriche}
 			\subparagraph{Completezza delle funzioni sviluppate}
-			Indica la percentuale di funzionalità sviluppate ritenute complete.
+			\textbf{Id Metrica}: \hypertarget{MPDF1}{MPD\_F1}\\
+			\textbf{Descrizione}: indica la percentuale di funzionalità sviluppate ritenute complete.
 			
 			\begin{itemize}
 				\item \textbf{fun\ped{Compl}} = numero di funzioni ritenute complete
@@ -52,7 +70,8 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 		\end{longtable}
 			
 			\subparagraph{Correttezza delle funzioni sviluppate}
-			Indica la percentuale di funzionalità sviluppate ritenute corrette.
+			\textbf{Id Metrica}: \hypertarget{MPDF2}{MPD\_F2}\\
+			\textbf{Descrizione}: indica la percentuale di funzionalità sviluppate ritenute corrette.
 			
 			\begin{itemize}
 				\item \textbf{fun\ped{Corr}} = numero di funzioni ritenute corrette
@@ -73,7 +92,8 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 			\end{longtable}
 			
 			\subparagraph{Accuratezza rispetto alle aspettative}
-			Indica la percentuale di risultati conformi alle aspettative.
+			\textbf{Id Metrica}: \hypertarget{MPDF3}{MPD\_F3}\\
+			\textbf{Descrizione}: indica la percentuale di risultati conformi alle aspettative.
 			
 			\begin{itemize}
 				\item \textbf{test\ped{Corr}} = numero di test ritenuti corretti
@@ -93,7 +113,8 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 			\end{longtable}
 						
 			\subparagraph{Controllo degli accessi}
-			Indica la percentuale di accessi corretti al sistema.
+			\textbf{Id Metrica}: \hypertarget{MPDF4}{MPD\_F4}\\
+			\textbf{Descrizione}: indica la percentuale di accessi corretti al sistema.
 			
 			\begin{itemize}
 				\item \textbf{accessi\ped{Succ}} = numero di accessi controllati con successo dal sistema
@@ -124,7 +145,8 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 		
 		\paragraph{Metriche}
 			\subparagraph{Chiamate a microservizi corrette}
-			Indica il numero di chiamate al microservizio j andate a buon fine.
+			\textbf{Id Metrica}: \hypertarget{MPDA1}{MPD\_A1}\\
+			\textbf{Descrizione}: indica il numero di chiamate al microservizio j andate a buon fine.
 			
 			\begin{itemize}
 				\item \textbf{num\ped{CF(MS(j))}} = numero di chiamate al microservizio j fallite o avvenute con successo, ma con t\ped{R(MS(j))} > t\ped{MR(MS(j))} + 0.3*t\ped{MR(MS(j))}, dove t\ped{R(MS(j))} = tempo di risposta del microservizio j e t\ped{MR(MS(j))} = tempo medio di risposta del microservizio j
@@ -145,7 +167,8 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 			\end{longtable}
 		
 			\subparagraph{Copertura dei test}
-			Indica il livello di copertura dei test.
+			\textbf{Id Metrica}: \hypertarget{MPDA2}{MPD\_A2}\\
+			\textbf{Descrizione}: indica il livello di copertura dei test.
 			
 			\begin{itemize}
 				\item \textbf{test\ped{P}} = numero di test pianificati
@@ -166,7 +189,8 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 			
 			
 			\subparagraph{Controllo dei guasti}
-			Indica il livello di controllo dei guasti, attraverso il numero di condizioni di errore messe sotto controllo per evitare malfunzionamenti e/o guasti al prodotto.
+			\textbf{Id Metrica}: \hypertarget{MPDA3}{MPD\_A3}\\
+			\textbf{Descrizione}: indica il livello di controllo dei guasti, attraverso il numero di condizioni di errore messe sotto controllo per evitare malfunzionamenti e/o guasti al prodotto.
 			
 			\begin{itemize}
 				\item \textbf{num\ped{CEG}} = numero di condizioni d'errore gestite correttamente
@@ -198,7 +222,8 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 		
 		\paragraph{Metriche}
 			\subparagraph{Comprensibilità delle funzionalità offerte}
-			Indica la percentuale di funzioni comprensibili agli utenti.
+			\textbf{Id Metrica}: \hypertarget{MPDU1}{MPD\_U1}\\
+			\textbf{Descrizione}: indica la percentuale di funzioni comprensibili agli utenti.
 			
 				\begin{itemize}
 				\item \textbf{num\ped{FC}} = numero di funzionalità comprensibili agli utenti
@@ -218,7 +243,8 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 			\end{longtable}
 			
 			\subparagraph{Controllo e monitoraggio delle operazioni}
-			Indica la capacità del prodotto di monitorare lo stato delle operazioni eseguite.
+			\textbf{Id Metrica}: \hypertarget{MPDU2}{MPD\_U2}\\
+			\textbf{Descrizione}: indica la capacità del prodotto di monitorare lo stato delle operazioni eseguite.
 			
 				\begin{itemize}
 				\item \textbf{num\ped{FC}} = numero di funzionalità con adeguato controllo e monitoraggio delle operazioni
@@ -239,12 +265,15 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 			\end{longtable}
 			
 			\subparagraph{Qualità della messaggistica}
-			Indica il grado di chiarezza, completezza e correttezza dei messaggi previsti rispetto alle diverse condizioni gestite dal prodotto (ad esempio, il completamento di una funzione, le condizioni di errore, le scelte da effettuare, etc.).
+			\textbf{Id Metrica}: \hypertarget{MPDU3}{MPD\_U3}\\
+			\textbf{Descrizione}: indica il grado di chiarezza, completezza e correttezza dei messaggi previsti rispetto alle diverse condizioni gestite dal prodotto (ad esempio, il completamento di una funzione, le condizioni di errore, le scelte da effettuare, etc.).
 			
 			\begin{itemize}
 				\item \textbf{num\ped{MC}} = numero di messaggi che risultano chiari, completi e corretti
 				\item \textbf{num\ped{MT}} = numero totale di messaggi previsti
 			\end{itemize}
+			
+			\clearpage
 			
 			\begin{longtable}{>{\centering\arraybackslash}p{5cm}|>{\centering\arraybackslash}p{5cm} | >{\centering\arraybackslash}p{5cm}}
 					\hline
@@ -270,7 +299,8 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 		\paragraph{Metriche}
 			
 			\subparagraph{Tempo di risposta}
-			Indica il tempo medio che intercorre fra la richiesta di una determinata funzionalità e la restituzione del risultato all’utente. L'unità di misura scelta per esprimere il tempo è il \textit{secondo}.
+			\textbf{Id Metrica}: \hypertarget{MPDE1}{MPD\_E1}\\
+			\textbf{Descrizione}: indica il tempo medio che intercorre fra la richiesta di una determinata funzionalità e la restituzione del risultato all’utente. L'unità di misura scelta per esprimere il tempo è il \textit{secondo}.
 			\begin{itemize}
 				\item t\ped{i} = tempo trascorso
 				fra la richiesta i di una funzionalità ed il completamento delle operazioni necessarie
@@ -325,9 +355,9 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 	
 		\paragraph{Metriche}
 
-			
 			\subparagraph{Impatto delle modifiche}
-			Indica la percentuale di modifiche effettuate in risposta a failure, le quali hanno portato all’introduzione di nuove failure in altre componenti del sistema.
+			\textbf{Id Metrica}: \hypertarget{MPDM1}{MPD\_M1}\\
+			\textbf{Descrizione}: indica la percentuale di modifiche effettuate in risposta a failure, le quali hanno portato all’introduzione di nuove failure in altre componenti del sistema.
 			
 			\begin{itemize}
 				\item \textbf{num\ped{FRNF}} = numero di failure risolte con l’introduzione di nuove failure
@@ -357,7 +387,8 @@ Esse sono specificate nella norma \textbf{\textit{ISO/IEC 9126-2\ped{G}}}.
 		
 		\paragraph{Metriche}
 			\subparagraph{Supporto differenti versioni dei browser}
-			Indica la percentuale di versioni dei browser supportate.
+			\textbf{Id Metrica}: \hypertarget{MPDP1}{MPD\_P1}\\
+			\textbf{Descrizione}: indica la percentuale di versioni dei browser supportate.
 			
 			\begin{itemize}
 				\item \textbf{num\ped{VSupp}} = numero delle versioni dei browser supportati

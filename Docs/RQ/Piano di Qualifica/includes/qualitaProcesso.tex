@@ -55,6 +55,11 @@
 	\end{figure}
 
 	Infine, il team ha individuato dallo standard \textbf{\textit{ISO/IEC 12207:2008\ped{G}}} i processi che ritiene più importanti durante tutto il ciclo di vita del prodotto, al fine di garantire una buona qualità di processo. Per ognuno di essi sono stati individuati obiettivi e metriche coerenti con i livelli di qualità perseguiti.
+	Le metriche per la qualità di processo saranno identificate con la seguente sintassi:
+	\begin{center}
+		\textbf{MPC}[\textit{Id}]
+	\end{center}
+	dove \textbf{\textit{Id}} rappresenta il codice identificativo progressivo della metrica di processo interessata.
 	
 	\subsection{Infrastructure Management Process}
 	Questo processo ha lo scopo di fornire, mantenere ed aggiornare l’infrastruttura ed i servizi necessari alla realizzazione del progetto, durante tutto il suo ciclo di vita. Il termine infrastruttura comprende: elementi hardware, software, metodi, strumenti, tecniche e standard impiegati nello sviluppo del prodotto.
@@ -72,7 +77,8 @@
 		\end{itemize}
 		\subsubsection{Metriche}
 			\paragraph{Disponibilità \textit{NetBreakDB}}
-			Indica la percentuale di disponibilità di utilizzo della piattaforma \textit{NetBreakDB}, rispetto alle richieste di accesso.
+			\textbf{Id Metrica}: \hypertarget{MPC1}{MPC1}\\
+			\textbf{Descrizione}: indica la percentuale di disponibilità di utilizzo della piattaforma \textit{NetBreakDB}, rispetto alle richieste di accesso.
 			
 			\begin{itemize}
 				\item \textbf{num\ped{AL}} = numero di accessi corretti alla pagina di login
@@ -101,6 +107,7 @@
 		\item le misurazioni per rilevare lo stato del progetto, rispetto alle pianificazioni stilate.
 	\end{itemize}
 	Durante tutta l’attività di	progetto, sarà fondamentale mantenere aggiornata la pianificazione effettuata, in modo da essere sempre coerente con la situazione attuale. Nel caso in cui, in una fase di lavoro, venissero rilevati dei valori negativi, attraverso l'utilizzo delle metriche scelte Schedule Variance e Budget Variance, occorrerà compensare tali valori entro la fine dell’attività di progetto, al fine di evitare di eccedere le ore di lavoro totali e, di conseguenza, il preventivo dei costi finale indicato nella pianificazione contenuta nel documento \textsc{PianoDiProgetto 3\_0\_0.pdf}.
+		
 		\subsubsection{Obiettivi}
 		L’intero sviluppo del progetto dovrà seguire la pianificazione prodotta:
 		\begin{itemize}
@@ -108,9 +115,11 @@
 			\item il costo necessario allo svolgimento di un'attività non dovrà eccedere la somma
 			preventivata.
 		\end{itemize}
+		
 		\subsubsection{Metriche}
 			\paragraph{Schedule Variance}
-			Indica se si è o meno in linea con la pianificazione temporale delle attività nella baseline.
+			\textbf{Id Metrica}: \hypertarget{MPC2}{MPC2}\\
+			\textbf{Descrizione}: indica se si è o meno in linea con la pianificazione temporale delle attività nella baseline.
 			Se si ottiene un valore maggiore di 0, significa che il team è in anticipo, se si ottiene 0, significa che il team ha rispettato la pianificazione, altrimenti, in caso di valore negativo, significa che il team è in ritardo.
 			
 				\begin{itemize}
@@ -129,9 +138,11 @@
 				\\
 				\caption{Schedule Variance}
 			\end{longtable}
+		\clearpage
 		
 		\paragraph{Budget Variance}
-		Indica se la spesa sostenuta alla data corrente è superiore o inferiore a quella preventivata in sede di pianificazione.
+		\textbf{Id Metrica}: \hypertarget{MPC3}{MPC3}\\
+		\textbf{Descrizione}: indica se la spesa sostenuta alla data corrente è superiore o inferiore a quella preventivata in sede di pianificazione.
 		Un valore positivo indica che si è speso meno di quanto inizialmente previsto, altrimenti significa che si è speso più della somma preventivata.
 		
 		\begin{itemize}
@@ -163,7 +174,8 @@
 		\end{itemize}
 		\subsubsection{Metriche}
 			\paragraph{Rischi non preventivati}
-			Indicatore che evidenzia i rischi non preventivati.
+			\textbf{Id Metrica}: \hypertarget{MPC4}{MPC4}\\
+			\textbf{Descrizione}: indicatore che evidenzia i rischi non preventivati.
 			
 			\begin{itemize}
 				\item \textbf{risk\ped{NP}} = contatore che viene incrementato nel momento in cui si manifesta un rischio non individuato nell’attività di analisi dei rischi
@@ -194,7 +206,8 @@
 		\subsubsection{Metriche}
 			
 			\paragraph{Adempimento requisiti obbligatori}
-			Indica la percentuale di requisiti obbligatori soddisfatti dal prodotto.
+			\textbf{Id Metrica}: \hypertarget{MPC5}{MPC5}\\
+			\textbf{Descrizione}: indica la percentuale di requisiti obbligatori soddisfatti dal prodotto.
 			
 			\begin{itemize}
 				\item \textbf{num\ped{ROS}} = numero di requisiti obbligatori soddisfatti
@@ -228,7 +241,8 @@
 		
 		\subsubsection{Metriche}
 			\paragraph{Fan In}
-			In riferimento ad un modulo software, misura quanti altri moduli lo utilizzano durante la loro esecuzione.
+			\textbf{Id Metrica}: \hypertarget{MPC6}{MPC6}\\
+			\textbf{Descrizione}: in riferimento ad un modulo software, misura quanti altri moduli lo utilizzano durante la loro esecuzione.
 			Tale indicazione consente di stabilire il livello di riuso implementato.
 			
 			\begin{itemize}
@@ -246,7 +260,8 @@
 			\end{longtable}
 			
 			\paragraph{Fan Out}
-			In riferimento ad un modulo software, misura quanti moduli vengono utilizzati durante la
+			\textbf{Id Metrica}: \hypertarget{MPC7}{MPC7}\\
+			\textbf{Descrizione}: in riferimento ad un modulo software, misura quanti moduli vengono utilizzati durante la
 			sua esecuzione.
 			Tale indicazione consente di stabilire il livello di accoppiamento implementato.
 			
@@ -290,7 +305,8 @@
 		\subsubsection{Metriche}
 			
 			\paragraph{Numero di metodi per classe}
-			Indica il numero di metodi definiti in una classe.
+			\textbf{Id Metrica}: \hypertarget{MPC8}{MPC8}\\
+			\textbf{Descrizione}: indica il numero di metodi definiti in una classe.
 			Un valore molto alto potrebbe indicare una
 			non buona decomposizione delle funzionalità a livello logico.
 			
@@ -310,7 +326,8 @@
 			
 		
 			\paragraph{Numero di parametri per metodo}
-			Indica il numero di parametri passati ad un metodo.
+			\textbf{Id Metrica}: \hypertarget{MPC9}{MPC9}\\
+			\textbf{Descrizione}: indica il numero di parametri passati ad un metodo.
 			Un valore molto alto potrebbe indicare un'eccessiva complessità del metodo, il quale potrebbe non essere sufficientemente scomposto in sotto-metodi.
 			
 			\begin{itemize}
@@ -328,7 +345,8 @@
 			\end{longtable}
 			
 			\paragraph{Numero di attributi per classe}
-			Indica il numero di attributi di una classe.
+			\textbf{Id Metrica}: \hypertarget{MPC10}{MPC10}\\
+			\textbf{Descrizione}: indica il numero di attributi di una classe.
 			Un valore molto alto potrebbe suggerire la necessità di suddividere tale classe in più classi differenti correlate tra loro.
 			
 			\begin{itemize}
@@ -363,7 +381,8 @@
 		\subsubsection{Metriche}
 			
 			\paragraph{Complessità Ciclomatica}
-			Indica la complessità di funzioni, moduli, metodi o classi di un programma, misurando il numero
+			\textbf{Id Metrica}: \hypertarget{MPC11}{MPC11}\\
+			\textbf{Descrizione}: indica la complessità di funzioni, moduli, metodi o classi di un programma, misurando il numero
 			di cammini linearmente indipendenti attraverso il grafo di controllo di flusso. Alti valori di complessità ciclomatica implicano una ridotta manutenibilità del codice; viceversa, bassi valori potrebbero determinare una scarsa efficienza dei metodi.
 			
 				\begin{itemize}
@@ -383,7 +402,8 @@
 			
 			
 			\paragraph{Numero di livelli di annidamento}
-			Indica il numero di funzioni o procedure chiamate all’interno di un metodo.
+			\textbf{Id Metrica}: \hypertarget{MPC12}{MPC12}\\
+			\textbf{Descrizione}: indica il numero di funzioni o procedure chiamate all’interno di un metodo.
 			Un valore elevato implica un’alta complessità ed un basso livello di astrazione del codice.
 			
 			\begin{itemize}
@@ -402,7 +422,8 @@
 			\end{longtable}
 		
 			\paragraph{Linee di commento}
-			Indica la percentuale di linee di commento presenti all’interno del codice sorgente; la loro presenza
+			\textbf{Id Metrica}: \hypertarget{MPC13}{MPC13}\\
+			\textbf{Descrizione}: indica la percentuale di linee di commento presenti all’interno del codice sorgente; la loro presenza
 			permette una più semplice comprensione ed un maggior livello di manutenibilità di quanto
 			prodotto.
 			
@@ -437,7 +458,8 @@
 		
 		\subsubsection{Metriche}
 			\paragraph{Test di Unità}
-			Indica la percentuale di test di unità eseguiti.
+			\textbf{Id Metrica}: \hypertarget{MPC14}{MPC14}\\
+			\textbf{Descrizione}: indica la percentuale di test di unità eseguiti.
 			
 			\begin{itemize}
 				\item \textbf{num\ped{TUE}} = numero di test di unità eseguiti
@@ -457,7 +479,8 @@
 			\end{longtable}
 		
 			\paragraph{Test di Integrazione}
-			Indica la percentuale di test di integrazione eseguiti.
+			\textbf{Id Metrica}: \hypertarget{MPC15}{MPC15}\\
+			\textbf{Descrizione}: indica la percentuale di test di integrazione eseguiti.
 			
 			\begin{itemize}
 				\item \textbf{num\ped{TIE}} = numero di test di integrazione eseguiti
@@ -478,7 +501,8 @@
 			\end{longtable}
 			
 			\paragraph{Test di Sistema}
-			Indica la percentuale di test di sistema eseguiti.
+			\textbf{Id Metrica}: \hypertarget{MPC16}{MPC16}\\
+			\textbf{Descrizione}: indica la percentuale di test di sistema eseguiti.
 			
 			\begin{itemize}
 				\item \textbf{num\ped{TSE}} = numero di test di sistema eseguiti
@@ -498,7 +522,8 @@
 			\end{longtable}
 			
 			\paragraph{Test superati}
-			Indica la percentuale di test totali superati.
+			\textbf{Id Metrica}: \hypertarget{MPC17}{MPC17}\\
+			\textbf{Descrizione}: indica la percentuale di test totali superati.
 			
 			\begin{itemize}
 				\item \textbf{num\ped{TS}} = numero di test superati
@@ -539,7 +564,8 @@
 		\subsubsection{Metriche}
 			
 			\paragraph{Indice Gulpease}
-			L'indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana.
+			\textbf{Id Metrica}: \hypertarget{MPC18}{MPC18}\\
+			\textbf{Descrizione}: l'indice Gulpease è un indice di leggibilità di un testo tarato sulla lingua italiana.
 			Rispetto ad altri indici, questo ha il vantaggio di utilizzare la lunghezza delle parole in lettere, anziché in sillabe, semplificandone il calcolo automatico. L'indice Gulpease considera due variabili linguistiche:
 			\begin{itemize}
 				\item la lunghezza della parola;
@@ -582,7 +608,8 @@
 		
 		\subsubsection{Metriche}
 			\paragraph{Code Coverage}
-			Indica la percentuale di istruzioni che sono eseguite durante i test.
+			\textbf{Id Metrica}: \hypertarget{MPC19}{MPC19}\\
+			\textbf{Descrizione}: indica la percentuale di istruzioni che sono eseguite durante i test.
 			Un alto valore di questo indice implica un'alta probabilità che le componenti testate abbiano una ridotta quantità di errori.
 			Per ottenere un indice basso è necessario che l'implementazione dei metodi sia molto semplice, in modo da non richiedere alcuna attività di testing. Ad esempio, i metodi getter e setter.
 			
