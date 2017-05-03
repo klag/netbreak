@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="myapp">
+<html ng-app="myApp">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -32,7 +32,7 @@
                   <span class="icon-bar"></span>
               </button>
               <!-- Logo APIMarket -->
-              <a class="navbar-brand" href="index.html">APIMarket</a>
+              <a class="navbar-brand" href="#!/api_list">APIMarket</a>
           </div>
           <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
@@ -94,45 +94,53 @@
       </div>
 
       <div class="col-xs-12 col-sm-9 col-md-10">
-                        <div class="row">
-                            <div ng-controller="api_homeCtrl">
-                                <div ng-repeat="HomepageMSData in mslistdata.HomepageMSData">
-                                    <div class="col-xs-10 col-sm-6 col-md-4 col-xs-offset-1 col-sm-offset-0 col-md-offset-0">
-                                        <div class="thumbnail">
-                                            <a href="{{MSRegListData.Name}}"><img src="{{HomepageMSData.Logo}}"></a>
-                                            <div class="caption">
-                                                <h3 class="text-center">{{HomepageMSData.Name}}</h3>
-                                                <p class="text-center">{{HomepageMSData.DeveloperName}}</p>
-                                                <p class="text-center">
-                                                    <a href="{{MSRegListData.Name}}" class="btn btn-primary" role="button">Scopri di Piu'</a>
-                                                </p>
-                                                <button ng-repeat="Category in HomepageMSData.Category">{{Category.Name}}</button>
-                                            </div>
-                                        </div>
+        <div class="row">
+            <div ng-controller="api_homeCtrl">
+                <div ng-repeat="HomepageMSData in mslistdata.HomepageMSData">
+                    <div class="col-xs-10 col-sm-6 col-md-4 col-xs-offset-1 col-sm-offset-0 col-md-offset-0">
+                        <div class="thumbnail">
+                            <a href="{{MSRegListData.Name}}"><img src="{{HomepageMSData.Logo}}"></a>
+                            <div class="caption">
+                                <h3 class="text-center">{{HomepageMSData.Name}}</h3>
+                                <p class="text-center">{{HomepageMSData.DeveloperName}}</p>
+                                <p class="text-center">
+                                    <a href="{{MSRegListData.Name}}" class="btn btn-primary" role="button">Scopri di Piu'</a>
+                                </p>
+                                <button ng-repeat="Category in HomepageMSData.Category">{{Category.Name}}</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-          </div>
+        </div>
       </div>
   </div>
 
+  <p>gggggggggg</p>
   <div ng-view></div>
+  <p>hhhhhhhhhhh</p>
 
   <!-- Codice per saltare una riga  -->
   <div class="row"><p></p><p></p></div>
   <!-- Footer  -->
   <div class="panel-footer"><p class="text-center">APIM</p></div>
+
+  <!--inclusione views-->
+  <script src="app.js"></script>
+  <script src="views/view1/view1.js"></script>
+  <script src="views/view2/view2.js"></script>
+  <script src="views/api_list/api_list.js"></script>
+
+  <!--inclusione serivices-->
+  <script src="services/api_home.js"></script>
+
+
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <!-- Include all compiled plugins (below), or include individual files as needed -->
   <script src="js/bootstrap.min.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="views/view1/view1.js"></script>
-  <script src="views/view2/view2.js"></script>
-  <script src="services/api_home.js"></script>
-  <script src="views/api_list/api_list.js"></script>
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

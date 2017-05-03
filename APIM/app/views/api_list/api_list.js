@@ -9,13 +9,7 @@ angular.module('myApp.api_list', ['ngRoute'])
   });
 }])
 
-.controller('api_listCtrl', [function($scope, $http) {
-	$http.get("/getApi") 
-	    .success(function(data) { 
-	        $scope.api_list = data; 
-	    }) 
-	    .error(function() { 
-	        alert("Si è verificato un errore!"); 
-	    })
+.controller('api_listCtrl', [function() {
+
 }]);
 
