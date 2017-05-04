@@ -2,7 +2,7 @@
 \section{Tecnologie utilizzate}
 In questa sezione, vengono descritte le tecnologie utilizzate per la realizzazione della piattaforma \progetto. Verranno elencati i pregi e i difetti individuati durante l'analisi, e le motivazioni che hanno spinto il gruppo \textit{\gruppo} a intraprendere tali scelte progettuali e tecnologiche.
 
-\subsection{Angular 2}
+\subsection{AngularJS}
 \begin{itemize}
 	\item \textbf{Descrizione}: AngularJS è un framework JavaScript per lo sviluppo di applicazioni web Client-side. Può essere aggiunto alle pagine HTML tramite opportune inclusioni. \MakeUppercase{è} distribuito come un file JavaScript.
 	\item \textbf{Utilizzo}: questa tecnologia verrà utilizzata per rendere le pagine HTML reattive e responsive alle richieste in real-time.
@@ -158,38 +158,6 @@ In questa sezione, vengono descritte le tecnologie utilizzate per la realizzazio
 	\end{itemize}
 \end{itemize}
 
-\subsection{Leonardo}
-\begin{itemize}
-	\item \textbf{Descrizione}: Leonardo è un web server sviluppato completamente in Jolie. 
-	\item \textbf{Utilizzo}: questa tecnologia sarà utilizzata, visto la sua affinità con le altre tecnologie adottate, come web server per la piattaforma.
-	\item \textbf{Vantaggi}:
-	\begin{itemize}
-		\item Affine alle tecnologie utilizzate nel progetto e ad un approccio a microservizi;
-		\item Offre una buona scalabilità per ogni tipo di applicazione.
-	\end{itemize}
-	\item \textbf{Svantaggi}:
-	\begin{itemize}
-		\item Leonardo è un web server che presenta tuttora una diffusione molto limitata;
-		\item Essendo limitato il bacino di utenza, il supporto per tale piattaforma è anch'esso limitato.
-	\end{itemize}
-\end{itemize}
-
-\subsection{MeteorJS}
-\begin{itemize}
-	\item \textbf{Descrizione}: MeteorJS è un framework open source JavaScript scritto con \textit{Node.js\ped{G}}. Esso permette lo sviluppo di applicazioni web cross-platform. Il framework integra \textit{MongoDB\ped{G}} e utilizza il pattern publish-subcribe per la propagazione dei dati in tempo reale tra client e server. Per la parte client, si è deciso di utilizzare il package Meteor-Angular, in modo da poter usare il framework Angular 2 per lo sviluppo front-end.
-	\item \textbf{Utilizzo}: framework principale su cui sarà basata la parte front-end dell'API Market.
-	\item \textbf{Vantaggi}:
-	\begin{itemize}
-		\item Isomorfismo, ovvero il codice sviluppato per il client può essere riutilizzato anche sul server;
-		\item Latency compensation, ovvero le azioni vengono eseguite inmmediatamente nel client, ma il server può eventualmente fare roll-back qualora un'azione eseguita non fosse valida;
-		\item Reattività e Virtual DOM, con le viste che vengono automaticamente ricalcolate al variare dei dati;
-		\item Sono presenti moltissimi package che rispondono a svariate esigenze del prodotto.
-	\end{itemize}
-	\item \textbf{Svantaggi}:
-	\begin{itemize}
-		\item La tecnologia non è mai stata utilizzata da nessun membro del team, ed è quindi necessario un periodo di formazione per poterla utilizzare al meglio.
-	\end{itemize}
-\end{itemize}
 
 \subsection{MySQL}
 \begin{itemize}

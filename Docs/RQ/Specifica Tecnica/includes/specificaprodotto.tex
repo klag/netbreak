@@ -56,7 +56,7 @@ All'interno della componente Model sono presenti una serie di microservizi reliz
 	{IMG/microservices-aggregator}
 	\caption{Aggregator Microservices design pattern}
 \end{figure}
-Questo design pattern si compone di un aggregatore, ovvero un microservizio in grado di collezionare i dati che gli vengono forniti da diversi microservizi, per poi renderli fruibili all'utente, tramite la componente View. Utilizzando un design pattern a microservizi è necessario che le varie componenti siano indipendenti tra loro e, quindi, che lo siano anche i relativi database. La realizzazione di un unico database avrebbe portato alla realizzazione di un'architettura \textit{SOA\ped{G}}, ovvero un'architettura orientata ai servizi, e non basata sui microservizi. Tutti i microservizi contenuti in un package, sono indipendenti da microservizi contenuti in altri package, ed ogni microservizio opera sul proprio database.
+Questo design pattern si compone di un aggregatore, ovvero un microservizio in grado di collezionare i dati che gli vengono forniti da diversi microservizi, per poi renderli fruibili all'utente, tramite la componente View. Utilizzando un design pattern a microservizi è necessario che le varie componenti siano indipendenti tra loro e, quindi, che lo siano anche i relativi database. Tutti i microservizi contenuti in un package, sono indipendenti da microservizi contenuti in altri package, ed ogni microservizio opera sul proprio database.
 
 \subsubsection{Pattern architetturale API Gateway}
 Il design pattern architetturale scelto per l'API Gateway è il design pattern \textbf{\textit{Chain Microservices}}. Questo tipo di pattern è una sequenza di azioni prestabilite, innescate da una richiesta \textit{HTTP\ped{G}}. 
