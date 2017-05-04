@@ -57,10 +57,10 @@ main
     		for( j=0, j<#mscategoriesidlist.CategoryIdListData, j++ ) {
     			categoryid.Id = mscategoriesidlist.CategoryIdListData[j].IdCategory;
     			retrieve_category_info@microservices_dbOutput( categoryid )( mscategorydata );
-    			for( k=0, k<#mscategorydata.CategoryData, k++ ) {
-    				with ( mscategorydata.CategoryData[k] ) {
+    			for( k=0, k<#mscategorydata, k++ ) {
+    				with ( mscategorydata ) {
       					response.HomepageMSData[i].Category[j].Name = .Name;
-    					  response.HomepageMSData[i].Category[j].Image = .Image
+    					response.HomepageMSData[i].Category[j].Image = .Image
     				}
 				}
   			}
@@ -99,10 +99,10 @@ main
       		for( k=0, k<#mscategoriesidlist.CategoryIdListData, k++ ) {
         		categoryid.Id = mscategoriesidlist.CategoryIdListData[k].IdCategory;
         		retrieve_category_info@microservices_dbOutput( categoryid )( mscategorydata );
-        		for( l=0, l<#mscategorydata.CategoryData, l++ ) {
-         			with ( mscategorydata.CategoryData[l] ) {
-            			response.HomepageMSData[i].Category[l].Name = .Name;
-            			response.HomepageMSData[i].Category[l].Image = .Image
+        		for( l=0, l<#mscategorydata, l++ ) {
+         			with ( mscategorydata ) {
+            			response.HomepageMSData[i].Category[k].Name = .Name;
+            			response.HomepageMSData[i].Category[k].Image = .Image
           			}
         		}
       		}

@@ -15,9 +15,17 @@ angular.module('APIM.lista_api', ['ngRoute'])
     });
 
 
-	/*funzione che filtra api per categoria. Da completare per ottenere un filtro totalmente locale*/
+	/* filtraggio api per categoria */
     $scope.filter = function(event){
-    	/*questo alert prende come id l'id del bottone premuto, che corrisponde all'id della categoria*/
-    	alert(event.target.id);
+		var query;
+		var queryid = event.target.id;
+		if(queryid > 0) { 
+			query = "http://localhost:8100/homepage_filter_cat_list?Id=";
+			query = query + queryid;
+		}
+		else { query = "http://localhost:8100/homepage_ms_list"; }
+			$http.get(query).then(function(response) {
+				$scope.mslistdata = response.data;
+		});
 	}
 });
