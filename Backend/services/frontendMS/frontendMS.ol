@@ -37,7 +37,7 @@ init
 main
 {
 	[homepage_ms_list( request )( response ) {
-		shownumber.Number = 9;
+		shownumber.Number = 100;
 		println@Console("Getting last registered microservices")();
 		
 		retrieve_last_registered_ms@microservices_dbOutput( shownumber )( lastmsreglist );

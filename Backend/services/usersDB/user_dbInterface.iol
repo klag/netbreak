@@ -128,7 +128,7 @@ interface user_dbInterface {
 		retrieve_modtype_info( modtypeid )( modtypedata ),
 		retrieve_clienttype_info( clienttypeid )( clienttypedata ),
 		
-		basicclient_registration( basicclientdata )( void ),
+		basicclient_registration( basicclientdata )( bool ),
 		developer_upgrade( developerdata )( void ),
 		basicclient_downgrade( clientid )( void ),
 		client_moderation( entrydataw )( void ),

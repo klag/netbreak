@@ -326,7 +326,7 @@ angular.module('APIM.registra_utente', ['ngRoute'])
           }
         } else {
           /*applica ad hash formato md5*/
-          $scope.password = (MD5($scope.password));
+          var passmd5 = (MD5($scope.password));
 
           /*e' stato scelto questo metodo di inviare i dati, alla fine, a causa di problemi
           molto gravi di interfacciamento con Jolie, causati da HTTP access control (CORS)
@@ -335,19 +335,26 @@ angular.module('APIM.registra_utente', ['ngRoute'])
 
           /*dopo tante imprecazioni e' stato meglio arrendersi all'imprecisione*/
 
-          $http.post("http://localhost:8102/basicclient_registration?"
+          $http.post("http://localhost:8101/basicclient_registration?"
             +"Name="+$scope.nome
             +"&Surname="+$scope.cognome
             +"&Email="+$scope.email
-            +"&Password="+$scope.password
+            +"&Password="+passmd5
             +"&Avatar="+$scope.avataruri
             +"&PayPal="+$scope.paypal
             +"&Citizenship="+$scope.cittadinanza
             +"&AboutMe="+$scope.aboutme
             +"&LinkToSelf="+$scope.linksito
             ).then(function(response) {
-                /*qui potrebbero ritornarmi ulteriori errori, tipo che l'utente esiste gia', se no:*/
-                document.getElementById('success').style.visibility = 'visible';    
+                /*l'utente esiste gia'?*/
+                if (response.data.$ == false) {
+                    document.getElementById('success').style.visibility = 'visible';    
+                } else {
+                    document.getElementById('errors').style.visibility = 'visible';
+                    var node = document.createElement("li");
+                    node.appendChild(document.createTextNode("Utente gia' esistente"));   
+                    document.getElementById("errors_list").append(node);
+                }
            });
 
         }        

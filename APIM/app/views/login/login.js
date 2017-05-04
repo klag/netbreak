@@ -18,17 +18,17 @@ angular.module('APIM.login', ['ngRoute'])
    $scope.submitForm = function() {
         document.getElementById('error').style.visibility = 'hidden';
         /*applica hash, formato md5*/
-	    $scope.password = (MD5($scope.password));
+	    var passmd5 = (MD5($scope.password));
 
 	    $http.post("http://localhost:8101/user_exists?"
 	        +"Email="+$scope.email
-	        +"&Password="+$scope.password
+	        +"&Password="+passmd5
 	        ).then(function(response) {
 	        	/*se utente esiste arriva true, altrimenti false*/
-	        	if (response.data.$) {
-	        		alert("loggato!");
+	        	if (response.data.$ == false) {
+	        	   document.getElementById('error').style.visibility = 'visible';
 	        	} else {
-	        		document.getElementById('error').style.visibility = 'visible';
+	        	    alert("congrats esisti e sei loggato!");
 	        	}
 	        });        
     };

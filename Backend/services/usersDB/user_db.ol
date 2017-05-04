@@ -6,6 +6,15 @@ include "time.iol"
 
 execution { sequential }
 
+
+/*creando un'outputport che punta alla stessa location del servizio se ne possono richiamare
+le operation interne come fossero metodi di una classe*/
+outputPort Self {
+  Location: "socket://localhost:8101"
+  Protocol: http 
+  Interfaces: user_dbInterface
+}
+
 inputPort user_dbInput {
   Location: "socket://localhost:8201"
   Protocol: sodep
@@ -48,6 +57,7 @@ main
     q = "SELECT * FROM clients WHERE Email=:email AND Password=:password";
     q.email = request.Email;
     q.password = request.Password;
+    query@Database( q )( result );
     //se non lo trovi vuol dire che non esiste
     if ( #result.row == 0 ) {
       println@Console("Client not found")();
@@ -57,7 +67,6 @@ main
     else {
       println@Console("Client exists with info " + request.Email + " " + request.Password)();
       response = true
-      
     }
   }]
   [retrieve_admin_info( request )( response ) {
@@ -193,28 +202,35 @@ main
 
 
   [basicclient_registration( request )( response ) {
-    println@Console("basicclient_registration execution started")();
-    getDateTime@Time( 0 )( date ); //data corrente
-    //query
-    q = "INSERT INTO clients (Name,Surname,Email,Password,Avatar,Registration,
-         Credits,ClientType,AboutMe,Citizenship,LinkToSelf,PayPal) 
-         VALUES (:nome, :cognome, :email, :password, :avataruri, :regdate, 100, 
-         1, :aboutme, :cittadinanza, :linkweb, :paypal)";
-      with( q ) {
-          .nome = request.Name;
-          .cognome = request.Surname;
-          .email = request.Email;
-          .password = request.Password;
-          .avataruri = request.Avatar;
-          .regdate = date.year + "-" + date.month + "-" + date.day;
-          .aboutme = request.AboutMe;
-          .cittadinanza = request.Citizenship;
-          .linkweb = request.LinkToSelf;
-          .paypal = request.PayPal
-    };
-    update@Database( q )( result );
-    //update@Database( q )( result );
-    println@Console("Registering new basic client " + request.Name + " " + request.Surname)()
+    loginfo.Email = request.Email;
+    loginfo.Password = request.Password;
+    user_exists@Self( loginfo )( exists );
+    if (!exists) {
+      println@Console("basicclient_registration execution started")();
+      getDateTime@Time( 0 )( date ); //data corrente
+      //query
+      q = "INSERT INTO clients (Name,Surname,Email,Password,Avatar,Registration,
+           Credits,ClientType,AboutMe,Citizenship,LinkToSelf,PayPal) 
+           VALUES (:nome, :cognome, :email, :password, :avataruri, :regdate, 100, 
+           1, :aboutme, :cittadinanza, :linkweb, :paypal)";
+        with( q ) {
+            .nome = request.Name;
+            .cognome = request.Surname;
+            .email = request.Email;
+            .password = request.Password;
+            .avataruri = request.Avatar;
+            .regdate = date.year + "-" + date.month + "-" + date.day;
+            .aboutme = request.AboutMe;
+            .cittadinanza = request.Citizenship;
+            .linkweb = request.LinkToSelf;
+            .paypal = request.PayPal
+      };
+      update@Database( q )( result );
+      response = true;
+      println@Console("Registering new basic client " + request.Name + " " + request.Surname)()
+    } else {
+      response = false
+    }
   }]
 
   [developer_upgrade( request )( response ) {

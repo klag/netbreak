@@ -14,4 +14,10 @@ angular.module('APIM.lista_api', ['ngRoute'])
         $scope.mslistdata = response.data;
     });
 
+
+	/*funzione che filtra api per categoria. Da completare per ottenere un filtro totalmente locale*/
+    $scope.filter = function(event){
+    	/*questo alert prende come id l'id del bottone premuto, che corrisponde all'id della categoria*/
+    	alert(event.target.id);
+	}
 });

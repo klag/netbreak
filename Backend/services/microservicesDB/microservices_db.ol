@@ -271,6 +271,7 @@ main
     println@Console("Retrieved last registered microservices by msid")()
   }]
 
+  /*metodo da completare con gestione errori ecc... faccenda complessa piu' del previsto*/
   [microservice_registration( request )( response ) {
     /*genero un courier temporaneo*/
     courierreq.subservices->request.subservices;
