@@ -44,9 +44,9 @@ main
 		for( i=0, i<#lastmsreglist.MSRegListData, i++ ) {
       		with ( lastmsreglist.MSRegListData[i] ) {
         		response.HomepageMSData[i].Name = .Name;
-    			response.HomepageMSData[i].Logo = .Logo;
-    			msid.Id = .IdMS;
-    			devid.Id = .IdDeveloper
+      			response.HomepageMSData[i].Logo = .Logo;
+      			msid.Id = .IdMS;
+      			devid.Id = .IdDeveloper
     		};
     		retrieve_client_fullname@user_dbOutput( devid )( fullname );
     		with( fullname ) {
@@ -60,7 +60,7 @@ main
     			for( k=0, k<#mscategorydata.CategoryData, k++ ) {
     				with ( mscategorydata.CategoryData[k] ) {
       					response.HomepageMSData[i].Category[j].Name = .Name;
-    					response.HomepageMSData[i].Category[j].Image = .Image
+    					  response.HomepageMSData[i].Category[j].Image = .Image
     				}
 				}
   			}

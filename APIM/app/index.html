@@ -1,112 +1,105 @@
 <!DOCTYPE html>
-<html ng-app="myApp">
+<html lang="en" ng-app="APIM" class="no-js">
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>API Market</title>
-  <meta name="description" content="API Market sviluppato dal gruppo NetBreak per progetto di SWE 2016-2017">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
-  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-  <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <!-- jQuery library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <!-- Latest compiled JavaScript -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>APIMarket</title>
+    <meta name="description" content="Progetto Universitario fatto dal gruppo Netbreak per l'insegnamento SWE 2016/2017">
+    <link rel="stylesheet" href="app.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
+
+
+<!-- Navbar -->
 <nav class="navbar navbar-default">
-    <div class="container-fluid">
-        <!-- Logo APIMarket -->
-        <div class="navbar-header">
-            <!-- Pulsante con Menu per Mobile -->
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <!-- Logo APIMarket -->
-            <a class="navbar-brand" href="#!/api_home">APIMarket</a>
-        </div>
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-            <!-- UC6 - Ricerca API -->
-            <form class="navbar-form navbar-left">
-                <div class="form-group">
-                    <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
-                    <input type="text"  class="form-control" placeholder="Ricerca APIs">
-                </div>
-            </form>
-
-
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <!-- Immagine profilo Utente e menu navigazione -->
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mark Twain<span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="account.html">Gestione Account</a></li>
-                        <li><a href="login.html">Login</a></li>
-                        <li><a href="registrautente.html">Registrati</a></li>
-                        <li><a href="registraapi.html">Aggiungi API</a></li>
-                        <li role="separator" class="divider"></li>
-                        <li><a href="#">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+  <div class="container-fluid">
+    <!-- Logo APIMarket -->
+    <div class="navbar-header">
+      <!-- Pulsante con Menu per Mobile -->
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <!-- Logo APIMarket -->
+      <a class="navbar-brand" href="#!/api_list.html">APIMarket</a>
     </div>
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+        <!-- UC6 - Ricerca API -->
+        <form class="navbar-form navbar-left">
+          <div class="form-group">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            <input type="text"  class="form-control" placeholder="Ricerca APIs">
+          </div>
+        </form>
+
+
+        <ul class="nav navbar-nav navbar-right">
+          <li class="dropdown">
+            <!-- Immagine profilo Utente e menu navigazione -->
+            <a href="#!" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Mark Twain<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#!/account">Gestione Account</a></li>
+              <li><a href="#!/login">Login</a></li>
+              <li><a href="#!/registra_utente">Registrati</a></li>
+              <li><a href="#!/registra_api">Aggiungi API</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+    </div>
+  </div>
 </nav>
 
-<div class="row">
-    <!-- Lista Categorie API -->
-    <div class="col-xs-10 col-sm-3 col-md-2 col-xs-offset-1 col-sm-offset-0 col-md-offset-0">
 
-        <div class="panel panel-default">
-            <div class="panel-heading">Categorie</div>
-            <div class="list-group">
-			  <!-- Da implementare le views per cambiare la visualizzazione delle categorie, ad ogni categoria corrisponde una view diversa -->
-				<a href="#api_home"><button type="button" class="list-group-item">Tutte</button></a>
-                <a href="#api_cat_giochi"><button type="button" class="list-group-item">Giochi</button></a>
-                <a href="#api_cat_multimedia"><button type="button" class="list-group-item">Multimedia</button></a>
-                <a href="#api_cat_notizie"><button type="button" class="list-group-item">Notizie</button></a>
-                <a href="#api_cat_database"><button type="button" class="list-group-item">Database</button></a>
-                <a href="#api_cat_geo"><button type="button" class="list-group-item">Geo</button></a>
-              </div>
-        </div>
-    </div>
-
-    <div ng-view></div>
-</div>
+  <!-- Qui si materializza la view  -->
+  <div ng-view></div>
 
 
-<!-- Codice per saltare una riga  -->
-<div class="row"><p></p><p></p></div>
-<!-- Footer  -->
-<div class="panel-footer"><p class="text-center">APIM</p></div>
-  
-  <!-- Bower Components -->
-  <script src="bower_components/angular/angular.js"></script>
+  <!-- Codice per saltare una riga  -->
+  <div class="row"><p></p><p></p></div>
+  <!-- Footer  -->
+  <div class="panel-footer"><p class="text-center">APIM  <span app-version></span></p></div>
+
+
   <script src="bower_components/angular-route/angular-route.js"></script>
-  <!-- File js setup views -->
   <script src="app.js"></script>
-  <!-- Views menù categorie -->
-  <script src="views/api_home/api_home.js"></script>
-  <script src="views/api_cat_giochi/api_cat_giochi.js"></script>
-  <script src="views/api_cat_multimedia/api_cat_multimedia.js"></script>
-  <script src="views/api_cat_notizie/api_cat_notizie.js"></script>
-  <script src="views/api_cat_database/api_cat_database.js"></script>
-  <script src="views/api_cat_geo/api_cat_geo.js"></script>
-  <!-- Inserire qui nuove views -->
-  <!-- Components -->
+
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- File assoc. alle varie view che includono i controller, da includere per far funzionare il tutto! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <script src="views/registra_utente/registra_utente.js"></script>
+  <script src="views/login/login.js"></script>
+  <script src="views/account/account.js"></script>
+  <script src="views/api/api.js"></script>
+  <script src="views/api_acquistate/api_acquistate.js"></script>
+  <script src="views/api_registrate/api_registrate.js"></script>
+  <script src="views/conto/conto.js"></script>
+  <script src="views/lista_api/lista_api.js"></script>
+  <script src="views/lista_transazioni/lista_transazioni.js"></script>
+  <script src="views/policy1/policy1.js"></script>
+  <script src="views/policy2/policy2.js"></script>
+  <script src="views/policy3/policy3.js"></script>
+  <script src="views/recupero_password/recupero_password.js"></script>
+  <script src="views/registra_api/registra_api.js"></script>
+  <script src="views/reset_password/reset_password.js"></script>
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+
   <script src="components/version/version.js"></script>
   <script src="components/version/version-directive.js"></script>
   <script src="components/version/interpolate-filter.js"></script>

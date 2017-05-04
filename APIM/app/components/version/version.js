@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('myApp.version', [
-  'myApp.version.interpolate-filter',
-  'myApp.version.version-directive'
+angular.module('APIM.version', [
+  'APIM.version.interpolate-filter',
+  'APIM.version.version-directive'
 ])
 
-.value('version', '0.1');
+.value('version', '0.8');

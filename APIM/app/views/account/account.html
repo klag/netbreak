@@ -1,0 +1,88 @@
+<div class="row">
+    <div class="col-xs-10 col-sm-10 col-md-3 col-xs-offset-1 col-sm-offset-1 col-md-offset-0">
+
+        <div class="well">
+          Mark Twain
+        </div>
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Gestione profilo</div>
+          <!-- List group -->
+          <ul class="list-group" >
+            <li class="list-group-item"><a href="#!/account">Dati personali</a></li>
+            <li class="list-group-item"><a href="#!/api_acquistate">API acquistate</a></li>
+            <li class="list-group-item"><a href="#!/api_registrate">API registrate</a></li>
+          </ul>
+        </div>
+        <div class="panel panel-default">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Pagamenti</div>
+          <!-- List group -->
+          <ul class="list-group" >
+            <li class="list-group-item"><a href="#!/conto">Gestione conto</a></li>
+            <li class="list-group-item"><a href="#!/lista_transazioni">Transazioni</a></li>
+          </ul>
+        </div>
+    </div>
+    <div class="col-xs-10 col-sm-10 col-md-7 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+
+       <div class="row">
+          
+          <!-- UC12.1.1 e UC12.1.2-->
+          <div class="col-md-11" >
+            <div class="page-header">
+              <h1>Dati personali</h1>
+            </div>
+
+            <div class="panel panel-default mainPanelAccount">
+
+              <form class="datiPersonaliForm" >
+                <fieldset disabled>
+                  <div class="form-group">
+                      <label for="nomeInput">Avatar</label>
+                      <div class="thumbnail">
+                        <img style="max-width: 100px;" class="img-circle" src="images/profilo.png" alt="apilogo">
+                      </div>
+                      <input type="file" id="exampleInputFile">
+                      <p class="help-block">Puoi scegliere un altro avatar</p>
+                  </div>
+                  <div class="form-group">
+                    <label for="nomeInput">Nome</label>
+                    <input type="text" class="form-control" id="nomeInput" placeholder="Nome" >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="cognomeInput">Cognome</label>
+                    <input type="text" class="form-control" id="cognomeInput" placeholder="Cognome"  >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="usernameInput">Username</label>
+                    <input type="text" class="form-control" id="usernameInput" placeholder="Username"  readonly >
+                  </div>
+
+                  <div class="form-group">
+                    <label for="emailInput">Email</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="Email"  >
+                  </div>
+
+                  <p>
+                    La tua tipologia di account &egrave; <span class="label label-primary">Cliente</span>
+                  </p>
+
+                  <button type="submit" class="btn btn-default">Salva</button>
+                </fieldset>
+              </form>
+              
+            </div>
+            <div class="col-md-12">
+                <button type="button" class="btn btn-primary">Modifica dati personali</button>
+                <div class="alert alert-success" role="alert">La modifica dei dati personali &egrave; avvenuta con succsso</div>
+                <div class="alert alert-danger" role="alert">Errore nella modifica dei dati personali</div>  
+              </div>
+            
+          </div>
+
+        </div>
+    </div>
+  </div>

@@ -14,6 +14,17 @@ type categoryid: void {
 
 // strutture dati con altri dati
 
+/*lista di servizi con info per inizializzare outputportgateway*/
+type listservices: void {
+	.services[0, *]: int {
+		.subservices[0, *]: void {
+			.location:string
+			.protocol:string
+			.interfaces[0, *]: string 
+		}
+	}
+}
+
 type msdata: void {
 	.IdMS: int
 	.Name: string
@@ -46,6 +57,11 @@ type categorydata: void {
 }
 
 type msdataw: void {
+	.subservices[0, *]: void {
+		.location:string
+		.protocol:string
+		.interfaces[0, *]: string 
+	}
 	.Name: string
 	.Description: string
 	.Version: int
@@ -152,6 +168,7 @@ type shownumberandidms: void {
 
 interface microservices_dbInterface {
 	RequestResponse:
+		retrieve_all_ms_info( void )( listservices ), 
 		retrieve_ms_info( msid )( msdata ),
 		retrieve_intf_info( intfid )( intfdata ),
 		retrieve_interfaces_of_ms( msid )( intfidlist ),

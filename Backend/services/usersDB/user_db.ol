@@ -2,6 +2,7 @@ include "user_dbInterface.iol"
 
 include "database.iol"
 include "console.iol"
+include "time.iol"
 
 execution { sequential }
 
@@ -42,6 +43,23 @@ init
 
 main
 {
+  [user_exists( request )( response ) {
+    //cerca gli utenti con queste credenziali
+    q = "SELECT * FROM clients WHERE Email=:email AND Password=:password";
+    q.email = request.Email;
+    q.password = request.Password;
+    //se non lo trovi vuol dire che non esiste
+    if ( #result.row == 0 ) {
+      println@Console("Client not found")();
+      response = false
+    }
+    //altrimenti esiste
+    else {
+      println@Console("Client exists with info " + request.Email + " " + request.Password)();
+      response = true
+      
+    }
+  }]
   [retrieve_admin_info( request )( response ) {
 
     //query
@@ -175,19 +193,27 @@ main
 
 
   [basicclient_registration( request )( response ) {
-
+    println@Console("basicclient_registration execution started")();
+    getDateTime@Time( 0 )( date ); //data corrente
     //query
-    q = "INSERT INTO clients (Name,Surname,Email,Password,Avatar,Registration,Credits,ClientType,AboutMe,Citizenship,LinkToSelf,PayPal) 
-      VALUES (:n,:s,:e,:p,:a,:r,0,1,'','','','')";
-    with( request ) {
-      q.n = .Name;
-      q.s = .Surname;
-      q.e = .Email;
-      q.p = .Password;
-      q.a = .Avatar;
-      q.r = .Registration
+    q = "INSERT INTO clients (Name,Surname,Email,Password,Avatar,Registration,
+         Credits,ClientType,AboutMe,Citizenship,LinkToSelf,PayPal) 
+         VALUES (:nome, :cognome, :email, :password, :avataruri, :regdate, 100, 
+         1, :aboutme, :cittadinanza, :linkweb, :paypal)";
+      with( q ) {
+          .nome = request.Name;
+          .cognome = request.Surname;
+          .email = request.Email;
+          .password = request.Password;
+          .avataruri = request.Avatar;
+          .regdate = date.year + "-" + date.month + "-" + date.day;
+          .aboutme = request.AboutMe;
+          .cittadinanza = request.Citizenship;
+          .linkweb = request.LinkToSelf;
+          .paypal = request.PayPal
     };
     update@Database( q )( result );
+    //update@Database( q )( result );
     println@Console("Registering new basic client " + request.Name + " " + request.Surname)()
   }]
 

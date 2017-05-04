@@ -1,5 +1,10 @@
 // strutture dati con semplice id
 
+type logininfo: void {
+	.Email: string
+	.Password: string
+}
+
 type adminid: void {
 	.Id: int
 }
@@ -76,7 +81,10 @@ type basicclientdata: void {
 	.Email: string
 	.Password: string
 	.Avatar: string
-	.Registration: string
+	.AboutMe: string
+	.Citizenship: string
+	.LinkToSelf: string
+	.PayPal: string
 }
 
 type developerdata: void {
@@ -111,6 +119,7 @@ type userdata: void {
 
 interface user_dbInterface {
 	RequestResponse:
+	    user_exists(logininfo)(bool),
 		retrieve_admin_info( adminid )( admindata ),
 		retrieve_client_info( clientid )( clientdata ),
 		retrieve_client_fullname( clientid )( clientfullnamedata ),

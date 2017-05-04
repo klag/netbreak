@@ -1,0 +1,130 @@
+<div class="row" >
+        <div class="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3">
+        <div class="thumbnail">
+              <img src="images/apiexample.png" alt="apilogo">
+              <div class="caption">
+                <h3 class="text-center">Tesseract</h3>
+                <p class="text-center">John Doe</p>
+                <button type="button" class="label label-default">Politics</button>
+                <button type="button" class="label label-primary">Network</button>
+                <button type="button" class="label label-info">Video</button>
+                <button type="button" class="label label-default">Cats</button>
+                <button type="button" class="label label-default">ImgProcessors</button>
+                <button type="button" class="label label-warning">Chats</button>
+                <button type="button" class="label label-primary">Utils</button>
+                <button type="button" class="label label-danger">Hackerz</button>
+                <div class="row"><p></p><p></p></div>
+                <div class="jumbotron">
+                  <h3>Descrizione</h3>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <table class="table table-striped">                 
+                <tr>
+                    <td>Versione</td>
+                    <td>1</td>
+                 </tr>
+                 <tr>
+                    <td>Modificata</td>
+                    <td>14/03/2016</td>
+                 </tr>
+                 <tr>
+                    <td>Prezzo</td>
+                    <td>20 euri</td>
+                 </tr>
+                 <tr>
+                    <td>Policy Vendita</td>
+                    <td><a href="#!/policy3">Per tempo di utilizzo</a></td>
+                 </tr>
+                 <tr>
+                    <td>Documentazione Pdf</td>
+                    <td><a href="test_files/intervisteproponente.pdf">link</a></td>
+                 </tr>
+                 <tr>
+                    <td>Documentazione Esterna</td>
+                    <td><a href="http://it.lipsum.com">link</a></td>
+                 </tr>
+                 <tr>
+                    <td>Numero Licenze Attive</td>
+                    <td>3</td>
+                 </tr>
+                 <tr>
+                    <td>SLA</td>
+                    <td>(3455 query)/(giorno) in media</td>
+                 </tr>
+                </table> 
+                <a href="acquistaapi.html" class="btn btn-primary" role="button">Acquista</a>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+
+  <!-- Visualizzazione Interfaccia API -->
+  <div class="row">
+    <div class="col-xs-10 col-sm-8 col-md-6 col-xs-offset-1 col-sm-offset-2 col-md-offset-3">
+      <h2>Interfaccia API:</h2>
+
+      <h3>Info per l'uso:</h3>
+      <h4>OutputPort: Tesseract</h4>
+      <h4>.iol Client Interface: <a href="test_files/calc_interfaceC.iol">Interfaccia</a></h4>
+
+      <h3>Lista Operation:</h3>
+      <h4>getMetaData</h4>
+      <pre>getMetaData( GetMetaDataRequest )( GetMetaDataResponse ) throws
+          SemanticException( SemanticExceptionType )
+          ParserException( ParserExceptionType )</pre>
+      <p>Il lorem ipsum e' un testo segnaposto utilizzato da grafici, designer, programmatori e tipografi a modo riempitivo per bozzetti e prove grafiche.</p>
+
+      <h4>parseRoles</h4>
+      <pre>parseRoles( ParseRoleRequest )( Role )</pre>
+      <p>Il lorem ipsum e' un testo segnaposto utilizzato da grafici, designer, programmatori e tipografi a modo riempitivo per bozzetti e prove grafiche.</p>
+
+      <h4>getInputPortMetaData</h4>
+      <pre>getInputPortMetaData( GetInputPortMetaDataRequest )( GetInputPortMetaDataResponse ) throws
+          SemanticException( SemanticExceptionType )
+          InputPortMetaDataFault
+          ParserException( ParserExceptionType )</pre>
+      <p>Il lorem ipsum e' un testo segnaposto utilizzato da grafici, designer, programmatori e tipografi a modo riempitivo per bozzetti e prove grafiche.</p>
+
+      <h4>messageTypeCast</h4>
+      <pre>messageTypeCast( MessageTypeCastRequest )( MessageTypeCastResponse ) throws
+          TypeMismatch</pre>
+      <p>Il lorem ipsum e' un testo segnaposto utilizzato da grafici, designer, programmatori e tipografi a modo riempitivo per bozzetti e prove grafiche.</p>
+
+      <h4>checkNativeType</h4>
+      <pre>checkNativeType( CheckNativeTypeRequest )( CheckNativeTypeResponse )</pre>
+      <p>Il lorem ipsum e' un testo segnaposto utilizzato da grafici, designer, programmatori e tipografi a modo riempitivo per bozzetti e prove grafiche.</p>
+
+      <h3>Lista Tipi:</h3>
+
+      <h4>GetMetaDataRequest</h4>
+      <pre>type GetMetaDataRequest:void { 
+      .name:Name
+      .filename:string}</pre>
+      <p>Il lorem ipsum e' un testo segnaposto utilizzato da grafici, designer, programmatori e tipografi a modo riempitivo per bozzetti e prove grafiche.</p>
+
+      <h4>GetMetaDataResponse</h4>
+      <pre>type GetMetaDataResponse:void { 
+      .input*:Participant
+      .interfaces*:Interface
+      .service:Service
+      .embeddedServices*:void { 
+          .servicepath:string
+          .type:string
+          .portId:string
+      }
+      .types*:Type
+      .output*:Participant}</pre>
+      <p>Il lorem ipsum e' un testo segnaposto utilizzato da grafici, designer, programmatori e tipografi a modo riempitivo per bozzetti e prove grafiche.</p>
+
+      <h4>SemanticExceptionType</h4>
+      <pre>type SemanticExceptionType:void { 
+      .error*:void { 
+          .message:string
+          .sourceName:string
+          .line:int
+      }}</pre>
+      <p>Il lorem ipsum e' un testo segnaposto utilizzato da grafici, designer, programmatori e tipografi a modo riempitivo per bozzetti e prove grafiche.</p>
+    </div>  
+  </div>

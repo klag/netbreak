@@ -1,9 +1,20 @@
 include "microservices_dbInterface.iol"
+include "serviceinteractionhandlerinterface.iol"
+
 
 include "database.iol"
 include "console.iol"
 
 execution { sequential }
+
+/*---------*/
+/*porta per comunicare con gestore delle interazioni dei microservizi*/
+outputPort ServiceInteractionHandler {
+   Location: "socket://localhost:8322"
+   Protocol: http 
+   Interfaces: ServiceInteractionHandlerInterface
+}
+/*-----------*/
 
 inputPort microservices_dbInput {
   Location: "socket://localhost:8221"
@@ -42,6 +53,51 @@ init
 
 main
 {
+  //per gateway do not touch
+  /*PRE = (posso assumere che non ci sono inconsistenze a livello di database)*/
+  [retrieve_all_ms_info( request )( response ) {
+    q = "select microservices.idMS, interfaces.Interf, interfaces.Loc, 
+      interfaces.Protoc from interfaces, microservices where interfaces.idMS = microservices.idMS
+      ORDER BY microservices.idMS ASC;";
+    query@Database(q)(result);
+
+    service_index = -1; currId = -1;
+    for ( i=0, i<#result.row, i++ ) {
+        //diverso id vuol dire che ho altro servizio
+        if (currId != result.row[i].idMS) {
+          currId = result.row[i].idMS;
+          service_index++; 
+          response.services[service_index] << currId
+        };
+        /*controllo se la location di questa riga e' uguale a quella di subservizi precedenti*/
+        j = 0; trovato = false;
+        while (j < #response.services[service_index].subservices && !trovato) {
+            if (response.services[service_index].subservices[j].location == result.row[i].Loc) {
+              trovato = true
+            } else {
+              j++
+            }
+        };        
+        if (!trovato) {
+        /*se location mai trovata nei subservice precedente ho un nuovo subservice*/
+          subservice_index = #response.services[service_index].subservices;
+          interf_index = #response.services[service_index].subservices[subservice_index].interfaces;
+          response.services[service_index].subservices[subservice_index].location << result.row[i].Loc;
+          response.services[service_index].subservices[subservice_index].protocol << result.row[i].Protoc;
+          response.services[service_index].subservices[subservice_index].interfaces[interf_index] << result.row[i].Interf
+        } 
+        /*se la location trovata nei subservice precedenti aggiungi interfaccia a quel subservice dove trovata*/
+        else {
+          interf_index = #response.services[service_index].subservices[j].interfaces;
+          response.services[service_index].subservices[j].interfaces[interf_index] << result.row[i].Interf
+        }
+    }
+  }]
+  /*POST = (ritorna le info per fare il binding a livello di gateway)*/
+
+
+
+
   [retrieve_ms_info( request )( response ) {
 
     //query
@@ -216,7 +272,18 @@ main
   }]
 
   [microservice_registration( request )( response ) {
-
+    /*genero un courier temporaneo*/
+    courierreq.subservices->request.subservices;
+    courierreq = 6;
+    courierreq.subservices->request.subservices; //ricavo richiesta per generatore courier
+    generateCourier@ServiceInteractionHandler(courierreq)(rr);
+    /*uso il generatore di interfacce per estrarre i metadati*/
+    interfreq = 1;
+    interfreq.name -> request.name;
+    generateClientInterface@ServiceInteractionHandler(interfreq)(rr);
+    //a questo punto so che le interfacce sono a posto
+    //richiamo il gateway affinche' faccia il binding di questo nuovo servizio a se stesso
+    //genero la documentazione in automatico usando quello che ho fatto nel punto a.
     //query
     q = "INSERT INTO microservices (Name,Description,Version,LastUpdate,IdDeveloper,Logo,DocPDF,DocExternal,Profit,
       IsActive,SLAGuaranteed,Policy) VALUES (:n,:d,:v,:lu,:idv,:lg,:dp,:de,:pf,:isa,:sg,:py)";
